@@ -1,0 +1,387 @@
+<!doctype html>
+<html lang="ar">
+<head>
+<meta charset="utf-8">
+<style>
+@font-face{font-family:Cairo;font-weight:400;src:url(assets/cairo-arabic-400-normal.woff2) format("woff2");unicode-range:U+0600-06FF,U+0750-077F,U+0870-08FF,U+FB50-FDFF,U+FE70-FEFF,U+200C-200E}
+@font-face{font-family:Cairo;font-weight:600;src:url(assets/cairo-arabic-600-normal.woff2) format("woff2");unicode-range:U+0600-06FF,U+0750-077F,U+0870-08FF,U+FB50-FDFF,U+FE70-FEFF,U+200C-200E}
+@font-face{font-family:Cairo;font-weight:700;src:url(assets/cairo-arabic-700-normal.woff2) format("woff2");unicode-range:U+0600-06FF,U+0750-077F,U+0870-08FF,U+FB50-FDFF,U+FE70-FEFF,U+200C-200E}
+@font-face{font-family:Cairo;font-weight:800;src:url(assets/cairo-arabic-800-normal.woff2) format("woff2");unicode-range:U+0600-06FF,U+0750-077F,U+0870-08FF,U+FB50-FDFF,U+FE70-FEFF,U+200C-200E}
+@font-face{font-family:Cairo;font-weight:400;src:url(assets/cairo-latin-400-normal.woff2) format("woff2");unicode-range:U+0000-00FF,U+2000-206F,U+20AC,U+2122,U+2190-21FF}
+@font-face{font-family:Cairo;font-weight:600 700;src:url(assets/cairo-latin-700-normal.woff2) format("woff2");unicode-range:U+0000-00FF,U+2000-206F,U+20AC,U+2122,U+2190-21FF}
+@font-face{font-family:Cairo;font-weight:800;src:url(assets/cairo-latin-800-normal.woff2) format("woff2");unicode-range:U+0000-00FF,U+2000-206F,U+20AC,U+2122,U+2190-21FF}
+@font-face{font-family:Mono;font-weight:700;src:url(assets/jetbrains-mono-latin-700-normal.woff2) format("woff2")}
+
+:root{--bg:#040a16;--navy:#0d1a36;--cyan:#28cde4;--cyan2:#12a9c9;--fg:#f2f6ff;--muted:#8d9cbc;--wa:#25d366;--card:#0e1830;--line:#1f2c4d}
+*{box-sizing:border-box;margin:0;padding:0}
+html,body{width:1080px;height:1920px;overflow:hidden;background:var(--bg)}
+body{font-family:Cairo,sans-serif;color:var(--fg);position:relative}
+.abs{position:absolute}
+.c{left:50%;top:50%}
+#stage{position:absolute;inset:0;overflow:hidden}
+#glow{width:1300px;height:1300px;left:-110px;top:310px;border-radius:50%;
+  background:radial-gradient(circle,rgba(40,205,228,.55) 0%,rgba(18,169,201,.28) 28%,rgba(30,80,200,.10) 52%,rgba(0,0,0,0) 70%);filter:blur(30px)}
+#glow2{width:900px;height:900px;left:90px;top:510px;border-radius:50%;
+  background:radial-gradient(circle,rgba(80,110,255,.35),rgba(0,0,0,0) 65%);filter:blur(40px)}
+#vig{inset:0;background:radial-gradient(ellipse at 50% 48%,rgba(0,0,0,0) 45%,rgba(0,0,0,.65) 100%);z-index:50}
+#grain{inset:0;z-index:51;opacity:.07;mix-blend-mode:screen}
+#grid{inset:-200px;background-image:linear-gradient(rgba(40,205,228,.07) 1px,transparent 1px),linear-gradient(90deg,rgba(40,205,228,.07) 1px,transparent 1px);background-size:90px 90px;
+  -webkit-mask-image:radial-gradient(ellipse at 50% 50%,#000 20%,transparent 70%);mask-image:radial-gradient(ellipse at 50% 50%,#000 20%,transparent 70%)}
+
+/* S1 logo */
+#logo{width:640px;height:419px;left:220px;top:700px}
+#logo img{position:absolute;top:0;height:419px}
+#logoR{left:0}
+#logoP{left:431px}
+#tag{width:1080px;left:0;top:1170px;text-align:center;font-family:Mono;font-size:34px;letter-spacing:.42em;color:#c9d6f0;direction:ltr;white-space:pre}
+#dot{width:40px;height:40px;left:520px;top:940px;border-radius:50%;background:#bff6ff;box-shadow:0 0 40px 18px rgba(40,205,228,.9),0 0 120px 60px rgba(40,205,228,.45)}
+
+/* S2 phone */
+#url{width:1080px;left:0;top:250px;text-align:center;font-family:Mono;font-size:66px;color:var(--fg);direction:ltr}
+#url b{color:var(--cyan)}
+#url i{display:inline-block;width:30px;height:62px;background:var(--cyan);vertical-align:-8px;margin-left:6px}
+#phone{width:600px;height:1230px;left:240px;top:420px;border-radius:92px;background:#0a0f1c;border:3px solid #34405e;
+  box-shadow:0 0 0 12px #121a2c,0 0 0 14px #2b3654,0 60px 140px rgba(0,0,0,.6),0 0 160px rgba(40,205,228,.25);overflow:hidden}
+#island{width:190px;height:54px;left:205px;top:22px;border-radius:30px;background:#000;z-index:5}
+#sbar{left:0;top:26px;width:100%;padding:0 60px;display:flex;justify-content:space-between;direction:ltr;font-weight:700;font-size:28px;z-index:4}
+#screen{left:0;top:0;width:100%;height:100%;background:linear-gradient(165deg,#070e1d,#10224c 60%,#0a1a3a);overflow:hidden}
+#scr{left:0;top:0;width:100%;direction:rtl}
+.sx{padding:0 42px}
+.s-head{display:flex;align-items:center;justify-content:space-between;padding:110px 42px 22px;border-bottom:1px solid rgba(255,255,255,.08)}
+.s-head img{height:58px}
+.s-pill{background:var(--wa);color:#fff;font-weight:700;font-size:24px;padding:6px 22px;border-radius:30px}
+.s-prompt{font-family:Mono;color:var(--cyan);font-size:22px;direction:ltr;text-align:right;margin:40px 0 18px}
+.s-h1{font-size:62px;font-weight:800;line-height:1.25}
+.s-h1 em{font-style:normal;color:var(--cyan)}
+.s-lead{color:#b4c3e0;font-size:26px;line-height:1.7;margin-top:22px}
+.s-btn{display:flex;align-items:center;justify-content:center;gap:12px;height:86px;border-radius:20px;font-size:30px;font-weight:700;margin-top:22px}
+.s-btn.g{background:var(--wa);margin-top:40px}
+.s-btn.o{border:2px solid rgba(255,255,255,.5)}
+.s-strip{margin-top:60px;padding:22px 0;border-block:1px solid rgba(255,255,255,.1);font-family:Mono;font-size:22px;color:#cfe;white-space:nowrap;direction:ltr;letter-spacing:.12em}
+.s-strip span{color:var(--cyan);margin:0 20px}
+.s-h2{font-size:44px;font-weight:800;margin:50px 0 20px}
+.s-h2 b{font-family:Mono;color:var(--cyan);font-size:30px;margin-left:12px}
+.s-card{border:1px solid rgba(255,255,255,.12);background:rgba(255,255,255,.04);border-radius:24px;padding:24px 26px;margin-bottom:18px}
+.s-card code{font-family:Mono;color:var(--cyan);font-size:18px;direction:ltr;display:block;text-align:right}
+.s-card h4{font-size:32px;margin-top:4px}
+.s-card p{color:#9fb0d2;font-size:22px}
+
+/* S3 products */
+#list{width:940px;left:70px;top:470px;direction:rtl}
+#listHead{display:flex;align-items:baseline;justify-content:space-between;margin-bottom:26px;padding:0 10px}
+#listHead h3{font-size:60px;font-weight:800}
+#listHead span{font-family:Mono;color:var(--cyan);font-size:28px;direction:ltr}
+#chips{display:flex;gap:14px;margin:0 10px 34px}
+.chip{font-size:28px;font-weight:700;padding:8px 26px;border-radius:40px;border:1.5px solid var(--line);color:var(--muted)}
+.chip.on{background:var(--cyan);border-color:var(--cyan);color:#04121f}
+.row{position:relative;display:flex;align-items:center;gap:28px;height:176px;padding:0 28px;margin-bottom:20px;border-radius:30px;background:var(--card);border:1.5px solid var(--line);transform-origin:50% 50%}
+.thumb{width:124px;height:124px;border-radius:22px;background:#fff;overflow:hidden;flex:none;display:grid;place-items:center}
+.thumb img{width:100%;height:100%;object-fit:cover}
+.thumb.ic{background:#123047}
+.thumb svg{width:66px;height:66px;stroke:var(--cyan);fill:none;stroke-width:1.8;stroke-linecap:round;stroke-linejoin:round}
+.meta{flex:1;min-width:0}
+.meta h4{font-size:38px;font-weight:800;line-height:1.25;white-space:nowrap}
+.meta p{font-size:25px;color:var(--muted);white-space:nowrap}
+.price{text-align:left;flex:none}
+.price b{display:block;font-size:46px;font-weight:800;direction:ltr;white-space:nowrap}
+.price b small{font-size:26px;color:var(--cyan);margin-left:6px}
+.price s{font-size:24px;color:#6f7fa3;direction:ltr;display:block}
+.badge{position:absolute;top:-18px;right:176px;font-size:22px;font-weight:700;padding:3px 18px;border-radius:20px;background:#13324a;color:var(--cyan);border:1px solid rgba(40,205,228,.4)}
+.price .t{font-size:30px;font-weight:700;color:var(--cyan)}
+
+/* S4 chat */
+#chat{width:900px;left:90px;top:520px;border-radius:44px;background:#0b1528;border:1.5px solid var(--line);overflow:hidden;direction:rtl;box-shadow:0 40px 120px rgba(0,0,0,.5)}
+#chatHead{display:flex;align-items:center;gap:22px;padding:30px 36px;background:#0f1f3a;border-bottom:1px solid var(--line)}
+#chatHead .av{width:92px;height:92px;border-radius:50%;background:#fff;display:grid;place-items:center;overflow:hidden}
+#chatHead .av img{width:74px}
+#chatHead h5{font-size:36px;font-weight:800;line-height:1.2}
+#chatHead p{font-size:24px;color:var(--wa)}
+#chatHead .wa{margin-right:auto;width:62px;height:62px}
+#chatBody{height:640px;padding:40px 36px;position:relative;background:
+  radial-gradient(circle at 20% 30%,rgba(40,205,228,.06),transparent 40%),#08111f}
+.b{position:absolute;max-width:640px;font-size:34px;line-height:1.55;padding:22px 30px;border-radius:30px}
+.b.in{right:36px;background:#1b2945;border-top-right-radius:8px}
+.b.out{left:36px;background:#0e5a6b;border-top-left-radius:8px}
+.b .tm{display:block;font-size:20px;color:#a9bad8;direction:ltr;text-align:left;margin-top:4px}
+.b .tk{color:#9fb0c8}
+#typing{left:36px;top:300px;width:150px;height:76px;border-radius:30px;background:#0e5a6b;display:flex;align-items:center;justify-content:center;gap:12px}
+#typing i{width:16px;height:16px;border-radius:50%;background:#cfefff}
+
+/* S5 kinetic */
+.kw{width:1080px;left:0;text-align:center;font-weight:800;font-size:150px;line-height:1.2;direction:rtl;white-space:nowrap}
+#k4{font-size:120px}
+#k5 em{font-style:normal;color:var(--cyan)}
+#uline{height:14px;border-radius:8px;background:var(--cyan);box-shadow:0 0 30px rgba(40,205,228,.8)}
+
+/* S6 cta / end */
+#pill{width:760px;height:170px;left:160px;top:875px;border-radius:90px;border:4px solid rgba(160,245,255,.9);
+  background:linear-gradient(90deg,#18b9d3,#2ad8e9);display:flex;align-items:center;justify-content:center;gap:22px;
+  font-size:58px;font-weight:800;color:#03202b;direction:rtl}
+#pill svg{width:70px;height:70px}
+#end{width:1080px;left:0;top:640px;text-align:center}
+#end img{height:300px}
+#endUrl{font-family:Mono;font-size:78px;margin-top:60px;direction:ltr}
+#endUrl b{color:var(--cyan)}
+#endAr{font-size:46px;font-weight:700;color:#c7d3ee;margin-top:6px}
+#endIg{display:inline-flex;align-items:center;gap:16px;margin-top:40px;font-size:40px;font-weight:700;color:var(--muted);direction:ltr;border:1.5px solid var(--line);padding:12px 34px;border-radius:50px}
+#endIg svg{width:46px;height:46px}
+#wm{right:70px;top:220px;display:flex;align-items:center;gap:12px;font-size:30px;font-weight:700;color:rgba(242,246,255,.85);direction:ltr}
+#wm svg{width:38px;height:38px}
+#flash{inset:0;background:radial-gradient(circle at 50% 50%,#bdf4ff,#28cde4 60%,#0b3a55);z-index:40;mix-blend-mode:screen}
+</style>
+</head>
+<body>
+<svg width="0" height="0" style="position:absolute"><symbol id="wa" viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></symbol></svg>
+<div id="stage">
+  <canvas id="bgc" class="abs" width="1080" height="1920" style="left:0;top:0"></canvas>
+
+  <!-- S1 LOGO (0-2.8s): no edits needed -->
+  <div id="dot" class="abs"></div>
+  <div id="logo" class="abs"><img id="logoR" src="assets/logo_r.png"><img id="logoP" src="assets/logo_p.png"></div>
+  <div id="tag" class="abs"></div>
+
+  <!-- S2 PHONE (2.6-6.2s): mock of rootjo.com. Edit only if the site changes -->
+  <div id="url" class="abs"><span id="urlT"></span><i id="urlC"></i></div>
+  <div id="phone" class="abs">
+    <div id="screen" class="abs">
+      <div class="s-head abs" style="left:0;top:0;width:100%;z-index:3;background:#081127"><img src="assets/logo.png"><span class="s-pill">واتساب</span></div>
+      <div id="scr" class="abs" style="top:190px">
+        <div class="sx">
+          <div class="s-prompt">root@tech-partner:~$ ./start</div>
+          <div class="s-h1">شريكك التقني لكل ما <em>تحتاجه</em> من حواسيب</div>
+          <div class="s-lead">لابتوبات وكمبيوترات جديدة ومستعملة، تراخيص برامج أصلية، وصيانة بأسعار واضحة.</div>
+          <div class="s-btn g">تواصل عبر واتساب</div>
+          <div class="s-btn o">تابعنا على انستغرام</div>
+        </div>
+        <div class="s-strip">LAPTOPS<span>&gt;_</span>DESKTOPS<span>&gt;_</span>LICENSES<span>&gt;_</span>REPAIR</div>
+        <div class="sx">
+          <div class="s-h2"><b>&gt;_</b>خدماتنا</div>
+          <div class="s-card"><code>$ laptops --new --used</code><h4>لابتوبات</h4><p>جديدة بالكرتونة ومستعملة بحالة ممتازة</p></div>
+          <div class="s-card"><code>$ license --activate</code><h4>تراخيص البرامج</h4><p>Microsoft 365 وتراخيص أخرى</p></div>
+          <div class="s-card"><code>$ repair --diagnose</code><h4>الصيانة</h4><p>فحص وإصلاح وتهيئة</p></div>
+        </div>
+      </div>
+    </div>
+    <div id="island" class="abs"></div>
+    <div id="sbar" class="abs"><span>9:41</span><span>5G&nbsp;&#9646;</span></div>
+  </div>
+
+  <!-- S3 PRODUCTS (6-10.8s) EDIT: 4 rows #r0..#r3. Each: optional .badge, .thumb (img in assets/ or svg icon), .meta h4 name + p specs (use dir="ltr" for English specs), .price (b=number + small JD, optional s=old price, or span.t for text). Keep exactly 4 rows (timing in render()). Chips #ch0..#ch3 labels can change. -->
+  <div id="list" class="abs">
+    <div id="listHead"><h3>منتجات Root</h3><span>rootjo.com</span></div>
+    <div id="chips"><span class="chip on" id="ch0">الكل</span><span class="chip" id="ch1">لابتوبات</span><span class="chip" id="ch2">تراخيص</span><span class="chip" id="ch3">صيانة</span></div>
+    <div class="row" id="r0"><span class="badge">جديد بالكرتونة</span><div class="thumb"><img src="assets/thinkpad.png"></div>
+      <div class="meta"><h4>ThinkPad X1 Carbon Gen 9</h4><p dir="ltr" style="text-align:right">Core i7 11th Gen · 16GB · 1TB SSD</p></div>
+      <div class="price"><b>440<small>JD</small></b></div></div>
+    <div class="row" id="r1"><span class="badge">عرض خاص</span><div class="thumb"><img src="assets/m365.png" style="object-position:50% 20%"></div>
+      <div class="meta"><h4>Microsoft 365 Personal</h4><p>سنة كاملة · 5 أجهزة · 1TB سحابة</p></div>
+      <div class="price"><s>70 JD</s><b>25<small>JD</small></b></div></div>
+    <div class="row" id="r2"><div class="thumb ic"><svg viewBox="0 0 24 24"><rect x="2" y="3" width="20" height="13" rx="2"/><path d="M8 21h8M12 16v5"/></svg></div>
+      <div class="meta"><h4>كمبيوتر مكتبي</h4><p>تجميع حسب ميزانيتك واستخدامك</p></div>
+      <div class="price"><span class="t">حسب الطلب</span></div></div>
+    <div class="row" id="r3"><div class="thumb ic"><svg viewBox="0 0 24 24"><path d="M14.7 6.3a4 4 0 0 0-5.4 5.4L3 18l3 3 6.3-6.3a4 4 0 0 0 5.4-5.4l-2.6 2.6-2.4-.6-.6-2.4z"/></svg></div>
+      <div class="meta"><h4>صيانة وتهيئة</h4><p>فحص · تنظيف · تثبيت أنظمة</p></div>
+      <div class="price"><span class="t">احجز الآن</span></div></div>
+  </div>
+
+  <!-- S4 WHATSAPP CHAT (10.7-14.1s) EDIT: #b1 customer question, #b2 Root reply with product + price. Wrap English/numbers in <bdi>. -->
+  <div id="chat" class="abs">
+    <div id="chatHead"><div class="av"><img src="assets/logo_navy.png" id="avimg"></div>
+      <div><h5>Root Computers</h5><p>متصل الآن</p></div>
+      <svg class="wa" viewBox="0 0 24 24" fill="#25d366"><use href="#wa"/></svg>
+    </div>
+    <div id="chatBody">
+      <div class="b in" id="b1" style="top:40px">مرحباً Root، بدي لابتوب للشغل والدراسة<span class="tm">10:24</span></div>
+      <div id="typing" class="abs"><i></i><i></i><i></i></div>
+      <div class="b out" id="b2" style="top:300px">أهلاً! عنا <bdi>ThinkPad X1 Carbon</bdi><br>جديد بالكرتونة بسعر <b><bdi>440 JD</bdi></b><span class="tm">10:25 <span class="tk" id="tk">&#10003;&#10003;</span></span></div>
+    </div>
+  </div>
+
+  <!-- S5 KINETIC TEXT (14-17s) EDIT: #k1-#k3 three short words, #k4 line, #k5 line with one <em> word (gets cyan + underline). -->
+  <div class="kw abs" id="k1">لابتوبات.</div>
+  <div class="kw abs" id="k2">تراخيص.</div>
+  <div class="kw abs" id="k3">صيانة.</div>
+  <div class="kw abs" id="k4">جهازك الجاي</div>
+  <div class="kw abs" id="k5">صار <em>أقرب</em></div>
+  <div id="uline" class="abs"></div>
+
+  <!-- S6 CTA + END CARD (17-20s): pill text + end card. Usually no edits. -->
+  <div id="pill" class="abs"><svg viewBox="0 0 24 24" fill="#03202b"><use href="#wa"/></svg>اطلب على واتساب</div>
+  <div id="end" class="abs">
+    <img src="assets/logo.png">
+    <div id="endUrl">rootjo<b>.com</b></div>
+    <div id="endAr">شريكك التقني</div>
+    <div id="endIg"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r=".8" fill="currentColor"/></svg>@rootcomputers</div>
+  </div>
+  <div id="wm" class="abs"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r=".8" fill="currentColor"/></svg>@rootcomputers</div>
+
+  <div id="flash" class="abs"></div>
+  <div id="vig" class="abs"></div>
+</div>
+
+<script>
+const $=id=>document.getElementById(id);
+const cl=(x,a=0,b=1)=>Math.min(b,Math.max(a,x));
+const P=(t,a,b)=>cl((t-a)/(b-a));
+const eo=x=>1-Math.pow(1-x,3);
+const eo5=x=>1-Math.pow(1-x,5);
+const ei=x=>x*x*x;
+const eio=x=>x<.5?4*x*x*x:1-Math.pow(-2*x+2,3)/2;
+const back=x=>{const c1=1.6,c3=c1+1;return 1+c3*Math.pow(x-1,3)+c1*Math.pow(x-1,2)};
+const lerp=(a,b,p)=>a+(b-a)*p;
+function S(el,o){ // o: op,x,y,s,sx,r,rx,blur,extra
+  if(typeof el==="string")el=$(el);
+  const op=o.op==null?1:o.op;
+  el.style.opacity=op.toFixed(3);
+  el.style.visibility=op<=0.001?"hidden":"visible";
+  let tr="";
+  if(o.p)tr+=`perspective(${o.p}px) `;
+  tr+=`translate(${(o.x||0).toFixed(1)}px,${(o.y||0).toFixed(1)}px)`;
+  if(o.rx)tr+=` rotateX(${o.rx.toFixed(2)}deg)`;
+  if(o.ry)tr+=` rotateY(${o.ry.toFixed(2)}deg)`;
+  if(o.r)tr+=` rotate(${o.r.toFixed(2)}deg)`;
+  const s=o.s==null?1:o.s;
+  tr+=` scale(${(o.sx==null?s:o.sx).toFixed(4)},${(o.sy==null?s:o.sy).toFixed(4)})`;
+  el.style.transform=tr;
+  el.style.filter=o.blur>0.05?`blur(${o.blur.toFixed(2)}px)`:"none";
+}
+// window: in a->b, out c->d
+const win=(t,a,b,c,d)=>Math.min(eo(P(t,a,b)),1-ei(P(t,c,d)));
+
+// grain (deterministic)
+const grainC=document.createElement("canvas");grainC.width=540;grainC.height=960;
+(function(){const g=grainC.getContext("2d");let s=7;const r=()=>(s=(s*16807)%2147483647)/2147483647;
+ const im=g.createImageData(540,960);for(let i=0;i<im.data.length;i+=4){const v=r()*255;im.data[i]=im.data[i+1]=im.data[i+2]=v;im.data[i+3]=255}g.putImageData(im,0,0)})();
+
+const TAG="YOUR TECH PARTNER", URL="rootjo.com";
+
+function render(t){
+  // ---------- background glow choreography ----------
+  // [time, x(center), y(center), scale, opacity]
+  const K=[[0,540,960,.05,0],[.5,540,960,.25,1],[1.3,540,960,.85,1],[2.4,540,960,.95,1],[2.9,540,1250,.8,.9],[3.6,540,1000,1.05,1],[5.6,540,1050,1,1],
+           [6.1,540,820,.75,.9],[7,540,700,.8,1],[8,540,900,.8,1],[9,540,1080,.8,1],[9.8,540,1260,.8,1],[10.6,540,900,.95,1],
+           [11.2,700,800,.75,1],[12.4,380,1100,.8,1],[13.8,540,950,.9,1],[14.4,540,950,.55,.8],[15.5,540,950,.7,.9],[16.2,620,1020,.85,1],
+           [17.0,540,960,.6,1],[17.9,540,960,.9,1],[18.3,540,960,1.5,1],[19,540,900,1,1],[20,540,900,1.05,1]];
+  let i=0;while(i<K.length-2&&t>K[i+1][0])i++;
+  const k0=K[i],k1=K[i+1],q=eio(P(t,k0[0],k1[0]));
+  const gx=lerp(k0[1],k1[1],q),gy=lerp(k0[2],k1[2],q),gs=lerp(k0[3],k1[3],q)*(1+.03*Math.sin(t*2.2)),go=lerp(k0[4],k1[4],q);
+  drawBg(t,gx,gy,gs,go);
+
+  // ---------- S1 logo 0–2.8 ----------
+  const dotIn=eo(P(t,0,.45)), dotOut=P(t,.55,.85);
+  S("dot",{s:dotIn*(1+.4*Math.sin(t*12))*(1-dotOut*.9),op:dotIn*(1-dotOut)});
+  const lr=eo5(P(t,.6,1.4)), lp=back(P(t,1.05,1.55)), lout=ei(P(t,2.35,2.85));
+  S("logo",{s:(.86+.14*lr)*(1+.35*lout),op:1-lout,blur:(1-lr)*18+lout*26});
+  S("logoR",{op:lr});
+  S("logoP",{x:(1-lp)*-80,op:P(t,1.05,1.3)});
+  const blink=(Math.floor(t*2.5)%2===0||t<1.6)?1:.15;
+  $("logoP").style.clipPath="none";
+  const n=Math.floor(P(t,1.5,2.2)*TAG.length+.001);
+  $("tag").textContent=TAG.slice(0,n);
+  S("tag",{op:(1-lout)*P(t,1.45,1.6),y:lout*-30,blur:lout*10});
+
+  // ---------- S2 phone 2.6–6.2 ----------
+  const pin=eo5(P(t,2.6,3.4)), pout=ei(P(t,5.6,6.15));
+  S("phone",{p:2200,y:(1-pin)*900+pout*-120,rx:(1-pin)*28+pout*-10,s:(.9+.1*pin)*(1-pout*.18),op:Math.min(P(t,2.6,2.9),1-pout),blur:pout*22});
+  S("scr",{y:-430*eio(P(t,3.9,5.5))});
+  const un=Math.floor(P(t,3.0,3.8)*URL.length+.001);
+  $("urlT").innerHTML=URL.slice(0,un).replace(".com","<b>.com</b>").replace(/\.co$/,"<b>.co</b>").replace(/\.c$/,"<b>.c</b>").replace(/\.$/,"<b>.</b>");
+  S("url",{op:Math.min(P(t,2.95,3.1),1-pout),y:pout*-40,blur:pout*12});
+  S("urlC",{op:(Math.floor(t*3)%2===0)?1:0});
+
+  // ---------- S3 products 6.0–10.8 ----------
+  const lin=eo5(P(t,6.0,6.8)), lout2=ei(P(t,10.3,10.8));
+  S("list",{p:2400,y:(1-lin)*220+lout2*-160,rx:(1-lin)*-18,s:(.94+.06*lin)*(1-lout2*.1),op:Math.min(P(t,6.0,6.4),1-lout2),blur:(1-lin)*14+lout2*20});
+  const act=[[6.9,7.9,0],[7.9,8.9,1],[8.9,9.7,2],[9.7,10.6,3]];
+  for(let r=0;r<4;r++){
+    const rin=eo(P(t,6.25+r*.12,6.85+r*.12));
+    let a=0;act.forEach(([s0,s1,ri])=>{if(ri===r)a=Math.max(a,Math.min(eo(P(t,s0,s0+.3)),1-eio(P(t,s1-.15,s1+.15))))});
+    const anyAct=t>6.9&&t<10.6?1:0;
+    const el=$("r"+r);
+    S(el,{x:(1-rin)*-120 + a*-24,s:1+a*.07,op:rin*(1-anyAct*.5*(1-a))});
+    el.style.borderColor=a>.02?`rgba(40,205,228,${(.3+.7*a).toFixed(2)})`:"";
+    el.style.boxShadow=a>.02?`0 0 ${Math.round(70*a)}px rgba(40,205,228,${(.45*a).toFixed(2)}), 0 30px 60px rgba(0,0,0,${(.4*a).toFixed(2)})`:"none";
+    el.style.background=a>.02?`rgb(${Math.round(14+12*a)},${Math.round(24+22*a)},${Math.round(48+30*a)})`:"";
+    el.style.zIndex=a>.5?2:1;
+  }
+  const chipIdx=t<7.9?1:t<8.9?2:t<9.7?0:3;
+  for(let c=0;c<4;c++)$("ch"+c).classList.toggle("on",t<6.9?c===0:c===chipIdx);
+
+  // ---------- S4 chat 10.7–14.1 ----------
+  const cin=eo5(P(t,10.7,11.4)), cout=ei(P(t,13.6,14.1));
+  S("chat",{y:(1-cin)*260+cout*-120,s:(.92+.08*cin)*(1-cout*.12),op:Math.min(P(t,10.7,11),1-cout),blur:(1-cin)*12+cout*20});
+  const b1=back(P(t,11.4,11.8));
+  S("b1",{s:.6+.4*b1,op:P(t,11.4,11.55),x:(1-b1)*40});
+  $("b1").style.transformOrigin="100% 0";
+  const ty=Math.min(P(t,11.95,12.05),1-P(t,12.45,12.55));
+  S("typing",{op:ty,s:.8+.2*eo(P(t,11.95,12.15))});
+  document.querySelectorAll("#typing i").forEach((d,j)=>{d.style.transform=`translateY(${(-8*Math.max(0,Math.sin((t*9)-j*.9))).toFixed(1)}px)`});
+  const b2=back(P(t,12.5,12.9));
+  S("b2",{s:.6+.4*b2,op:P(t,12.5,12.65),x:(1-b2)*-40});
+  $("b2").style.transformOrigin="0 0";
+  $("tk").style.color=t>13.1?"#53bdeb":"#9fb0c8";
+
+  // ---------- S5 kinetic 14.0–17.1 ----------
+  const kOut=ei(P(t,15.35,15.6));
+  [["k1",14.15,720],["k2",14.5,880],["k3",14.85,1040]].forEach(([id,st,top])=>{
+    const p=eo5(P(t,st,st+.35));
+    $(id).style.top=top+"px";
+    S(id,{y:(1-p)*90-kOut*40,op:Math.min(P(t,st,st+.15),1-kOut),blur:(1-p)*14+kOut*16,s:1-kOut*.05});
+  });
+  const k4=eo5(P(t,15.65,16.05)), k5=eo5(P(t,16.05,16.45)), kEnd=ei(P(t,16.85,17.15));
+  $("k4").style.top="790px";$("k5").style.top="950px";
+  S("k4",{y:(1-k4)*80-kEnd*30,op:Math.min(P(t,15.65,15.8),1-kEnd),blur:(1-k4)*14+kEnd*16});
+  S("k5",{y:(1-k5)*80-kEnd*30,op:Math.min(P(t,16.05,16.2),1-kEnd),blur:(1-k5)*14+kEnd*16,s:1+.04*eo(P(t,16.3,16.8))});
+  // underline under "أقرب": measure em
+  const em=document.querySelector("#k5 em"),rb=em.getBoundingClientRect();
+  const ul=eo(P(t,16.35,16.75));
+  const ulEl=$("uline");ulEl.style.top=(950+205)+"px";
+  const w=Math.max(rb.width,10);ulEl.style.width=w+"px";ulEl.style.left=(rb.left - (k5<1? 0:0))+"px";
+  ulEl.style.transformOrigin="100% 50%";
+  S(ulEl,{sx:ul,sy:1,op:Math.min(ul>0?1:0,1-kEnd)});
+
+  // ---------- S6 CTA + end 17.0–20 ----------
+  const pi=back(P(t,17.1,17.6)), press=Math.sin(Math.PI*P(t,17.95,18.2)), pout3=ei(P(t,18.15,18.4));
+  S("pill",{s:(.5+.5*pi)*(1-.06*press)*(1+pout3*.6),op:Math.min(P(t,17.1,17.25),1-pout3),blur:pout3*20});
+  const pg=.5+.5*Math.sin(t*6);
+  $("pill").style.boxShadow=`0 0 ${Math.round(60+50*pg)}px rgba(40,205,228,${(.55+.25*pg).toFixed(2)}),0 0 ${Math.round(160+60*pg)}px rgba(40,205,228,.35)`;
+  const fl=Math.min(eo(P(t,18.15,18.25)),1-eo(P(t,18.25,18.75)));
+  S("flash",{op:fl*.28});
+  const e1=eo5(P(t,18.3,19.0)), e2=eo5(P(t,18.6,19.2)), e3=eo5(P(t,18.85,19.4));
+  S("end",{op:P(t,18.3,18.5)});
+  const eimg=$("end").querySelector("img");
+  S(eimg,{s:.8+.2*e1,blur:(1-e1)*16,op:e1});
+  S("endUrl",{y:(1-e2)*40,op:e2,blur:(1-e2)*8});
+  S("endAr",{y:(1-e2)*40,op:e2*.95});
+  S("endIg",{y:(1-e3)*40,op:e3});
+
+  // watermark during middle
+  S("wm",{op:Math.min(P(t,6.2,6.6),1-P(t,16.8,17.1))*.9});
+}
+const bg=$("bgc").getContext("2d");
+function rg(x,y,r,stops){const g=bg.createRadialGradient(x,y,0,x,y,r);stops.forEach(([o,c])=>g.addColorStop(o,c));bg.fillStyle=g;bg.fillRect(x-r,y-r,2*r,2*r)}
+function drawBg(t,gx,gy,gs,go){
+  bg.globalAlpha=1;bg.fillStyle="#040a16";bg.fillRect(0,0,1080,1920);
+  // grid with radial falloff
+  const ga=.9*P(t,.3,1.5); if(ga>0){
+    bg.save();bg.strokeStyle="rgba(40,205,228,.07)";bg.lineWidth=1;bg.beginPath();
+    const off=(t*14)%90;for(let x=0;x<=1080;x+=90){bg.moveTo(x+.5,0);bg.lineTo(x+.5,1920)}for(let y=-90+off;y<=1920;y+=90){bg.moveTo(0,y+.5);bg.lineTo(1080,y+.5)}
+    bg.globalAlpha=ga;bg.stroke();
+    bg.restore();
+  }
+  // re-darken edges of grid by painting bg color radially
+  rg(540,960,1150,[[0,"rgba(4,10,22,0)"],[.45,"rgba(4,10,22,0)"],[1,"rgba(4,10,22,1)"]]);
+  // glows
+  bg.globalCompositeOperation="lighter";
+  const x2=540+(gx-540)*-.4+Math.sin(t*.7)*60, y2=960+(gy-960)*-.3+Math.cos(t*.5)*50, s2=(.8+.2*Math.sin(t*.4));
+  bg.globalAlpha=.6*go;rg(x2,y2,520*s2,[[0,"rgba(80,110,255,.33)"],[1,"rgba(80,110,255,0)"]]);
+  bg.globalAlpha=go;rg(gx,gy,700*gs,[[0,"rgba(40,205,228,.55)"],[.3,"rgba(18,169,201,.26)"],[.6,"rgba(30,80,200,.08)"],[1,"rgba(0,0,0,0)"]]);
+  bg.globalCompositeOperation="source-over";
+  // grain
+  bg.globalAlpha=.05;bg.drawImage(grainC,0,0,1080,1920);bg.globalAlpha=1;
+}
+window.render=render;
+window.ready=document.fonts.ready.then(()=>new Promise(r=>setTimeout(r,300)));
+</script>
+</body>
+</html>
