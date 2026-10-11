@@ -52,7 +52,8 @@ html[lang="en"] .lang{font-family:var(--font-ar);font-size:15px;padding:5px 14px
 .gal img{width:100%;height:100%;object-fit:contain;padding:28px;filter:drop-shadow(0 18px 22px rgba(0,0,0,.28))}
 .gal.cover img{object-fit:cover;padding:0}
 .sold .gal img{filter:grayscale(1);opacity:.55}
-.pbadge{position:absolute;top:14px;inset-inline-start:14px;font-size:14px;font-weight:800;padding:4px 14px;border-radius:999px;background:var(--cyan);color:#04121f}
+.ptags{display:flex;flex-wrap:wrap;gap:8px;align-items:center}
+.pbadge{font-size:14px;font-weight:800;padding:3px 14px;border-radius:999px;background:var(--cyan);color:#04121f}
 .sold .pbadge{background:#6b7280;color:#fff}
 .info{display:flex;flex-direction:column;gap:14px;min-width:0}
 .cond{align-self:flex-start;font-size:14px;font-weight:700;padding:3px 14px;border-radius:999px;background:var(--cyan-soft);color:var(--navy)}
@@ -110,9 +111,9 @@ footer{border-top:1px solid var(--line);padding-block:24px 40px;color:var(--mute
 <main class="wrap">
   <a class="crumb" href="../#products"><span class="t-ar">&rarr; كل المنتجات</span><span class="t-en">&larr; All products</span></a>
   <div class="prod">
-    <div class="gal"><span class="pbadge"><span class="t-ar">عرض خاص</span><span class="t-en">Special offer</span></span><img src="../img/products/microsoft-365-personal.webp" alt="Microsoft 365 Personal"></div>
+    <div class="gal"><img src="../img/products/microsoft-365-personal.webp" alt="Microsoft 365 Personal"></div>
     <div class="info">
-      <span class="cond digital"><span class="t-ar">ترخيص رقمي</span><span class="t-en">Digital license</span></span>
+      <div class="ptags"><span class="pbadge"><span class="t-ar">عرض خاص</span><span class="t-en">Special offer</span></span><span class="cond digital"><span class="t-ar">ترخيص رقمي</span><span class="t-en">Digital license</span></span></div>
       <h1>Microsoft 365 Personal</h1>
       <div class="price"><s>70 JD</s><b>25<small>JD</small></b></div>
       <p class="about"><span class="t-ar">اشتراك سنة كاملة في Microsoft 365 لشخص واحد، مع تطبيقات Office كاملة و1TB تخزين سحابي.</span><span class="t-en">A full year of Microsoft 365 for one person, with the complete Office apps and 1TB of cloud storage.</span></p>
@@ -132,7 +133,7 @@ footer{border-top:1px solid var(--line);padding-block:24px 40px;color:var(--mute
   <h2><span class="t-ar">المواصفات</span><span class="t-en">Specifications</span></h2><dl class="specs"><div><dt><span class="t-ar">المستخدمين</span><span class="t-en">Users</span></dt><dd>1 person</dd></div><div><dt><span class="t-ar">المدة</span><span class="t-en">Duration</span></dt><dd>12-month subscription</dd></div><div><dt><span class="t-ar">الأجهزة</span><span class="t-en">Devices</span></dt><dd>Up to 5 devices at the same time</dd></div><div><dt><span class="t-ar">الأنظمة</span><span class="t-en">Platforms</span></dt><dd>Windows, Mac, iPhone, Android</dd></div><div><dt><span class="t-ar">التخزين السحابي</span><span class="t-en">Cloud storage</span></dt><dd>1TB OneDrive cloud storage</dd></div><div><dt><span class="t-ar">التطبيقات</span><span class="t-en">Apps</span></dt><dd>Word, Excel, PowerPoint, Outlook, OneNote</dd></div></dl>
   <h2><span class="t-ar">منتجات ثانية متوفرة</span><span class="t-en">More available now</span></h2><div class="more"><a class="mcard" href="asus-rog-zephyrus-g14-oled.html"><img src="../img/products/asus-rog-zephyrus-g14-oled.webp" alt="" loading="lazy"><div><span>ASUS ROG Zephyrus G14 OLED</span><small>1799 JD</small></div></a><a class="mcard" href="lenovo-thinkpad-e16-gen4.html"><img src="../img/products/lenovo-thinkpad-e16-gen4.webp" alt="" loading="lazy"><div><span>Lenovo ThinkPad E16 Gen 4</span><small>1199 JD</small></div></a><a class="mcard" href="asus-tuf-gaming-a15.html"><img src="../img/products/asus-tuf-gaming-a15.webp" alt="" loading="lazy"><div><span>ASUS TUF Gaming A15</span><small>799 JD</small></div></a></div>
 </main>
-<footer><div class="wrap">Root &middot; Your Tech Partner &middot; <a href="../">rootjo.com</a> &middot; <a href="https://www.instagram.com/rootcomputers/" target="_blank" rel="noopener">@rootcomputers</a></div></footer>
+<footer><div class="wrap">Root &middot; Your Tech Partner &middot; <a href="../">rootjo.com</a> &middot; <a href="https://www.instagram.com/rootcomputers/" target="_blank" rel="noopener">@rootcomputers</a> &middot; <a href="mailto:info@rootjo.com">info@rootjo.com</a></div></footer>
 <script>
 (function(){
   var h=document.documentElement;

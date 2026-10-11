@@ -52,7 +52,8 @@ html[lang="en"] .lang{font-family:var(--font-ar);font-size:15px;padding:5px 14px
 .gal img{width:100%;height:100%;object-fit:contain;padding:28px;filter:drop-shadow(0 18px 22px rgba(0,0,0,.28))}
 .gal.cover img{object-fit:cover;padding:0}
 .sold .gal img{filter:grayscale(1);opacity:.55}
-.pbadge{position:absolute;top:14px;inset-inline-start:14px;font-size:14px;font-weight:800;padding:4px 14px;border-radius:999px;background:var(--cyan);color:#04121f}
+.ptags{display:flex;flex-wrap:wrap;gap:8px;align-items:center}
+.pbadge{font-size:14px;font-weight:800;padding:3px 14px;border-radius:999px;background:var(--cyan);color:#04121f}
 .sold .pbadge{background:#6b7280;color:#fff}
 .info{display:flex;flex-direction:column;gap:14px;min-width:0}
 .cond{align-self:flex-start;font-size:14px;font-weight:700;padding:3px 14px;border-radius:999px;background:var(--cyan-soft);color:var(--navy)}
@@ -112,7 +113,7 @@ footer{border-top:1px solid var(--line);padding-block:24px 40px;color:var(--mute
   <div class="prod">
     <div class="gal"><img src="../img/products/asus-rog-zephyrus-g14-oled.webp" alt="ASUS ROG Zephyrus G14 OLED"></div>
     <div class="info">
-      <span class="cond new"><span class="t-ar">جديد بالكرتونة · كفالة سنة</span><span class="t-en">New in box · 1-year warranty</span></span>
+      <div class="ptags"><span class="cond new"><span class="t-ar">جديد بالكرتونة · كفالة سنة</span><span class="t-en">New in box · 1-year warranty</span></span></div>
       <h1>ASUS ROG Zephyrus G14 OLED</h1>
       <div class="price"><s>1829 JD</s><b>1799<small>JD</small></b></div>
       <p class="about"><span class="t-ar">لابتوب ألعاب وتصميم خفيف بشاشة OLED بدقة 3K وكرت RTX 5060. جديد بالكرتونة مع كفالة سنة.</span><span class="t-en">A light gaming and creator laptop with a 3K OLED display and an RTX 5060. New in the box with a 1-year warranty.</span></p>
@@ -132,7 +133,7 @@ footer{border-top:1px solid var(--line);padding-block:24px 40px;color:var(--mute
   <h2><span class="t-ar">المواصفات</span><span class="t-en">Specifications</span></h2><dl class="specs"><div><dt><span class="t-ar">المعالج</span><span class="t-en">Processor</span></dt><dd>AMD Ryzen AI 9 465, up to 5.0GHz</dd></div><div><dt><span class="t-ar">الذاكرة</span><span class="t-en">Memory</span></dt><dd>16GB LPDDR5X</dd></div><div><dt><span class="t-ar">التخزين</span><span class="t-en">Storage</span></dt><dd>1TB PCIe 4.0 NVMe SSD</dd></div><div><dt><span class="t-ar">الشاشة</span><span class="t-en">Display</span></dt><dd>14&quot; 3K OLED, 120Hz, Nebula HDR</dd></div><div><dt><span class="t-ar">كرت الشاشة</span><span class="t-en">Graphics</span></dt><dd>NVIDIA GeForce RTX 5060 8GB GDDR7</dd></div><div><dt><span class="t-ar">الشبكة</span><span class="t-en">Wireless</span></dt><dd>Wi-Fi 7</dd></div><div><dt><span class="t-ar">البطارية</span><span class="t-en">Battery</span></dt><dd>73Wh</dd></div><div><dt><span class="t-ar">الكفالة</span><span class="t-en">Warranty</span></dt><dd>1 year</dd></div></dl>
   <h2><span class="t-ar">منتجات ثانية متوفرة</span><span class="t-en">More available now</span></h2><div class="more"><a class="mcard" href="lenovo-thinkpad-e16-gen4.html"><img src="../img/products/lenovo-thinkpad-e16-gen4.webp" alt="" loading="lazy"><div><span>Lenovo ThinkPad E16 Gen 4</span><small>1199 JD</small></div></a><a class="mcard" href="asus-tuf-gaming-a15.html"><img src="../img/products/asus-tuf-gaming-a15.webp" alt="" loading="lazy"><div><span>ASUS TUF Gaming A15</span><small>799 JD</small></div></a><a class="mcard" href="hp-zbook-firefly-14-g7.html"><img src="../img/products/hp-zbook-firefly-14-g7.webp" alt="" loading="lazy"><div><span>HP ZBook Firefly 14 G7</span><small>280 JD</small></div></a></div>
 </main>
-<footer><div class="wrap">Root &middot; Your Tech Partner &middot; <a href="../">rootjo.com</a> &middot; <a href="https://www.instagram.com/rootcomputers/" target="_blank" rel="noopener">@rootcomputers</a></div></footer>
+<footer><div class="wrap">Root &middot; Your Tech Partner &middot; <a href="../">rootjo.com</a> &middot; <a href="https://www.instagram.com/rootcomputers/" target="_blank" rel="noopener">@rootcomputers</a> &middot; <a href="mailto:info@rootjo.com">info@rootjo.com</a></div></footer>
 <script>
 (function(){
   var h=document.documentElement;

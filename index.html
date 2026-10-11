@@ -15,7 +15,7 @@
 <meta property="og:image" content="https://rootjo.com/img/og-image.jpg">
 <meta name="twitter:card" content="summary_large_image">
 <link rel="icon" type="image/png" href="img/favicon.png">
-<script type="application/ld+json">{"@context": "https://schema.org", "@type": "Store", "name": "Root Computers", "url": "https://rootjo.com/", "logo": "https://rootjo.com/img/logo.png", "image": "https://rootjo.com/img/og-image.jpg", "telephone": "+962799167971", "address": {"@type": "PostalAddress", "addressCountry": "JO"}, "sameAs": ["https://www.instagram.com/rootcomputers/"]}</script>
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "Store", "name": "Root Computers", "url": "https://rootjo.com/", "logo": "https://rootjo.com/img/logo.png", "image": "https://rootjo.com/img/og-image.jpg", "telephone": "+962799167971", "email": "info@rootjo.com", "address": {"@type": "PostalAddress", "addressCountry": "JO"}, "sameAs": ["https://www.instagram.com/rootcomputers/"]}</script>
 <title>Root Computers</title>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;700;800&family=JetBrains+Mono:wght@500;700&display=swap">
 <script>document.documentElement.classList.add('js')</script>
@@ -139,7 +139,8 @@ h2::before{content:">_";font-family:var(--font-mono);color:var(--cyan);font-size
 .pcard .pbody{padding:16px 18px 18px;display:flex;flex-direction:column;gap:8px;flex:1}
 .cond{align-self:flex-start;font-size:13px;font-weight:700;padding:3px 12px;border-radius:999px;background:var(--cyan-soft);color:var(--navy)}
 .cond.used{background:color-mix(in srgb,#f0b429 22%,transparent)}
-.pbadge{position:absolute;top:12px;inset-inline-start:12px;font-size:13px;font-weight:800;padding:4px 12px;border-radius:999px;background:var(--cyan);color:#04121f}
+.ptags{display:flex;flex-wrap:wrap;gap:6px;align-items:center}
+.pbadge{font-size:13px;font-weight:800;padding:3px 12px;border-radius:999px;background:var(--cyan);color:#04121f}
 .pcard h3{margin:0;font-size:19px;line-height:1.35;color:var(--navy)}
 .pcard h3 a{text-decoration:none}
 .pcard h3 a:hover{text-decoration:underline}
@@ -192,7 +193,7 @@ h2::before{content:">_";font-family:var(--font-mono);color:var(--cyan);font-size
 @keyframes pulse{70%{box-shadow:0 0 0 10px transparent}100%{box-shadow:0 0 0 0 transparent}}
 .note{color:var(--muted);font-size:16px;margin:16px 0 0}
 
-.contact{display:grid;grid-template-columns:repeat(auto-fit,minmax(270px,1fr));gap:16px}
+.contact{display:grid;grid-template-columns:repeat(auto-fit,minmax(230px,1fr));gap:16px}
 .card{background:var(--glass);backdrop-filter:blur(10px);-webkit-backdrop-filter:blur(10px);border:1px solid var(--line);border-radius:18px;padding:28px;display:grid;gap:12px;min-width:0}
 .card h3{margin:0;font-size:21px;color:var(--navy)}
 .card .val{font-family:var(--font-mono);font-weight:700;direction:ltr;text-align:right;overflow-wrap:anywhere;font-size:18px}
@@ -344,6 +345,11 @@ img{max-width:100%}[hidden]{display:none!important}
           <div class="val">@rootcomputers</div>
           <a class="btn solid" href="https://www.instagram.com/rootcomputers/" target="_blank" rel="noopener" data-i18n="ct_ig_btn">افتح الصفحة</a>
         </div>
+        <div class="card">
+          <h3 data-i18n="ct_mail">البريد الإلكتروني</h3>
+          <div class="val">info@rootjo.com</div>
+          <a class="btn solid" href="mailto:info@rootjo.com" data-i18n="ct_mail_btn">راسلنا</a>
+        </div>
       </div>
     </div>
   </section>
@@ -351,7 +357,7 @@ img{max-width:100%}[hidden]{display:none!important}
 
 <footer dir="rtl" lang="ar" data-dir>
   <div class="wrap">
-    <span>Root &middot; Your Tech Partner &middot; rootjo.com</span>
+    <span>Root &middot; Your Tech Partner &middot; rootjo.com &middot; <a href="mailto:info@rootjo.com">info@rootjo.com</a></span>
     <span data-i18n="foot">الأسعار والتوفر قابلة للتغيير، ويؤكدها فريقنا عند الطلب.</span>
   </div>
 </footer>
@@ -423,9 +429,8 @@ var CONFIG = {
     var cond = COND[p.condition] || ["", ""], note = en ? p.condition_note_en : p.condition_note_ar;
     var specs = (p.card_specs || []).slice(0, 4).map(function (x) { return "<li>" + esc(x) + "</li>"; }).join("");
     return '<article class="pcard' + (sold ? " sold" : "") + '">' +
-      (badge ? '<span class="pbadge">' + esc(badge) + "</span>" : "") +
       '<a class="pimg' + "" + '" href="' + url + '" tabindex="-1" aria-hidden="true"><img loading="lazy" src="' + esc(p.image) + '" alt=""></a>' +
-      '<div class="pbody"><span class="cond ' + esc(p.condition) + '">' + esc(cond[i]) + (note ? " · " + esc(note) : "") + "</span>" +
+      '<div class="pbody"><div class="ptags">' + (badge ? '<span class="pbadge">' + esc(badge) + "</span>" : "") + '<span class="cond ' + esc(p.condition) + '">' + esc(cond[i]) + (note ? " · " + esc(note) : "") + "</span></div>" +
       '<h3><a href="' + url + '" dir="ltr">' + esc(p.name) + "</a></h3>" +
       '<ul class="pspecs">' + specs + "</ul>" +
       '<div class="pprice">' + (p.old_price ? "<s>" + p.old_price + " JD</s>" : "") + "<b>" + p.price + "<small>JD</small></b></div>" +
@@ -521,6 +526,8 @@ var CONFIG = {
 "f5d": "Across Jordan, pay on delivery",
 "ct_wa_btn": "Start a chat",
 "ct_ig_btn": "Open profile",
+"ct_mail": "Email",
+"ct_mail_btn": "Send an email",
 "foot": "Prices and availability may change; our team confirms them when you order."
 };
   var TXT = {
