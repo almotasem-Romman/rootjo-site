@@ -18,7 +18,7 @@ log = []
 for line in open("images2.txt", encoding="utf-8"):
     line = line.strip()
     if not line or line.startswith("#"): continue
-    name, path = line.split()[:2]
+    name, path, *flags = line.split()
     try:
         im = Image.open(path).convert("RGB")
         m = max(im.size)
@@ -29,7 +29,24 @@ for line in open("images2.txt", encoding="utf-8"):
             im = Image.fromarray(cv2.cvtColor(up, cv2.COLOR_BGR2RGB))
         im.thumbnail((2000, 2000), Image.LANCZOS)
         print("processing", name, im.size, flush=True)
-        cut = remove(im, session=sess, post_process_mask=False)
+        mask = remove(im, session=sess, only_mask=True, post_process_mask=False)
+        m = (np.asarray(mask) > 127).astype(np.uint8) * 255
+        if "close" in flags or "fill" in flags:
+            m = cv2.morphologyEx(m, cv2.MORPH_CLOSE, np.ones((9, 9), np.uint8))
+        if "biggest" in flags:
+            n, lab, stats, _ = cv2.connectedComponentsWithStats(m)
+            if n > 1:
+                big = stats[1:, cv2.CC_STAT_AREA].max()
+                keep = [i for i in range(1, n) if stats[i, cv2.CC_STAT_AREA] > big * 0.05]
+                m = np.isin(lab, keep).astype(np.uint8) * 255
+        if "fill" in flags:
+            cnts, _ = cv2.findContours(m, cv2.RETR_EXTERNAL, cv2.CHAIN_APPROX_SIMPLE)
+            m = np.zeros_like(m); cv2.drawContours(m, cnts, -1, 255, -1)
+        if "hull" in flags:
+            pts = cv2.findNonZero(m); h = cv2.convexHull(pts)
+            m = np.zeros_like(m); cv2.fillPoly(m, [h], 255)
+        soft = Image.fromarray(m).filter(__import__("PIL.ImageFilter", fromlist=["x"]).GaussianBlur(1.0))
+        cut = im.convert("RGBA"); cut.putalpha(soft)
         bb = cut.getbbox(); cut = cut.crop(bb) if bb else cut
         cut.thumbnail((1600, 1600), Image.LANCZOS)
         cut.save(f"out2/{name}.png", optimize=True)

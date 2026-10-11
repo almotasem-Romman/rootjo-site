@@ -1,13 +1,6 @@
-office src2/office.png
-m365 src2/m365.png
-win11 src2/win11.png
-winsrv src2/winsrv.png
-hp290 src2/hp290.png
-msi src2/msi.jpg
-msi-ad src2/msi-ad.png
-rog src2/rog.jpg
-tuf src2/tuf.jpg
-x1 src2/x1.jpg
-zbook src2/zbook.jpg
-e16 src2/e16.jpg
-# run 2
+office src2/office.png hull
+m365 src2/m365.png hull
+win11 src2/win11.png hull
+winsrv src2/winsrv.png hull
+hp290 src2/hp290.png biggest
+msi-ad src2/msi-ad.png fill biggest
