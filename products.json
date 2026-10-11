@@ -1,0 +1,604 @@
+[
+  {
+    "slug": "asus-rog-zephyrus-g14-oled",
+    "status": "available",
+    "category": "laptop",
+    "condition": "new",
+    "condition_note_ar": "كفالة سنة",
+    "condition_note_en": "1-year warranty",
+    "name": "ASUS ROG Zephyrus G14 OLED",
+    "price": 1799,
+    "old_price": 1829,
+    "badge_ar": "",
+    "badge_en": "",
+    "image": "img/products/asus-rog-zephyrus-g14-oled.webp",
+    "card_specs": [
+      "Ryzen AI 9 465",
+      "RTX 5060 8GB",
+      "16GB",
+      "1TB SSD"
+    ],
+    "specs": [
+      [
+        "cpu",
+        "AMD Ryzen AI 9 465, up to 5.0GHz"
+      ],
+      [
+        "ram",
+        "16GB LPDDR5X"
+      ],
+      [
+        "storage",
+        "1TB PCIe 4.0 NVMe SSD"
+      ],
+      [
+        "display",
+        "14\" 3K OLED, 120Hz, Nebula HDR"
+      ],
+      [
+        "gpu",
+        "NVIDIA GeForce RTX 5060 8GB GDDR7"
+      ],
+      [
+        "wifi",
+        "Wi-Fi 7"
+      ],
+      [
+        "battery",
+        "73Wh"
+      ],
+      [
+        "warranty",
+        "1 year"
+      ]
+    ],
+    "perks": [
+      "win11",
+      "office",
+      "gift",
+      "delivery"
+    ],
+    "about_ar": "لابتوب ألعاب وتصميم خفيف بشاشة OLED بدقة 3K وكرت RTX 5060. جديد بالكرتونة مع كفالة سنة.",
+    "about_en": "A light gaming and creator laptop with a 3K OLED display and an RTX 5060. New in the box with a 1-year warranty.",
+    "added": "2026-10-11"
+  },
+  {
+    "slug": "lenovo-thinkpad-e16-gen4",
+    "status": "available",
+    "category": "laptop",
+    "condition": "new",
+    "condition_note_ar": "كفالة سنة",
+    "condition_note_en": "1-year warranty",
+    "name": "Lenovo ThinkPad E16 Gen 4",
+    "price": 1199,
+    "old_price": 1229,
+    "badge_ar": "",
+    "badge_en": "",
+    "image": "img/products/lenovo-thinkpad-e16-gen4.webp",
+    "card_specs": [
+      "Core Ultra 7 355",
+      "16GB DDR5",
+      "1TB SSD",
+      "16\" WUXGA"
+    ],
+    "specs": [
+      [
+        "cpu",
+        "Intel Core Ultra 7 355 (8 cores, up to 4.7GHz)"
+      ],
+      [
+        "ram",
+        "16GB DDR5-5600"
+      ],
+      [
+        "storage",
+        "1TB PCIe 4.0 NVMe SSD"
+      ],
+      [
+        "display",
+        "16\" WUXGA IPS, anti-glare, 400 nits"
+      ],
+      [
+        "gpu",
+        "Intel Graphics (integrated)"
+      ],
+      [
+        "wifi",
+        "Wi-Fi 7, Thunderbolt 4"
+      ],
+      [
+        "keyboard",
+        "Backlit Arabic keyboard"
+      ],
+      [
+        "warranty",
+        "1 year"
+      ]
+    ],
+    "perks": [
+      "win11",
+      "office",
+      "gift",
+      "delivery"
+    ],
+    "about_ar": "لابتوب أعمال بشاشة 16 إنش ومعالج Intel Core Ultra 7، مناسب للشغل والدراسة. جديد بالكرتونة مع كفالة سنة.",
+    "about_en": "A 16-inch business laptop with an Intel Core Ultra 7, made for work and study. New in the box with a 1-year warranty.",
+    "added": "2026-10-11"
+  },
+  {
+    "slug": "asus-tuf-gaming-a15",
+    "status": "available",
+    "category": "laptop",
+    "condition": "new",
+    "condition_note_ar": "كفالة سنة",
+    "condition_note_en": "1-year warranty",
+    "name": "ASUS TUF Gaming A15",
+    "price": 799,
+    "old_price": 829,
+    "badge_ar": "",
+    "badge_en": "",
+    "image": "img/products/asus-tuf-gaming-a15.webp",
+    "card_specs": [
+      "Ryzen 7 170",
+      "RTX 3050 4GB",
+      "8GB DDR5",
+      "15.6\" 144Hz"
+    ],
+    "specs": [
+      [
+        "cpu",
+        "AMD Ryzen 7 170 (8C/16T, up to 4.75GHz)"
+      ],
+      [
+        "ram",
+        "8GB DDR5"
+      ],
+      [
+        "storage",
+        "512GB PCIe 4.0 NVMe SSD"
+      ],
+      [
+        "display",
+        "15.6\" FHD IPS, 144Hz"
+      ],
+      [
+        "gpu",
+        "NVIDIA GeForce RTX 3050 4GB GDDR6"
+      ],
+      [
+        "keyboard",
+        "Backlit RGB keyboard"
+      ],
+      [
+        "warranty",
+        "1 year"
+      ]
+    ],
+    "perks": [
+      "win11",
+      "office",
+      "gift",
+      "delivery"
+    ],
+    "about_ar": "لابتوب ألعاب بسعر مناسب بشاشة 144Hz وكرت RTX 3050. جديد بالكرتونة مع كفالة سنة.",
+    "about_en": "An affordable gaming laptop with a 144Hz display and an RTX 3050. New in the box with a 1-year warranty.",
+    "added": "2026-10-11"
+  },
+  {
+    "slug": "hp-zbook-firefly-14-g7",
+    "status": "available",
+    "category": "laptop",
+    "condition": "used",
+    "condition_note_ar": "كفالة شهرين",
+    "condition_note_en": "2-month warranty",
+    "name": "HP ZBook Firefly 14 G7",
+    "price": 280,
+    "old_price": 330,
+    "badge_ar": "كمية محدودة",
+    "badge_en": "Limited stock",
+    "image": "img/products/hp-zbook-firefly-14-g7.webp",
+    "card_specs": [
+      "Core i7-10610U vPro",
+      "16GB",
+      "512GB SSD",
+      "14\" Touch"
+    ],
+    "specs": [
+      [
+        "cpu",
+        "Intel Core i7-10610U vPro"
+      ],
+      [
+        "ram",
+        "16GB DDR4"
+      ],
+      [
+        "storage",
+        "512GB NVMe SSD"
+      ],
+      [
+        "display",
+        "14\" FHD touchscreen"
+      ],
+      [
+        "gpu",
+        "Intel UHD Graphics"
+      ],
+      [
+        "keyboard",
+        "Backlit keyboard"
+      ],
+      [
+        "warranty",
+        "2 months"
+      ]
+    ],
+    "perks": [
+      "win11",
+      "office",
+      "gift",
+      "delivery"
+    ],
+    "about_ar": "محطة عمل خفيفة من HP بشاشة لمس، مناسبة للشغل والدراسة. مستعمل بحالة ممتازة مع كفالة شهرين.",
+    "about_en": "A light HP business workstation with a touchscreen, good for work and study. Used, in excellent condition, with a 2-month warranty.",
+    "added": "2026-10-11"
+  },
+  {
+    "slug": "thinkpad-x1-carbon-gen9",
+    "status": "sold",
+    "category": "laptop",
+    "condition": "new",
+    "condition_note_ar": "",
+    "condition_note_en": "",
+    "name": "Lenovo ThinkPad X1 Carbon Gen 9",
+    "price": 440,
+    "old_price": null,
+    "badge_ar": "",
+    "badge_en": "",
+    "image": "img/products/thinkpad-x1-carbon-gen9.webp",
+    "card_specs": [
+      "Core i7 11th Gen",
+      "16GB RAM",
+      "1TB SSD",
+      "14\" WUXGA"
+    ],
+    "specs": [
+      [
+        "cpu",
+        "Intel Core i7 (11th Gen)"
+      ],
+      [
+        "ram",
+        "16GB LPDDR4x"
+      ],
+      [
+        "storage",
+        "1TB NVMe SSD"
+      ],
+      [
+        "display",
+        "14\" WUXGA IPS, 1920 x 1200"
+      ],
+      [
+        "gpu",
+        "Intel Iris Xe Graphics"
+      ],
+      [
+        "wifi",
+        "Wi-Fi 6"
+      ],
+      [
+        "ports",
+        "2x Thunderbolt 4, 2x USB-A, HDMI"
+      ],
+      [
+        "keyboard",
+        "Backlit keyboard"
+      ],
+      [
+        "security",
+        "Fingerprint reader"
+      ],
+      [
+        "weight",
+        "Approx. 1.13 kg"
+      ]
+    ],
+    "perks": [],
+    "about_ar": "لابتوب أعمال خفيف وقوي من سلسلة ThinkPad، مناسب للشغل والدراسة والسفر. جديد بالكرتونة.",
+    "about_en": "A light, powerful business laptop from the ThinkPad line, built for work, study and travel. New in the box.",
+    "added": "2026-10-11"
+  },
+  {
+    "slug": "hp-pro-tower-290-g9",
+    "status": "available",
+    "category": "desktop",
+    "condition": "new",
+    "condition_note_ar": "كفالة سنة",
+    "condition_note_en": "1-year warranty",
+    "name": "HP Pro Tower 290 G9",
+    "price": 449,
+    "old_price": 479,
+    "badge_ar": "",
+    "badge_en": "",
+    "image": "img/products/hp-pro-tower-290-g9.webp",
+    "card_specs": [
+      "Core i3-13100",
+      "8GB DDR4",
+      "512GB SSD",
+      "Wi-Fi 6"
+    ],
+    "specs": [
+      [
+        "cpu",
+        "Intel Core i3-13100 (4C/8T, up to 4.5GHz)"
+      ],
+      [
+        "ram",
+        "8GB DDR4-3200"
+      ],
+      [
+        "storage",
+        "512GB PCIe NVMe M.2 SSD"
+      ],
+      [
+        "gpu",
+        "Intel UHD Graphics 730"
+      ],
+      [
+        "wifi",
+        "Wi-Fi 6 + Bluetooth 5.3"
+      ],
+      [
+        "inbox",
+        "HP keyboard and mouse"
+      ],
+      [
+        "warranty",
+        "1 year"
+      ]
+    ],
+    "perks": [
+      "win11",
+      "office",
+      "gift_mouse",
+      "delivery"
+    ],
+    "about_ar": "كمبيوتر مكتبي من HP بمعالج Intel الجيل 13، مناسب للمكاتب والشغل اليومي والدراسة. جديد بالكرتونة مع كيبورد وماوس وكفالة سنة.",
+    "about_en": "An HP desktop with a 13th-gen Intel processor, made for office work, everyday tasks and study. New in the box with a keyboard, mouse and a 1-year warranty.",
+    "added": "2026-10-11"
+  },
+  {
+    "slug": "msi-cubi-5-1m-pro-mp225v",
+    "status": "available",
+    "category": "desktop",
+    "condition": "new",
+    "condition_note_ar": "كفالة 3 سنوات",
+    "condition_note_en": "3-year warranty",
+    "name": "MSI Cubi 5 1M + PRO MP225V 22\"",
+    "price": 559,
+    "old_price": 589,
+    "badge_ar": "باقة مع شاشة",
+    "badge_en": "Monitor bundle",
+    "image": "img/products/msi-cubi-5-1m-pro-mp225v.webp",
+    "card_specs": [
+      "Core 3 100U",
+      "8GB DDR5",
+      "512GB SSD",
+      "22\" 100Hz"
+    ],
+    "specs": [
+      [
+        "cpu",
+        "Intel Core 3 100U (6C/8T, up to 4.7GHz)"
+      ],
+      [
+        "ram",
+        "8GB DDR5-5200"
+      ],
+      [
+        "storage",
+        "512GB NVMe M.2 SSD"
+      ],
+      [
+        "gpu",
+        "Intel Graphics (integrated)"
+      ],
+      [
+        "monitor",
+        "MSI PRO MP225V 22\" FHD VA, 100Hz"
+      ],
+      [
+        "ports",
+        "Thunderbolt 4, dual LAN 2.5G + 1G"
+      ],
+      [
+        "wifi",
+        "Wi-Fi 6E + Bluetooth 5.3"
+      ],
+      [
+        "warranty",
+        "3 years"
+      ]
+    ],
+    "perks": [
+      "win11",
+      "office",
+      "gift_mouse",
+      "delivery"
+    ],
+    "about_ar": "باقة كاملة: كمبيوتر صغير MSI Cubi مع شاشة 22 إنش 100Hz. بياخذ مساحة قليلة ومناسب للمكاتب والبيت. جديد بالكرتونة مع كفالة 3 سنوات.",
+    "about_en": "A complete bundle: an MSI Cubi mini PC with a 22-inch 100Hz monitor. Takes up little space and suits offices and homes. New in the box with a 3-year warranty.",
+    "added": "2026-10-11"
+  },
+  {
+    "slug": "microsoft-365-personal",
+    "status": "available",
+    "category": "license",
+    "condition": "digital",
+    "condition_note_ar": "",
+    "condition_note_en": "",
+    "name": "Microsoft 365 Personal",
+    "price": 25,
+    "old_price": 70,
+    "badge_ar": "عرض خاص",
+    "badge_en": "Special offer",
+    "image": "img/products/microsoft-365-personal.webp",
+    "card_specs": [
+      "1 person",
+      "12 months",
+      "5 devices",
+      "1TB cloud"
+    ],
+    "specs": [
+      [
+        "users",
+        "1 person"
+      ],
+      [
+        "duration",
+        "12-month subscription"
+      ],
+      [
+        "devices",
+        "Up to 5 devices at the same time"
+      ],
+      [
+        "platforms",
+        "Windows, Mac, iPhone, Android"
+      ],
+      [
+        "cloud",
+        "1TB OneDrive cloud storage"
+      ],
+      [
+        "apps",
+        "Word, Excel, PowerPoint, Outlook, OneNote"
+      ]
+    ],
+    "perks": [],
+    "about_ar": "اشتراك سنة كاملة في Microsoft 365 لشخص واحد، مع تطبيقات Office كاملة و1TB تخزين سحابي.",
+    "about_en": "A full year of Microsoft 365 for one person, with the complete Office apps and 1TB of cloud storage.",
+    "added": "2026-10-11"
+  },
+  {
+    "slug": "office-2021-pro-plus",
+    "status": "available",
+    "category": "license",
+    "condition": "digital",
+    "condition_note_ar": "",
+    "condition_note_en": "",
+    "name": "Microsoft Office 2021 Professional Plus",
+    "price": 15,
+    "old_price": 30,
+    "badge_ar": "",
+    "badge_en": "",
+    "image": "img/products/office-2021-pro-plus.webp",
+    "card_specs": [
+      "Lifetime",
+      "1 PC",
+      "Windows",
+      "Genuine"
+    ],
+    "specs": [
+      [
+        "duration",
+        "Lifetime license"
+      ],
+      [
+        "devices",
+        "Activates once on one device"
+      ],
+      [
+        "platforms",
+        "Windows only"
+      ],
+      [
+        "apps",
+        "Word, Excel, PowerPoint, Outlook, Teams, OneNote, Publisher, Access"
+      ]
+    ],
+    "perks": [],
+    "about_ar": "ترخيص Office 2021 Professional Plus أصلي مدى الحياة، يتفعّل مرة واحدة على جهازك (ويندوز فقط).",
+    "about_en": "A genuine lifetime Office 2021 Professional Plus license that activates once on your PC (Windows only).",
+    "added": "2026-10-11"
+  },
+  {
+    "slug": "windows-11-pro",
+    "status": "available",
+    "category": "license",
+    "condition": "digital",
+    "condition_note_ar": "",
+    "condition_note_en": "",
+    "name": "Windows 11 Pro",
+    "price": 15,
+    "old_price": 50,
+    "badge_ar": "عرض خاص",
+    "badge_en": "Special offer",
+    "image": "img/products/windows-11-pro.webp",
+    "card_specs": [
+      "Lifetime",
+      "1 PC",
+      "Genuine key"
+    ],
+    "specs": [
+      [
+        "duration",
+        "Lifetime activation"
+      ],
+      [
+        "devices",
+        "Activates once on one device"
+      ],
+      [
+        "other",
+        "Genuine Microsoft activation key, sent after payment"
+      ]
+    ],
+    "perks": [],
+    "about_ar": "مفتاح تفعيل Windows 11 Pro أصلي، تفعيل مرة واحدة مدى الحياة، ويوصلك الكود فوراً بعد الدفع.",
+    "about_en": "A genuine Windows 11 Pro activation key: activate once for life, with the code sent right after payment.",
+    "added": "2026-10-11"
+  },
+  {
+    "slug": "windows-server-2019-standard",
+    "status": "available",
+    "category": "license",
+    "condition": "digital",
+    "condition_note_ar": "",
+    "condition_note_en": "",
+    "name": "Windows Server 2019 Standard",
+    "price": 35,
+    "old_price": 65,
+    "badge_ar": "",
+    "badge_en": "",
+    "image": "img/products/windows-server-2019-standard.webp",
+    "card_specs": [
+      "Server OS",
+      "Genuine",
+      "Permanent"
+    ],
+    "specs": [
+      [
+        "other",
+        "Windows Server 2019 Standard"
+      ],
+      [
+        "type",
+        "Server operating system"
+      ],
+      [
+        "license",
+        "Original Microsoft license"
+      ],
+      [
+        "duration",
+        "Permanent activation"
+      ]
+    ],
+    "perks": [],
+    "about_ar": "ترخيص Windows Server 2019 Standard أصلي من مايكروسوفت بتفعيل دائم، لتشغيل السيرفرات في الشركات والمكاتب.",
+    "about_en": "A genuine Microsoft Windows Server 2019 Standard license with permanent activation, for running servers in businesses and offices.",
+    "added": "2026-10-11"
+  }
+]
