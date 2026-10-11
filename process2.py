@@ -8,12 +8,12 @@ os.makedirs("out2", exist_ok=True)
 models = {}
 def sr(scale):
     if scale not in models:
-        p = f"EDSR_x{scale}.pb"
+        p = f"FSRCNN_x{scale}.pb"
         if not os.path.exists(p):
-            urllib.request.urlretrieve(f"https://github.com/Saafke/EDSR_Tensorflow/raw/master/models/EDSR_x{scale}.pb", p)
-        m = cv2.dnn_superres.DnnSuperResImpl_create(); m.readModel(p); m.setModel("edsr", scale); models[scale] = m
+            urllib.request.urlretrieve(f"https://github.com/Saafke/FSRCNN_Tensorflow/raw/master/models/FSRCNN_x{scale}.pb", p)
+        m = cv2.dnn_superres.DnnSuperResImpl_create(); m.readModel(p); m.setModel("fsrcnn", scale); models[scale] = m
     return models[scale]
-sess = new_session("birefnet-general")
+sess = new_session("birefnet-general-lite")
 log = []
 for line in open("images2.txt", encoding="utf-8"):
     line = line.strip()
@@ -22,11 +22,13 @@ for line in open("images2.txt", encoding="utf-8"):
     try:
         im = Image.open(path).convert("RGB")
         m = max(im.size)
-        scale = 4 if m < 600 else 2 if m < 1300 else 1
+        scale = 3 if m < 600 else 2 if m < 1300 else 1
         if scale > 1:
             bgr = cv2.cvtColor(np.asarray(im), cv2.COLOR_RGB2BGR)
             up = sr(scale).upsample(bgr)
             im = Image.fromarray(cv2.cvtColor(up, cv2.COLOR_BGR2RGB))
+        im.thumbnail((2000, 2000), Image.LANCZOS)
+        print("processing", name, im.size, flush=True)
         cut = remove(im, session=sess, post_process_mask=False)
         bb = cut.getbbox(); cut = cut.crop(bb) if bb else cut
         cut.thumbnail((1600, 1600), Image.LANCZOS)
