@@ -31,12 +31,14 @@ data = json.dumps(visible, ensure_ascii=False).replace("</", "<\\/")
 body = src.replace("__PRODUCTS__", data).replace("__GA_ID__", cfg["ga_id"])
 open(os.path.join(OUT, "index.preview.html"), "w", encoding="utf-8").write(body)
 
+GA_SNIPPET = (f'<script async src="https://www.googletagmanager.com/gtag/js?id={cfg["ga_id"]}"></script>\n'
+    f'<script>window.__gaHead=1;window.dataLayer=window.dataLayer||[];function gtag(){{dataLayer.push(arguments);}}gtag("js",new Date());gtag("config","{cfg["ga_id"]}");</script>\n') if cfg["ga_id"] else ""
 fav = "img/favicon.png"
 head = f'''<!doctype html>
 <html lang="ar">
 <head>
 <meta charset="utf-8">
-<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+{GA_SNIPPET}<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
 <meta name="description" content="Root - Your Tech Partner. لابتوبات وكمبيوترات جديدة ومستعملة، تراخيص برامج، وصيانة في الأردن. New and used laptops, desktops, software licenses and repair in Jordan.">
 <meta name="theme-color" content="#0b1324">
 <link rel="canonical" href="{BASE}/">
@@ -201,7 +203,7 @@ def product_page(p, others):
 <html lang="ar" dir="rtl">
 <head>
 <meta charset="utf-8">
-<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+{GA_SNIPPET}<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
 <title>{E(title)}</title>
 <meta name="description" content="{E(desc.strip())}">
 <link rel="canonical" href="{BASE}/p/{p['slug']}">
@@ -260,7 +262,7 @@ def product_page(p, others):
   apply();
   document.getElementById("langBtn").addEventListener("click",function(){{var l=h.lang==="en"?"ar":"en";h.lang=l;h.dir=l==="en"?"ltr":"rtl";try{{localStorage.setItem("root-lang",l)}}catch(e){{}}apply();}});
   var GA="{cfg['ga_id']}";window.dataLayer=window.dataLayer||[];function gtag(){{dataLayer.push(arguments)}}
-  if(/^G-[A-Z0-9]+$/.test(GA)){{var s=document.createElement("script");s.async=true;s.src="https://www.googletagmanager.com/gtag/js?id="+GA;document.head.appendChild(s);gtag("js",new Date());gtag("config",GA);}}
+  if(/^G-[A-Z0-9]+$/.test(GA)&&!window.__gaHead){{var s=document.createElement("script");s.async=true;s.src="https://www.googletagmanager.com/gtag/js?id="+GA;document.head.appendChild(s);gtag("js",new Date());gtag("config",GA);}}
   document.addEventListener("click",function(e){{var a=e.target.closest&&e.target.closest('a[href^="https://wa.me"]');if(a)gtag("event","whatsapp_click",{{link_location:"product_page",product:a.getAttribute("data-product")||""}});}});
 }})();
 </script>

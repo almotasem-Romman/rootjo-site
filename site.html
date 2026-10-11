@@ -355,7 +355,7 @@ var CONFIG = {
   window.dataLayer = window.dataLayer || [];
   function gtag() { window.dataLayer.push(arguments); }
   window.gtag = gtag;
-  if (/^G-[A-Z0-9]+$/.test(CONFIG.GA_ID)) {
+  if (/^G-[A-Z0-9]+$/.test(CONFIG.GA_ID) && !window.__gaHead) {
     var gs = document.createElement("script"); gs.async = true;
     gs.src = "https://www.googletagmanager.com/gtag/js?id=" + CONFIG.GA_ID;
     document.head.appendChild(gs);
