@@ -2,6 +2,8 @@
 <html lang="ar">
 <head>
 <meta charset="utf-8">
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-LE9MEQRCHE"></script>
+<script>window.__gaHead=1;window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag("js",new Date());gtag("config","G-LE9MEQRCHE");</script>
 <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
 <meta name="description" content="Root - Your Tech Partner. لابتوبات وكمبيوترات جديدة ومستعملة، تراخيص برامج، وصيانة في الأردن. New and used laptops, desktops, software licenses and repair in Jordan.">
 <meta name="theme-color" content="#0b1324">
@@ -360,7 +362,7 @@ img{max-width:100%}[hidden]{display:none!important}
 /* ===== إعدادات Root ===== */
 var CONFIG = {
   WHATSAPP: "962799167971",
-  GA_ID: "",   /* Google Analytics 4 Measurement ID, e.g. G-XXXXXXX */
+  GA_ID: "G-LE9MEQRCHE",   /* Google Analytics 4 Measurement ID, e.g. G-XXXXXXX */
   HOURS: [
     { days: "السبت - الخميس", days_en: "Saturday - Thursday", time: "9:00 AM - 5:00 PM", time_en: "9:00 AM - 5:00 PM" },
     { days: "الجمعة", days_en: "Friday", time: "مغلق", time_en: "Closed" }
@@ -375,7 +377,7 @@ var CONFIG = {
   window.dataLayer = window.dataLayer || [];
   function gtag() { window.dataLayer.push(arguments); }
   window.gtag = gtag;
-  if (/^G-[A-Z0-9]+$/.test(CONFIG.GA_ID)) {
+  if (/^G-[A-Z0-9]+$/.test(CONFIG.GA_ID) && !window.__gaHead) {
     var gs = document.createElement("script"); gs.async = true;
     gs.src = "https://www.googletagmanager.com/gtag/js?id=" + CONFIG.GA_ID;
     document.head.appendChild(gs);
