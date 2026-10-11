@@ -146,12 +146,6 @@ h2::before{content:">_";font-family:var(--font-mono);color:var(--cyan);font-size
 .cat-empty{grid-column:1/-1;padding:28px;border:1.5px dashed var(--line);border-radius:18px;color:var(--muted);text-align:center}
 .cat-more{margin:26px 0 0;color:var(--muted)}
 .cat-more a{color:var(--cyan);font-weight:700}
-.about{display:grid;grid-template-columns:1.3fr 1fr;gap:40px;align-items:center}
-.about p{margin:0 0 14px}
-.facts{margin:0;background:var(--glass);backdrop-filter:blur(10px);-webkit-backdrop-filter:blur(10px);border:1px solid var(--line);border-radius:18px;padding:24px;display:grid;gap:14px;align-content:start}
-.facts div{display:flex;justify-content:space-between;gap:12px;border-bottom:1px dashed var(--line);padding-bottom:12px}
-.facts div:last-child{border:0;padding:0}
-.facts dt{color:var(--muted)} .facts dd{margin:0;font-weight:700}
 
 .services{display:grid;grid-template-columns:repeat(auto-fit,minmax(250px,1fr));gap:16px}
 .svc{position:relative;overflow:hidden;background:var(--glass);backdrop-filter:blur(10px);-webkit-backdrop-filter:blur(10px);border:1px solid var(--line);border-radius:16px;padding:24px;min-width:0;display:flex;flex-direction:column;gap:6px;transition:border-color .25s,transform .25s}
@@ -161,8 +155,39 @@ h2::before{content:">_";font-family:var(--font-mono);color:var(--cyan);font-size
 .svc code{font-family:var(--font-mono);font-size:12px;color:var(--cyan);direction:ltr;display:block;text-align:right;font-weight:700;position:relative}
 .svc h3{margin:0;font-size:21px;color:var(--navy);position:relative}
 .svc p{margin:0;color:var(--muted);font-size:15.5px;position:relative;flex:1}
-.svc a{position:relative;margin-top:10px;font-weight:700;font-size:15px;color:var(--cyan);text-decoration:none}
-.svc a:hover{text-decoration:underline}
+.services.why{grid-template-columns:repeat(6,1fr)}
+.why .svc{grid-column:span 2}
+.why .svc:nth-child(n+4){grid-column:span 3}
+@media (max-width:900px){.services.why{grid-template-columns:repeat(2,1fr)}.why .svc,.why .svc:nth-child(n+4){grid-column:auto}.why .svc:last-child{grid-column:1/-1}}
+@media (max-width:560px){.services.why{grid-template-columns:1fr}}
+/* request form */
+.reqform{display:grid;gap:22px;background:var(--glass);backdrop-filter:blur(10px);-webkit-backdrop-filter:blur(10px);border:1px solid var(--line);border-radius:20px;padding:28px}
+.reqform fieldset{border:0;margin:0;padding:0;display:grid;gap:10px;min-width:0}
+.reqform legend{padding:0;margin-bottom:10px;font-weight:800;font-size:17px;color:var(--navy)}
+.reqform legend small{font-weight:600;font-size:14px;color:var(--muted)}
+.picks{display:flex;flex-wrap:wrap;gap:8px}
+.pick{position:relative;cursor:pointer}
+.pick input{position:absolute;opacity:0;width:1px;height:1px}
+.pick span{display:inline-block;padding:7px 16px;border-radius:999px;border:1.5px solid var(--line);background:var(--surface);color:var(--fg);font-weight:700;font-size:15px;transition:border-color .2s,background .2s,color .2s}
+.pick:hover span{border-color:var(--cyan)}
+.pick input:checked+span{background:var(--cyan);border-color:var(--cyan);color:#04121f}
+.pick input:focus-visible+span{outline:3px solid var(--cyan);outline-offset:2px}
+.rq-row{display:grid;grid-template-columns:1.2fr 1fr;gap:16px;align-items:start}
+.rq-two{display:grid;gap:12px}
+.fld{display:grid;gap:6px;font-weight:700;font-size:15px;color:var(--navy);min-width:0}
+.fld input,.fld textarea{font:inherit;font-size:16px;font-weight:400;color:var(--fg);background:var(--surface);border:1.5px solid var(--line);border-radius:12px;padding:10px 14px;width:100%;min-width:0;resize:vertical}
+.fld input:focus-visible,.fld textarea:focus-visible{outline:3px solid var(--cyan);outline-offset:1px;border-color:var(--cyan)}
+.rq-send{display:flex;flex-wrap:wrap;align-items:center;gap:14px}
+.rq-hint{margin:0;color:var(--muted);font-size:15px}
+/* faq */
+.faq{display:grid;gap:10px;max-width:820px}
+.qa{background:var(--glass);backdrop-filter:blur(10px);-webkit-backdrop-filter:blur(10px);border:1px solid var(--line);border-radius:14px;padding:0 20px;transition:border-color .2s}
+.qa[open]{border-color:var(--cyan)}
+.qa summary{list-style:none;cursor:pointer;display:flex;justify-content:space-between;align-items:center;gap:14px;padding:16px 0;font-weight:800;font-size:17px;color:var(--navy)}
+.qa summary::-webkit-details-marker{display:none}
+.qa summary::after{content:"+";font-family:var(--font-mono);color:var(--cyan);font-size:22px;line-height:1;flex:none;transition:transform .2s}
+.qa[open] summary::after{transform:rotate(45deg)}
+.qa p{margin:0 0 18px;color:var(--muted)}
 
 .hours{max-width:560px}
 .table{background:var(--glass);backdrop-filter:blur(10px);-webkit-backdrop-filter:blur(10px);border:1px solid var(--line);border-radius:18px;overflow:hidden}
@@ -187,7 +212,9 @@ footer .wrap{display:flex;justify-content:space-between;flex-wrap:wrap;gap:12px}
 @media (max-width:760px){
   body{font-size:16px}
   nav a:not(.navcta){display:none}
-  .about{grid-template-columns:1fr}
+  .rq-row{grid-template-columns:1fr}
+  .reqform{padding:20px}
+  .rq-send .btn{width:100%}
   .hero-in{padding-block:60px 84px}
   .lead{font-size:17px}
   .cta .btn,.card .btn{width:100%}
@@ -210,9 +237,9 @@ footer .wrap{display:flex;justify-content:space-between;flex-wrap:wrap;gap:12px}
     </a>
     <nav aria-label="أقسام الصفحة" dir="rtl" data-dir>
       <a href="#products" data-i18n="nav_products">المتوفر</a>
-      <a href="#about" data-i18n="nav_about">من نحن</a>
-      <a href="#services" data-i18n="nav_services">خدماتنا</a>
-      <a href="#hours" data-i18n="nav_hours">ساعات الدوام</a>
+      <a href="#request" data-i18n="nav_request">اطلب جهازك</a>
+      <a href="#about" data-i18n="nav_about">ليش Root؟</a>
+      <a href="#faq" data-i18n="nav_faq">أسئلة شائعة</a>
       <a href="#contact" data-i18n="nav_contact">تواصل</a>
       <button type="button" class="lang" id="langBtn" aria-label="Switch to English">EN</button>
       <a class="navcta" data-wa href="#contact" data-i18n="nav_wa">واتساب</a>
@@ -250,41 +277,61 @@ footer .wrap{display:flex;justify-content:space-between;flex-wrap:wrap;gap:12px}
       <p class="sub" data-i18n="pr_sub">اختار القسم، وشوف المتوفر بأسعار نهائية بالدينار. توصيل لكل المملكة، والدفع بعد الاستلام والمعاينة.</p>
       <nav class="cats" id="catNav" aria-label="الأقسام"></nav>
       <div id="catalog"></div>
-      <p class="cat-more" data-i18n="pr_more">ما لقيت اللي بدك ياه؟ <a data-wa data-msg="مرحباً Root، بدي جهاز بهالمواصفات: " data-msg-en="Hi Root, I'm looking for a device with these specs: " href="#contact">ابعتلنا المواصفات ونوفره لك</a></p>
+      <p class="cat-more" data-i18n="pr_more">ما لقيت اللي بدك ياه؟ <a href="#request">عبّي طلبك ونوفره لك</a></p>
+    </div>
+  </section>
+
+  <section id="request">
+    <div class="wrap">
+      <h2 data-i18n="rq_h">اطلب جهازك</h2>
+      <p class="sub" data-i18n="rq_sub">قلنا شو بدك، وبتوصلنا رسالة واتساب مرتبة. منرد عليك بالخيارات والأسعار.</p>
+      <form class="reqform rv" id="reqForm" novalidate>
+        <fieldset><legend data-i18n="rq_type">نوع الجهاز</legend><div class="picks"><label class="pick"><input type="radio" name="rq-type" value="laptop" data-ar="لابتوب" data-en="Laptop" checked><span data-i18n="rq_t1">لابتوب</span></label><label class="pick"><input type="radio" name="rq-type" value="desktop" data-ar="كمبيوتر مكتبي" data-en="Desktop"><span data-i18n="rq_t2">كمبيوتر مكتبي</span></label></div></fieldset>
+        <fieldset><legend data-i18n="rq_use">الاستخدام <small>(اختار أكثر من واحد)</small></legend><div class="picks"><label class="pick"><input type="checkbox" name="rq-use" value="study" data-ar="دراسة" data-en="Study"><span data-i18n="rq_u1">دراسة</span></label><label class="pick"><input type="checkbox" name="rq-use" value="office" data-ar="شغل مكتبي" data-en="Office work"><span data-i18n="rq_u2">شغل مكتبي</span></label><label class="pick"><input type="checkbox" name="rq-use" value="code" data-ar="برمجة" data-en="Programming"><span data-i18n="rq_u3">برمجة</span></label><label class="pick"><input type="checkbox" name="rq-use" value="design" data-ar="تصميم ومونتاج" data-en="Design & editing"><span data-i18n="rq_u4">تصميم ومونتاج</span></label><label class="pick"><input type="checkbox" name="rq-use" value="gaming" data-ar="ألعاب" data-en="Gaming"><span data-i18n="rq_u5">ألعاب</span></label></div></fieldset>
+        <fieldset><legend data-i18n="rq_budget">الميزانية</legend><div class="picks"><label class="pick"><input type="radio" name="rq-budget" value="lt300" data-ar="أقل من 300 دينار" data-en="Under 300 JD"><span data-i18n="rq_b1">أقل من 300 دينار</span></label><label class="pick"><input type="radio" name="rq-budget" value="300-500" data-ar="من 300 لـ 500 دينار" data-en="300 – 500 JD"><span data-i18n="rq_b2">من 300 لـ 500 دينار</span></label><label class="pick"><input type="radio" name="rq-budget" value="500-800" data-ar="من 500 لـ 800 دينار" data-en="500 – 800 JD"><span data-i18n="rq_b3">من 500 لـ 800 دينار</span></label><label class="pick"><input type="radio" name="rq-budget" value="800-1200" data-ar="من 800 لـ 1200 دينار" data-en="800 – 1200 JD"><span data-i18n="rq_b4">من 800 لـ 1200 دينار</span></label><label class="pick"><input type="radio" name="rq-budget" value="gt1200" data-ar="أكثر من 1200 دينار" data-en="Over 1200 JD"><span data-i18n="rq_b5">أكثر من 1200 دينار</span></label></div></fieldset>
+        <fieldset><legend data-i18n="rq_cond">الحالة</legend><div class="picks"><label class="pick"><input type="radio" name="rq-cond" value="new" data-ar="جديد" data-en="New"><span data-i18n="rq_c1">جديد</span></label><label class="pick"><input type="radio" name="rq-cond" value="used" data-ar="مستعمل" data-en="Used"><span data-i18n="rq_c2">مستعمل</span></label><label class="pick"><input type="radio" name="rq-cond" value="any" data-ar="ما بتفرق" data-en="Either" checked><span data-i18n="rq_c3">ما بتفرق</span></label></div></fieldset>
+        <div class="rq-row">
+          <label class="fld" for="rq-notes"><span data-i18n="rq_notes">تفاصيل إضافية (اختياري)</span>
+            <textarea id="rq-notes" rows="3" data-ph-ar="مثلاً: شاشة 14 إنش، رام 16GB، خفيف للسفر" data-ph-en="e.g. 14-inch screen, 16GB RAM, light for travel" placeholder="مثلاً: شاشة 14 إنش، رام 16GB، خفيف للسفر"></textarea>
+          </label>
+          <div class="rq-two">
+            <label class="fld" for="rq-name"><span data-i18n="rq_name">الاسم (اختياري)</span><input id="rq-name" type="text" autocomplete="name"></label>
+            <label class="fld" for="rq-city"><span data-i18n="rq_city">المدينة (اختياري)</span><input id="rq-city" type="text" autocomplete="address-level2"></label>
+          </div>
+        </div>
+        <div class="rq-send">
+          <a class="btn wa" id="rqSend" target="_blank" rel="noopener" data-product="request" href="#request"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><use href="#wa-i"/></svg><span data-i18n="rq_btn">ابعت الطلب على واتساب</span></a>
+          <p class="rq-hint" data-i18n="rq_hint">بيفتحلك واتساب والرسالة جاهزة، بس اضغط إرسال.</p>
+        </div>
+      </form>
     </div>
   </section>
 
   <section id="about">
     <div class="wrap">
-      <h2 data-i18n="about_h">من نحن</h2>
+      <h2 data-i18n="about_h">ليش Root؟</h2>
       <p class="sub rv" data-i18n="about_sub">Root متجر تقني يعتمد على الوضوح: مواصفات حقيقية، سعر معلن، وجهاز يناسب استخدامك.</p>
-      <div class="about rv">
-        <div>
-          <p data-i18n="about_p1">نبيع الحواسيب بأنواعها، الجديد بالكرتونة والمستعمل المفحوص، ونعرض لكل جهاز مواصفاته الكاملة وسعره قبل أن تسأل.</p>
-          <p data-i18n="about_p2">إلى جانب الموجود عندنا، نتعامل مع عدة موردين، فإذا طلبت جهازاً معيناً نوفره لك بسعر مناسب بدل أن تبحث عنه بنفسك.</p>
-          <p data-i18n="about_p3">نقدم أيضاً تراخيص Microsoft 365 وغيرها، وخدمات صيانة وإعداد للأجهزة، لأن الجهاز الجيد يحتاج برنامجاً مرخصاً وتهيئة صحيحة.</p>
-        </div>
-        <dl class="facts">
-          <div><dt data-i18n="f1t">نبيع</dt><dd data-i18n="f1d">جديد ومستعمل</dd></div>
-          <div><dt data-i18n="f2t">العملة</dt><dd data-i18n="f2d">دينار أردني (JD)</dd></div>
-          <div><dt data-i18n="f3t">الطلب الخاص</dt><dd data-i18n="f3d">نوفر أي جهاز</dd></div>
-          <div><dt data-i18n="f4t">الطلبات</dt><dd data-i18n="f4d">واتساب وانستغرام</dd></div>
-          <div><dt data-i18n="f5t">التوصيل</dt><dd data-i18n="f5d">لكل المملكة، الدفع عند الاستلام</dd></div>
-        </dl>
+      <div class="services why">
+        <article class="svc rv"><code>$ pay --on-delivery</code><h3 data-i18n="w2h">الدفع عند الاستلام</h3><p data-i18n="w2p">توصيل لكل مناطق المملكة: 3 دنانير داخل عمّان و5 دنانير خارجها، وما بتدفع إلا بعد ما تستلم الجهاز وتعاينه.</p></article>
+        <article class="svc rv"><code>$ warranty --listed</code><h3 data-i18n="w3h">كفالة واضحة</h3><p data-i18n="w3p">مدة الكفالة مكتوبة على كل جهاز: الجديد بكفالته، والمستعمل مفحوص وكفالته محددة.</p></article>
+        <article class="svc rv"><code>$ setup --ready</code><h3 data-i18n="w4h">جاهز للشغل</h3><p data-i18n="w4p">كل الأجهزة بتوصلك وعليها ويندوز وأوفيس أصليين، جاهزة من أول يوم.</p></article>
+        <article class="svc rv"><code>$ license --genuine</code><h3 data-i18n="w5h">تراخيص أصلية</h3><p data-i18n="w5p">مفاتيح تفعيل أصلية لويندوز وأوفيس ومايكروسوفت 365، بتوصلك مباشرة بعد الدفع.</p></article>
+        <article class="svc rv"><code>$ source --any-device</code><h3 data-i18n="w6h">نوفر أي جهاز</h3><p data-i18n="w6p">نتعامل مع عدة موردين، فإذا ما لقيت جهازك نوفره لك بالمواصفات اللي بدك ياها.</p></article>
       </div>
     </div>
   </section>
 
-  <section id="services">
+  <section id="faq">
     <div class="wrap">
-      <h2 data-i18n="svc_h">خدماتنا</h2>
-      <p class="sub" data-i18n="svc_sub">كل شيء تحتاجه لتشغيل جهازك، من الشراء حتى الصيانة.</p>
-      <div class="services">
-        <article class="svc rv"><code>$ laptops --new --used</code><h3 data-i18n="s1h">لابتوبات</h3><p data-i18n="s1p">أجهزة جديدة بالكرتونة ومستعملة بحالة ممتازة، للعمل والدراسة والأعمال.</p><a data-wa data-msg="مرحباً Root، أبحث عن لابتوب. " data-msg-en="Hi Root, I'm looking for a laptop. " href="#contact" data-i18n="s1a">اسأل عن لابتوب &larr;</a></article>
-        <article class="svc rv"><code>$ desktops --build</code><h3 data-i18n="s2h">كمبيوترات مكتبية</h3><p data-i18n="s2p">أجهزة مكتبية جاهزة أو مجمعة حسب ميزانيتك واستخدامك.</p><a data-wa data-msg="مرحباً Root، أبحث عن كمبيوتر مكتبي. " data-msg-en="Hi Root, I'm looking for a desktop computer. " href="#contact" data-i18n="s2a">اسأل عن كمبيوتر &larr;</a></article>
-        <article class="svc rv"><code>$ license --activate</code><h3 data-i18n="s3h">تراخيص البرامج</h3><p data-i18n="s3p">Microsoft 365 وتراخيص أخرى بأسعار مناسبة، مع تفعيل على عدة أجهزة.</p><a data-wa data-msg="مرحباً Root، أريد الاستفسار عن ترخيص برنامج. " data-msg-en="Hi Root, I'd like to ask about a software license. " href="#contact" data-i18n="s3a">اسأل عن ترخيص &larr;</a></article>
-        <article class="svc rv"><code>$ repair --diagnose</code><h3 data-i18n="s4h">الصيانة</h3><p data-i18n="s4p">فحص وتشخيص وإصلاح وتهيئة للأجهزة، وتحسين الأداء.</p><a data-wa data-msg="مرحباً Root، جهازي يحتاج صيانة. " data-msg-en="Hi Root, my device needs a repair. " href="#contact" data-i18n="s4a">اطلب صيانة &larr;</a></article>
-        <article class="svc rv"><code>$ order --any-device</code><h3 data-i18n="s5h">توفير حسب الطلب</h3><p data-i18n="s5p">لم تجد جهازك؟ نوفره لك من الموردين بالمواصفات التي تحددها.</p><a data-wa data-msg="مرحباً Root، أريد توفير جهاز بمواصفات محددة: " data-msg-en="Hi Root, I'd like you to source a device with these specs: " href="#contact" data-i18n="s5a">اطلب جهازك &larr;</a></article>
+      <h2 data-i18n="faq_h">أسئلة شائعة</h2>
+      <p class="sub" data-i18n="faq_sub">أكثر الأسئلة اللي بتوصلنا على واتساب، وجوابها هون.</p>
+      <div class="faq rv">
+        <details class="qa"><summary><span data-i18n="q1">كيف بطلب جهاز؟</span></summary><p data-i18n="a1">اختار الجهاز واضغط «اطلبه على واتساب»، أو عبّي نموذج «اطلب جهازك». بنأكدلك التوفر والسعر ومنرتب معك التوصيل.</p></details>
+        <details class="qa"><summary><span data-i18n="q2">كيف التوصيل والدفع؟</span></summary><p data-i18n="a2">بنوصّل لكل مناطق المملكة: التوصيل داخل عمّان 3 دنانير، وخارج عمّان 5 دنانير. والدفع عند الاستلام بعد ما تعاين الجهاز وتتأكد منه.</p></details>
+        <details class="qa"><summary><span data-i18n="q3">شو الكفالة؟</span></summary><p data-i18n="a3">مدة الكفالة مكتوبة بصفحة كل جهاز. الأجهزة الجديدة بالكرتونة بكفالتها، والمستعمل بكفالة أقصر مكتوبة على الجهاز.</p></details>
+        <details class="qa"><summary><span data-i18n="q4">شو الفرق بين «جديد بالكرتونة» و«مستعمل»؟</span></summary><p data-i18n="a4">الجديد بيوصلك بكرتونته الأصلية. المستعمل جهاز مفحوص وبحالة ممتازة، بسعر أقل، وحالته وكفالته مكتوبة بصفحته.</p></details>
+        <details class="qa"><summary><span data-i18n="q5">كيف بيوصلني الترخيص؟</span></summary><p data-i18n="a5">التراخيص رقمية: بنبعتلك مفتاح التفعيل مباشرة بعد الدفع. وإذا واجهتك مشكلة بالتفعيل راسلنا على واتساب.</p></details>
+        <details class="qa"><summary><span data-i18n="q6">ما لقيت الجهاز اللي بدي ياه، شو بعمل؟</span></summary><p data-i18n="a6">عبّي نموذج «اطلب جهازك» بميزانيتك واستخدامك، أو ابعتلنا المواصفات، ومنوفره لك من الموردين.</p></details>
       </div>
     </div>
   </section>
@@ -452,45 +499,67 @@ var CONFIG = {
 "nav_about": "About",
 "pr_h": "Available now",
 "pr_sub": "Pick a section and see what is in stock, with final prices in JD. Delivery across Jordan, and you pay after you receive and check it.",
-"pr_more": "Can't find what you need? <a data-wa data-msg=\"مرحباً Root، بدي جهاز بهالمواصفات: \" data-msg-en=\"Hi Root, I'm looking for a device with these specs: \" href=\"#contact\">Send us the specs and we'll source it</a>",
-"nav_services": "Services",
-"nav_hours": "Hours",
+"pr_more": "Can't find what you need? <a href=\"#request\">Tell us what you want and we'll source it</a>",
 "nav_contact": "Contact",
 "nav_wa": "WhatsApp",
 "h1": "Your tech partner for every computer you <em>need</em>",
 "lead": "New and used laptops and desktops, genuine software licenses, and repairs with clear prices. Can't find your device here? We'll source it for you.",
 "btn_wa": "Chat on WhatsApp",
 "btn_ig": "Follow on Instagram",
-"about_h": "About us",
+"about_h": "Why Root?",
+"nav_request": "Request a device",
+"nav_faq": "FAQ",
+"rq_h": "Request a device",
+"rq_sub": "Tell us what you need and we'll get a tidy WhatsApp message. We'll reply with options and prices.",
+"rq_type": "Device type",
+"rq_use": "What it's for <small>(pick any)</small>",
+"rq_budget": "Budget",
+"rq_cond": "Condition",
+"rq_notes": "More details (optional)",
+"rq_name": "Name (optional)",
+"rq_city": "City (optional)",
+"rq_btn": "Send request on WhatsApp",
+"rq_hint": "WhatsApp opens with the message ready. Just tap send.",
+"faq_h": "FAQ",
+"faq_sub": "The questions we get most on WhatsApp, answered here.",
+"rq_u1": "Study",
+"rq_u2": "Office work",
+"rq_u3": "Programming",
+"rq_u4": "Design & editing",
+"rq_u5": "Gaming",
+"rq_b1": "Under 300 JD",
+"rq_b2": "300 – 500 JD",
+"rq_b3": "500 – 800 JD",
+"rq_b4": "800 – 1200 JD",
+"rq_b5": "Over 1200 JD",
+"rq_t1": "Laptop",
+"rq_t2": "Desktop",
+"rq_c1": "New",
+"rq_c2": "Used",
+"rq_c3": "Either",
+"w2h": "Pay on delivery",
+"w2p": "Delivery across Jordan: 3 JD inside Amman and 5 JD outside it, and you only pay after you receive and check the device.",
+"w3h": "A clear warranty",
+"w3p": "The warranty is written on every device: new ones come with their warranty, used ones are inspected and carry a set warranty.",
+"w4h": "Ready to use",
+"w4p": "Every device arrives with genuine Windows and Office installed, ready from day one.",
+"w5h": "Genuine licenses",
+"w5p": "Genuine activation keys for Windows, Office and Microsoft 365, sent right after payment.",
+"w6h": "Any device, sourced",
+"w6p": "We work with several suppliers, so if your device isn't listed we'll get it to your specs.",
+"q1": "How do I order?",
+"a1": "Pick a device and tap “Order on WhatsApp”, or fill in the “Request a device” form. We confirm availability and price and arrange delivery with you.",
+"q2": "How do delivery and payment work?",
+"a2": "We deliver across Jordan: 3 JD inside Amman and 5 JD outside Amman. You pay on delivery after you check the device.",
+"q3": "What warranty do I get?",
+"a3": "The warranty is listed on each device's page. New in-box devices come with their warranty, and used ones carry a shorter warranty shown on the device.",
+"q4": "What's the difference between “new in box” and “used”?",
+"a4": "New devices come sealed in their original box. Used devices are inspected and in excellent condition, at a lower price, with their condition and warranty listed on their page.",
+"q5": "How do I receive a license?",
+"a5": "Licenses are digital: we send you the activation key right after payment. If activation gives you any trouble, message us on WhatsApp.",
+"q6": "I can't find the device I want. What now?",
+"a6": "Fill in the “Request a device” form with your budget and use, or send us the specs, and we'll source it from our suppliers.",
 "about_sub": "Root is a tech store built on clarity: real specs, upfront prices, and a device that fits how you use it.",
-"about_p1": "We sell computers of every kind, new in the box and inspected used, and list the full specs and price of each device before you have to ask.",
-"about_p2": "Beyond our own stock, we work with several suppliers. Ask for a specific device and we'll get it for you at a fair price, so you don't have to hunt for it.",
-"about_p3": "We also offer Microsoft 365 and other licenses, plus repair and setup services, because a good machine needs licensed software and a proper setup.",
-"f1t": "We sell",
-"f1d": "New &amp; used",
-"f2t": "Currency",
-"f2d": "Jordanian dinar (JD)",
-"f3t": "Special orders",
-"f3d": "Any device, sourced",
-"f4t": "Orders via",
-"f4d": "WhatsApp &amp; Instagram",
-"svc_h": "Services",
-"svc_sub": "Everything your device needs, from purchase to repair.",
-"s1h": "Laptops",
-"s1p": "New in the box and used in excellent condition, for work, study and business.",
-"s1a": "Ask about laptops &rarr;",
-"s2h": "Desktops",
-"s2p": "Ready-made or custom-built desktops to fit your budget and use.",
-"s2a": "Ask about desktops &rarr;",
-"s3h": "Software licenses",
-"s3p": "Microsoft 365 and other licenses at good prices, activated on multiple devices.",
-"s3a": "Ask about licenses &rarr;",
-"s4h": "Repair",
-"s4p": "Inspection, diagnosis, repair and setup, plus performance tuning.",
-"s4a": "Book a repair &rarr;",
-"s5h": "Made to order",
-"s5p": "Can't find your device? We'll source it from our suppliers to your exact specs.",
-"s5a": "Order your device &rarr;",
 "hrs_h": "Opening hours",
 "hrs_sub": "When we reply to messages and take orders.",
 "hrs_note": "Outside opening hours, send us a message on WhatsApp or Instagram and we'll reply as soon as we open.",
@@ -500,8 +569,6 @@ var CONFIG = {
 "ct_ig": "Instagram",
 "ct_call": "Call",
 "ct_call_btn": "Call us",
-"f5t": "Delivery",
-"f5d": "Across Jordan, pay on delivery",
 "ct_wa_btn": "Start a chat",
 "ct_ig_btn": "Open profile",
 "ct_mail": "Email",
@@ -550,11 +617,38 @@ var CONFIG = {
     });
     if (st !== null) badge.lastChild.textContent = st ? T.open : T.closed;
     renderCatalog(lang);
+    if (typeof rqLang === "function") rqLang(en);
     var nav = document.querySelector("nav"); nav.setAttribute("aria-label", T.nav);
     var b = document.getElementById("langBtn");
     b.textContent = T.btn; b.className = "lang" + (en ? " ar" : ""); b.setAttribute("aria-label", T.btnLabel);
     b.lang = en ? "ar" : "en";
   }
+  /* ===== Request a device ===== */
+  var rqForm = document.getElementById("reqForm"), rqSend = document.getElementById("rqSend");
+  function rqVals(name, en) { return [].map.call(rqForm.querySelectorAll('input[name="' + name + '"]:checked'), function (x) { return x.getAttribute(en ? "data-en" : "data-ar"); }); }
+  function rqUpdate() {
+    var en = document.documentElement.lang === "en";
+    var L = en ? { hi: "Hi Root, I'd like to request a device:", type: "Type", use: "Use", budget: "Budget", cond: "Condition", notes: "Details", name: "Name", city: "City", none: "not set" }
+               : { hi: "مرحباً Root، بدي أطلب جهاز:", type: "النوع", use: "الاستخدام", budget: "الميزانية", cond: "الحالة", notes: "تفاصيل", name: "الاسم", city: "المدينة", none: "ما حددت" };
+    var lines = [L.hi];
+    function add(k, v) { if (v) lines.push("• " + k + ": " + v); }
+    add(L.type, rqVals("rq-type", en).join(""));
+    add(L.use, rqVals("rq-use", en).join(en ? ", " : "، ") || L.none);
+    add(L.budget, rqVals("rq-budget", en).join("") || L.none);
+    add(L.cond, rqVals("rq-cond", en).join(""));
+    add(L.notes, document.getElementById("rq-notes").value.trim());
+    add(L.name, document.getElementById("rq-name").value.trim());
+    add(L.city, document.getElementById("rq-city").value.trim());
+    lines.push("rootjo.com");
+    rqSend.href = waHref(lines.join("\n"));
+  }
+  rqForm.addEventListener("input", rqUpdate); rqForm.addEventListener("change", rqUpdate);
+  rqForm.addEventListener("submit", function (e) { e.preventDefault(); });
+  function rqLang(en) {
+    var ta = document.getElementById("rq-notes"); ta.placeholder = ta.getAttribute(en ? "data-ph-en" : "data-ph-ar");
+    rqUpdate();
+  }
+
   var lang = "ar";
   try { lang = localStorage.getItem("root-lang") || lang; } catch (e) {}
   if (location.hash === "#en") lang = "en";

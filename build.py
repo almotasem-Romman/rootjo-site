@@ -31,6 +31,10 @@ data = json.dumps(visible, ensure_ascii=False).replace("</", "<\\/")
 body = src.replace("__PRODUCTS__", data).replace("__GA_ID__", cfg["ga_id"])
 open(os.path.join(OUT, "index.preview.html"), "w", encoding="utf-8").write(body)
 
+import re as _re
+_qs = dict(_re.findall(r'data-i18n="(q\d+)">([^<]+)<', body)); _as = dict(_re.findall(r'data-i18n="(a\d+)">([^<]+)<', body))
+FAQ_LD = json.dumps({"@context": "https://schema.org", "@type": "FAQPage", "inLanguage": "ar",
+    "mainEntity": [{"@type": "Question", "name": _qs[k], "acceptedAnswer": {"@type": "Answer", "text": _as["a" + k[1:]]}} for k in sorted(_qs, key=lambda x: int(x[1:]))]}, ensure_ascii=False)
 GA_SNIPPET = (f'<script async src="https://www.googletagmanager.com/gtag/js?id={cfg["ga_id"]}"></script>\n'
     f'<script>window.__gaHead=1;window.dataLayer=window.dataLayer||[];function gtag(){{dataLayer.push(arguments);}}gtag("js",new Date());gtag("config","{cfg["ga_id"]}");</script>\n') if cfg["ga_id"] else ""
 fav = "img/favicon.png"
@@ -50,6 +54,7 @@ head = f'''<!doctype html>
 <meta name="twitter:card" content="summary_large_image">
 <link rel="icon" type="image/png" href="{fav}">
 <script type="application/ld+json">{json.dumps({"@context":"https://schema.org","@type":"Store","name":"Root Computers","url":BASE+"/","logo":BASE+"/img/logo.png","image":BASE+"/img/og-image.jpg","telephone":"+"+WA,"email":"info@rootjo.com","address":{"@type":"PostalAddress","addressCountry":"JO"},"sameAs":["https://www.instagram.com/rootcomputers/"]},ensure_ascii=False)}</script>
+<script type="application/ld+json">{FAQ_LD}</script>
 '''
 assert body.count("</style>") == 1
 live = head + body.replace("</style>", "\nimg{max-width:100%}[hidden]{display:none!important}\n</style>\n</head>\n<body>") + "\n</body>\n</html>\n"
