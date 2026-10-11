@@ -49,7 +49,7 @@ head = f'''<!doctype html>
 <meta property="og:image" content="{BASE}/img/og-image.jpg">
 <meta name="twitter:card" content="summary_large_image">
 <link rel="icon" type="image/png" href="{fav}">
-<script type="application/ld+json">{json.dumps({"@context":"https://schema.org","@type":"Store","name":"Root Computers","url":BASE+"/","logo":BASE+"/img/logo.png","image":BASE+"/img/og-image.jpg","telephone":"+"+WA,"address":{"@type":"PostalAddress","addressCountry":"JO"},"sameAs":["https://www.instagram.com/rootcomputers/"]},ensure_ascii=False)}</script>
+<script type="application/ld+json">{json.dumps({"@context":"https://schema.org","@type":"Store","name":"Root Computers","url":BASE+"/","logo":BASE+"/img/logo.png","image":BASE+"/img/og-image.jpg","telephone":"+"+WA,"email":"info@rootjo.com","address":{"@type":"PostalAddress","addressCountry":"JO"},"sameAs":["https://www.instagram.com/rootcomputers/"]},ensure_ascii=False)}</script>
 '''
 assert body.count("</style>") == 1
 live = head + body.replace("</style>", "\nimg{max-width:100%}[hidden]{display:none!important}\n</style>\n</head>\n<body>") + "\n</body>\n</html>\n"
@@ -121,7 +121,8 @@ html[lang="en"] .lang{font-family:var(--font-ar);font-size:15px;padding:5px 14px
 .gal img{width:100%;height:100%;object-fit:contain;padding:28px;filter:drop-shadow(0 18px 22px rgba(0,0,0,.28))}
 .gal.cover img{object-fit:cover;padding:0}
 .sold .gal img{filter:grayscale(1);opacity:.55}
-.pbadge{position:absolute;top:14px;inset-inline-start:14px;font-size:14px;font-weight:800;padding:4px 14px;border-radius:999px;background:var(--cyan);color:#04121f}
+.ptags{display:flex;flex-wrap:wrap;gap:8px;align-items:center}
+.pbadge{font-size:14px;font-weight:800;padding:3px 14px;border-radius:999px;background:var(--cyan);color:#04121f}
 .sold .pbadge{background:#6b7280;color:#fff}
 .info{display:flex;flex-direction:column;gap:14px;min-width:0}
 .cond{align-self:flex-start;font-size:14px;font-weight:700;padding:3px 14px;border-radius:999px;background:var(--cyan-soft);color:var(--navy)}
@@ -232,9 +233,9 @@ def product_page(p, others):
 <main class="wrap">
   <a class="crumb" href="../#products">{bi("&rarr; كل المنتجات", "&larr; All products")}</a>
   <div class="prod{' sold' if sold else ''}">
-    <div class="gal">{f'<span class="pbadge">{badge}</span>' if badge else ''}<img src="../{E(p['image'])}" alt="{E(name)}"></div>
+    <div class="gal"><img src="../{E(p['image'])}" alt="{E(name)}"></div>
     <div class="info">
-      <span class="cond {E(p.get('condition',''))}">{cond_html}</span>
+      <div class="ptags">{f'<span class="pbadge">{badge}</span>' if badge else ''}<span class="cond {E(p.get('condition',''))}">{cond_html}</span></div>
       <h1>{E(name)}</h1>
       <div class="price">{f'<s>{p["old_price"]} JD</s>' if p.get("old_price") else ''}<b>{p['price']}<small>JD</small></b></div>
       <p class="about">{bi(E(p.get('about_ar','')), E(p.get('about_en','')))}</p>
@@ -254,7 +255,7 @@ def product_page(p, others):
   {f'<h2>{bi("المواصفات", "Specifications")}</h2><dl class="specs">{specs}</dl>' if specs else ''}
   {f'<h2>{bi("منتجات ثانية متوفرة", "More available now")}</h2><div class="more">{more}</div>' if more else ''}
 </main>
-<footer><div class="wrap">Root &middot; Your Tech Partner &middot; <a href="../">rootjo.com</a> &middot; <a href="https://www.instagram.com/rootcomputers/" target="_blank" rel="noopener">@rootcomputers</a></div></footer>
+<footer><div class="wrap">Root &middot; Your Tech Partner &middot; <a href="../">rootjo.com</a> &middot; <a href="https://www.instagram.com/rootcomputers/" target="_blank" rel="noopener">@rootcomputers</a> &middot; <a href="mailto:info@rootjo.com">info@rootjo.com</a></div></footer>
 <script>
 (function(){{
   var h=document.documentElement;
