@@ -43,7 +43,7 @@ head = f'''<!doctype html>
 <head>
 <meta charset="utf-8">
 {GA_SNIPPET}<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
-<meta name="description" content="Root - Your Tech Partner. لابتوبات وكمبيوترات جديدة ومستعملة، تراخيص برامج، وصيانة في الأردن. New and used laptops, desktops, software licenses and repair in Jordan.">
+<meta name="description" content="Root - Your Tech Partner. لابتوبات وكمبيوترات وشاشات جديدة ومستعملة، تراخيص برامج، وصيانة في الأردن. New and used laptops, desktops, software licenses and repair in Jordan.">
 <meta name="theme-color" content="#0b1324">
 <link rel="canonical" href="{BASE}/">
 <meta property="og:title" content="Root Computers">
@@ -69,11 +69,14 @@ LBL = {
     "warranty": ("الكفالة", "Warranty"), "users": ("المستخدمين", "Users"), "duration": ("المدة", "Duration"),
     "devices": ("الأجهزة", "Devices"), "platforms": ("الأنظمة", "Platforms"), "cloud": ("التخزين السحابي", "Cloud storage"),
     "apps": ("التطبيقات", "Apps"), "monitor": ("الشاشة المرفقة", "Monitor"), "inbox": ("داخل العلبة", "In the box"), "type": ("النوع", "Type"), "license": ("الترخيص", "License"), "color": ("اللون", "Color"), "other": ("أخرى", "Other"),
+    "panel": ("نوع اللوحة", "Panel"), "refresh": ("معدل التحديث", "Refresh rate"), "hdr": ("الألوان و HDR", "Color & HDR"),
+    "eyecare": ("راحة العين", "Eye care"), "audio": ("الصوت", "Audio"), "mount": ("التثبيت والإمالة", "Mount & tilt"),
+    "camera": ("الكاميرا", "Camera"), "npu": ("الذكاء الاصطناعي", "AI engine"), "charger": ("الشاحن", "Charger"),
 }
 COND = {"new": ("جديد بالكرتونة", "New in box"), "open-box": ("مفتوح الكرتونة", "Open box"),
-        "used": ("مستعمل", "Used"), "digital": ("ترخيص رقمي", "Digital license")}
+        "used": ("مستعمل", "Used"), "like-new": ("مستعمل بحالة الجديد", "Used, like new"), "digital": ("ترخيص رقمي", "Digital license")}
 CAT = {"laptop": ("لابتوبات", "Laptops"), "desktop": ("كمبيوترات", "Desktops"),
-       "license": ("تراخيص", "Licenses"), "accessory": ("إكسسوارات", "Accessories")}
+       "license": ("تراخيص", "Licenses"), "monitor": ("شاشات", "Monitors"), "accessory": ("إكسسوارات", "Accessories")}
 from urllib.parse import quote
 PERKS = {
     "win11": ("ويندوز 11 برو أصلي", "Genuine Windows 11 Pro", '<rect x="3" y="3" width="8" height="8"/><rect x="13" y="3" width="8" height="8"/><rect x="3" y="13" width="8" height="8"/><rect x="13" y="13" width="8" height="8"/>'),
@@ -203,7 +206,7 @@ def product_page(p, others):
           "description": p.get("about_en") or name, "brand": {"@type": "Brand", "name": name.split()[0]},
           "offers": {"@type": "Offer", "url": f"{BASE}/p/{p['slug']}", "priceCurrency": "JOD", "price": str(p["price"]),
                      "availability": "https://schema.org/SoldOut" if sold else "https://schema.org/InStock",
-                     "itemCondition": "https://schema.org/UsedCondition" if p.get("condition") == "used" else "https://schema.org/NewCondition",
+                     "itemCondition": "https://schema.org/UsedCondition" if p.get("condition") in ("used", "like-new") else "https://schema.org/NewCondition",
                      "seller": {"@type": "Organization", "name": "Root Computers"}}}
     return f'''<!doctype html>
 <html lang="ar" dir="rtl">

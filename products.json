@@ -310,6 +310,246 @@
     "added": "2026-10-11"
   },
   {
+    "slug": "hp-elitebook-840-g10",
+    "status": "available",
+    "category": "laptop",
+    "condition": "like-new",
+    "condition_note_ar": "تحت الكفالة الرسمية",
+    "condition_note_en": "Official warranty",
+    "name": "HP EliteBook 840 G10",
+    "price": 519,
+    "old_price": 549,
+    "badge_ar": "",
+    "badge_en": "",
+    "image": "img/products/hp-elitebook-840-g10.webp",
+    "card_specs": [
+      "Core i7-1355U",
+      "16GB DDR5",
+      "512GB SSD",
+      "14\" FHD IPS"
+    ],
+    "specs": [
+      [
+        "cpu",
+        "Intel Core i7-1355U (13th Gen)"
+      ],
+      [
+        "ram",
+        "16GB DDR5-5200MHz"
+      ],
+      [
+        "storage",
+        "512GB NVMe M.2 SSD"
+      ],
+      [
+        "display",
+        "14\" FHD IPS, 400 nits, 100% sRGB"
+      ],
+      [
+        "battery",
+        "Excellent battery, original charger"
+      ],
+      [
+        "warranty",
+        "Under official warranty"
+      ]
+    ],
+    "perks": [
+      "win11",
+      "office",
+      "gift",
+      "delivery"
+    ],
+    "about_ar": "لابتوب أعمال خفيف من فئة HP EliteBook بمعالج Core i7 الجيل 13 وشاشة 400 nits. مستعمل بحالة الجديد مع الشاحن الأصلي، وتحت الكفالة الرسمية.",
+    "about_en": "A light HP EliteBook business laptop with a 13th Gen Core i7 and a 400-nit screen. Used, like new, with the original charger and under official warranty.",
+    "added": "2026-10-13"
+  },
+  {
+    "slug": "dell-latitude-7650",
+    "status": "available",
+    "category": "laptop",
+    "condition": "like-new",
+    "condition_note_ar": "بالكرتونة · كفالة Dell لـ 11/2027",
+    "condition_note_en": "Boxed · Dell warranty to 11/2027",
+    "name": "Dell Latitude 7650",
+    "price": 820,
+    "old_price": 850,
+    "badge_ar": "",
+    "badge_en": "",
+    "image": "img/products/dell-latitude-7650.webp",
+    "card_specs": [
+      "Core Ultra 7 165U",
+      "32GB LPDDR5x",
+      "512GB SSD",
+      "16\" FHD IPS"
+    ],
+    "specs": [
+      [
+        "cpu",
+        "Intel Core Ultra 7 165U"
+      ],
+      [
+        "npu",
+        "Intel NPU AI accelerator"
+      ],
+      [
+        "ram",
+        "32GB LPDDR5x 6400MHz"
+      ],
+      [
+        "storage",
+        "512GB NVMe SSD"
+      ],
+      [
+        "display",
+        "16\" FHD IPS"
+      ],
+      [
+        "keyboard",
+        "Backlit keyboard"
+      ],
+      [
+        "battery",
+        "Excellent battery, original charger"
+      ],
+      [
+        "warranty",
+        "Official Dell warranty until 11/2027"
+      ]
+    ],
+    "perks": [
+      "win11",
+      "office",
+      "gift",
+      "delivery"
+    ],
+    "about_ar": "لابتوب أعمال من الفئة العليا بشاشة 16 إنش، معالج Core Ultra 7 مع NPU للذكاء الاصطناعي، و32GB رام. مستعمل بحالة الجديد بالكرتونة، وعليه كفالة Dell الرسمية لـ 11/2027.",
+    "about_en": "A premium 16-inch business laptop with a Core Ultra 7, an NPU for AI, and 32GB of RAM. Used, like new, in its box, with official Dell warranty until 11/2027.",
+    "added": "2026-10-13"
+  },
+  {
+    "slug": "thinkpad-e16-gen1",
+    "status": "available",
+    "category": "laptop",
+    "condition": "like-new",
+    "condition_note_ar": "مكفول",
+    "condition_note_en": "With warranty",
+    "name": "Lenovo ThinkPad E16 Gen 1",
+    "price": 619,
+    "old_price": 649,
+    "badge_ar": "",
+    "badge_en": "",
+    "image": "img/products/thinkpad-e16-gen1.webp",
+    "card_specs": [
+      "Core i7-13700H",
+      "16GB DDR4",
+      "512GB SSD",
+      "16\" WUXGA IPS"
+    ],
+    "specs": [
+      [
+        "cpu",
+        "Intel Core i7-13700H (13th Gen)"
+      ],
+      [
+        "ram",
+        "16GB DDR4-3200"
+      ],
+      [
+        "storage",
+        "512GB NVMe SSD"
+      ],
+      [
+        "display",
+        "16\" WUXGA 1920×1200 IPS, anti-glare, 300 nits"
+      ],
+      [
+        "keyboard",
+        "Backlit keyboard + fingerprint reader"
+      ],
+      [
+        "weight",
+        "1.81 kg"
+      ],
+      [
+        "charger",
+        "Original charger"
+      ],
+      [
+        "warranty",
+        "Warranty included"
+      ]
+    ],
+    "perks": [
+      "win11",
+      "office",
+      "gift",
+      "delivery"
+    ],
+    "about_ar": "ThinkPad بشاشة 16 إنش ومعالج Core i7-13700H القوي من فئة H، مع بصمة ولوحة مفاتيح مضيئة. مستعمل بحالة الجديد ومكفول.",
+    "about_en": "A 16-inch ThinkPad with a powerful H-series Core i7-13700H, fingerprint reader and backlit keyboard. Used, like new, with warranty.",
+    "added": "2026-10-13"
+  },
+  {
+    "slug": "dell-latitude-5550",
+    "status": "available",
+    "category": "laptop",
+    "condition": "like-new",
+    "condition_note_ar": "كفالة Dell لـ 2028",
+    "condition_note_en": "Dell warranty to 2028",
+    "name": "Dell Latitude 5550",
+    "price": 619,
+    "old_price": 649,
+    "badge_ar": "",
+    "badge_en": "",
+    "image": "img/products/dell-latitude-5550.webp",
+    "card_specs": [
+      "Core Ultra 7 155U",
+      "16GB DDR5",
+      "512GB SSD",
+      "15.6\" FHD IPS"
+    ],
+    "specs": [
+      [
+        "cpu",
+        "Intel Core Ultra 7 155U"
+      ],
+      [
+        "npu",
+        "Intel NPU AI accelerator"
+      ],
+      [
+        "ram",
+        "16GB DDR5"
+      ],
+      [
+        "storage",
+        "512GB NVMe SSD"
+      ],
+      [
+        "display",
+        "15.6\" FHD IPS, 250 nits"
+      ],
+      [
+        "camera",
+        "FHD + IR camera"
+      ],
+      [
+        "warranty",
+        "Official Dell warranty until 2028"
+      ]
+    ],
+    "perks": [
+      "win11",
+      "office",
+      "gift",
+      "delivery"
+    ],
+    "about_ar": "لابتوب أعمال 15.6 إنش بمعالج Core Ultra 7 مع NPU، وكاميرا FHD مع IR لتسجيل الدخول بالوجه. مستعمل بحالة الجديد، وعليه كفالة Dell الرسمية لـ 2028.",
+    "about_en": "A 15.6-inch business laptop with a Core Ultra 7 and NPU, plus an FHD + IR camera for face sign-in. Used, like new, with official Dell warranty until 2028.",
+    "added": "2026-10-13"
+  },
+  {
     "slug": "hp-pro-tower-290-g9",
     "status": "available",
     "category": "desktop",
@@ -430,6 +670,246 @@
     "about_ar": "باقة كاملة: كمبيوتر صغير MSI Cubi مع شاشة 22 إنش 100Hz. بياخذ مساحة قليلة ومناسب للمكاتب والبيت. جديد بالكرتونة مع كفالة 3 سنوات.",
     "about_en": "A complete bundle: an MSI Cubi mini PC with a 22-inch 100Hz monitor. Takes up little space and suits offices and homes. New in the box with a 3-year warranty.",
     "added": "2026-10-11"
+  },
+  {
+    "slug": "msi-pro-mp341cqw-e12",
+    "status": "available",
+    "category": "monitor",
+    "condition": "new",
+    "condition_note_ar": "كفالة سنتين",
+    "condition_note_en": "2-year warranty",
+    "name": "MSI PRO MP341CQW E12",
+    "price": 309,
+    "old_price": 339,
+    "badge_ar": "",
+    "badge_en": "",
+    "image": "img/products/msi-pro-mp341cqw-e12.webp",
+    "card_specs": [
+      "34\" UWQHD Curved",
+      "VA 120Hz",
+      "21:9",
+      "HDR Ready"
+    ],
+    "specs": [
+      [
+        "display",
+        "34\" UWQHD 3440×1440, curved 1500R"
+      ],
+      [
+        "panel",
+        "VA, 21:9 UltraWide"
+      ],
+      [
+        "refresh",
+        "120Hz, 1ms (MPRT)"
+      ],
+      [
+        "hdr",
+        "HDR Ready, 91% DCI-P3"
+      ],
+      [
+        "eyecare",
+        "EyesErgo, Flicker-Free, Low Blue Light"
+      ],
+      [
+        "ports",
+        "2× HDMI 2.0b, 1× DisplayPort 1.4a"
+      ],
+      [
+        "audio",
+        "Built-in speakers 2× 2W"
+      ],
+      [
+        "mount",
+        "Tilt -3.5° to 21.5°, VESA 100×100"
+      ],
+      [
+        "warranty",
+        "2 years"
+      ]
+    ],
+    "perks": [
+      "delivery"
+    ],
+    "about_ar": "شاشة ألترا وايد منحنية 34 إنش بدقة UWQHD، مساحتها بتغنيك عن شاشتين. ممتازة للبرمجة والتصميم والجداول. جديدة بالكرتونة مع كفالة سنتين.",
+    "about_en": "A 34-inch curved UltraWide UWQHD monitor with the room of two screens. Great for coding, design and spreadsheets. New in box with a 2-year warranty.",
+    "added": "2026-10-13"
+  },
+  {
+    "slug": "msi-pro-mp275q",
+    "status": "available",
+    "category": "monitor",
+    "condition": "new",
+    "condition_note_ar": "كفالة سنتين",
+    "condition_note_en": "2-year warranty",
+    "name": "MSI PRO MP275Q",
+    "price": 159,
+    "old_price": 189,
+    "badge_ar": "",
+    "badge_en": "",
+    "image": "img/products/msi-pro-mp275q.webp",
+    "card_specs": [
+      "27\" WQHD 2K",
+      "IPS",
+      "144Hz",
+      "HDR Ready"
+    ],
+    "specs": [
+      [
+        "display",
+        "27\" WQHD 2560×1440"
+      ],
+      [
+        "panel",
+        "IPS, anti-glare, 178° viewing angles"
+      ],
+      [
+        "refresh",
+        "144Hz, 1ms MPRT"
+      ],
+      [
+        "hdr",
+        "HDR Ready, 115% sRGB"
+      ],
+      [
+        "eyecare",
+        "EyesErgo, Flicker-Free"
+      ],
+      [
+        "ports",
+        "2× HDMI 2.0b, DisplayPort 1.2a"
+      ],
+      [
+        "audio",
+        "Built-in speakers 2× 2W"
+      ],
+      [
+        "mount",
+        "VESA 100×100, tilt"
+      ],
+      [
+        "warranty",
+        "2 years"
+      ]
+    ],
+    "perks": [
+      "delivery"
+    ],
+    "about_ar": "شاشة 27 إنش بدقة 2K وتحديث 144Hz على لوحة IPS، صورة حادة وحركة سلسة للشغل والألعاب. جديدة بالكرتونة مع كفالة سنتين.",
+    "about_en": "A 27-inch 2K IPS monitor at 144Hz, with a sharp picture and smooth motion for work and play. New in box with a 2-year warranty.",
+    "added": "2026-10-13"
+  },
+  {
+    "slug": "msi-pro-mp272-e14c",
+    "status": "available",
+    "category": "monitor",
+    "condition": "new",
+    "condition_note_ar": "كفالة سنتين",
+    "condition_note_en": "2-year warranty",
+    "name": "MSI PRO MP272 E14C",
+    "price": 129,
+    "old_price": 159,
+    "badge_ar": "",
+    "badge_en": "",
+    "image": "img/products/msi-pro-mp272-e14c.webp",
+    "card_specs": [
+      "27\" FHD IPS",
+      "144Hz",
+      "USB Type-C",
+      "HDR Ready"
+    ],
+    "specs": [
+      [
+        "display",
+        "27\" FHD 1920×1080 IPS"
+      ],
+      [
+        "refresh",
+        "144Hz, 1ms (MPRT)"
+      ],
+      [
+        "hdr",
+        "HDR Ready, Adaptive-Sync"
+      ],
+      [
+        "ports",
+        "USB Type-C (DP Alt), HDMI, DisplayPort"
+      ],
+      [
+        "audio",
+        "Built-in speakers 2× 2W"
+      ],
+      [
+        "eyecare",
+        "Flicker-Free, Less Blue Light"
+      ],
+      [
+        "warranty",
+        "2 years"
+      ]
+    ],
+    "perks": [
+      "delivery"
+    ],
+    "about_ar": "شاشة 27 إنش IPS بتحديث 144Hz ومنفذ USB Type-C، فبتوصل اللابتوب بكيبل واحد للصورة. جديدة بالكرتونة مع كفالة سنتين.",
+    "about_en": "A 27-inch 144Hz IPS monitor with USB Type-C, so your laptop connects with a single cable for video. New in box with a 2-year warranty.",
+    "added": "2026-10-13"
+  },
+  {
+    "slug": "msi-pro-mp251-e14l",
+    "status": "available",
+    "category": "monitor",
+    "condition": "new",
+    "condition_note_ar": "كفالة سنتين",
+    "condition_note_en": "2-year warranty",
+    "name": "MSI PRO MP251 E14L",
+    "price": 99,
+    "old_price": 129,
+    "badge_ar": "",
+    "badge_en": "",
+    "image": "img/products/msi-pro-mp251-e14l.webp",
+    "card_specs": [
+      "24.5\" FHD IPS",
+      "144Hz",
+      "99% sRGB",
+      "HDR Ready"
+    ],
+    "specs": [
+      [
+        "display",
+        "24.5\" FHD 1920×1080 IPS"
+      ],
+      [
+        "refresh",
+        "144Hz, 1ms MPRT"
+      ],
+      [
+        "hdr",
+        "HDR Ready, Adaptive-Sync, 99% sRGB, 16.7M colors"
+      ],
+      [
+        "ports",
+        "HDMI 1.4b, VGA, headphone out"
+      ],
+      [
+        "eyecare",
+        "EyesErgo, Flicker-Free"
+      ],
+      [
+        "mount",
+        "VESA 100×100, tilt -5° to 20°"
+      ],
+      [
+        "warranty",
+        "2 years"
+      ]
+    ],
+    "perks": [
+      "delivery"
+    ],
+    "about_ar": "شاشة 24.5 إنش IPS بتحديث 144Hz وألوان 99% sRGB بسعر ممتاز، للمكتب والدراسة والألعاب الخفيفة. جديدة بالكرتونة مع كفالة سنتين.",
+    "about_en": "A 24.5-inch 144Hz IPS monitor with 99% sRGB color at a great price, for the office, study and casual gaming. New in box with a 2-year warranty.",
+    "added": "2026-10-13"
   },
   {
     "slug": "microsoft-365-personal",

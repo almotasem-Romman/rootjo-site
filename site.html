@@ -88,7 +88,7 @@ h2::before{content:">_";font-family:var(--font-mono);color:var(--cyan);font-size
 .rv{transform:translateY(26px);transition:transform .8s cubic-bezier(.2,.7,.2,1)}
 .rv.in{transform:none}
 
-.cats{display:grid;grid-template-columns:repeat(4,1fr);gap:14px;margin:0 0 40px}
+.cats{display:grid;grid-template-columns:repeat(5,1fr);gap:14px;margin:0 0 40px}
 .cat{display:flex;flex-direction:column;gap:6px;padding:20px;border-radius:18px;border:1px solid var(--line);background:var(--glass);backdrop-filter:blur(10px);-webkit-backdrop-filter:blur(10px);text-decoration:none;transition:transform .25s,border-color .25s;min-width:0}
 .cat:hover{transform:translateY(-3px);border-color:var(--cyan)}
 .cat svg{width:38px;height:38px;stroke:var(--cyan);fill:none;stroke-width:1.6;stroke-linecap:round;stroke-linejoin:round}
@@ -106,7 +106,8 @@ h2::before{content:">_";font-family:var(--font-mono);color:var(--cyan);font-size
 .svcbox a svg{width:18px;height:18px}
 .svcbox.wide{grid-column:1/-1;flex-direction:row;align-items:center;gap:20px;flex-wrap:wrap}
 .svcbox.wide div{flex:1;min-width:220px}
-@media (max-width:760px){.cats{grid-template-columns:repeat(2,1fr)}.cat{padding:16px}}
+@media (max-width:980px){.cats{grid-template-columns:repeat(3,1fr)}}
+@media (max-width:760px){.cats{grid-template-columns:repeat(2,1fr)}.cat{padding:16px}.cat:last-child:nth-child(odd){grid-column:1/-1}}
 .chips{display:flex;flex-wrap:wrap;gap:10px;margin:-10px 0 26px}
 .chip{font:inherit;font-size:15px;font-weight:700;padding:7px 18px;border-radius:999px;border:1.5px solid var(--line);background:var(--glass);color:var(--muted);cursor:pointer;transition:all .2s}
 .chip:hover{color:var(--fg);border-color:var(--cyan)}
@@ -211,7 +212,7 @@ footer .wrap{display:flex;justify-content:space-between;flex-wrap:wrap;gap:12px}
 
 @media (max-width:760px){
   body{font-size:16px}
-  nav a:not(.navcta){display:none}
+  header.top nav a:not(.navcta){display:none}
   .rq-row{grid-template-columns:1fr}
   .reqform{padding:20px}
   .rq-send .btn{width:100%}
@@ -266,8 +267,8 @@ footer .wrap{display:flex;justify-content:space-between;flex-wrap:wrap;gap:12px}
 
   <div class="strip" aria-hidden="true">
     <div class="track">
-      <span>LAPTOPS</span><span>DESKTOPS</span><span>SOFTWARE LICENSES</span><span>REPAIR &amp; SETUP</span><span>NEW &amp; USED</span><span>MADE-TO-ORDER</span>
-      <span>LAPTOPS</span><span>DESKTOPS</span><span>SOFTWARE LICENSES</span><span>REPAIR &amp; SETUP</span><span>NEW &amp; USED</span><span>MADE-TO-ORDER</span>
+      <span>LAPTOPS</span><span>DESKTOPS</span><span>MONITORS</span><span>SOFTWARE LICENSES</span><span>REPAIR &amp; SETUP</span><span>NEW &amp; USED</span><span>MADE-TO-ORDER</span>
+      <span>LAPTOPS</span><span>DESKTOPS</span><span>MONITORS</span><span>SOFTWARE LICENSES</span><span>REPAIR &amp; SETUP</span><span>NEW &amp; USED</span><span>MADE-TO-ORDER</span>
     </div>
   </div>
 
@@ -424,16 +425,18 @@ var CONFIG = {
   /* ===== Products ===== */
   var PRODUCTS = [];
   try { PRODUCTS = JSON.parse(document.getElementById("productsData").textContent); } catch (e) {}
-  var COND = { "new": ["جديد بالكرتونة", "New in box"], "open-box": ["مفتوح الكرتونة", "Open box"], used: ["مستعمل", "Used"], digital: ["ترخيص رقمي", "Digital license"] };
+  var COND = { "new": ["جديد بالكرتونة", "New in box"], "open-box": ["مفتوح الكرتونة", "Open box"], used: ["مستعمل", "Used"], "like-new": ["مستعمل بحالة الجديد", "Used, like new"], digital: ["ترخيص رقمي", "Digital license"] };
   var ICON = {
     laptop: '<svg viewBox="0 0 24 24"><rect x="4" y="4" width="16" height="11" rx="1.5"/><path d="M2 19h20l-2-4H4z"/></svg>',
-    desktop: '<svg viewBox="0 0 24 24"><rect x="2" y="3" width="20" height="13" rx="2"/><path d="M8 21h8M12 16v5"/></svg>',
+    desktop: '<svg viewBox="0 0 24 24"><rect x="7" y="2" width="10" height="20" rx="1.5"/><path d="M10 6h4M10 9h4"/><circle cx="12" cy="17" r="1.2"/></svg>',
+    monitor: '<svg viewBox="0 0 24 24"><rect x="2" y="3" width="20" height="13" rx="2"/><path d="M8 21h8M12 16v5"/></svg>',
     license: '<svg viewBox="0 0 24 24"><circle cx="8" cy="15" r="4"/><path d="M10.8 12.2 20 3M17 6l3 3M15 8l2 2"/></svg>',
     repair: '<svg viewBox="0 0 24 24"><path d="M14.7 6.3a4 4 0 0 0-5.4 5.4L3 18l3 3 6.3-6.3a4 4 0 0 0 5.4-5.4l-2.6 2.6-2.4-.6-.6-2.4z"/></svg>'
   };
   var CATS = [
     { id: "laptop", ar: "لابتوبات", en: "Laptops", dar: "جديد بالكرتونة ومستعمل بحالة ممتازة", den: "New in box and used in excellent condition" },
     { id: "desktop", ar: "كمبيوترات مكتبية", en: "Desktops", dar: "جاهزة أو تجميع حسب ميزانيتك", den: "Ready-made or built to your budget" },
+    { id: "monitor", ar: "شاشات", en: "Monitors", dar: "جديدة بالكرتونة مع كفالة سنتين", den: "New in box with a 2-year warranty" },
     { id: "license", ar: "تراخيص البرامج", en: "Software licenses", dar: "ويندوز وأوفيس أصلي", den: "Genuine Windows and Office" },
     { id: "repair", ar: "الصيانة", en: "Repair & setup", dar: "فحص وإصلاح وتهيئة", den: "Diagnosis, repair and setup" }
   ];
