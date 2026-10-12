@@ -432,8 +432,8 @@
     "status": "available",
     "category": "laptop",
     "condition": "like-new",
-    "condition_note_ar": "مكفول",
-    "condition_note_en": "With warranty",
+    "condition_note_ar": "كفالة شهرين",
+    "condition_note_en": "2-month warranty",
     "name": "Lenovo ThinkPad E16 Gen 1",
     "price": 619,
     "old_price": 649,
@@ -477,7 +477,7 @@
       ],
       [
         "warranty",
-        "Warranty included"
+        "2 months"
       ]
     ],
     "perks": [
@@ -486,8 +486,8 @@
       "gift",
       "delivery"
     ],
-    "about_ar": "ThinkPad بشاشة 16 إنش ومعالج Core i7-13700H القوي من فئة H، مع بصمة ولوحة مفاتيح مضيئة. مستعمل بحالة الجديد ومكفول.",
-    "about_en": "A 16-inch ThinkPad with a powerful H-series Core i7-13700H, fingerprint reader and backlit keyboard. Used, like new, with warranty.",
+    "about_ar": "ThinkPad بشاشة 16 إنش ومعالج Core i7-13700H القوي من فئة H، مع بصمة ولوحة مفاتيح مضيئة. مستعمل بحالة الجديد مع كفالة شهرين.",
+    "about_en": "A 16-inch ThinkPad with a powerful H-series Core i7-13700H, fingerprint reader and backlit keyboard. Used, like new, with a 2-month warranty.",
     "added": "2026-10-13"
   },
   {
