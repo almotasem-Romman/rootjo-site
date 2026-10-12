@@ -1,6 +1,8 @@
-office src2/office.png hull
-m365 src2/m365.png hull
-win11 src2/win11.png hull
-winsrv src2/winsrv.png hull
-hp290 src2/hp290.png biggest
-msi-ad src2/msi-ad.png fill biggest
+msi-pro-mp341cqw-e12 src2/msi-pro-mp341cqw-e12.png biggest
+msi-pro-mp275q src2/msi-pro-mp275q.png biggest
+msi-pro-mp272-e14c src2/msi-pro-mp272-e14c.png biggest
+msi-pro-mp251-e14l src2/msi-pro-mp251-e14l.png biggest
+hp-elitebook-840-g10 src2/hp-elitebook-840-g10.png biggest
+dell-latitude-7650 src2/dell-latitude-7650.png biggest
+thinkpad-e16-gen1 src2/thinkpad-e16-gen1.png biggest
+dell-latitude-5550 src2/dell-latitude-5550.png biggest
