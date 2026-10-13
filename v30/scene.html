@@ -1,0 +1,453 @@
+<!doctype html>
+<html lang="ar">
+<head>
+<meta charset="utf-8">
+<style>
+@font-face{font-family:Cairo;font-weight:400;src:url(assets/cairo-arabic-400-normal.woff2) format("woff2");unicode-range:U+0600-06FF,U+0750-077F,U+0870-08FF,U+FB50-FDFF,U+FE70-FEFF,U+200C-200E}
+@font-face{font-family:Cairo;font-weight:600;src:url(assets/cairo-arabic-600-normal.woff2) format("woff2");unicode-range:U+0600-06FF,U+0750-077F,U+0870-08FF,U+FB50-FDFF,U+FE70-FEFF,U+200C-200E}
+@font-face{font-family:Cairo;font-weight:700;src:url(assets/cairo-arabic-700-normal.woff2) format("woff2");unicode-range:U+0600-06FF,U+0750-077F,U+0870-08FF,U+FB50-FDFF,U+FE70-FEFF,U+200C-200E}
+@font-face{font-family:Cairo;font-weight:800;src:url(assets/cairo-arabic-800-normal.woff2) format("woff2");unicode-range:U+0600-06FF,U+0750-077F,U+0870-08FF,U+FB50-FDFF,U+FE70-FEFF,U+200C-200E}
+@font-face{font-family:Cairo;font-weight:400;src:url(assets/cairo-latin-400-normal.woff2) format("woff2");unicode-range:U+0000-00FF,U+2000-206F,U+20AC,U+2122,U+2190-21FF}
+@font-face{font-family:Cairo;font-weight:600 700;src:url(assets/cairo-latin-700-normal.woff2) format("woff2");unicode-range:U+0000-00FF,U+2000-206F,U+20AC,U+2122,U+2190-21FF}
+@font-face{font-family:Cairo;font-weight:800;src:url(assets/cairo-latin-800-normal.woff2) format("woff2");unicode-range:U+0000-00FF,U+2000-206F,U+20AC,U+2122,U+2190-21FF}
+@font-face{font-family:Mono;font-weight:700;src:url(assets/jetbrains-mono-latin-700-normal.woff2) format("woff2")}
+
+:root{--bg:#040a16;--cyan:#28cde4;--fg:#f2f6ff;--muted:#8d9cbc;--wa:#25d366;--card:#0e1830;--line:#1f2c4d}
+*{box-sizing:border-box;margin:0;padding:0}
+html,body{width:1080px;height:1920px;overflow:hidden;background:var(--bg)}
+body{font-family:Cairo,sans-serif;color:var(--fg);position:relative}
+.abs{position:absolute}
+#stage{position:absolute;inset:0;overflow:hidden}
+#vig{inset:0;background:radial-gradient(ellipse at 50% 48%,rgba(0,0,0,0) 45%,rgba(0,0,0,.65) 100%);z-index:50}
+
+/* logo */
+#logo{width:640px;height:419px;left:220px;top:700px}
+#logo img{position:absolute;top:0;height:419px}
+#logoR{left:0} #logoP{left:431px}
+#tag{width:1080px;left:0;top:1170px;text-align:center;font-family:Mono;font-size:34px;letter-spacing:.42em;color:#c9d6f0;direction:ltr;white-space:pre}
+#dot{width:40px;height:40px;left:520px;top:940px;border-radius:50%;background:#bff6ff;box-shadow:0 0 40px 18px rgba(40,205,228,.9),0 0 120px 60px rgba(40,205,228,.45)}
+
+/* titles */
+.ttl{width:1080px;left:0;top:250px;text-align:center;font-weight:800;font-size:78px;line-height:1.25;direction:rtl;white-space:nowrap}
+.ttl em{font-style:normal;color:var(--cyan)}
+.ttl small{display:block;font-size:36px;font-weight:700;color:#b9c7e6;margin-top:6px}
+.ttl .mono{font-family:Mono;direction:ltr;unicode-bidi:isolate}
+#url{width:1080px;left:0;top:270px;text-align:center;font-family:Mono;font-size:66px;direction:ltr}
+#url b{color:var(--cyan)}
+#url i{display:inline-block;width:30px;height:62px;background:var(--cyan);vertical-align:-8px;margin-left:6px}
+
+/* phone */
+#phone{width:600px;height:1230px;left:240px;top:500px;border-radius:92px;background:#0a0f1c;border:3px solid #34405e;
+  box-shadow:0 0 0 12px #121a2c,0 0 0 14px #2b3654,0 60px 140px rgba(0,0,0,.6),0 0 160px rgba(40,205,228,.25);overflow:hidden}
+#island{width:190px;height:54px;left:205px;top:22px;border-radius:30px;background:#000;z-index:9}
+#sbar{left:0;top:0;width:100%;height:90px;padding:28px 60px 0;display:flex;justify-content:space-between;direction:ltr;font-weight:700;font-size:28px;z-index:8;background:#070d1b}
+#screen{left:0;top:0;width:100%;height:100%;background:#0b1324;overflow:hidden}
+.lay{left:0;top:90px;width:600px;height:1140px;overflow:hidden}
+.lay img{position:absolute;left:0;display:block}
+#pin{left:0;top:90px;width:600px;z-index:6}
+#touch{width:74px;height:74px;margin:-37px 0 0 -37px;border-radius:50%;background:rgba(255,255,255,.88);box-shadow:0 0 0 6px rgba(255,255,255,.25),0 8px 24px rgba(0,0,0,.45);z-index:20}
+#ring{width:74px;height:74px;margin:-37px 0 0 -37px;border-radius:50%;border:5px solid var(--cyan);z-index:19}
+#scan{left:0;width:600px;height:8px;background:linear-gradient(90deg,transparent,#bff6ff,transparent);box-shadow:0 0 30px 10px rgba(40,205,228,.8);z-index:7}
+
+/* category rows */
+#cats{width:940px;left:70px;top:520px;direction:rtl}
+.row{position:relative;display:flex;align-items:center;gap:30px;height:170px;padding:0 34px;margin-bottom:22px;border-radius:30px;background:var(--card);border:1.5px solid var(--line)}
+.ic{width:112px;height:112px;border-radius:26px;background:#123047;display:grid;place-items:center;flex:none}
+.ic svg{width:64px;height:64px;stroke:var(--cyan);fill:none;stroke-width:1.7;stroke-linecap:round;stroke-linejoin:round}
+.row h4{font-size:48px;font-weight:800;flex:1}
+.row span.n{font-size:30px;color:var(--muted);font-weight:700}
+.new{position:absolute;top:-20px;left:40px;font-size:26px;font-weight:800;padding:4px 22px;border-radius:24px;background:var(--cyan);color:#04121f;box-shadow:0 0 30px rgba(40,205,228,.7)}
+
+/* product grid */
+.grid{width:960px;left:60px;top:500px;display:grid;grid-template-columns:1fr 1fr;gap:30px;direction:rtl}
+.pc{position:relative;height:560px;border-radius:34px;background:var(--card);border:1.5px solid var(--line);overflow:hidden;display:flex;flex-direction:column}
+.pc .im{height:300px;background:radial-gradient(circle at 50% 46%,#2a3d66,#121c34 75%);display:grid;place-items:center;padding:24px}
+.pc .im{overflow:hidden}
+.pc .im img{max-width:410px;max-height:250px;object-fit:contain;filter:drop-shadow(0 16px 18px rgba(0,0,0,.45))}
+.pc .tx{padding:20px 26px;display:flex;flex-direction:column;gap:4px;flex:1}
+.pc h5{font-size:31px;font-weight:800;direction:ltr;text-align:right;line-height:1.25;white-space:nowrap}
+.pc p{font-size:23px;color:var(--muted);direction:ltr;text-align:right;white-space:nowrap}
+.pc .pr{margin-top:auto;display:flex;align-items:baseline;gap:14px;direction:ltr;justify-content:flex-end}
+.pc .pr b{font-size:58px;font-weight:800;line-height:1}
+.pc .pr b small{font-size:28px;color:var(--cyan);margin-left:6px}
+.pc .pr s{font-size:26px;color:#6f7fa3}
+.pc .bd{z-index:3;position:absolute;top:20px;right:20px;font-size:21px;font-weight:800;padding:4px 16px;border-radius:20px;background:#13324a;color:var(--cyan);border:1px solid rgba(40,205,228,.45);direction:rtl}
+.note{width:1080px;left:0;top:1650px;text-align:center}
+.note span{display:inline-block;font-size:36px;font-weight:800;padding:14px 40px;border-radius:50px;border:2px solid rgba(40,205,228,.6);background:rgba(18,169,201,.12);color:#dff8ff}
+
+/* lang flip */
+#lang{width:1080px;left:0;top:1785px;text-align:center;height:90px;perspective:600px}
+#lang div{position:absolute;width:1080px;left:0;font-size:56px;font-weight:800}
+#langA{color:#dff8ff}
+#langB{color:var(--cyan);font-family:Cairo}
+
+/* chat */
+#chat{width:900px;left:90px;top:500px;border-radius:44px;background:#0b1528;border:1.5px solid var(--line);overflow:hidden;direction:rtl;box-shadow:0 40px 120px rgba(0,0,0,.5)}
+#chatHead{display:flex;align-items:center;gap:22px;padding:30px 36px;background:#0f1f3a;border-bottom:1px solid var(--line)}
+#chatHead .av{width:92px;height:92px;border-radius:50%;background:#fff;display:grid;place-items:center;overflow:hidden}
+#chatHead .av img{width:74px}
+#chatHead h5{font-size:36px;font-weight:800;line-height:1.2}
+#chatHead p{font-size:24px;color:var(--wa)}
+#chatHead .wa{margin-right:auto;width:62px;height:62px}
+#chatBody{height:860px;padding:40px 36px;position:relative;background:radial-gradient(circle at 20% 30%,rgba(40,205,228,.06),transparent 40%),#08111f}
+.b{position:absolute;max-width:700px;font-size:33px;line-height:1.6;padding:22px 30px;border-radius:30px}
+.b.me{right:36px;background:#0e5a6b;border-top-right-radius:8px}
+.b.them{left:36px;background:#1b2945;border-top-left-radius:8px}
+.b .tm{display:block;font-size:20px;color:#a9bad8;direction:ltr;text-align:left;margin-top:4px}
+#typing{left:36px;width:150px;height:76px;border-radius:30px;background:#1b2945;display:flex;align-items:center;justify-content:center;gap:12px}
+#typing i{width:16px;height:16px;border-radius:50%;background:#cfefff}
+
+/* trust pills */
+.tp{font-size:36px;font-weight:800;padding:16px 34px;border-radius:50px;background:rgba(12,24,48,.92);border:2px solid rgba(40,205,228,.55);box-shadow:0 0 40px rgba(40,205,228,.25);white-space:nowrap;direction:rtl;z-index:12}
+.tp b{color:var(--cyan)}
+
+/* cta / end */
+#pill{width:780px;height:170px;left:150px;top:875px;border-radius:90px;border:4px solid rgba(160,245,255,.9);
+  background:linear-gradient(90deg,#18b9d3,#2ad8e9);display:flex;align-items:center;justify-content:center;gap:22px;
+  font-size:60px;font-weight:800;color:#03202b;direction:rtl}
+#pill .mono{font-family:Mono;font-size:56px;direction:ltr}
+#end{width:1080px;left:0;top:640px;text-align:center}
+#end img{height:300px}
+#endUrl{font-family:Mono;font-size:78px;margin-top:60px;direction:ltr}
+#endUrl b{color:var(--cyan)}
+#endAr{font-size:46px;font-weight:700;color:#c7d3ee;margin-top:6px}
+#endIg{display:inline-flex;align-items:center;gap:16px;margin-top:40px;font-size:40px;font-weight:700;color:var(--muted);direction:ltr;border:1.5px solid var(--line);padding:12px 34px;border-radius:50px}
+#endIg svg{width:46px;height:46px}
+#wm{right:70px;top:150px;display:flex;align-items:center;gap:12px;font-size:30px;font-weight:700;color:rgba(242,246,255,.85);direction:ltr}
+#wm svg{width:38px;height:38px}
+#flash{inset:0;background:radial-gradient(circle at 50% 50%,#bdf4ff,#28cde4 60%,#0b3a55);z-index:40;mix-blend-mode:screen}
+</style>
+</head>
+<body>
+<svg width="0" height="0" style="position:absolute"><symbol id="wa" viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></symbol></svg>
+<div id="stage">
+  <canvas id="bgc" class="abs" width="1080" height="1920" style="left:0;top:0"></canvas>
+
+  <!-- S1 logo 0-2.6 -->
+  <div id="dot" class="abs"></div>
+  <div id="logo" class="abs"><img id="logoR" src="assets/logo_r.png"><img id="logoP" src="assets/logo_p.png"></div>
+  <div id="tag" class="abs"></div>
+
+  <!-- titles -->
+  <div id="url" class="abs"><span id="urlT"></span><i id="urlC"></i></div>
+  <div class="ttl abs" id="t2">بحلّة <em>جديدة</em><small>كل المتوفر بأسعاره النهائية</small></div>
+  <div class="ttl abs" id="t3"><em>5</em> أقسام بمكان واحد</div>
+  <div class="ttl abs" id="t4">جديد: قسم <em>الشاشات</em></div>
+  <div class="ttl abs" id="t5">مستعمل <em>بحالة الجديد</em></div>
+  <div class="ttl abs" id="t6">الموقع <em>بلغتين</em><small>عربي · English</small></div>
+  <div class="ttl abs" id="t7">اطلب جهازك <em>بضغطة</em><small>اختار، وبتوصلنا رسالة جاهزة</small></div>
+  <div class="ttl abs" id="t8">كل <em>أسئلتك</em> إلها جواب</div>
+
+  <!-- phone -->
+  <div id="phone" class="abs">
+    <div id="screen" class="abs">
+      <div class="lay abs" id="Ls"><div id="strip" class="abs" style="left:0;top:0;width:600px">
+        <img src="assets/site/hero_ar.png" style="top:0;width:600px">
+        <img src="assets/site/cats_ar.png" style="top:1140px;left:31px;width:538px">
+      </div></div>
+      <img id="pin" class="abs" src="assets/site/header_ar.png">
+      <div class="lay abs" id="Lar"><img src="assets/site/hero_ar.png" style="top:0;width:600px"></div>
+      <div class="lay abs" id="Len"><img src="assets/site/hero_en.png" style="top:0;width:600px"></div>
+      <div id="scan" class="abs"></div>
+      <div class="lay abs" id="Lreq"><div id="reqS" class="abs" style="left:0;top:0;width:600px;height:2106px">
+        <img id="rq0" src="assets/site/req0.png" style="top:0;width:600px">
+        <img id="rq1" src="assets/site/req1.png" style="top:0;width:600px">
+        <img id="rq2" src="assets/site/req2.png" style="top:0;width:600px">
+        <img id="rq3" src="assets/site/req3.png" style="top:0;width:600px">
+      </div></div>
+      <div class="lay abs" id="Lfaq"><img id="faqI" src="assets/site/faq_ar.png" style="top:0;width:600px"></div>
+      <div id="ring" class="abs"></div>
+      <div id="touch" class="abs"></div>
+    </div>
+    <div id="island" class="abs"></div>
+    <div id="sbar" class="abs"><span>9:41</span><span>5G&nbsp;&#9646;</span></div>
+  </div>
+
+  <!-- S3 categories -->
+  <div id="cats" class="abs">
+    <div class="row" id="c0"><div class="ic"><svg viewBox="0 0 24 24"><rect x="4" y="4" width="16" height="11" rx="1.5"/><path d="M2 19h20l-2-4H4z"/></svg></div><h4>لابتوبات</h4><span class="n">8 متوفر</span></div>
+    <div class="row" id="c1"><div class="ic"><svg viewBox="0 0 24 24"><rect x="7" y="2" width="10" height="20" rx="1.5"/><path d="M10 6h4M10 9h4"/><circle cx="12" cy="17" r="1.2"/></svg></div><h4>كمبيوترات مكتبية</h4><span class="n">2 متوفر</span></div>
+    <div class="row" id="c2"><span class="new">جديد</span><div class="ic"><svg viewBox="0 0 24 24"><rect x="2" y="3" width="20" height="13" rx="2"/><path d="M8 21h8M12 16v5"/></svg></div><h4>شاشات</h4><span class="n">4 متوفر</span></div>
+    <div class="row" id="c3"><div class="ic"><svg viewBox="0 0 24 24"><circle cx="8" cy="15" r="4"/><path d="M10.8 12.2 20 3M17 6l3 3M15 8l2 2"/></svg></div><h4>تراخيص البرامج</h4><span class="n">4 متوفر</span></div>
+    <div class="row" id="c4"><div class="ic"><svg viewBox="0 0 24 24"><path d="M14.7 6.3a4 4 0 0 0-5.4 5.4L3 18l3 3 6.3-6.3a4 4 0 0 0 5.4-5.4l-2.6 2.6-2.4-.6-.6-2.4z"/></svg></div><h4>الصيانة</h4><span class="n">4 خدمات</span></div>
+  </div>
+
+  <!-- S4 monitors -->
+  <div id="gm" class="grid abs">
+    <div class="pc" id="m0"><div class="im"><img src="assets/msi-pro-mp251-e14l.webp"></div><div class="tx"><h5>MSI PRO MP251 E14L</h5><p>24.5" FHD IPS · 144Hz</p><div class="pr"><s>129 JD</s><b>99<small>JD</small></b></div></div></div>
+    <div class="pc" id="m1"><div class="im"><img src="assets/msi-pro-mp272-e14c.webp"></div><div class="tx"><h5>MSI PRO MP272 E14C</h5><p>27" FHD IPS · USB Type-C</p><div class="pr"><s>159 JD</s><b>129<small>JD</small></b></div></div></div>
+    <div class="pc" id="m2"><div class="im"><img src="assets/msi-pro-mp275q.webp"></div><div class="tx"><h5>MSI PRO MP275Q</h5><p>27" 2K WQHD · 144Hz</p><div class="pr"><s>189 JD</s><b>159<small>JD</small></b></div></div></div>
+    <div class="pc" id="m3"><div class="im"><img src="assets/msi-pro-mp341cqw-e12.webp"></div><div class="tx"><h5>MSI PRO MP341CQW</h5><p>34" Curved UltraWide</p><div class="pr"><s>339 JD</s><b>309<small>JD</small></b></div></div></div>
+  </div>
+  <div class="note abs" id="nm"><span>جديدة بالكرتونة · كفالة سنتين</span></div>
+
+  <!-- S5 laptops -->
+  <div id="gl" class="grid abs">
+    <div class="pc" id="l0"><span class="bd">تحت الكفالة الرسمية</span><div class="im"><img src="assets/hp-elitebook-840-g10.webp"></div><div class="tx"><h5>HP EliteBook 840 G10</h5><p>Core i7-1355U · 16GB · 512GB</p><div class="pr"><s>549 JD</s><b>519<small>JD</small></b></div></div></div>
+    <div class="pc" id="l1"><span class="bd">كفالة Dell لـ 2028</span><div class="im"><img src="assets/dell-latitude-5550.webp"></div><div class="tx"><h5>Dell Latitude 5550</h5><p>Core Ultra 7 · 16GB · 512GB</p><div class="pr"><s>649 JD</s><b>619<small>JD</small></b></div></div></div>
+    <div class="pc" id="l2"><span class="bd">كفالة شهرين</span><div class="im"><img src="assets/thinkpad-e16-gen1.webp"></div><div class="tx"><h5>ThinkPad E16 Gen 1</h5><p>Core i7-13700H · 16GB · 512GB</p><div class="pr"><s>649 JD</s><b>619<small>JD</small></b></div></div></div>
+    <div class="pc" id="l3"><span class="bd">بالكرتونة · كفالة Dell</span><div class="im"><img src="assets/dell-latitude-7650.webp"></div><div class="tx"><h5>Dell Latitude 7650</h5><p>Core Ultra 7 · 32GB · 512GB</p><div class="pr"><s>850 JD</s><b>820<small>JD</small></b></div></div></div>
+  </div>
+  <div class="note abs" id="nl"><span>ويندوز وأوفيس أصليين · هدية شنطة وماوس</span></div>
+
+  <!-- S6 language flip label -->
+  <div id="lang" class="abs"><div id="langA">عربي</div><div id="langB" dir="ltr">English</div></div>
+
+  <!-- S7 chat -->
+  <div id="chat" class="abs">
+    <div id="chatHead"><div class="av"><img src="assets/logo_navy.png"></div>
+      <div><h5>Root Computers</h5><p>متصل الآن</p></div>
+      <svg class="wa" viewBox="0 0 24 24" fill="#25d366"><use href="#wa"/></svg>
+    </div>
+    <div id="chatBody">
+      <div class="b me" id="b1" style="top:40px">مرحباً <bdi>Root</bdi>، بدي أطلب جهاز:<br>• النوع: لابتوب<br>• الاستخدام: برمجة<br>• الميزانية: من <bdi>500</bdi> لـ <bdi>800</bdi> دينار<br>• الحالة: جديد<br><bdi>rootjo.com</bdi><span class="tm">10:24 ✓✓</span></div>
+      <div id="typing" class="abs" style="top:520px"><i></i><i></i><i></i></div>
+      <div class="b them" id="b2" style="top:520px">أهلاً فيك! هاي الخيارات اللي بتناسبك بميزانيتك 👇<span class="tm">10:25</span></div>
+    </div>
+  </div>
+
+  <!-- S8 trust pills -->
+  <div class="tp abs" id="p0">توصيل <b>3 JD</b> داخل عمّان</div>
+  <div class="tp abs" id="p1">الدفع <b>عند الاستلام</b></div>
+  <div class="tp abs" id="p2">كفالة <b>واضحة</b> لكل جهاز</div>
+  <div class="tp abs" id="p3">ويندوز وأوفيس <b>أصليين</b></div>
+
+  <!-- S9 cta / end -->
+  <div id="pill" class="abs"><span>زور</span><span class="mono">rootjo.com</span></div>
+  <div id="end" class="abs">
+    <img src="assets/logo.png">
+    <div id="endUrl">rootjo<b>.com</b></div>
+    <div id="endAr">شريكك التقني</div>
+    <div id="endIg"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r=".8" fill="currentColor"/></svg>@rootcomputers</div>
+  </div>
+  <div id="wm" class="abs"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r=".8" fill="currentColor"/></svg>@rootcomputers</div>
+
+  <div id="flash" class="abs"></div>
+  <div id="vig" class="abs"></div>
+</div>
+
+<script>
+const $=id=>document.getElementById(id);
+const cl=(x,a=0,b=1)=>Math.min(b,Math.max(a,x));
+const P=(t,a,b)=>cl((t-a)/(b-a));
+const eo=x=>1-Math.pow(1-x,3);
+const eo5=x=>1-Math.pow(1-x,5);
+const ei=x=>x*x*x;
+const eio=x=>x<.5?4*x*x*x:1-Math.pow(-2*x+2,3)/2;
+const back=x=>{const c1=1.6,c3=c1+1;return 1+c3*Math.pow(x-1,3)+c1*Math.pow(x-1,2)};
+const lerp=(a,b,p)=>a+(b-a)*p;
+function S(el,o){
+  if(typeof el==="string")el=$(el);
+  const op=o.op==null?1:o.op;
+  el.style.opacity=op.toFixed(3);
+  el.style.visibility=op<=0.001?"hidden":"visible";
+  let tr="";
+  if(o.p)tr+=`perspective(${o.p}px) `;
+  tr+=`translate(${(o.x||0).toFixed(1)}px,${(o.y||0).toFixed(1)}px)`;
+  if(o.rx)tr+=` rotateX(${o.rx.toFixed(2)}deg)`;
+  if(o.ry)tr+=` rotateY(${o.ry.toFixed(2)}deg)`;
+  if(o.r)tr+=` rotate(${o.r.toFixed(2)}deg)`;
+  const s=o.s==null?1:o.s;
+  tr+=` scale(${(o.sx==null?s:o.sx).toFixed(4)},${(o.sy==null?s:o.sy).toFixed(4)})`;
+  el.style.transform=tr;
+  el.style.filter=o.blur>0.05?`blur(${o.blur.toFixed(2)}px)`:"none";
+}
+const grainC=document.createElement("canvas");grainC.width=540;grainC.height=960;
+(function(){const g=grainC.getContext("2d");let s=7;const r=()=>(s=(s*16807)%2147483647)/2147483647;
+ const im=g.createImageData(540,960);for(let i=0;i<im.data.length;i+=4){const v=r()*255;im.data[i]=im.data[i+1]=im.data[i+2]=v;im.data[i+3]=255}g.putImageData(im,0,0)})();
+
+const TAG="YOUR TECH PARTNER", URL="rootjo.com";
+// title windows: id, in, out
+const TT=[["t2",3.0,6.2],["t3",6.7,10.0],["t4",10.3,13.9],["t5",14.1,17.5],["t6",17.8,21.1],["t7",21.4,24.9],["t8",25.2,27.3]];
+// touch path inside the phone screen (screen coords): [t0 move start, t1 arrive, tap time, x, y]
+const TAPS=[[18.2,18.6,18.75,532,142],[21.55,21.9,22.0,163,594-300+90],[22.15,22.45,22.55,418,909-300+90],[22.7,23.0,23.1,488,1223-300+90]];
+
+function drawFrame(t){
+  // background glow choreography: [time, x, y, scale, opacity]
+  const K=[[0,540,960,.05,0],[.5,540,960,.25,1],[1.3,540,960,.85,1],[2.4,540,960,.95,1],[2.9,540,1250,.8,.9],[3.6,540,1050,1.05,1],[6.3,540,1100,1,1],
+           [6.9,540,900,.8,1],[9.6,540,1100,.85,1],[10.4,700,900,.9,1],[13.6,380,1200,.9,1],[14.4,380,900,.9,1],[17.2,700,1200,.9,1],
+           [18.0,540,1050,1,1],[21,540,1100,1,1],[24,540,950,.95,1],[25.2,540,1050,1,1],[27.2,540,1000,.9,1],[27.6,540,960,.6,1],
+           [28.4,540,960,.9,1],[28.8,540,960,1.5,1],[29.4,540,900,1,1],[30,540,900,1.05,1]];
+  let i=0;while(i<K.length-2&&t>K[i+1][0])i++;
+  const k0=K[i],k1=K[i+1],q=eio(P(t,k0[0],k1[0]));
+  drawBg(t,lerp(k0[1],k1[1],q),lerp(k0[2],k1[2],q),lerp(k0[3],k1[3],q)*(1+.03*Math.sin(t*2.2)),lerp(k0[4],k1[4],q));
+
+  // ---------- S1 logo 0-2.6 ----------
+  const dotIn=eo(P(t,0,.45)), dotOut=P(t,.55,.85);
+  S("dot",{s:dotIn*(1+.4*Math.sin(t*12))*(1-dotOut*.9),op:dotIn*(1-dotOut)});
+  const lr=eo5(P(t,.6,1.4)), lp=back(P(t,1.05,1.55)), lout=ei(P(t,2.25,2.7));
+  S("logo",{s:(.86+.14*lr)*(1+.35*lout),op:1-lout,blur:(1-lr)*18+lout*26});
+  S("logoR",{op:lr});
+  S("logoP",{x:(1-lp)*-80,op:P(t,1.05,1.3)});
+  $("tag").textContent=TAG.slice(0,Math.floor(P(t,1.5,2.1)*TAG.length+.001));
+  S("tag",{op:(1-lout)*P(t,1.45,1.6),y:lout*-30,blur:lout*10});
+
+  // ---------- titles ----------
+  TT.forEach(([id,a,b])=>{
+    const pi=eo5(P(t,a,a+.5)), po=ei(P(t,b-.35,b));
+    S(id,{y:(1-pi)*60-po*40,op:Math.min(P(t,a,a+.2),1-po),blur:(1-pi)*14+po*14});
+  });
+  // url typing (S2 only, above title)
+  const un=Math.floor(P(t,2.7,3.3)*URL.length+.001);
+  $("urlT").innerHTML=URL.slice(0,un).replace(".com","<b>.com</b>");
+  const uOut=ei(P(t,2.95,3.15));
+  S("url",{op:Math.min(P(t,2.6,2.75),1-uOut),y:-uOut*30,blur:uOut*10});
+  S("urlC",{op:(Math.floor(t*3)%2===0)?1:0});
+
+  // ---------- phone windows ----------
+  const ph=[[2.6,3.4,6.1,6.6],[17.5,18.2,23.45,23.95],[25.0,25.6,27.0,27.4]];
+  let pv=0,py=0,prx=0,ps=1,pblur=0;
+  ph.forEach(([a,b,c,d])=>{ if(t>=a-.01&&t<=d+.01){ const pin=eo5(P(t,a,b)),pout=ei(P(t,c,d));
+      pv=Math.min(P(t,a,a+.3),1-pout); py=(1-pin)*900+pout*-140; prx=(1-pin)*26-pout*10; ps=(.9+.1*pin)*(1-pout*.16); pblur=pout*22; }});
+  // gentle float + slide right during trust pills
+  const sideP=eio(P(t,25.6,26.1))*(1-eio(P(t,26.9,27.2)));
+  S("phone",{p:2200,y:py+Math.sin(t*1.3)*6,rx:prx,s:ps*(1-.12*sideP),op:pv,blur:pblur});
+
+  // S2 layer: scroll hero -> categories
+  const seg2=t<6.8;
+  S("Ls",{op:seg2?1:0});
+  const sc=1080*eio(P(t,4.3,5.6));
+  $("strip").style.transform=`translateY(${-sc}px)`;
+  S("pin",{op:seg2?P(sc,0,40):0});
+  // S6 language switch
+  const seg6=t>=17&&t<21.3;
+  S("Lar",{op:seg6?1:0});
+  const wipe=eio(P(t,18.8,19.35));        // AR -> EN
+  const wipeBack=eio(P(t,20.35,20.85));   // EN -> AR (shows it goes both ways)
+  const showEn=seg6?(wipe*(1-wipeBack)):0;
+  S("Len",{op:seg6&&(wipe>0)?1:0});
+  // clip EN from the right edge (RTL feel): reveal width = wipe, hide on back
+  const revealR = wipe>0&&wipeBack===0 ? (1-wipe)*100 : wipeBack*100;
+  $("Len").style.clipPath=`inset(0 0 0 ${revealR.toFixed(2)}%)`;
+  const scanOn=(t>18.8&&t<19.4)||(t>20.35&&t<20.9);
+  const scanX = t<20 ? 90+1140*wipe : 90+1140*wipeBack;
+  $("scan").style.top="0px";$("scan").style.height="1230px";$("scan").style.width="10px";
+  $("scan").style.background="linear-gradient(180deg,transparent,#bff6ff,transparent)";
+  $("scan").style.left=((t<20? (1-wipe) : wipeBack)*600-5).toFixed(1)+"px";
+  S("scan",{op:scanOn?1:0});
+  // S7 request form
+  const seg7=t>=21.3&&t<23.9;
+  S("Lreq",{op:seg7?1:0});
+  $("reqS").style.transform=`translateY(${-300}px)`;
+  const st1=P(t,22.0,22.15),st2=P(t,22.55,22.7),st3=P(t,23.1,23.25);
+  S("rq1",{op:st1});S("rq2",{op:st2});S("rq3",{op:st3});
+  // S8 faq
+  const seg8=t>=24.9;
+  S("Lfaq",{op:seg8?1:0});
+  $("faqI").style.transform=`translateY(${-140*eio(P(t,25.8,27))}px)`;
+
+  // touch indicator
+  let tv=0,tx=300,ty=700,tsz=1,rg=0,rgx=0,rgy=0;
+  TAPS.forEach(([m0,m1,tp,x,y],k)=>{
+    const prev=k>0&&TAPS[k-1][2]>m0-1.2?TAPS[k-1]:null;
+    if(t>=m0-.25&&t<=tp+.45){
+      const mv=eio(P(t,m0,m1)); const sx=prev?prev[3]:x+60, sy=prev?prev[4]:y+220;
+      tx=lerp(sx,x,mv); ty=lerp(sy,y,mv); tv=Math.min(P(t,m0-.25,m0),1-P(t,tp+.2,tp+.45));
+      tsz=1-.22*Math.sin(Math.PI*P(t,tp-.06,tp+.12));
+    }
+    const rp=P(t,tp,tp+.5); if(rp>0&&rp<1){rg=rp;rgx=x;rgy=y;}
+  });
+  $("touch").style.left=tx+"px";$("touch").style.top=ty+"px";
+  S("touch",{op:tv*.9,s:tsz});
+  $("ring").style.left=rgx+"px";$("ring").style.top=rgy+"px";
+  S("ring",{op:rg>0?(1-rg):0,s:1+2.2*eo(rg)});
+
+  // ---------- S3 categories 6.6-10.1 ----------
+  const cIn=P(t,6.6,6.7), cOut=ei(P(t,9.6,10.1));
+  S("cats",{op:Math.min(cIn,1-cOut),y:-cOut*60,blur:cOut*16});
+  for(let r=0;r<5;r++){
+    const ri=eo5(P(t,6.75+r*.13,7.35+r*.13));
+    const hl=r===2?Math.min(eo(P(t,8.3,8.6)),1):0;
+    const el=$("c"+r);
+    S(el,{x:(1-ri)*(r%2?140:-140),op:ri*(t>8.3&&r!==2?1-.45*eo(P(t,8.3,8.6)):1),s:1+hl*.06});
+    el.style.borderColor=hl>.02?`rgba(40,205,228,${(.3+.7*hl).toFixed(2)})`:"";
+    el.style.boxShadow=hl>.02?`0 0 ${Math.round(80*hl)}px rgba(40,205,228,${(.5*hl).toFixed(2)})`:"none";
+    el.style.zIndex=r===2?2:1;
+  }
+  S(document.querySelector("#c2 .new"),{s:.4+.6*back(P(t,8.45,8.85))+.04*Math.sin(t*8)*P(t,8.85,9),op:P(t,8.45,8.6)});
+
+  // ---------- S4 monitors 10.3-13.9 / S5 laptops 14.1-17.5 ----------
+  grid("gm","m",10.4,13.6,13.95,"nm",11.4);
+  grid("gl","l",14.2,17.1,17.5,"nl",15.2);
+
+  // ---------- S6 lang label ----------
+  const lgIn=eo5(P(t,18.0,18.4)), lgOut=ei(P(t,20.9,21.2));
+  S("lang",{op:Math.min(P(t,18,18.2),1-lgOut),y:(1-lgIn)*40});
+  const flip=eio(P(t,18.85,19.25))*(1-eio(P(t,20.4,20.8)));
+  S("langA",{rx:flip*90,op:1-flip,p:600});
+  S("langB",{rx:(1-flip)*-90,op:flip,p:600});
+
+  // ---------- S7 chat 23.7-25.0 ----------
+  const chIn=eo5(P(t,23.75,24.3)), chOut=ei(P(t,24.75,25.1));
+  S("chat",{y:(1-chIn)*260+chOut*-120,s:(.92+.08*chIn)*(1-chOut*.1),op:Math.min(P(t,23.75,24),1-chOut),blur:(1-chIn)*12+chOut*20});
+  const b1=back(P(t,24.0,24.35)); $("b1").style.transformOrigin="100% 0";
+  S("b1",{s:.6+.4*b1,op:P(t,24.0,24.15),x:(1-b1)*40});
+  S("typing",{op:Math.min(P(t,24.4,24.5),1-P(t,24.62,24.7))});
+  document.querySelectorAll("#typing i").forEach((d,j)=>{d.style.transform=`translateY(${(-8*Math.max(0,Math.sin((t*9)-j*.9))).toFixed(1)}px)`});
+  const b2=back(P(t,24.65,24.95)); $("b2").style.transformOrigin="0 0";
+  S("b2",{s:.6+.4*b2,op:P(t,24.65,24.75),x:(1-b2)*-40});
+
+  // ---------- S8 trust pills 25.7-27.3 ----------
+  const pos=[[60,560],[470,820],[90,1120],[420,1400]];
+  for(let k=0;k<4;k++){
+    const a=25.75+k*.22, pi=back(P(t,a,a+.4)), po=ei(P(t,27.0,27.3));
+    const el=$("p"+k); el.style.left=pos[k][0]+"px"; el.style.top=pos[k][1]+"px";
+    S(el,{s:(.5+.5*pi)*(1-po*.2),op:Math.min(P(t,a,a+.12),1-po),y:Math.sin(t*1.6+k)*6,blur:po*12});
+  }
+
+  // ---------- S9 CTA + end 27.4-30 ----------
+  const pi=back(P(t,27.5,28.0)), press=Math.sin(Math.PI*P(t,28.25,28.5)), pout3=ei(P(t,28.45,28.7));
+  S("pill",{s:(.5+.5*pi)*(1-.06*press)*(1+pout3*.6),op:Math.min(P(t,27.5,27.65),1-pout3),blur:pout3*20});
+  const pg=.5+.5*Math.sin(t*6);
+  $("pill").style.boxShadow=`0 0 ${Math.round(60+50*pg)}px rgba(40,205,228,${(.55+.25*pg).toFixed(2)}),0 0 ${Math.round(160+60*pg)}px rgba(40,205,228,.35)`;
+  const fl=Math.min(eo(P(t,28.45,28.55)),1-eo(P(t,28.55,29.05)));
+  S("flash",{op:fl*.28});
+  const e1=eo5(P(t,28.6,29.3)), e2=eo5(P(t,28.9,29.5)), e3=eo5(P(t,29.15,29.7));
+  S("end",{op:P(t,28.6,28.8)});
+  S($("end").querySelector("img"),{s:.8+.2*e1,blur:(1-e1)*16,op:e1});
+  S("endUrl",{y:(1-e2)*40,op:e2,blur:(1-e2)*8});
+  S("endAr",{y:(1-e2)*40,op:e2*.95});
+  S("endIg",{y:(1-e3)*40,op:e3});
+
+  S("wm",{op:Math.min(P(t,3.2,3.6),1-P(t,27.1,27.4))*.85});
+}
+function grid(gid,pre,a,c,d,noteId,na){
+  const gin=P(window.__t,a,a+.1), gout=ei(P(window.__t,c,d));
+  S(gid,{op:Math.min(gin,1-gout),y:-gout*60,blur:gout*16,s:1-gout*.04});
+  const t=window.__t;
+  for(let k=0;k<4;k++){
+    const st=a+.1+k*.16, p=eo5(P(t,st,st+.6));
+    const col=k%2, row=Math.floor(k/2);
+    S(pre+k,{p:1600,y:(1-p)*220,rx:(1-p)*-24,ry:(1-p)*(col?18:-18),s:.86+.14*p,op:P(t,st,st+.2)});
+    // spotlight sweep: each card glows in turn
+    const hs=na+.45+k*.45, hl=Math.min(eo(P(t,hs,hs+.25)),1-eio(P(t,hs+.35,hs+.6)));
+    const el=$(pre+k);
+    el.style.borderColor=hl>.02?`rgba(40,205,228,${(.3+.7*hl).toFixed(2)})`:"";
+    el.style.boxShadow=hl>.02?`0 0 ${Math.round(70*hl)}px rgba(40,205,228,${(.45*hl).toFixed(2)})`:"none";
+    S(el.querySelector(".im img"),{s:1+.06*hl,y:-8*hl});
+  }
+  const ni=back(P(t,na,na+.45)), no=ei(P(t,c,d));
+  S(noteId,{s:.7+.3*ni,op:Math.min(P(t,na,na+.15),1-no),blur:no*12});
+}
+const bg=$("bgc").getContext("2d");
+function rg(x,y,r,stops){const g=bg.createRadialGradient(x,y,0,x,y,r);stops.forEach(([o,c])=>g.addColorStop(o,c));bg.fillStyle=g;bg.fillRect(x-r,y-r,2*r,2*r)}
+function drawBg(t,gx,gy,gs,go){
+  bg.globalAlpha=1;bg.fillStyle="#040a16";bg.fillRect(0,0,1080,1920);
+  const ga=.9*P(t,.3,1.5); if(ga>0){
+    bg.save();bg.strokeStyle="rgba(40,205,228,.07)";bg.lineWidth=1;bg.beginPath();
+    const off=(t*14)%90;for(let x=0;x<=1080;x+=90){bg.moveTo(x+.5,0);bg.lineTo(x+.5,1920)}for(let y=-90+off;y<=1920;y+=90){bg.moveTo(0,y+.5);bg.lineTo(1080,y+.5)}
+    bg.globalAlpha=ga;bg.stroke();bg.restore();
+  }
+  rg(540,960,1150,[[0,"rgba(4,10,22,0)"],[.45,"rgba(4,10,22,0)"],[1,"rgba(4,10,22,1)"]]);
+  bg.globalCompositeOperation="lighter";
+  const x2=540+(gx-540)*-.4+Math.sin(t*.7)*60, y2=960+(gy-960)*-.3+Math.cos(t*.5)*50, s2=(.8+.2*Math.sin(t*.4));
+  bg.globalAlpha=.6*go;rg(x2,y2,520*s2,[[0,"rgba(80,110,255,.33)"],[1,"rgba(80,110,255,0)"]]);
+  bg.globalAlpha=go;rg(gx,gy,700*gs,[[0,"rgba(40,205,228,.55)"],[.3,"rgba(18,169,201,.26)"],[.6,"rgba(30,80,200,.08)"],[1,"rgba(0,0,0,0)"]]);
+  bg.globalCompositeOperation="source-over";
+  bg.globalAlpha=.05;bg.drawImage(grainC,0,0,1080,1920);bg.globalAlpha=1;
+}
+window.render=t=>{window.__t=t;drawFrame(t)};
+window.ready=Promise.all([document.fonts.ready,...[...document.images].map(im=>im.decode().catch(()=>{}))]).then(()=>new Promise(r=>setTimeout(r,300)));
+</script>
+</body>
+</html>
