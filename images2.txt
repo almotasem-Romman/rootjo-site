@@ -1,8 +1,5 @@
-msi-pro-mp341cqw-e12 src2/msi-pro-mp341cqw-e12.png biggest
-msi-pro-mp275q src2/msi-pro-mp275q.png biggest
-msi-pro-mp272-e14c src2/msi-pro-mp272-e14c.png biggest
-msi-pro-mp251-e14l src2/msi-pro-mp251-e14l.png biggest
-hp-elitebook-840-g10 src2/hp-elitebook-840-g10.png biggest
-dell-latitude-7650 src2/dell-latitude-7650.png biggest
-thinkpad-e16-gen1 src2/thinkpad-e16-gen1.png biggest
-dell-latitude-5550 src2/dell-latitude-5550.png biggest
+ultra5-gaming-desktop-rtx5070ti src2/ultra5-gaming-desktop-rtx5070ti.png biggest
+macbook-pro-14-m5-pro src2/macbook-pro-14-m5-pro.png biggest
+dell-pro-p2726h src2/dell-pro-p2726h.png biggest
+asus-rog-strix-scar-18 src2/asus-rog-strix-scar-18.png biggest
+asus-vivobook-15-x1504va src2/asus-vivobook-15-x1504va.png biggest
