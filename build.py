@@ -72,17 +72,21 @@ LBL = {
     "panel": ("نوع اللوحة", "Panel"), "refresh": ("معدل التحديث", "Refresh rate"), "hdr": ("الألوان و HDR", "Color & HDR"),
     "eyecare": ("راحة العين", "Eye care"), "audio": ("الصوت", "Audio"), "mount": ("التثبيت والإمالة", "Mount & tilt"),
     "camera": ("الكاميرا", "Camera"), "npu": ("الذكاء الاصطناعي", "AI engine"), "charger": ("الشاحن", "Charger"),
+    "cooling": ("التبريد", "Cooling"), "case": ("الكيس", "Case"), "psu": ("مزود الطاقة", "Power supply"),
+    "colors": ("دقة الألوان", "Color accuracy"), "usbhub": ("منافذ USB", "USB hub"),
 }
 COND = {"new": ("جديد بالكرتونة", "New in box"), "open-box": ("مفتوح الكرتونة", "Open box"),
         "used": ("مستعمل", "Used"), "like-new": ("مستعمل بحالة الجديد", "Used, like new"), "digital": ("ترخيص رقمي", "Digital license")}
 CAT = {"laptop": ("لابتوبات", "Laptops"), "desktop": ("كمبيوترات", "Desktops"),
        "license": ("تراخيص", "Licenses"), "monitor": ("شاشات", "Monitors"), "accessory": ("إكسسوارات", "Accessories")}
 from urllib.parse import quote
+CSLUG = {"laptop": "laptops", "desktop": "desktops", "monitor": "monitors", "license": "licenses", "repair": "repair"}
 PERKS = {
     "win11": ("ويندوز 11 برو أصلي", "Genuine Windows 11 Pro", '<rect x="3" y="3" width="8" height="8"/><rect x="13" y="3" width="8" height="8"/><rect x="3" y="13" width="8" height="8"/><rect x="13" y="13" width="8" height="8"/>'),
     "office": ("أوفيس برو بلس أصلي", "Genuine MS Office Pro Plus", '<path d="M4 6l9-3 7 3v12l-7 3-9-3z"/><path d="M13 3v18"/>'),
     "gift": ("هدية: شنطة وماوس لاسلكي", "Free gift: bag and wireless mouse", '<rect x="3" y="8" width="18" height="13" rx="1"/><path d="M12 8v13M3 12h18M12 8c-2-4-6-4-6-1s4 1 6 1c2 0 6 2 6-1s-4-3-6 1"/>'),
     "gift_mouse": ("هدية: ماوس لاسلكي", "Free gift: wireless mouse", '<rect x="3" y="8" width="18" height="13" rx="1"/><path d="M12 8v13M3 12h18M12 8c-2-4-6-4-6-1s4 1 6 1c2 0 6 2 6-1s-4-3-6 1"/>'),
+    "macos": ("نظام macOS الأصلي", "Genuine macOS", '<path d="M12 3l1.8 4.7L18.5 9.5l-4.7 1.8L12 16l-1.8-4.7L5.5 9.5l4.7-1.8z"/><path d="M18 15l.9 2.1L21 18l-2.1.9L18 21l-.9-2.1L15 18l2.1-.9z"/>'),
     "delivery": ("توصيل لكل المملكة، الدفع بعد الاستلام والمعاينة", "Delivery across Jordan, pay after you receive and check it", '<path d="M3 6h11v10H3zM14 9h4l3 3v4h-7"/><circle cx="7" cy="17" r="2"/><circle cx="17" cy="17" r="2"/>'),
 }
 
@@ -99,7 +103,7 @@ WA_ICON = '<svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path
 
 PCSS = '''
 :root{--bg:#f5f8fc;--surface:#ffffff;--fg:#14213d;--muted:#586783;--line:#d9e2ef;--navy:#1b2a52;--cyan:#0e9db9;--cyan-soft:#e0f4f9;--wa:#1a8f4d;--hero:#0b1730;--panel-hi:#ffffff;--panel-lo:#e7edf5;
---font-ar:'Cairo','Segoe UI',Tahoma,sans-serif;--font-mono:'JetBrains Mono',ui-monospace,Consolas,monospace;color-scheme:light}
+--font-ar:'Cairo','Segoe UI',Tahoma,sans-serif;--font-head:'Readex Pro','Cairo','Segoe UI',Tahoma,sans-serif;--font-mono:'JetBrains Mono',ui-monospace,Consolas,monospace;color-scheme:light}
 @media (prefers-color-scheme:dark){:root:not([data-theme="light"]){--bg:#0b1324;--surface:#121d36;--fg:#e8eefb;--muted:#9aa9c7;--line:#24335a;--navy:#e8eefb;--cyan:#2cc4e3;--cyan-soft:#12304a;--wa:#2fb868;--panel-hi:#2a3d66;--panel-lo:#131e37;color-scheme:dark}}
 :root[data-theme="dark"]{--bg:#0b1324;--surface:#121d36;--fg:#e8eefb;--muted:#9aa9c7;--line:#24335a;--navy:#e8eefb;--cyan:#2cc4e3;--cyan-soft:#12304a;--wa:#2fb868;--panel-hi:#2a3d66;--panel-lo:#131e37;color-scheme:dark}
 *{box-sizing:border-box}
@@ -107,6 +111,7 @@ body{margin:0;font-family:var(--font-ar);font-size:17px;line-height:1.75;color:v
  background-image:radial-gradient(900px 500px at 85% -10%,color-mix(in srgb,var(--cyan) 18%,transparent),transparent 70%),radial-gradient(700px 500px at 0% 30%,color-mix(in srgb,#4664eb 10%,transparent),transparent 70%),linear-gradient(color-mix(in srgb,var(--cyan) 7%,transparent) 1px,transparent 1px),linear-gradient(90deg,color-mix(in srgb,var(--cyan) 7%,transparent) 1px,transparent 1px);
  background-size:auto,auto,72px 72px,72px 72px;background-attachment:fixed}
 img{max-width:100%}
+h1,h2,h3,h4,.mcard span{font-family:var(--font-head)}
 a{color:inherit}
 :focus-visible{outline:3px solid var(--cyan);outline-offset:3px;border-radius:6px}
 html[lang="ar"] .t-en,html[lang="en"] .t-ar{display:none!important}
@@ -203,7 +208,7 @@ def product_page(p, others):
     title = f"{name} - {p['price']} JD | Root"
     desc = (p.get("about_ar") or "") + " " + (p.get("about_en") or "")
     ld = {"@context": "https://schema.org", "@type": "Product", "name": name, "image": [img_abs],
-          "description": p.get("about_en") or name, "brand": {"@type": "Brand", "name": name.split()[0]},
+          "description": p.get("about_en") or name, "brand": {"@type": "Brand", "name": p.get("brand") or name.split()[0]},
           "offers": {"@type": "Offer", "url": f"{BASE}/p/{p['slug']}", "priceCurrency": "JOD", "price": str(p["price"]),
                      "availability": "https://schema.org/SoldOut" if sold else "https://schema.org/InStock",
                      "itemCondition": "https://schema.org/UsedCondition" if p.get("condition") in ("used", "like-new") else "https://schema.org/NewCondition",
@@ -225,7 +230,7 @@ def product_page(p, others):
 <meta name="theme-color" content="#0b1324">
 <link rel="icon" type="image/png" href="../img/favicon.png">
 <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;700;800&family=JetBrains+Mono:wght@700&display=swap">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;700;800&family=JetBrains+Mono:wght@700&family=Readex+Pro:wght@500;600;700&display=swap">
 <script>(function(){{var l="ar";try{{l=localStorage.getItem("root-lang")||l}}catch(e){{}}if(location.hash==="#en")l="en";if(location.hash==="#ar")l="ar";document.documentElement.lang=l;document.documentElement.dir=l==="en"?"ltr":"rtl"}})();</script>
 <script type="application/ld+json">{json.dumps(ld, ensure_ascii=False)}</script>
 <style>{PCSS}</style>
@@ -239,7 +244,7 @@ def product_page(p, others):
   </div>
 </div></header>
 <main class="wrap">
-  <a class="crumb" href="../#products">{bi("&rarr; كل المنتجات", "&larr; All products")}</a>
+  <a class="crumb" href="../{CSLUG.get(p['category'], 'index')}.html">{bi("&rarr; " + CAT.get(p['category'], ("كل المنتجات", ""))[0], "&larr; " + CAT.get(p['category'], ("", "All products"))[1])}</a>
   <div class="prod{' sold' if sold else ''}">
     <div class="gal"><img src="../{E(p['image'])}" alt="{E(name)}"></div>
     <div class="info">
@@ -295,10 +300,198 @@ def og_image(p):
 for p in visible:
     og_image(p)
     others = [o for o in visible if o["slug"] != p["slug"] and o.get("status") == "available"]
+    others.sort(key=lambda o: o["category"] != p["category"])
     open(os.path.join(OUT, "p", p["slug"] + ".html"), "w", encoding="utf-8").write(product_page(p, others))
 
+# ---------- category pages (laptops.html, desktops.html, ...) ----------
+SECTIONS = [
+    ("laptop", "لابتوبات", "Laptops", "جديد بالكرتونة ومستعمل بحالة ممتازة، وكل جهاز بكفالة واضحة.", "New in box and used in excellent condition, each with a clear warranty."),
+    ("desktop", "كمبيوترات مكتبية", "Desktops", "كمبيوترات جاهزة أو تجميع حسب ميزانيتك.", "Ready-made desktops, or one built to your budget."),
+    ("monitor", "شاشات", "Monitors", "شاشات جديدة بالكرتونة وبكفالة.", "New-in-box monitors with warranty."),
+    ("license", "تراخيص البرامج", "Software licenses", "ويندوز وأوفيس ومايكروسوفت 365 أصلي، والمفتاح بيوصلك بعد الدفع مباشرة.", "Genuine Windows, Office and Microsoft 365, with the key sent right after payment."),
+    ("repair", "الصيانة", "Repair & setup", "فحص وإصلاح وترقية وتهيئة لجهازك.", "Diagnosis, repair, upgrades and setup for your device."),
+]
+ICONS = {
+    "laptop": '<rect x="4" y="4" width="16" height="11" rx="1.5"/><path d="M2 19h20l-2-4H4z"/>',
+    "desktop": '<rect x="7" y="2" width="10" height="20" rx="1.5"/><path d="M10 6h4M10 9h4"/><circle cx="12" cy="17" r="1.2"/>',
+    "monitor": '<rect x="2" y="3" width="20" height="13" rx="2"/><path d="M8 21h8M12 16v5"/>',
+    "license": '<circle cx="8" cy="15" r="4"/><path d="M10.8 12.2 20 3M17 6l3 3M15 8l2 2"/>',
+    "repair": '<path d="M14.7 6.3a4 4 0 0 0-5.4 5.4L3 18l3 3 6.3-6.3a4 4 0 0 0 5.4-5.4l-2.6 2.6-2.4-.6-.6-2.4z"/>',
+}
+REPAIR = [
+    ("فحص وتشخيص", "Diagnosis", "نفحص الجهاز ونحدد المشكلة ونعطيك التكلفة قبل أي إصلاح.", "We check the device, find the fault and give you the cost before any repair.", "مرحباً Root، بدي أفحص جهازي. المشكلة: ", "Hi Root, I'd like my device checked. The problem: "),
+    ("تثبيت ويندوز وأوفيس", "Windows & Office setup", "تثبيت نظام نظيف مع تفعيل أصلي وتعريفات كاملة.", "A clean install with genuine activation and all drivers.", "مرحباً Root، بدي تثبيت ويندوز وأوفيس على جهازي. ", "Hi Root, I'd like Windows and Office installed on my device. "),
+    ("ترقية الرام والتخزين", "RAM & SSD upgrades", "نرفع سرعة جهازك بإضافة رام أو تركيب SSD.", "Speed up your device with more RAM or an SSD.", "مرحباً Root، بدي أرقّي جهازي (رام / SSD). موديل الجهاز: ", "Hi Root, I'd like to upgrade my device (RAM / SSD). Model: "),
+    ("تنظيف وتحسين الأداء", "Cleaning & tune-up", "تنظيف داخلي وتحسين أداء الجهاز وحرارته.", "Internal cleaning and a tune-up for speed and temperature.", "مرحباً Root، بدي تنظيف وصيانة لجهازي. ", "Hi Root, I'd like my device cleaned and tuned up. "),
+]
+CCSS = PCSS + """
+.chips{display:flex;gap:8px;overflow-x:auto;padding:18px 0 4px;scrollbar-width:none}
+.chips::-webkit-scrollbar{display:none}
+.chip{display:inline-flex;align-items:center;gap:8px;flex:none;padding:8px 16px;border-radius:999px;border:1.5px solid var(--line);background:var(--surface);color:var(--muted);font-weight:700;font-size:15px;text-decoration:none;white-space:nowrap}
+.chip svg{width:20px;height:20px;stroke:currentColor;fill:none;stroke-width:1.7;stroke-linecap:round;stroke-linejoin:round}
+.chip:hover{border-color:var(--cyan);color:var(--fg)}
+.chip[aria-current="page"]{background:var(--cyan);border-color:var(--cyan);color:#04121f}
+.chead{display:flex;align-items:center;gap:16px;padding:26px 0 8px}
+.chead>svg{width:54px;height:54px;flex:none;stroke:var(--cyan);fill:none;stroke-width:1.5;stroke-linecap:round;stroke-linejoin:round;padding:10px;border-radius:16px;background:var(--cyan-soft)}
+.chead h1{direction:inherit;text-align:start!important;font-size:clamp(28px,4.4vw,40px)}
+.chead p{margin:2px 0 0;color:var(--muted)}
+.count{font-weight:800;color:var(--cyan);white-space:nowrap}
+.catalog{display:grid;grid-template-columns:repeat(auto-fill,minmax(260px,1fr));gap:18px;padding:22px 0 30px}
+.pcard{position:relative;display:flex;flex-direction:column;background:var(--surface);border:1px solid var(--line);border-radius:18px;overflow:hidden;min-width:0;transition:transform .25s,border-color .25s,box-shadow .25s}
+.pcard:hover{transform:translateY(-4px);border-color:var(--cyan);box-shadow:0 18px 40px -18px color-mix(in srgb,var(--cyan) 60%,transparent)}
+.pimg{display:block;aspect-ratio:4/3;background:radial-gradient(circle at 50% 45%,var(--panel-hi),var(--panel-lo) 75%);overflow:hidden}
+.pimg img{width:100%;height:100%;object-fit:contain;padding:18px;transition:transform .4s;filter:drop-shadow(0 12px 14px rgba(0,0,0,.28))}
+.pcard:hover .pimg img{transform:scale(1.04)}
+.pbody{padding:16px 18px 18px;display:flex;flex-direction:column;gap:8px;flex:1}
+.pbody .cond{font-size:13px;padding:3px 12px}
+.pbody .pbadge{font-size:13px;padding:3px 12px}
+.pcard h3{margin:0;font-size:19px;line-height:1.35;color:var(--navy);direction:ltr;text-align:start}
+html[lang="ar"] .pcard h3{text-align:right}
+.pcard h3 a{text-decoration:none}
+.pcard h3 a:hover{text-decoration:underline}
+.pspecs{margin:0;padding:0;list-style:none;display:flex;flex-wrap:wrap;gap:6px}
+.pspecs li{font-size:13px;color:var(--muted);border:1px solid var(--line);border-radius:8px;padding:2px 8px;direction:ltr}
+.pprice{display:flex;align-items:baseline;gap:10px;margin-top:auto;padding-top:6px;direction:ltr;justify-content:flex-end}
+html[lang="en"] .pprice{justify-content:flex-start}
+.pprice b{font-size:28px;font-weight:800;color:var(--navy);font-variant-numeric:tabular-nums}
+.pprice b small{font-size:15px;color:var(--cyan);margin-left:4px}
+.pprice s{color:var(--muted);font-size:15px}
+.pact{display:grid;grid-template-columns:1fr auto;gap:8px}
+.pact a{display:inline-flex;align-items:center;justify-content:center;gap:8px;padding:10px 14px;border-radius:10px;font-weight:700;font-size:15px;text-decoration:none}
+.pact .order{background:var(--wa);color:#fff}
+.pact .order:hover{filter:brightness(1.1)}
+.pact .det{border:1.5px solid var(--line);color:var(--fg)}
+.pact .det:hover{border-color:var(--cyan)}
+.pact svg{width:18px;height:18px;flex:none}
+.pcard.sold .pimg img{filter:grayscale(1);opacity:.55}
+.pcard.sold .pbadge{background:#6b7280;color:#fff}
+.pcard.sold .order{background:var(--line);color:var(--fg)}
+.svcbox{display:flex;flex-direction:column;gap:10px;padding:22px;border-radius:18px;border:1px solid var(--line);background:var(--surface)}
+.svcbox h4{margin:0;font-size:19px;color:var(--navy)}
+.svcbox p{margin:0;color:var(--muted);font-size:15px;flex:1}
+.svcbox a{align-self:flex-start;display:inline-flex;align-items:center;gap:8px;padding:9px 16px;border-radius:10px;background:var(--wa);color:#fff;font-weight:700;font-size:15px;text-decoration:none}
+.svcbox a svg{width:18px;height:18px}
+.svcbox.wide{grid-column:1/-1;flex-direction:row;align-items:center;gap:20px;flex-wrap:wrap}
+.svcbox.wide div{flex:1;min-width:220px}
+.askbox{display:flex;align-items:center;justify-content:space-between;gap:16px;flex-wrap:wrap;margin:10px 0 60px;padding:22px 24px;border-radius:18px;border:1.5px dashed var(--line)}
+.askbox p{margin:0;font-weight:700}
+.askbox a{color:var(--cyan);font-weight:800}
+"""
+
+
+def ccard(p, pre):
+    sold = p.get("status") == "sold"
+    url = f"{pre}p/{p['slug']}.html"
+    share = f"rootjo.com/p/{p['slug']}"
+    if sold:
+        m_ar = f"مرحباً Root، {p['name']} غير متوفر حالياً. في إشي مشابه؟\n{share}"
+        m_en = f"Hi Root, {p['name']} is out of stock. Do you have something similar?\n{share}"
+        badge = bi("غير متوفر", "Out of stock")
+    else:
+        m_ar = f"مرحباً Root، بدي أطلب: {p['name']} بسعر {p['price']} JD\n{share}"
+        m_en = f"Hi Root, I'd like to order: {p['name']} ({p['price']} JD)\n{share}"
+        badge = bi(E(p.get("badge_ar", "")), E(p.get("badge_en", ""))) if p.get("badge_ar") else ""
+    cond = COND.get(p.get("condition"), ("", ""))
+    na, ne = p.get("condition_note_ar") or "", p.get("condition_note_en") or ""
+    ctext = bi(E(cond[0]) + (f" · {E(na)}" if na else ""), E(cond[1]) + (f" · {E(ne)}" if ne else ""))
+    specs = "".join(f"<li>{E(x)}</li>" for x in (p.get("card_specs") or [])[:4])
+    old = f"<s>{p['old_price']} JD</s>" if p.get("old_price") else ""
+    tags = (f'<span class="pbadge">{badge}</span>' if badge else "")
+    return (f'<article class="pcard{" sold" if sold else ""}">'
+            f'<a class="pimg" href="{url}" tabindex="-1" aria-hidden="true"><img loading="lazy" src="{pre}{E(p["image"])}" alt=""></a>'
+            f'<div class="pbody"><div class="ptags">{tags}<span class="cond {E(p.get("condition", ""))}">{ctext}</span></div>'
+            f'<h3><a href="{url}" dir="ltr">{E(p["name"])}</a></h3><ul class="pspecs">{specs}</ul>'
+            f'<div class="pprice">{old}<b>{p["price"]}<small>JD</small></b></div>'
+            f'<div class="pact"><a class="order" target="_blank" rel="noopener" data-product="{E(p["slug"])}" href="{wa_link(m_ar)}" data-href-en="{wa_link(m_en)}">{WA_ICON}{bi("اطلب مشابه" if sold else "اطلبه على واتساب", "Ask for similar" if sold else "Order on WhatsApp")}</a>'
+            f'<a class="det" href="{url}">{bi("التفاصيل", "Details")}</a></div></div></article>')
+
+
+def svgi(cid):
+    return f'<svg viewBox="0 0 24 24" aria-hidden="true">{ICONS[cid]}</svg>'
+
+
+def cat_page(cid, ar, en, dar, den):
+    pre = ""
+    slug = CSLUG[cid]
+    chips = "".join(f'<a class="chip" href="{CSLUG[c]}.html"{" aria-current=page" if c == cid else ""}>{svgi(c)}{bi(a, e)}</a>' for c, a, e, _, _ in SECTIONS)
+    if cid == "repair":
+        grid = "".join(f'<div class="svcbox"><h4>{bi(E(r[0]), E(r[1]))}</h4><p>{bi(E(r[2]), E(r[3]))}</p><a target="_blank" rel="noopener" data-product="repair" href="{wa_link(r[4])}" data-href-en="{wa_link(r[5])}">{WA_ICON}{bi("احجز على واتساب", "Book on WhatsApp")}</a></div>' for r in REPAIR)
+        count = bi(f"{len(REPAIR)} خدمات", f"{len(REPAIR)} services")
+        n_items = 0
+    else:
+        items = [p for p in visible if p["category"] == cid]
+        items.sort(key=lambda p: p.get("status") == "sold")
+        n_items = sum(p.get("status") != "sold" for p in items)
+        grid = "".join(ccard(p, pre) for p in items)
+        if cid == "desktop":
+            grid += (f'<div class="svcbox wide"><div><h4>{bi("بدك مواصفات ثانية؟", "Need different specs?")}</h4><p>{bi("قلنا ميزانيتك وشو استخدامك، ونجهزلك الكمبيوتر المناسب، جاهز أو تجميع.", "Tell us your budget and what you will use it for, and we will put together the right desktop for you.")}</p></div>'
+                     f'<a target="_blank" rel="noopener" data-product="desktop" href="{wa_link("مرحباً Root، بدي كمبيوتر مكتبي. الميزانية: " + chr(10) + "الاستخدام: ")}" data-href-en="{wa_link("Hi Root, I am looking for a desktop. Budget: " + chr(10) + "Use: ")}">{WA_ICON}{bi("اسأل على واتساب", "Ask on WhatsApp")}</a></div>')
+        count = bi(f"{n_items} متوفر", f"{n_items} available") if n_items else bi("حسب الطلب", "Made to order")
+    title = f"{en} | {ar} - Root Computers"
+    desc = f"{dar} {den}"
+    ld = {"@context": "https://schema.org", "@type": "CollectionPage", "name": f"{ar} - Root", "url": f"{BASE}/{slug}",
+          "isPartOf": {"@type": "WebSite", "name": "Root Computers", "url": BASE + "/"}}
+    if cid != "repair":
+        ld["mainEntity"] = {"@type": "ItemList", "itemListElement": [{"@type": "ListItem", "position": k + 1, "url": f"{BASE}/p/{p['slug']}", "name": p["name"]} for k, p in enumerate([q for q in visible if q["category"] == cid])]}
+    return f'''<!doctype html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="utf-8">
+{GA_SNIPPET}<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<title>{E(title)}</title>
+<meta name="description" content="{E(desc)}">
+<link rel="canonical" href="{BASE}/{slug}">
+<meta property="og:type" content="website">
+<meta property="og:title" content="{E(ar)} - Root Computers">
+<meta property="og:description" content="{E(desc)}">
+<meta property="og:image" content="{BASE}/img/og-image.jpg">
+<meta property="og:url" content="{BASE}/{slug}">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="theme-color" content="#0b1324">
+<link rel="icon" type="image/png" href="img/favicon.png">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;700;800&family=JetBrains+Mono:wght@700&family=Readex+Pro:wght@500;600;700&display=swap">
+<script>(function(){{var l="ar";try{{l=localStorage.getItem("root-lang")||l}}catch(e){{}}if(location.hash==="#en")l="en";if(location.hash==="#ar")l="ar";document.documentElement.lang=l;document.documentElement.dir=l==="en"?"ltr":"rtl"}})();</script>
+<script type="application/ld+json">{json.dumps(ld, ensure_ascii=False)}</script>
+<style>{CCSS}</style>
+</head>
+<body>
+<header><div class="wrap">
+  <a class="logo" href="index.html" aria-label="Root"><img class="l" src="img/logo.png" alt="Root"><img class="d" src="img/logo-light-on-dark.png" alt=""></a>
+  <div class="hbtns">
+    <button type="button" class="lang" id="langBtn"><span class="t-ar">EN</span><span class="t-en">عربي</span></button>
+    <a class="navcta" target="_blank" rel="noopener" href="{wa_link('مرحباً Root، أريد الاستفسار عن ')}" data-href-en="{wa_link("Hi Root, I'd like to ask about ")}" data-product="{slug}">{bi("واتساب", "WhatsApp")}</a>
+  </div>
+</div></header>
+<main class="wrap">
+  <a class="crumb" href="index.html">{bi("&rarr; الرئيسية", "&larr; Home")}</a>
+  <nav class="chips" aria-label="الأقسام">{chips}</nav>
+  <div class="chead">{svgi(cid)}<div><h1>{bi(E(ar), E(en))}</h1><p>{bi(E(dar), E(den))} <span class="count">{count}</span></p></div></div>
+  <div class="catalog">{grid}</div>
+  <div class="askbox"><p>{bi("ما لقيت اللي بدك ياه؟ قلنا شو بدك ومنوفره لك.", "Can't find what you need? Tell us and we'll source it.")}</p><a href="index.html#request">{bi("اطلب جهازك &larr;", "Request a device &rarr;")}</a></div>
+</main>
+<footer><div class="wrap">Root &middot; Your Tech Partner &middot; <a href="index.html">rootjo.com</a> &middot; <a href="https://www.instagram.com/rootcomputers/" target="_blank" rel="noopener">@rootcomputers</a> &middot; <a href="mailto:info@rootjo.com">info@rootjo.com</a></div></footer>
+<script>
+(function(){{
+  var h=document.documentElement;
+  function apply(){{document.querySelectorAll("[data-href-en]").forEach(function(a){{if(!a.dataset.hrefAr)a.dataset.hrefAr=a.getAttribute("href");a.setAttribute("href",h.lang==="en"?a.dataset.hrefEn:a.dataset.hrefAr)}});}}
+  apply();
+  document.getElementById("langBtn").addEventListener("click",function(){{var l=h.lang==="en"?"ar":"en";h.lang=l;h.dir=l==="en"?"ltr":"rtl";try{{localStorage.setItem("root-lang",l)}}catch(e){{}}apply();}});
+  var GA="{cfg['ga_id']}";window.dataLayer=window.dataLayer||[];function gtag(){{dataLayer.push(arguments)}}
+  if(/^G-[A-Z0-9]+$/.test(GA)&&!window.__gaHead){{var s=document.createElement("script");s.async=true;s.src="https://www.googletagmanager.com/gtag/js?id="+GA;document.head.appendChild(s);gtag("js",new Date());gtag("config",GA);}}
+  document.addEventListener("click",function(e){{var a=e.target.closest&&e.target.closest('a[href^="https://wa.me"]');if(a)gtag("event","whatsapp_click",{{link_location:"category_{slug}",product:a.getAttribute("data-product")||""}});}});
+}})();
+</script>
+</body>
+</html>
+'''
+
+
+for sec in SECTIONS:
+    open(os.path.join(OUT, CSLUG[sec[0]] + ".html"), "w", encoding="utf-8").write(cat_page(*sec))
+
 # ---------- sitemap / robots / pages files ----------
-urls = [(BASE + "/", today)] + [(f"{BASE}/p/{p['slug']}", p.get("added", today)) for p in visible]
+urls = [(BASE + "/", today)] + [(f"{BASE}/{CSLUG[c[0]]}", today) for c in SECTIONS] + [(f"{BASE}/p/{p['slug']}", p.get("added", today)) for p in visible]
 sm = '<?xml version="1.0" encoding="UTF-8"?>\n<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">\n' + \
      "".join(f"  <url><loc>{u}</loc><lastmod>{d}</lastmod></url>\n" for u, d in urls) + "</urlset>\n"
 open(os.path.join(OUT, "sitemap.xml"), "w").write(sm)

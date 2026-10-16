@@ -1,5 +1,5 @@
 <title>Root Computers</title>
-<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;700;800&family=JetBrains+Mono:wght@500;700&display=swap">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;700;800&family=JetBrains+Mono:wght@500;700&family=Readex+Pro:wght@500;600;700&display=swap">
 <script>document.documentElement.classList.add('js')</script>
 <style>
 /* Layout: sticky header, always-dark animated hero (canvas network + aurora), marquee strip, then light/dark content sections. Terminal prompt (>_) from the logo is the recurring motif. */
@@ -11,6 +11,7 @@
   --glass:color-mix(in srgb,#ffffff 74%,transparent);--panel-hi:#ffffff;--panel-lo:#e6ecf4;--fx-line:14,157,185;--fx-dot:27,42,82;--fx-b1:18,169,201,.17;--fx-b2:70,100,235,.11;--fx-b3:20,184,166,.11;--fx-la:.36;
   --hero-a:#070e1d; --hero-b:#0f2048; --hero-fg:#f3f7ff; --hero-muted:#b4c3e0; --hero-cyan:#38d0ee;
   --font-ar:'Cairo','Segoe UI',Tahoma,sans-serif;
+  --font-head:'Readex Pro','Cairo','Segoe UI',Tahoma,sans-serif;
   --font-mono:'JetBrains Mono',ui-monospace,Consolas,monospace;
   color-scheme:light;
 }
@@ -30,6 +31,9 @@ body{margin:0;background:var(--bg);color:var(--fg);font-family:var(--font-ar);fo
 a{color:inherit}
 :focus-visible{outline:3px solid var(--cyan);outline-offset:3px;border-radius:6px}
 
+/* headings use Readex Pro, body text stays Cairo */
+h1,h2,h3,h4,.cat b,.reqform legend,.qa summary{font-family:var(--font-head)}
+h1{font-weight:700;letter-spacing:-.005em}
 /* header */
 header.top{position:sticky;top:env(safe-area-inset-top,0px);z-index:20;background:var(--head);backdrop-filter:blur(14px);-webkit-backdrop-filter:blur(14px);border-bottom:1px solid var(--line)}
 header .wrap{display:flex;align-items:center;justify-content:space-between;gap:16px;height:68px}
@@ -56,7 +60,7 @@ main,footer{position:relative;z-index:1}
 .prompt{font-family:var(--font-mono);color:var(--hero-cyan);font-weight:700;direction:ltr;text-align:right;font-size:15px;min-height:1.6em}
 .prompt .cur{display:inline-block;width:9px;height:1.05em;background:var(--hero-cyan);vertical-align:-3px;margin-inline-start:3px;animation:blink 1s steps(1) infinite}
 @keyframes blink{50%{opacity:0}}
-h1{font-size:clamp(36px,7vw,78px);line-height:1.15;margin:0;font-weight:800;text-wrap:balance;max-width:15ch}
+h1{font-size:clamp(36px,7vw,78px);line-height:1.24;margin:0;font-weight:700;text-wrap:balance;max-width:15ch}
 h1 em{font-style:normal;color:var(--hero-cyan)}
 .lead{max-width:54ch;color:var(--hero-muted);font-size:19px;margin:0}
 .cta{display:flex;flex-wrap:wrap;gap:12px;margin-top:6px}
@@ -88,12 +92,23 @@ h2::before{content:">_";font-family:var(--font-mono);color:var(--cyan);font-size
 .rv{transform:translateY(26px);transition:transform .8s cubic-bezier(.2,.7,.2,1)}
 .rv.in{transform:none}
 
-.cats{display:grid;grid-template-columns:repeat(5,1fr);gap:14px;margin:0 0 40px}
+.cats{display:grid;grid-template-columns:repeat(5,1fr);gap:14px;margin:0 0 40px;align-items:stretch}
 .cat{display:flex;flex-direction:column;gap:6px;padding:20px;border-radius:18px;border:1px solid var(--line);background:var(--glass);backdrop-filter:blur(10px);-webkit-backdrop-filter:blur(10px);text-decoration:none;transition:transform .25s,border-color .25s;min-width:0}
 .cat:hover{transform:translateY(-3px);border-color:var(--cyan)}
 .cat svg{width:38px;height:38px;stroke:var(--cyan);fill:none;stroke-width:1.6;stroke-linecap:round;stroke-linejoin:round}
 .cat b{font-size:19px;color:var(--navy)}
 .cat span{font-size:14px;color:var(--muted)}
+.cat{position:relative}
+.cat em{font-style:normal;font-size:14px;font-weight:700;color:var(--cyan)}
+.cat .go{position:absolute;inset-block-start:18px;inset-inline-end:18px;font-style:normal;font-family:var(--font-mono);font-weight:700;color:var(--muted);transition:transform .25s,color .25s}
+.cat:hover .go{color:var(--cyan);transform:translateX(-4px)}
+[dir="ltr"] .cat:hover .go{transform:translateX(4px)}
+.newin{margin-top:6px}
+.hscroll{display:grid;grid-auto-flow:column;grid-auto-columns:minmax(260px,280px);gap:16px;overflow-x:auto;scroll-snap-type:x mandatory;padding:4px 2px 18px;scrollbar-width:thin}
+.hscroll .pcard{scroll-snap-align:start}
+.hscroll .pact{grid-template-columns:1fr}.hscroll .pact .more{display:none}
+@media (min-width:981px){.hscroll{grid-auto-flow:row;grid-template-columns:repeat(4,1fr);overflow:visible}.hscroll .pcard:nth-child(n+5){display:none}}
+@media (max-width:760px){.hscroll{grid-auto-columns:78%}}
 .catsec{margin-bottom:44px}
 .cathead{display:flex;align-items:baseline;justify-content:space-between;gap:12px;margin-bottom:16px;border-bottom:1px solid var(--line);padding-bottom:10px}
 .cathead h3{margin:0;font-size:24px;color:var(--navy);display:flex;align-items:center;gap:10px}
@@ -190,16 +205,6 @@ h2::before{content:">_";font-family:var(--font-mono);color:var(--cyan);font-size
 .qa[open] summary::after{transform:rotate(45deg)}
 .qa p{margin:0 0 18px;color:var(--muted)}
 
-.hours{max-width:560px}
-.table{background:var(--glass);backdrop-filter:blur(10px);-webkit-backdrop-filter:blur(10px);border:1px solid var(--line);border-radius:18px;overflow:hidden}
-.table div{display:flex;justify-content:space-between;gap:12px;padding:16px 22px;border-bottom:1px solid var(--line);font-variant-numeric:tabular-nums}
-.table div:last-child{border:0}
-.table .t{font-weight:700;direction:ltr}
-.badge{display:inline-flex;align-items:center;gap:8px;font-weight:700;padding:6px 16px;border-radius:999px;background:var(--cyan-soft);color:var(--navy);margin-bottom:16px}
-.badge i{width:10px;height:10px;border-radius:50%;background:var(--muted)}
-.badge.open i{background:var(--wa);box-shadow:0 0 0 0 var(--wa);animation:pulse 1.8s infinite}
-@keyframes pulse{70%{box-shadow:0 0 0 10px transparent}100%{box-shadow:0 0 0 0 transparent}}
-.note{color:var(--muted);font-size:16px;margin:16px 0 0}
 
 .contact{display:grid;grid-template-columns:repeat(auto-fit,minmax(230px,1fr));gap:16px}
 .card{background:var(--glass);backdrop-filter:blur(10px);-webkit-backdrop-filter:blur(10px);border:1px solid var(--line);border-radius:18px;padding:28px;display:grid;gap:12px;min-width:0}
@@ -223,7 +228,7 @@ footer .wrap{display:flex;justify-content:space-between;flex-wrap:wrap;gap:12px}
 }
 @media (prefers-reduced-motion:reduce){
   html{scroll-behavior:auto}
-  .track,.scrollhint::after,.prompt .cur,.badge.open i{animation:none}
+  .track,.scrollhint::after,.prompt .cur{animation:none}
   .rv{transform:none;transition:none}
 }
 </style>
@@ -237,7 +242,7 @@ footer .wrap{display:flex;justify-content:space-between;flex-wrap:wrap;gap:12px}
       <img class="d" alt="" src="data:image/png;base64,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">
     </a>
     <nav aria-label="أقسام الصفحة" dir="rtl" data-dir>
-      <a href="#products" data-i18n="nav_products">المتوفر</a>
+      <a href="#products" data-i18n="nav_products">الأقسام</a>
       <a href="#request" data-i18n="nav_request">اطلب جهازك</a>
       <a href="#about" data-i18n="nav_about">ليش Root؟</a>
       <a href="#faq" data-i18n="nav_faq">أسئلة شائعة</a>
@@ -274,10 +279,13 @@ footer .wrap{display:flex;justify-content:space-between;flex-wrap:wrap;gap:12px}
 
   <section id="products">
     <div class="wrap">
-      <h2 data-i18n="pr_h">المتوفر الآن</h2>
-      <p class="sub" data-i18n="pr_sub">اختار القسم، وشوف المتوفر بأسعار نهائية بالدينار. توصيل لكل المملكة، والدفع بعد الاستلام والمعاينة.</p>
+      <h2 data-i18n="pr_h">تسوّق حسب القسم</h2>
+      <p class="sub" data-i18n="pr_sub">اختار القسم وبتفتحلك صفحة فيها كل الأجهزة المتوفرة بأسعار نهائية بالدينار. توصيل لكل المملكة، والدفع بعد الاستلام والمعاينة.</p>
       <nav class="cats" id="catNav" aria-label="الأقسام"></nav>
-      <div id="catalog"></div>
+      <div class="newin">
+        <div class="cathead"><h3 data-i18n="new_h">وصل حديثاً</h3><span data-i18n="new_sub">آخر الأجهزة اللي نزلت على الموقع</span></div>
+        <div class="hscroll" id="newIn"></div>
+      </div>
       <p class="cat-more" data-i18n="pr_more">ما لقيت اللي بدك ياه؟ <a href="#request">عبّي طلبك ونوفره لك</a></p>
     </div>
   </section>
@@ -315,7 +323,7 @@ footer .wrap{display:flex;justify-content:space-between;flex-wrap:wrap;gap:12px}
       <div class="services why">
         <article class="svc rv"><code>$ pay --on-delivery</code><h3 data-i18n="w2h">الدفع عند الاستلام</h3><p data-i18n="w2p">توصيل لكل مناطق المملكة: 3 دنانير داخل عمّان و5 دنانير خارجها، وما بتدفع إلا بعد ما تستلم الجهاز وتعاينه.</p></article>
         <article class="svc rv"><code>$ warranty --listed</code><h3 data-i18n="w3h">كفالة واضحة</h3><p data-i18n="w3p">مدة الكفالة مكتوبة على كل جهاز: الجديد بكفالته، والمستعمل مفحوص وكفالته محددة.</p></article>
-        <article class="svc rv"><code>$ setup --ready</code><h3 data-i18n="w4h">جاهز للشغل</h3><p data-i18n="w4p">كل الأجهزة بتوصلك وعليها ويندوز وأوفيس أصليين، جاهزة من أول يوم.</p></article>
+        <article class="svc rv"><code>$ setup --ready</code><h3 data-i18n="w4h">جاهز للشغل</h3><p data-i18n="w4p">كل الأجهزة بتوصلك جاهزة من أول يوم: ويندوز وأوفيس أصليين، أو macOS على أجهزة Apple.</p></article>
         <article class="svc rv"><code>$ license --genuine</code><h3 data-i18n="w5h">تراخيص أصلية</h3><p data-i18n="w5p">مفاتيح تفعيل أصلية لويندوز وأوفيس ومايكروسوفت 365، بتوصلك مباشرة بعد الدفع.</p></article>
         <article class="svc rv"><code>$ source --any-device</code><h3 data-i18n="w6h">نوفر أي جهاز</h3><p data-i18n="w6p">نتعامل مع عدة موردين، فإذا ما لقيت جهازك نوفره لك بالمواصفات اللي بدك ياها.</p></article>
       </div>
@@ -337,19 +345,6 @@ footer .wrap{display:flex;justify-content:space-between;flex-wrap:wrap;gap:12px}
     </div>
   </section>
 
-  <section id="hours">
-    <div class="wrap">
-      <h2 data-i18n="hrs_h">ساعات الدوام</h2>
-      <p class="sub" data-i18n="hrs_sub">أوقات الرد على الرسائل واستقبال الطلبات.</p>
-      <div class="hours rv">
-        <div>
-          <div class="badge" id="openBadge"><i></i><span>جاري التحقق</span></div>
-          <div class="table" id="hoursTable" role="table" aria-label="جدول ساعات الدوام"></div>
-          <p class="note" data-i18n="hrs_note">للاستفسار خارج أوقات الدوام، أرسل رسالتك على واتساب أو انستغرام وسنرد عليك مع بداية الدوام.</p>
-        </div>
-      </div>
-    </div>
-  </section>
 
   <section id="contact">
     <div class="wrap">
@@ -395,11 +390,6 @@ footer .wrap{display:flex;justify-content:space-between;flex-wrap:wrap;gap:12px}
 var CONFIG = {
   WHATSAPP: "962799167971",
   GA_ID: "__GA_ID__",   /* Google Analytics 4 Measurement ID, e.g. G-XXXXXXX */
-  HOURS: [
-    { days: "السبت - الخميس", days_en: "Saturday - Thursday", time: "9:00 AM - 5:00 PM", time_en: "9:00 AM - 5:00 PM" },
-    { days: "الجمعة", days_en: "Friday", time: "مغلق", time_en: "Closed" }
-  ],
-  OPEN: { days: [6, 0, 1, 2, 3, 4], from: 9, to: 17, tz: "Asia/Amman" }   /* 0 = الأحد */
 };
 
 (function () {
@@ -433,10 +423,11 @@ var CONFIG = {
     license: '<svg viewBox="0 0 24 24"><circle cx="8" cy="15" r="4"/><path d="M10.8 12.2 20 3M17 6l3 3M15 8l2 2"/></svg>',
     repair: '<svg viewBox="0 0 24 24"><path d="M14.7 6.3a4 4 0 0 0-5.4 5.4L3 18l3 3 6.3-6.3a4 4 0 0 0 5.4-5.4l-2.6 2.6-2.4-.6-.6-2.4z"/></svg>'
   };
+  var CSLUG = { laptop: "laptops", desktop: "desktops", monitor: "monitors", license: "licenses", repair: "repair" };
   var CATS = [
     { id: "laptop", ar: "لابتوبات", en: "Laptops", dar: "جديد بالكرتونة ومستعمل بحالة ممتازة", den: "New in box and used in excellent condition" },
     { id: "desktop", ar: "كمبيوترات مكتبية", en: "Desktops", dar: "جاهزة أو تجميع حسب ميزانيتك", den: "Ready-made or built to your budget" },
-    { id: "monitor", ar: "شاشات", en: "Monitors", dar: "جديدة بالكرتونة مع كفالة سنتين", den: "New in box with a 2-year warranty" },
+    { id: "monitor", ar: "شاشات", en: "Monitors", dar: "جديدة بالكرتونة وبكفالة", den: "New in box with warranty" },
     { id: "license", ar: "تراخيص البرامج", en: "Software licenses", dar: "ويندوز وأوفيس أصلي", den: "Genuine Windows and Office" },
     { id: "repair", ar: "الصيانة", en: "Repair & setup", dar: "فحص وإصلاح وتهيئة", den: "Diagnosis, repair and setup" }
   ];
@@ -468,40 +459,34 @@ var CONFIG = {
   function renderCatalog(lang) {
     var en = lang === "en", i = en ? 1 : 0;
     var list = PRODUCTS.filter(function (p) { return p.status !== "hidden"; });
-    var nav = document.getElementById("catNav"), box = document.getElementById("catalog");
+    var nav = document.getElementById("catNav"), box = document.getElementById("newIn");
     nav.setAttribute("aria-label", en ? "Sections" : "الأقسام");
-    var navHtml = "", html = "";
+    var navHtml = "";
     CATS.forEach(function (c) {
-      var items = list.filter(function (p) { return p.category === c.id; });
-      items.sort(function (a, b) { return (a.status === "sold") - (b.status === "sold"); });
-      var avail = items.filter(function (p) { return p.status !== "sold"; }).length;
+      var avail = list.filter(function (p) { return p.category === c.id && p.status !== "sold"; });
       var count = c.id === "repair" ? (en ? REPAIR.length + " services" : REPAIR.length + " خدمات")
-        : avail ? (en ? avail + " available" : avail + " متوفر") : (en ? "Made to order" : "حسب الطلب");
-      navHtml += '<a class="cat" href="#cat-' + c.id + '">' + ICON[c.id] + "<b>" + (en ? c.en : c.ar) + "</b><span>" + count + "</span></a>";
-      var body;
-      if (c.id === "repair") {
-        body = REPAIR.map(function (r) {
-          return '<div class="svcbox"><h4>' + esc(en ? r.en : r.ar) + "</h4><p>" + esc(en ? r.den : r.dar) + '</p><a target="_blank" rel="noopener" data-product="repair" href="' + waHref(en ? r.men : r.mar) + '">' + WA_SVG + (en ? "Book on WhatsApp" : "احجز على واتساب") + "</a></div>";
-        }).join("");
-      } else if (items.length && c.id !== "desktop") {
-        body = items.map(function (p) { return card(p, en, i); }).join("");
-      } else {
-        body = items.map(function (p) { return card(p, en, i); }).join("");
-        body += '<div class="svcbox wide"><div><h4>' + (en ? "Need different specs?" : "بدك مواصفات ثانية؟") + "</h4><p>" +
-          (en ? "Tell us your budget and what you'll use it for, and we'll put together the right desktop for you." : "قلنا ميزانيتك وشو استخدامك، ونجهزلك الكمبيوتر المناسب، جاهز أو تجميع.") +
-          '</p></div><a target="_blank" rel="noopener" data-product="' + c.id + '" href="' + waHref(en ? "Hi Root, I'm looking for a desktop. Budget: \nUse: " : "مرحباً Root، بدي كمبيوتر مكتبي. الميزانية: \nالاستخدام: ") + '">' + WA_SVG + (en ? "Ask on WhatsApp" : "اطلب على واتساب") + "</a></div>";
-      }
-      html += '<div class="catsec" id="cat-' + c.id + '"><div class="cathead"><h3>' + ICON[c.id] + (en ? c.en : c.ar) + "</h3><span>" + esc(en ? c.den : c.dar) + '</span></div><div class="catalog">' + body + "</div></div>";
+        : avail.length ? (en ? avail.length + " available" : avail.length + " متوفر") : (en ? "Made to order" : "حسب الطلب");
+      var min = avail.length ? Math.min.apply(null, avail.map(function (p) { return p.price; })) : 0;
+      var from = min ? '<em>' + (en ? "From " : "ابتداءً من ") + '<bdi>' + min + " JD</bdi></em>" : "";
+      navHtml += '<a class="cat" href="' + CSLUG[c.id] + '.html">' + ICON[c.id] + "<b>" + (en ? c.en : c.ar) + "</b><span>" + count + "</span>" + from +
+        '<i class="go" aria-hidden="true">' + (en ? "&rarr;" : "&larr;") + "</i></a>";
     });
-    nav.innerHTML = navHtml; box.innerHTML = html;
+    nav.innerHTML = navHtml;
+    var fresh = list.filter(function (p) { return p.status === "available" && p.category !== "license"; })
+      .map(function (p, k) { return { p: p, k: k }; })
+      .sort(function (a, b) { return (b.p.added || "").localeCompare(a.p.added || "") || a.k - b.k; })
+      .slice(0, 8).map(function (x) { return card(x.p, en, i); }).join("");
+    box.innerHTML = fresh;
   }
 
 
   var EN = {
-"nav_products": "Available",
+"nav_products": "Shop",
 "nav_about": "About",
-"pr_h": "Available now",
-"pr_sub": "Pick a section and see what is in stock, with final prices in JD. Delivery across Jordan, and you pay after you receive and check it.",
+"pr_h": "Shop by section",
+"new_h": "Just arrived",
+"new_sub": "The latest devices added to the site",
+"pr_sub": "Pick a section to open a page with every device in stock, at final prices in JD. Delivery across Jordan, and you pay after you receive and check it.",
 "pr_more": "Can't find what you need? <a href=\"#request\">Tell us what you want and we'll source it</a>",
 "nav_contact": "Contact",
 "nav_wa": "WhatsApp",
@@ -545,7 +530,7 @@ var CONFIG = {
 "w3h": "A clear warranty",
 "w3p": "The warranty is written on every device: new ones come with their warranty, used ones are inspected and carry a set warranty.",
 "w4h": "Ready to use",
-"w4p": "Every device arrives with genuine Windows and Office installed, ready from day one.",
+"w4p": "Every device arrives ready from day one: genuine Windows and Office, or macOS on Apple devices.",
 "w5h": "Genuine licenses",
 "w5p": "Genuine activation keys for Windows, Office and Microsoft 365, sent right after payment.",
 "w6h": "Any device, sourced",
@@ -563,9 +548,6 @@ var CONFIG = {
 "q6": "I can't find the device I want. What now?",
 "a6": "Fill in the “Request a device” form with your budget and use, or send us the specs, and we'll source it from our suppliers.",
 "about_sub": "Root is a tech store built on clarity: real specs, upfront prices, and a device that fits how you use it.",
-"hrs_h": "Opening hours",
-"hrs_sub": "When we reply to messages and take orders.",
-"hrs_note": "Outside opening hours, send us a message on WhatsApp or Instagram and we'll reply as soon as we open.",
 "ct_h": "Contact us",
 "ct_sub": "Send us the device name or the specs you're after and we'll reply with a price.",
 "ct_wa": "WhatsApp",
@@ -579,22 +561,10 @@ var CONFIG = {
 "foot": "Prices and availability may change; our team confirms them when you order."
 };
   var TXT = {
-    ar: { waDefault: "مرحباً Root، أريد الاستفسار عن ", open: "مفتوح الآن", closed: "مغلق الآن، راسلنا وسنرد عند الدوام", nav: "أقسام الصفحة", hoursLabel: "جدول ساعات الدوام", btn: "EN", btnLabel: "Switch to English" },
-    en: { waDefault: "Hi Root, I'd like to ask about ", open: "Open now", closed: "Closed now, message us and we'll reply when we open", nav: "Page sections", hoursLabel: "Opening hours table", btn: "عربي", btnLabel: "التبديل إلى العربية" }
+    ar: { waDefault: "مرحباً Root، أريد الاستفسار عن ", nav: "أقسام الصفحة", btn: "EN", btnLabel: "Switch to English" },
+    en: { waDefault: "Hi Root, I'd like to ask about ", nav: "Page sections", btn: "عربي", btnLabel: "التبديل إلى العربية" }
   };
   var wa = CONFIG.WHATSAPP.replace(/\D/g, "");
-  var table = document.getElementById("hoursTable"), badge = document.getElementById("openBadge");
-  function openState() {
-    try {
-      var p = new Intl.DateTimeFormat("en-US", { timeZone: CONFIG.OPEN.tz, weekday: "short", hour: "numeric", minute: "numeric", hour12: false }).formatToParts(new Date());
-      var o = {}; p.forEach(function (x) { o[x.type] = x.value; });
-      var day = { Sun: 0, Mon: 1, Tue: 2, Wed: 3, Thu: 4, Fri: 5, Sat: 6 }[o.weekday];
-      var h = (parseInt(o.hour, 10) % 24) + parseInt(o.minute, 10) / 60;
-      return CONFIG.OPEN.days.indexOf(day) > -1 && h >= CONFIG.OPEN.from && h < CONFIG.OPEN.to;
-    } catch (e) { return null; }
-  }
-  var st = openState();
-  if (st === null) badge.hidden = true; else badge.className = "badge" + (st ? " open" : "");
 
   function setLang(lang) {
     var en = lang === "en", T = TXT[lang];
@@ -610,15 +580,6 @@ var CONFIG = {
       a.href = "https://wa.me/" + wa + "?text=" + encodeURIComponent(m);
       a.target = "_blank"; a.rel = "noopener";
     });
-    table.textContent = "";
-    table.setAttribute("aria-label", T.hoursLabel);
-    CONFIG.HOURS.forEach(function (h) {
-      var row = document.createElement("div");
-      var d = document.createElement("span"); d.textContent = en ? h.days_en : h.days;
-      var t = document.createElement("span"); t.className = "t"; t.textContent = en ? h.time_en : h.time;
-      row.appendChild(d); row.appendChild(t); table.appendChild(row);
-    });
-    if (st !== null) badge.lastChild.textContent = st ? T.open : T.closed;
     renderCatalog(lang);
     if (typeof rqLang === "function") rqLang(en);
     var nav = document.querySelector("nav"); nav.setAttribute("aria-label", T.nav);
