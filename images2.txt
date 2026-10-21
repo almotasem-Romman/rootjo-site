@@ -3,3 +3,4 @@ macbook-pro-14-m5-pro src2/macbook-pro-14-m5-pro.png biggest
 dell-pro-p2726h src2/dell-pro-p2726h.png biggest
 asus-rog-strix-scar-18 src2/asus-rog-strix-scar-18.png biggest
 asus-vivobook-15-x1504va src2/asus-vivobook-15-x1504va.png biggest
+lenovo-v15-gen5 src2/lenovo-v15-gen5.jpg biggest
