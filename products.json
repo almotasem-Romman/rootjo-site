@@ -1,5 +1,58 @@
 [
   {
+    "slug": "lenovo-v15-gen5",
+    "status": "available",
+    "category": "laptop",
+    "condition": "like-new",
+    "condition_note_ar": "بالكرتونة · كفالة رسمية",
+    "condition_note_en": "Boxed · official warranty",
+    "name": "Lenovo V15 Gen 5",
+    "brand": "Lenovo",
+    "price": 360,
+    "old_price": null,
+    "badge_ar": "",
+    "badge_en": "",
+    "image": "img/products/lenovo-v15-gen5.webp",
+    "card_specs": [
+      "Core i5-13420H",
+      "8GB DDR5",
+      "512GB SSD",
+      "15.6\" FHD"
+    ],
+    "specs": [
+      [
+        "cpu",
+        "Intel Core i5-13420H (13th Gen)"
+      ],
+      [
+        "ram",
+        "8GB DDR5-5200MHz"
+      ],
+      [
+        "storage",
+        "512GB NVMe M.2 SSD"
+      ],
+      [
+        "display",
+        "15.6\" FHD"
+      ],
+      [
+        "battery",
+        "Excellent battery, original charger"
+      ],
+      [
+        "warranty",
+        "Under official warranty"
+      ]
+    ],
+    "perks": [
+      "delivery"
+    ],
+    "about_ar": "لابتوب Lenovo V15 Gen 5 بمعالج Core i5 الجيل 13 ورام DDR5. مستعمل بحالة الجديد (غير مستخدم) مع الكرتونة والشاحن الأصلي، وتحت الكفالة الرسمية.",
+    "about_en": "A Lenovo V15 Gen 5 with a 13th Gen Core i5 and DDR5 memory. Used but unused, like new, with the box and original charger, under official warranty.",
+    "added": "2026-10-21"
+  },
+  {
     "slug": "lenovo-thinkpad-p1-workstation",
     "status": "available",
     "category": "laptop",
