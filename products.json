@@ -1,5 +1,62 @@
 [
   {
+    "slug": "lenovo-thinkpad-p1-workstation",
+    "status": "available",
+    "category": "laptop",
+    "condition": "like-new",
+    "condition_note_ar": "كفالة شهرين",
+    "condition_note_en": "2-month warranty",
+    "name": "Lenovo ThinkPad P1 Workstation",
+    "brand": "Lenovo",
+    "price": 340,
+    "old_price": null,
+    "badge_ar": "",
+    "badge_en": "",
+    "image": "img/products/lenovo-thinkpad-p1-workstation.webp",
+    "card_specs": [
+      "Core i7 Gen 9",
+      "16GB DDR4",
+      "512GB SSD",
+      "T1000 4GB",
+      "15.6\""
+    ],
+    "specs": [
+      [
+        "cpu",
+        "Intel Core i7 (9th Gen)"
+      ],
+      [
+        "ram",
+        "16GB DDR4"
+      ],
+      [
+        "storage",
+        "512GB SSD"
+      ],
+      [
+        "display",
+        "15.6\" (non-touch)"
+      ],
+      [
+        "gpu",
+        "NVIDIA T1000 4GB"
+      ],
+      [
+        "warranty",
+        "2-month warranty"
+      ]
+    ],
+    "perks": [
+      "win11",
+      "office",
+      "gift",
+      "delivery"
+    ],
+    "about_ar": "محطة عمل Lenovo ThinkPad P1 بمعالج Core i7 الجيل 9 وكرت NVIDIA T1000 بذاكرة 4GB، مناسبة للتصميم والهندسة والبرامج الثقيلة. مستعمل بحالة الجديد بكفالة شهرين.",
+    "about_en": "A Lenovo ThinkPad P1 mobile workstation with a 9th Gen Core i7 and NVIDIA T1000 4GB graphics, suited to design, engineering and heavy software. Used, like new, with a 2-month warranty.",
+    "added": "2026-10-21"
+  },
+  {
     "slug": "macbook-pro-14-m5-pro",
     "status": "available",
     "category": "laptop",
