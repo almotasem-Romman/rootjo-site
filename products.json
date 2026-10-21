@@ -1,5 +1,70 @@
 [
   {
+    "slug": "dell-alienware-16-aurora",
+    "status": "available",
+    "category": "laptop",
+    "condition": "new",
+    "condition_note_ar": "كفالة سنة",
+    "condition_note_en": "1-year warranty",
+    "name": "Dell Alienware 16 Aurora",
+    "brand": "Dell",
+    "price": 1760,
+    "old_price": 1790,
+    "badge_ar": "",
+    "badge_en": "",
+    "image": "img/products/dell-alienware-16-aurora.webp",
+    "card_specs": [
+      "Core 9 270H",
+      "RTX 5070 8GB",
+      "32GB DDR5",
+      "1TB SSD",
+      "16\" QHD+ 120Hz"
+    ],
+    "specs": [
+      [
+        "cpu",
+        "Intel Core 9 270H, up to 5.8GHz"
+      ],
+      [
+        "ram",
+        "32GB DDR5-5600"
+      ],
+      [
+        "storage",
+        "1TB PCIe NVMe M.2 SSD"
+      ],
+      [
+        "display",
+        "16\" 2.5K QHD+ IPS, 120Hz, 100% sRGB"
+      ],
+      [
+        "gpu",
+        "NVIDIA GeForce RTX 5070 8GB GDDR7"
+      ],
+      [
+        "wifi",
+        "Wi-Fi 7"
+      ],
+      [
+        "ports",
+        "HDMI 2.1, RJ45"
+      ],
+      [
+        "warranty",
+        "1 year"
+      ]
+    ],
+    "perks": [
+      "win11",
+      "office",
+      "gift",
+      "delivery"
+    ],
+    "about_ar": "لابتوب ألعاب Dell Alienware 16 Aurora بمعالج Intel Core 9 270H وكرت RTX 5070 بذاكرة 8GB GDDR7، ورام 32GB وشاشة 16 إنش QHD+ بتردد 120Hz. جديد بالكرتونة مع كفالة سنة.",
+    "about_en": "A Dell Alienware 16 Aurora gaming laptop with an Intel Core 9 270H, RTX 5070 8GB GDDR7, 32GB RAM and a 16-inch QHD+ 120Hz display. New in the box with a 1-year warranty.",
+    "added": "2026-10-21"
+  },
+  {
     "slug": "lenovo-v15-gen5",
     "status": "available",
     "category": "laptop",
