@@ -5,5 +5,5 @@ OK asus-rog-strix-scar-18 x2 -> (1266, 868)
 OK asus-vivobook-15-x1504va x2 -> (1244, 818)
 OK lenovo-v15-gen5 x1 -> (1060, 1293)
 OK dell-alienware-16-aurora x2 -> (1266, 1070)
-FAIL hp-omnibook-x-flip-14-a [Errno 2] No such file or directory: 'https://cdn.mcc-jo.com/media/hp-omnibook-x-flip-14-fm0013dx-uycylwrywh.webp'
-FAIL hp-omnibook-x-flip-14-b [Errno 2] No such file or directory: 'https://cdn.mcc-jo.com/media/hp-omnibook-x-flip-laptop-ljwewy3cjz.webp'
+OK hp-omnibook-x-flip-14-a x2 -> (1171, 1051)
+OK hp-omnibook-x-flip-14-b x1 -> (1298, 1079)
