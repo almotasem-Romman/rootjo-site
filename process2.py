@@ -20,6 +20,13 @@ for line in open("images2.txt", encoding="utf-8"):
     if not line or line.startswith("#"): continue
     name, path, *flags = line.split()
     try:
+        if path.startswith("http"):
+            import urllib.request
+            req = urllib.request.Request(path, headers={"User-Agent": "Mozilla/5.0"})
+            os.makedirs("dl", exist_ok=True)
+            lp = "dl/" + name + ".img"
+            open(lp, "wb").write(urllib.request.urlopen(req, timeout=60).read())
+            path = lp
         im = Image.open(path).convert("RGB")
         m = max(im.size)
         scale = 3 if m < 600 else 2 if m < 1300 else 1
