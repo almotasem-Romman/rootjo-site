@@ -1,5 +1,73 @@
 [
   {
+    "slug": "hp-omnibook-x-flip-14",
+    "status": "available",
+    "category": "laptop",
+    "condition": "new",
+    "condition_note_ar": "كفالة سنة",
+    "condition_note_en": "1-year warranty",
+    "name": "HP OmniBook X Flip 14",
+    "brand": "HP",
+    "price": 749,
+    "old_price": 779,
+    "badge_ar": "",
+    "badge_en": "",
+    "image": "img/products/hp-omnibook-x-flip-14.webp",
+    "card_specs": [
+      "Core Ultra 5 226V",
+      "16GB DDR5",
+      "512GB SSD",
+      "14\" Touch"
+    ],
+    "specs": [
+      [
+        "cpu",
+        "Intel Core Ultra 5 226V, up to 4.5GHz"
+      ],
+      [
+        "ram",
+        "16GB DDR5-8533"
+      ],
+      [
+        "storage",
+        "512GB PCIe Gen4 NVMe SSD"
+      ],
+      [
+        "display",
+        "14\" FHD+ (1920 x 1200) IPS touchscreen, 400 nits"
+      ],
+      [
+        "gpu",
+        "Intel Arc Graphics"
+      ],
+      [
+        "wifi",
+        "Wi-Fi 6E, Bluetooth 5.3"
+      ],
+      [
+        "ports",
+        "Thunderbolt 4, USB-C, 2x USB 3.2, HDMI 2.1"
+      ],
+      [
+        "camera",
+        "5MP"
+      ],
+      [
+        "warranty",
+        "1 year"
+      ]
+    ],
+    "perks": [
+      "win11",
+      "office",
+      "gift",
+      "delivery"
+    ],
+    "about_ar": "لابتوب HP OmniBook X Flip 14 قابل للطي بشاشة لمس 14 إنش، ومعالج Intel Core Ultra 5 226V ورام 16GB. جديد بالكرتونة مع كفالة سنة.",
+    "about_en": "A HP OmniBook X Flip 14 convertible with a 14-inch touchscreen, an Intel Core Ultra 5 226V and 16GB of RAM. New in the box with a 1-year warranty.",
+    "added": "2026-10-23"
+  },
+  {
     "slug": "lenovo-ideapad-slim-3-15irh10",
     "status": "available",
     "category": "laptop",
