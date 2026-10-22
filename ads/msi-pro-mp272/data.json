@@ -1,0 +1,81 @@
+{
+ "brand": "<span style=\"font:800 26px/1 Poppins;letter-spacing:.06em\">MSI</span>",
+ "model": "PRO MP272<br><em>E14C</em>",
+ "sub": "27\" FHD Business Monitor",
+ "specs": [
+  {
+   "icon": "screen",
+   "label": "Screen",
+   "value": "27\" FHD (1920x1080) IPS"
+  },
+  {
+   "icon": "hz",
+   "label": "Refresh Rate",
+   "value": "144Hz · 1ms (MPRT)"
+  },
+  {
+   "icon": "hdr",
+   "label": "Display",
+   "value": "HDR Ready · Adaptive-Sync"
+  },
+  {
+   "icon": "usbc",
+   "label": "Ports",
+   "value": "USB Type-C (DP Alt) · HDMI · DP"
+  },
+  {
+   "icon": "spk",
+   "label": "Audio",
+   "value": "Built-in Speakers 2x 2W"
+  },
+  {
+   "icon": "eye",
+   "label": "Eye Care",
+   "value": "Flicker-Free · Less Blue Light"
+  },
+  {
+   "icon": "shield",
+   "label": "Warranty",
+   "value": "2 Year Warranty"
+  }
+ ],
+ "extras": [
+  {
+   "icon": "usbc",
+   "t": "USB Type-C",
+   "s": "صورة بكيبل واحد مع اللابتوب"
+  },
+  {
+   "icon": "hz",
+   "t": "IPS 144Hz",
+   "s": "حركة سلسة وألوان دقيقة"
+  },
+  {
+   "icon": "hdr",
+   "t": "HDR Ready",
+   "s": "صورة أوضح وألوان أغنى"
+  },
+  {
+   "icon": "truck",
+   "t": "توصيل لكل المملكة",
+   "s": "الدفع بعد الاستلام والمعاينة"
+  }
+ ],
+ "price": "129",
+ "old": "159",
+ "rib_t": "جديدة بالكرتونة",
+ "rib_s": "كفالة سنتين",
+ "contact": "للاستفسار والتواصل",
+ "handle": "@rootcomputers",
+ "wa": "0799167971",
+ "tel": "0791851390",
+ "wm": "",
+ "brand_bg": "#E60012",
+ "layout": {
+  "lap_w": 640,
+  "lap_x": 16,
+  "lap_y": 448,
+  "card_x": 668,
+  "spv": 12.8
+ }
+}

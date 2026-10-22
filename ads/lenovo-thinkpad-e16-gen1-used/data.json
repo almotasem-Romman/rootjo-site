@@ -1,0 +1,87 @@
+{
+ "brand": "<span style=\"font:600 28px/1 Poppins;letter-spacing:-.01em\">Lenovo</span>",
+ "model": "ThinkPad<br><em>E16 Gen 1</em>",
+ "sub": "Intel® Core™ i7-13700H · 16GB · 512GB SSD",
+ "specs": [
+  {
+   "icon": "cpu",
+   "label": "CPU",
+   "value": "Intel® Core™ i7-13700H (13th Gen)"
+  },
+  {
+   "icon": "ram",
+   "label": "RAM",
+   "value": "16GB DDR4-3200"
+  },
+  {
+   "icon": "ssd",
+   "label": "Storage",
+   "value": "SSD 512GB NVMe"
+  },
+  {
+   "icon": "screen",
+   "label": "Screen",
+   "value": "16\" WUXGA (1920x1200) IPS"
+  },
+  {
+   "icon": "screen",
+   "label": "Display",
+   "value": "Anti-Glare · 300 nits"
+  },
+  {
+   "icon": "kb",
+   "label": "Keyboard",
+   "value": "Backlit Keyboard + Fingerprint"
+  },
+  {
+   "icon": "box",
+   "label": "Charger & Weight",
+   "value": "Original Charger · 1.81 kg"
+  },
+  {
+   "icon": "shield",
+   "label": "Warranty",
+   "value": "Warranty Included"
+  }
+ ],
+ "extras": [
+  {
+   "icon": "win",
+   "t": "Windows 11 Pro",
+   "s": "نسخة أصلية"
+  },
+  {
+   "icon": "office",
+   "t": "MS Office Pro Plus",
+   "s": "نسخة أصلية"
+  },
+  {
+   "icon": "gift",
+   "t": "هدية مجانية",
+   "s": "شنطة + ماوس لاسلكي"
+  },
+  {
+   "icon": "truck",
+   "t": "توصيل لكل المملكة",
+   "s": "الدفع بعد الاستلام والمعاينة"
+  }
+ ],
+ "price": "619",
+ "old": "649",
+ "rib_t": "مستعمل بحالة الجديد",
+ "rib_s": "مكفول · <span style=\"font-family:Poppins;font-weight:600\">Used Like New</span>",
+ "contact": "للاستفسار والتواصل",
+ "handle": "@rootcomputers",
+ "wa": "0799167971",
+ "tel": "0791851390",
+ "wm": "",
+ "brand_bg": "#E2231A",
+ "layout": {
+  "lap_w": 610,
+  "lap_x": 34,
+  "lap_y": 402,
+  "card_x": 668,
+  "spv": 13.0,
+  "sp_pad": 9
+ }
+}

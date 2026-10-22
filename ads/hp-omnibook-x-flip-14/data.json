@@ -1,0 +1,81 @@
+{
+ "brand": "<span style=\"display:inline-flex;align-items:center;justify-content:center;width:34px;height:34px;border-radius:50%;background:#fff;color:#0096D6;font:italic 700 19px/1 Poppins;letter-spacing:-.04em\">hp</span>",
+ "model": "OmniBook X<br><em>Flip 14</em>",
+ "sub": "Intel® Core™ Ultra 5 · Touch Screen",
+ "specs": [
+  {
+   "icon": "cpu",
+   "label": "CPU",
+   "value": "Intel® Core™ Ultra 5 226V, up to 4.5GHz"
+  },
+  {
+   "icon": "ram",
+   "label": "RAM",
+   "value": "16GB DDR5-8533"
+  },
+  {
+   "icon": "ssd",
+   "label": "Storage",
+   "value": "SSD 512GB PCIe® Gen4 NVMe"
+  },
+  {
+   "icon": "screen",
+   "label": "Screen",
+   "value": "14\" FHD+ 2K IPS Touch (1920x1200)"
+  },
+  {
+   "icon": "gpu",
+   "label": "GPU",
+   "value": "Intel® Arc™ Graphics"
+  },
+  {
+   "icon": "wifi",
+   "label": "Connectivity",
+   "value": "Wi-Fi 6E · Bluetooth 5.3 · 5MP Camera"
+  },
+  {
+   "icon": "shield",
+   "label": "Warranty",
+   "value": "1 Year Warranty"
+  }
+ ],
+ "extras": [
+  {
+   "icon": "win",
+   "t": "Windows 11 Pro",
+   "s": "نسخة أصلية"
+  },
+  {
+   "icon": "office",
+   "t": "MS Office Pro Plus",
+   "s": "نسخة أصلية"
+  },
+  {
+   "icon": "gift",
+   "t": "هدية مجانية",
+   "s": "شنطة + ماوس لاسلكي"
+  },
+  {
+   "icon": "truck",
+   "t": "توصيل لكل المملكة",
+   "s": "الدفع بعد الاستلام والمعاينة"
+  }
+ ],
+ "price": "749",
+ "old": "779",
+ "rib_t": "جديد بالكرتونة",
+ "rib_s": "كفالة سنة",
+ "contact": "للاستفسار والتواصل",
+ "handle": "@rootcomputers",
+ "wa": "0799167971",
+ "tel": "0791851390",
+ "wm": "",
+ "brand_bg": "#0096D6",
+ "layout": {
+  "lap_w": 640,
+  "lap_x": 24,
+  "lap_y": 405,
+  "card_x": 668,
+  "spv": 13.2
+ }
+}

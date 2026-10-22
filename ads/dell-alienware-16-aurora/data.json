@@ -1,0 +1,83 @@
+{
+ "brand": "<span style=\"display:inline-flex;align-items:center;gap:12px\"><svg viewBox=\"0 0 120 120\" style=\"height:30px;display:block\"><circle cx=\"60\" cy=\"60\" r=\"54\" fill=\"none\" stroke=\"#fff\" stroke-width=\"7\"/><g fill=\"#fff\" font-family=\"Poppins\" font-weight=\"700\" font-size=\"30\"><text x=\"17\" y=\"71\">D</text><text x=\"42\" y=\"71\" transform=\"rotate(-25 52 61)\">E</text><text x=\"64\" y=\"71\">L</text><text x=\"84\" y=\"71\">L</text></g></svg><span style=\"width:2px;height:26px;background:rgba(255,255,255,.55)\"></span><span style=\"font:600 22px Poppins;letter-spacing:.32em\">ALIENWARE</span></span>",
+ "model": "Alienware 16<br><em>Aurora</em>",
+ "sub": "Intel® Core™ 9 270H · RTX™ 5070",
+ "specs": [
+  {
+   "icon": "cpu",
+   "label": "CPU",
+   "value": "Intel® Core™ 9 270H, up to 5.8GHz"
+  },
+  {
+   "icon": "ram",
+   "label": "RAM",
+   "value": "32GB DDR5-5600"
+  },
+  {
+   "icon": "ssd",
+   "label": "Storage",
+   "value": "SSD 1TB PCIe NVMe M.2"
+  },
+  {
+   "icon": "screen",
+   "label": "Screen",
+   "value": "16\" 2.5K QHD+ IPS 120Hz 100% sRGB"
+  },
+  {
+   "icon": "gpu",
+   "label": "GPU",
+   "value": "NVIDIA® GeForce RTX™ 5070 8GB GDDR7"
+  },
+  {
+   "icon": "wifi",
+   "label": "Connectivity",
+   "value": "Wi-Fi 7 · HDMI 2.1 · RJ45"
+  },
+  {
+   "icon": "shield",
+   "label": "Warranty",
+   "value": "1 Year Warranty"
+  }
+ ],
+ "extras": [
+  {
+   "icon": "win",
+   "t": "Windows 11 Pro",
+   "s": "نسخة أصلية"
+  },
+  {
+   "icon": "office",
+   "t": "MS Office Pro Plus",
+   "s": "نسخة أصلية"
+  },
+  {
+   "icon": "gift",
+   "t": "هدية مجانية",
+   "s": "شنطة + ماوس لاسلكي"
+  },
+  {
+   "icon": "truck",
+   "t": "توصيل لكل المملكة",
+   "s": "الدفع بعد الاستلام والمعاينة"
+  }
+ ],
+ "price": "1,760",
+ "old": "1,790",
+ "rib_t": "جديد بالكرتونة",
+ "rib_s": "كفالة سنة",
+ "contact": "للاستفسار والتواصل",
+ "handle": "@rootcomputers",
+ "wa": "0799167971",
+ "tel": "0791851390",
+ "wm": "",
+ "brand_bg": "#141A33",
+ "layout": {
+  "lap_w": 640,
+  "lap_x": 20,
+  "lap_y": 368,
+  "card_x": 668,
+  "spv": 13.2
+ },
+ "web": "www.rootjo.com",
+ "mail": "info@rootjo.com"
+}

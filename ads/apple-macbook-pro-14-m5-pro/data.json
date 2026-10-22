@@ -1,0 +1,83 @@
+{
+ "brand": "<svg viewBox=\"0 0 24 24\" style=\"height:26px;display:block;margin-right:8px\"><path fill=\"#fff\" d=\"M12.152 6.896c-.948 0-2.415-1.078-3.96-1.04-2.04.027-3.91 1.183-4.961 3.014-2.117 3.675-.546 9.103 1.519 12.09 1.013 1.454 2.208 3.09 3.792 3.039 1.52-.065 2.09-.987 3.935-.987 1.831 0 2.35.987 3.96.948 1.637-.026 2.676-1.48 3.676-2.948 1.156-1.688 1.636-3.325 1.662-3.415-.039-.013-3.182-1.221-3.22-4.857-.026-3.04 2.48-4.494 2.597-4.559-1.429-2.09-3.623-2.324-4.39-2.376-2-.156-3.675 1.09-4.61 1.09zM15.53 3.83c.843-1.012 1.4-2.427 1.245-3.83-1.207.052-2.662.805-3.532 1.818-.78.896-1.454 2.338-1.273 3.714 1.338.104 2.715-.688 3.559-1.701\"/></svg>Apple",
+ "model": "MacBook Pro 14\"<br><em>M5 Pro</em>",
+ "sub": "18-Core CPU · 20-Core GPU",
+ "specs": [
+  {
+   "icon": "cpu",
+   "label": "CPU",
+   "value": "Apple M5 Pro Chip (18-Core CPU)"
+  },
+  {
+   "icon": "gpu",
+   "label": "GPU",
+   "value": "Integrated 20-Core GPU"
+  },
+  {
+   "icon": "ram",
+   "label": "Memory",
+   "value": "24GB Unified Memory"
+  },
+  {
+   "icon": "ssd",
+   "label": "Storage",
+   "value": "SSD 2TB NVMe"
+  },
+  {
+   "icon": "screen",
+   "label": "Screen",
+   "value": "14.2\" Liquid Retina XDR<br>ProMotion up to 120Hz"
+  },
+  {
+   "icon": "kb",
+   "label": "Keyboard",
+   "value": "Backlit Magic Keyboard + Touch ID"
+  },
+  {
+   "icon": "shield",
+   "label": "Warranty",
+   "value": "1 Year Warranty"
+  }
+ ],
+ "extras": [
+  {
+   "icon": "ai",
+   "t": "macOS",
+   "s": "نظام التشغيل الأصلي"
+  },
+  {
+   "icon": "gift",
+   "t": "هدية مجانية",
+   "s": "شنطة + ماوس لاسلكي"
+  },
+  {
+   "icon": "truck",
+   "t": "توصيل لكل المملكة",
+   "s": "لباب بيتك"
+  },
+  {
+   "icon": "shield",
+   "t": "الدفع عند الاستلام",
+   "s": "بعد المعاينة"
+  }
+ ],
+ "price": "2,959",
+ "old": "2,989",
+ "rib_t": "جديد بالكرتونة",
+ "rib_s": "كفالة سنة",
+ "contact": "للاستفسار والتواصل",
+ "handle": "@rootcomputers",
+ "wa": "0799167971",
+ "tel": "0791851390",
+ "wm": "",
+ "brand_bg": "#111111",
+ "layout": {
+  "lap_w": 630,
+  "lap_x": 24,
+  "lap_y": 380,
+  "card_x": 662,
+  "spv": 13
+ },
+ "web": "www.rootjo.com",
+ "mail": "info@rootjo.com"
+}

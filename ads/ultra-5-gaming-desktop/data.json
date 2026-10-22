@@ -1,0 +1,92 @@
+{
+ "brand": "<span style=\"background:#0068B5;padding:7px 12px;border-radius:6px;font:700 18px/1 Poppins;letter-spacing:.01em\">intel<span style=\"color:#00C7FD\">.</span> <span style=\"font-weight:500\">CORE ULTRA 5</span></span><span style=\"background:#76B900;padding:7px 12px;border-radius:6px;font:800 18px/1 Poppins;letter-spacing:.02em\">GEFORCE RTX™</span>",
+ "model": "Ultra 5 Gaming<br><em>Desktop</em>",
+ "sub": "Core™ Ultra 5 · RTX™ 5070 Ti",
+ "specs": [
+  {
+   "icon": "cpu",
+   "label": "CPU",
+   "value": "Intel® Core™ Ultra 5 250K Plus<br>18 Cores · up to 5.3GHz · 30MB Cache"
+  },
+  {
+   "icon": "gpu",
+   "label": "GPU",
+   "value": "NVIDIA® GeForce RTX™ 5070 Ti 16GB GDDR7"
+  },
+  {
+   "icon": "ram",
+   "label": "RAM",
+   "value": "32GB DDR5 6000MHz (2×16GB)<br>Kingston FURY Beast RGB"
+  },
+  {
+   "icon": "ssd",
+   "label": "Storage",
+   "value": "SSD 1TB NV3 M.2 (up to 6000MB/s)"
+  },
+  {
+   "icon": "fan",
+   "label": "Cooling",
+   "value": "360mm AIO Liquid Cooling"
+  },
+  {
+   "icon": "case",
+   "label": "Case",
+   "value": "RGB ATX · 4× 120mm RGB Fans"
+  },
+  {
+   "icon": "bolt",
+   "label": "Power Supply",
+   "value": "800W 80+ Gold"
+  },
+  {
+   "icon": "shield",
+   "label": "Warranty",
+   "value": "1 Year Warranty"
+  }
+ ],
+ "extras": [
+  {
+   "icon": "win",
+   "t": "Windows 11 Pro",
+   "s": "نسخة أصلية"
+  },
+  {
+   "icon": "office",
+   "t": "MS Office Pro Plus",
+   "s": "نسخة أصلية"
+  },
+  {
+   "icon": "gift",
+   "t": "هدية مجانية",
+   "s": "ماوس لاسلكي"
+  },
+  {
+   "icon": "truck",
+   "t": "توصيل لكل المملكة",
+   "s": "الدفع بعد الاستلام والمعاينة"
+  }
+ ],
+ "price": "2,489",
+ "old": "2,519",
+ "rib_t": "جديد بالكرتونة",
+ "rib_s": "كفالة سنة",
+ "contact": "للاستفسار والتواصل",
+ "handle": "@rootcomputers",
+ "wa": "0799167971",
+ "tel": "0791851390",
+ "wm": "",
+ "brand_bg": "none",
+ "layout": {
+  "lap_w": 520,
+  "lap_x": 36,
+  "lap_y": 352,
+  "card_x": 650,
+  "card_y": 262,
+  "spv": 13,
+  "sp_pad": 7,
+  "price_y": 850,
+  "model_fs": 54
+ },
+ "web": "www.rootjo.com",
+ "mail": "info@rootjo.com"
+}

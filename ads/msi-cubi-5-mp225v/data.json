@@ -1,0 +1,86 @@
+{
+ "brand": "<span style=\"font:800 26px/1 Poppins;letter-spacing:.06em\">MSI</span>",
+ "model": "Cubi 5 1M<br><em>+ PRO MP225V</em>",
+ "sub": "Mini PC + 22\" Monitor Bundle",
+ "specs": [
+  {
+   "icon": "cpu",
+   "label": "CPU",
+   "value": "Intel® Core™ 3 100U (6C/8T, up to 4.7GHz)"
+  },
+  {
+   "icon": "ram",
+   "label": "RAM",
+   "value": "8GB DDR5-5200"
+  },
+  {
+   "icon": "ssd",
+   "label": "Storage",
+   "value": "SSD 512GB NVMe M.2"
+  },
+  {
+   "icon": "gpu",
+   "label": "GPU",
+   "value": "Intel® Graphics Integrated"
+  },
+  {
+   "icon": "screen",
+   "label": "Monitor",
+   "value": "MSI PRO MP225V 22\" FHD VA 100Hz"
+  },
+  {
+   "icon": "port",
+   "label": "Ports",
+   "value": "Thunderbolt™ 4 · Dual LAN 2.5G + 1G"
+  },
+  {
+   "icon": "wifi",
+   "label": "Wireless",
+   "value": "Wi-Fi 6E + Bluetooth 5.3"
+  },
+  {
+   "icon": "shield",
+   "label": "Warranty",
+   "value": "3 Year Warranty"
+  }
+ ],
+ "extras": [
+  {
+   "icon": "win",
+   "t": "Windows 11 Pro",
+   "s": "نسخة أصلية"
+  },
+  {
+   "icon": "office",
+   "t": "MS Office Pro Plus",
+   "s": "نسخة أصلية"
+  },
+  {
+   "icon": "gift",
+   "t": "هدية مجانية",
+   "s": "ماوس لاسلكي"
+  },
+  {
+   "icon": "truck",
+   "t": "توصيل لكل المملكة",
+   "s": "الدفع بعد الاستلام والمعاينة"
+  }
+ ],
+ "price": "559",
+ "old": "589",
+ "rib_t": "جديد بالكرتونة",
+ "rib_s": "كفالة 3 سنوات",
+ "contact": "للاستفسار والتواصل",
+ "handle": "@rootcomputers",
+ "wa": "0799167971",
+ "tel": "0791851390",
+ "wm": "",
+ "brand_bg": "#E60012",
+ "layout": {
+  "lap_w": 630,
+  "lap_x": 12,
+  "lap_y": 402,
+  "card_x": 668,
+  "spv": 12.4
+ }
+}

@@ -1,0 +1,82 @@
+{
+ "brand": "<span style=\"font:800 30px/1 Poppins;letter-spacing:.04em\">D<span style=\"display:inline-block;transform:rotate(-25deg)\">E</span>LL</span>",
+ "model": "Latitude<br><em>5550</em>",
+ "sub": "Intel® Core™ Ultra 7 · 16GB · 512GB SSD",
+ "specs": [
+  {
+   "icon": "cpu",
+   "label": "CPU",
+   "value": "Intel® Core™ Ultra 7 155U"
+  },
+  {
+   "icon": "ai",
+   "label": "AI",
+   "value": "Intel® NPU AI Accelerator"
+  },
+  {
+   "icon": "ram",
+   "label": "RAM",
+   "value": "16GB DDR5"
+  },
+  {
+   "icon": "ssd",
+   "label": "Storage",
+   "value": "SSD 512GB NVMe"
+  },
+  {
+   "icon": "screen",
+   "label": "Screen",
+   "value": "15.6\" FHD IPS 250 nits"
+  },
+  {
+   "icon": "cam",
+   "label": "Camera",
+   "value": "FHD + IR Camera"
+  },
+  {
+   "icon": "shield",
+   "label": "Warranty",
+   "value": "Dell Warranty until 2028"
+  }
+ ],
+ "extras": [
+  {
+   "icon": "win",
+   "t": "Windows 11 Pro",
+   "s": "نسخة أصلية"
+  },
+  {
+   "icon": "office",
+   "t": "MS Office Pro Plus",
+   "s": "نسخة أصلية"
+  },
+  {
+   "icon": "gift",
+   "t": "هدية مجانية",
+   "s": "شنطة + ماوس لاسلكي"
+  },
+  {
+   "icon": "truck",
+   "t": "توصيل لكل المملكة",
+   "s": "الدفع بعد الاستلام والمعاينة"
+  }
+ ],
+ "price": "619",
+ "old": "649",
+ "rib_t": "مستعمل بحالة الجديد",
+ "rib_s": "كفالة Dell الرسمية حتى 2028",
+ "contact": "للاستفسار والتواصل",
+ "handle": "@rootcomputers",
+ "wa": "0799167971",
+ "tel": "0791851390",
+ "wm": "",
+ "brand_bg": "#0076CE",
+ "layout": {
+  "lap_w": 680,
+  "lap_x": 16,
+  "lap_y": 505,
+  "card_x": 700,
+  "spv": 13.2,
+  "floor": 690
+ }
+}

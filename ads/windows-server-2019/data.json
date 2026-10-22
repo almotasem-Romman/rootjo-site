@@ -1,0 +1,30 @@
+{
+ "brand": "<span style=\"display:inline-flex;align-items:center;gap:9px\"><svg viewBox=\"0 0 23 23\" style=\"height:22px;width:22px;display:block\"><path fill=\"#F25022\" d=\"M0 0h11v11H0z\"/><path fill=\"#7FBA00\" d=\"M12 0h11v11H12z\"/><path fill=\"#00A4EF\" d=\"M0 12h11v11H0z\"/><path fill=\"#FFB900\" d=\"M12 12h11v11H12z\"/></svg><span style=\"color:#5E5E5E;font:600 24px Poppins;letter-spacing:-.01em\">Microsoft</span></span>",
+ "brand_bg": "#FFFFFF",
+ "model": "Windows Server<br><em>2019</em>",
+ "sub": "Original License · Permanent Activation",
+ "specs": [
+  {"icon": "win", "label": "Product", "value": "Windows Server 2019"},
+  {"icon": "server", "label": "Type", "value": "Server Operating System"},
+  {"icon": "doc", "label": "Platform", "value": "Based on Windows 10"},
+  {"icon": "key", "label": "License", "value": "Original Microsoft License"},
+  {"icon": "inf", "label": "Activation", "value": "Permanent Activation"}
+ ],
+ "extras": [
+  {"icon": "win", "t": "Windows Server", "s": "نظام تشغيل للسيرفرات"},
+  {"icon": "key", "t": "Original License", "s": "ترخيص أصلي من Microsoft"},
+  {"icon": "inf", "t": "تفعيل دائم", "s": "Permanent Activation"},
+  {"icon": "headset", "t": "تواصل مباشر", "s": "واتساب ومكالمات"}
+ ],
+ "price": "35",
+ "old": "65",
+ "rib_t": "ترخيص أصلي",
+ "rib_s": "تفعيل دائم",
+ "rib_icon": "key",
+ "contact": "للاستفسار والتواصل",
+ "handle": "@rootcomputers",
+ "wa": "0799167971",
+ "tel": "0791851390",
+ "wm": "",
+ "layout": {"lap_w": 455, "lap_x": 125, "lap_y": 270, "card_x": 640, "card_y": 320, "spv": 14, "sp_pad": 13, "model_fs": 56, "price_y": 830}
+}

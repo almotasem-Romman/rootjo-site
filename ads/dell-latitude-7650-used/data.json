@@ -1,0 +1,87 @@
+{
+ "brand": "<svg viewBox=\"0 0 120 120\" style=\"height:34px;display:block\"><circle cx=\"60\" cy=\"60\" r=\"54\" fill=\"none\" stroke=\"#fff\" stroke-width=\"7\"/><g fill=\"#fff\" font-family=\"Poppins\" font-weight=\"700\" font-size=\"30\"><text x=\"17\" y=\"71\">D</text><text x=\"42\" y=\"71\" transform=\"rotate(-25 52 61)\">E</text><text x=\"64\" y=\"71\">L</text><text x=\"84\" y=\"71\">L</text></g></svg>",
+ "model": "Latitude<br><em>7650</em>",
+ "sub": "Intel® Core™ Ultra 7 · 32GB · 512GB SSD",
+ "specs": [
+  {
+   "icon": "cpu",
+   "label": "CPU",
+   "value": "Intel® Core™ Ultra 7 165U"
+  },
+  {
+   "icon": "gpu",
+   "label": "AI Engine",
+   "value": "Intel® NPU AI Accelerator"
+  },
+  {
+   "icon": "ram",
+   "label": "RAM",
+   "value": "32GB LPDDR5x 6400MHz"
+  },
+  {
+   "icon": "ssd",
+   "label": "Storage",
+   "value": "SSD 512GB NVMe"
+  },
+  {
+   "icon": "screen",
+   "label": "Screen",
+   "value": "16\" FHD IPS"
+  },
+  {
+   "icon": "kb",
+   "label": "Keyboard",
+   "value": "Backlit Keyboard"
+  },
+  {
+   "icon": "box",
+   "label": "Charger & Battery",
+   "value": "Original Charger · Excellent Battery"
+  },
+  {
+   "icon": "shield",
+   "label": "Warranty",
+   "value": "Official Dell Warranty until 11/2027"
+  }
+ ],
+ "extras": [
+  {
+   "icon": "win",
+   "t": "Windows 11 Pro",
+   "s": "نسخة أصلية"
+  },
+  {
+   "icon": "office",
+   "t": "MS Office Pro Plus",
+   "s": "نسخة أصلية"
+  },
+  {
+   "icon": "gift",
+   "t": "هدية مجانية",
+   "s": "شنطة + ماوس لاسلكي"
+  },
+  {
+   "icon": "truck",
+   "t": "توصيل لكل المملكة",
+   "s": "الدفع بعد الاستلام والمعاينة"
+  }
+ ],
+ "price": "820",
+ "old": "850",
+ "rib_t": "مستعمل بحالة الجديد",
+ "rib_s": "بالكرتونة · <span style=\"font-family:Poppins;font-weight:600\">Used Like New</span>",
+ "contact": "للاستفسار والتواصل",
+ "handle": "@rootcomputers",
+ "wa": "0799167971",
+ "tel": "0791851390",
+ "wm": "",
+ "brand_bg": "#0672CB",
+ "layout": {
+  "lap_w": 620,
+  "lap_x": 36,
+  "lap_y": 468,
+  "card_x": 668,
+  "spv": 13.0,
+  "sp_pad": 9
+ }
+}

@@ -1,0 +1,27 @@
+{
+ "brand": "<span style=\"font:600 28px/1 Poppins;letter-spacing:-.01em\">Lenovo</span>",
+ "model": "ThinkPad<br><em>E16 Gen 4</em>",
+ "sub": "Intel® Core™ Ultra 7 · 1TB SSD",
+ "specs": [
+  {"icon": "cpu", "label": "CPU", "value": "Intel® Core™ Ultra 7 355 (8C, up to 4.7GHz)"},
+  {"icon": "ram", "label": "RAM", "value": "16GB DDR5-5600"},
+  {"icon": "ssd", "label": "Storage", "value": "SSD 1TB PCIe® 4.0 NVMe"},
+  {"icon": "screen", "label": "Screen", "value": "16\" WUXGA IPS Anti-glare 400 nits"},
+  {"icon": "gpu", "label": "GPU", "value": "Intel® Graphics Integrated"},
+  {"icon": "wifi", "label": "Connectivity", "value": "Wi-Fi 7 · Thunderbolt™ 4"},
+  {"icon": "kb", "label": "Keyboard", "value": "Backlit Arabic Keyboard"},
+  {"icon": "shield", "label": "Warranty", "value": "1 Year Warranty"}
+ ],
+ "extras": [
+  {"icon": "win", "t": "Windows 11 Pro", "s": "نسخة أصلية"},
+  {"icon": "office", "t": "MS Office Pro Plus", "s": "نسخة أصلية"},
+  {"icon": "gift", "t": "هدية مجانية", "s": "شنطة + ماوس لاسلكي"},
+  {"icon": "truck", "t": "توصيل لكل المملكة", "s": "الدفع بعد الاستلام والمعاينة"}
+ ],
+ "price": "1199", "old": "1229",
+ "rib_t": "جديد بالكرتونة", "rib_s": "كفالة سنة",
+ "contact": "للاستفسار والتواصل", "handle": "@rootcomputers",
+ "wa": "0799167971", "tel": "0791851390", "wm": "",
+ "brand_bg": "#E2231A",
+ "layout": {"lap_w": 640, "lap_x": 14, "lap_y": 400, "card_x": 668, "spv": 13.0, "sp_pad": 9}
+}

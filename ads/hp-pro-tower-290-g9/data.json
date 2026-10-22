@@ -1,0 +1,81 @@
+{
+ "brand": "<span style=\"font:800 26px/1 Poppins;letter-spacing:.02em\">HP</span>",
+ "model": "Pro Tower<br><em>290 G9</em>",
+ "sub": "Intel® Core™ i3 · 13th Gen",
+ "specs": [
+  {
+   "icon": "cpu",
+   "label": "CPU",
+   "value": "Intel® Core™ i3-13100 (4C/8T, up to 4.5GHz)"
+  },
+  {
+   "icon": "ram",
+   "label": "RAM",
+   "value": "8GB DDR4-3200"
+  },
+  {
+   "icon": "ssd",
+   "label": "Storage",
+   "value": "SSD 512GB PCIe® NVMe M.2"
+  },
+  {
+   "icon": "gpu",
+   "label": "GPU",
+   "value": "Intel® UHD Graphics 730"
+  },
+  {
+   "icon": "wifi",
+   "label": "Wireless",
+   "value": "Wi-Fi 6 + Bluetooth 5.3"
+  },
+  {
+   "icon": "kb",
+   "label": "In the Box",
+   "value": "HP Keyboard & Mouse"
+  },
+  {
+   "icon": "shield",
+   "label": "Warranty",
+   "value": "1 Year Warranty"
+  }
+ ],
+ "extras": [
+  {
+   "icon": "win",
+   "t": "Windows 11 Pro",
+   "s": "نسخة أصلية"
+  },
+  {
+   "icon": "office",
+   "t": "MS Office Pro Plus",
+   "s": "نسخة أصلية"
+  },
+  {
+   "icon": "gift",
+   "t": "هدية مجانية",
+   "s": "ماوس لاسلكي"
+  },
+  {
+   "icon": "truck",
+   "t": "توصيل لكل المملكة",
+   "s": "الدفع بعد الاستلام والمعاينة"
+  }
+ ],
+ "price": "449",
+ "old": "479",
+ "rib_t": "جديد بالكرتونة",
+ "rib_s": "كفالة سنة",
+ "contact": "للاستفسار والتواصل",
+ "handle": "@rootcomputers",
+ "wa": "0799167971",
+ "tel": "0791851390",
+ "wm": "",
+ "brand_bg": "#0096D6",
+ "layout": {
+  "lap_w": 640,
+  "lap_x": 14,
+  "lap_y": 350,
+  "card_x": 668,
+  "spv": 13.2
+ }
+}

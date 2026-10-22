@@ -1,0 +1,86 @@
+{
+ "brand": "<span style=\"font:800 26px/1 Poppins;letter-spacing:.06em\">MSI</span>",
+ "model": "PRO MP251<br><em>E14L</em>",
+ "sub": "24.5\" FHD · IPS · Business Monitor",
+ "specs": [
+  {
+   "icon": "screen",
+   "label": "Screen",
+   "value": "24.5\" FHD (1920×1080) IPS"
+  },
+  {
+   "icon": "hz",
+   "label": "Refresh Rate",
+   "value": "144Hz · 1ms MPRT"
+  },
+  {
+   "icon": "hdr",
+   "label": "HDR",
+   "value": "HDR Ready · Adaptive-Sync"
+  },
+  {
+   "icon": "palette",
+   "label": "Colors",
+   "value": "99% sRGB · 16.7M Colors"
+  },
+  {
+   "icon": "port",
+   "label": "Ports",
+   "value": "HDMI 1.4b · VGA · Headphone Out"
+  },
+  {
+   "icon": "eye",
+   "label": "Eye Care",
+   "value": "EyesErgo · Flicker-Free"
+  },
+  {
+   "icon": "mount",
+   "label": "Mount",
+   "value": "VESA 100×100 · Tilt -5° to 20°"
+  },
+  {
+   "icon": "shield",
+   "label": "Warranty",
+   "value": "2 Year Warranty"
+  }
+ ],
+ "extras": [
+  {
+   "icon": "eye",
+   "t": "EyesErgo",
+   "s": "تقنية راحة العين"
+  },
+  {
+   "icon": "hz",
+   "t": "144Hz",
+   "s": "عرض أسلس للعمل والألعاب"
+  },
+  {
+   "icon": "hdr",
+   "t": "HDR Ready",
+   "s": "صورة أوضح وألوان أغنى"
+  },
+  {
+   "icon": "truck",
+   "t": "توصيل لكل المملكة",
+   "s": "الدفع بعد الاستلام والمعاينة"
+  }
+ ],
+ "price": "99",
+ "old": "129",
+ "rib_t": "جديدة بالكرتونة",
+ "rib_s": "كفالة سنتين",
+ "contact": "للاستفسار والتواصل",
+ "handle": "@rootcomputers",
+ "wa": "0799167971",
+ "tel": "0791851390",
+ "wm": "",
+ "brand_bg": "#E60012",
+ "layout": {
+  "lap_w": 600,
+  "lap_x": 30,
+  "lap_y": 330,
+  "card_x": 668,
+  "spv": 12.6
+ }
+}

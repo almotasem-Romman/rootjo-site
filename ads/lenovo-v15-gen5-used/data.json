@@ -1,0 +1,83 @@
+{
+ "brand": "<span style=\"font:600 28px/1 Poppins;letter-spacing:-.01em\">Lenovo</span>",
+ "model": "V15<br><em>Gen 5</em>",
+ "sub": "Intel® Core™ i5-13420H · 8GB · 512GB SSD",
+ "specs": [
+  {
+   "icon": "cpu",
+   "label": "CPU",
+   "value": "Intel® Core™ i5-13420H (13th Gen)"
+  },
+  {
+   "icon": "ram",
+   "label": "RAM",
+   "value": "8GB DDR5-5200MHz"
+  },
+  {
+   "icon": "ssd",
+   "label": "Storage",
+   "value": "SSD 512GB NVMe™ M.2"
+  },
+  {
+   "icon": "screen",
+   "label": "Screen",
+   "value": "15.6\" FHD"
+  },
+  {
+   "icon": "bolt",
+   "label": "Battery",
+   "value": "Original Charger · Excellent Battery"
+  },
+  {
+   "icon": "box",
+   "label": "Box",
+   "value": "With Original Box"
+  },
+  {
+   "icon": "shield",
+   "label": "Warranty",
+   "value": "Under Official Warranty"
+  }
+ ],
+ "extras": [
+  {
+   "icon": "win",
+   "t": "Windows 11 Pro",
+   "s": "نسخة أصلية"
+  },
+  {
+   "icon": "office",
+   "t": "MS Office Pro Plus",
+   "s": "نسخة أصلية"
+  },
+  {
+   "icon": "gift",
+   "t": "هدية مجانية",
+   "s": "شنطة + ماوس لاسلكي"
+  },
+  {
+   "icon": "truck",
+   "t": "توصيل لكل المملكة",
+   "s": "الدفع بعد الاستلام والمعاينة"
+  }
+ ],
+ "price": "360",
+ "old": "390",
+ "rib_t": "مستعمل بحالة الجديد",
+ "rib_s": "بالكرتونة · تحت الكفالة الرسمية",
+ "contact": "للاستفسار والتواصل",
+ "handle": "@rootcomputers",
+ "wa": "0799167971",
+ "tel": "0791851390",
+ "wm": "",
+ "brand_bg": "#E2231A",
+ "layout": {
+  "card_x": 668,
+  "spv": 13.2,
+  "lap_w": 620,
+  "lap_y": 380,
+  "lap_x": 40
+ },
+ "web": "www.rootjo.com",
+ "mail": "info@rootjo.com"
+}

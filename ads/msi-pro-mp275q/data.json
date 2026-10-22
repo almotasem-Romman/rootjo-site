@@ -1,0 +1,82 @@
+{
+ "brand": "<span style=\"font:800 26px/1 Poppins;letter-spacing:.06em\">MSI</span>",
+ "model": "PRO MP275Q<br><em>27\" 2K WQHD</em>",
+ "sub": "Business Monitor · IPS 144Hz",
+ "specs": [
+  {
+   "icon": "screen",
+   "label": "Screen",
+   "value": "27\" WQHD 2560×1440"
+  },
+  {
+   "icon": "eye",
+   "label": "Panel",
+   "value": "IPS · Anti-Glare · 178°"
+  },
+  {
+   "icon": "hz",
+   "label": "Refresh Rate",
+   "value": "144Hz · 1ms MPRT"
+  },
+  {
+   "icon": "hdr",
+   "label": "Display",
+   "value": "HDR Ready · 115% sRGB"
+  },
+  {
+   "icon": "port",
+   "label": "Ports",
+   "value": "2× HDMI 2.0b · DP 1.2a"
+  },
+  {
+   "icon": "mount",
+   "label": "Mount",
+   "value": "VESA 100×100 · Tilt"
+  },
+  {
+   "icon": "shield",
+   "label": "Warranty",
+   "value": "2 Year Warranty"
+  }
+ ],
+ "extras": [
+  {
+   "icon": "eye",
+   "t": "EyesErgo",
+   "s": "تقنية لراحة العين"
+  },
+  {
+   "icon": "blue",
+   "t": "Flicker-Free",
+   "s": "وضوء أزرق أقل"
+  },
+  {
+   "icon": "spk",
+   "t": "سماعات مدمجة",
+   "s": "<span dir=\"ltr\">2 × 2W</span>"
+  },
+  {
+   "icon": "truck",
+   "t": "توصيل لكل المملكة",
+   "s": "الدفع بعد الاستلام والمعاينة"
+  }
+ ],
+ "price": "159",
+ "old": "189",
+ "rib_t": "جديد بالكرتونة",
+ "rib_s": "كفالة سنتين",
+ "contact": "للاستفسار والتواصل",
+ "handle": "@rootcomputers",
+ "wa": "0799167971",
+ "tel": "0791851390",
+ "wm": "",
+ "brand_bg": "#E60012",
+ "layout": {
+  "lap_w": 600,
+  "lap_x": 34,
+  "lap_y": 300,
+  "card_x": 668,
+  "spv": 13.6,
+  "model_fs": 56
+ }
+}

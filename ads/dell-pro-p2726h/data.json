@@ -1,0 +1,31 @@
+{
+ "brand": "<span style=\"font:800 30px/1 Poppins;letter-spacing:.04em\">D<span style=\"display:inline-block;transform:rotate(-25deg)\">E</span>LL</span>",
+ "brand_bg": "#0076CE",
+ "model": "Pro<br><em>P2726H</em>",
+ "sub": "27\" FHD 120Hz IPS Monitor",
+ "specs": [
+  {"icon": "screen", "label": "Screen", "value": "27\" FHD (1920x1080) IPS"},
+  {"icon": "hz", "label": "Refresh Rate", "value": "120Hz · 5ms GTG"},
+  {"icon": "color", "label": "Color", "value": "99% sRGB · 1500:1 · 300 nits"},
+  {"icon": "usbc", "label": "Video Ports", "value": "HDMI 1.4 · DisplayPort 1.4"},
+  {"icon": "usb", "label": "USB Hub", "value": "2x USB-C (15W PD) · 2x USB-A 5Gbps"},
+  {"icon": "adj", "label": "Stand", "value": "Height · Tilt · Swivel · Pivot"},
+  {"icon": "shield", "label": "Warranty", "value": "3 Year Warranty"}
+ ],
+ "extras": [
+  {"icon": "adj", "t": "ستاند كامل الحركة", "s": "ارتفاع · ميلان · دوران · عمودي"},
+  {"icon": "usb", "t": "USB-C Hub", "s": "شحن 15W ومنافذ إضافية"},
+  {"icon": "eye", "t": "Eye Comfort", "s": "بدون وميض · ضوء أزرق أقل"},
+  {"icon": "truck", "t": "توصيل لكل المملكة", "s": "الدفع بعد الاستلام والمعاينة"}
+ ],
+ "price": "189",
+ "old": "219",
+ "rib_t": "جديدة بالكرتونة",
+ "rib_s": "كفالة 3 سنوات",
+ "contact": "للاستفسار والتواصل",
+ "handle": "@rootcomputers",
+ "wa": "0799167971",
+ "tel": "0791851390",
+ "wm": "",
+ "layout": {"lap_w": 600, "lap_x": 30, "lap_y": 330, "card_x": 662, "spv": 12.6}
+}
