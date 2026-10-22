@@ -29,7 +29,7 @@ for line in open("images2.txt", encoding="utf-8"):
             path = lp
         if "cutout" in flags:
             from cutout import cutout as _co
-            rr = _co(path)
+            rr = _co(path, model='birefnet-general-lite', max_side=1600)
             rr.thumbnail((1600, 1600), Image.LANCZOS)
             rr.save(f"out2/{name}.png", optimize=True); rr.save(f"out2/{name}.webp", quality=90, method=6)
             log.append(f"OK {name} cutout.py -> {rr.size}"); continue
