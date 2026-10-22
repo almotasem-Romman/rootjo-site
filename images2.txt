@@ -5,3 +5,5 @@ asus-rog-strix-scar-18 src2/asus-rog-strix-scar-18.png biggest
 asus-vivobook-15-x1504va src2/asus-vivobook-15-x1504va.png biggest
 lenovo-v15-gen5 src2/lenovo-v15-gen5.jpg biggest
 dell-alienware-16-aurora src2/dell-alienware-16-aurora.png biggest
+hp-omnibook-x-flip-14-a https://cdn.mcc-jo.com/media/hp-omnibook-x-flip-14-fm0013dx-uycylwrywh.webp
+hp-omnibook-x-flip-14-b https://cdn.mcc-jo.com/media/hp-omnibook-x-flip-laptop-ljwewy3cjz.webp
