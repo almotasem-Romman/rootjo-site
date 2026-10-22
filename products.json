@@ -1,5 +1,73 @@
 [
   {
+    "slug": "lenovo-ideapad-slim-3-15irh10",
+    "status": "available",
+    "category": "laptop",
+    "condition": "new",
+    "condition_note_ar": "كفالة سنة",
+    "condition_note_en": "1-year warranty",
+    "name": "Lenovo IdeaPad Slim 3 15IRH10",
+    "brand": "Lenovo",
+    "price": 520,
+    "old_price": 550,
+    "badge_ar": "",
+    "badge_en": "",
+    "image": "img/products/lenovo-ideapad-slim-3-15irh10.webp",
+    "card_specs": [
+      "Core i5-13420H",
+      "8GB DDR5",
+      "512GB SSD",
+      "15.3\" WUXGA"
+    ],
+    "specs": [
+      [
+        "cpu",
+        "Intel Core i5-13420H (13th Gen, 8C/12T, up to 4.6GHz)"
+      ],
+      [
+        "ram",
+        "8GB DDR5-4800"
+      ],
+      [
+        "storage",
+        "512GB PCIe 4.0 NVMe M.2 SSD"
+      ],
+      [
+        "display",
+        "15.3\" WUXGA IPS (1920 x 1200)"
+      ],
+      [
+        "gpu",
+        "Intel UHD Graphics (integrated)"
+      ],
+      [
+        "wifi",
+        "Wi-Fi 6, Bluetooth 5.2"
+      ],
+      [
+        "ports",
+        "2x USB-A, 1x USB-C, HDMI 1.4, SD card reader"
+      ],
+      [
+        "keyboard",
+        "Arabic / English"
+      ],
+      [
+        "warranty",
+        "1 year"
+      ]
+    ],
+    "perks": [
+      "win11",
+      "office",
+      "gift",
+      "delivery"
+    ],
+    "about_ar": "لابتوب Lenovo IdeaPad Slim 3 بمعالج Core i5 الجيل 13 ورام DDR5 وشاشة 15.3 إنش WUXGA. جديد بالكرتونة مع كفالة سنة.",
+    "about_en": "A Lenovo IdeaPad Slim 3 with a 13th Gen Core i5, DDR5 memory and a 15.3-inch WUXGA IPS display. New in the box with a 1-year warranty.",
+    "added": "2026-10-23"
+  },
+  {
     "slug": "dell-alienware-16-aurora",
     "status": "available",
     "category": "laptop",
