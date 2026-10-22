@@ -2,7 +2,7 @@ name: process-product-images
 on:
   push:
     branches: [asset-pipeline]
-    paths: [images2.txt, process2.py]
+    paths: [images2.txt, process2.py, cutout.py]
 permissions:
   contents: write
 jobs:
@@ -13,7 +13,7 @@ jobs:
       - uses: actions/checkout@v4
       - uses: actions/setup-python@v5
         with: { python-version: "3.11" }
-      - run: pip install "rembg[cpu]" pillow opencv-contrib-python-headless numpy
+      - run: pip install "rembg[cpu]" pillow opencv-contrib-python-headless numpy scipy pymatting
       - run: python process2.py
       - run: |
           git config user.name "github-actions"
