@@ -7,3 +7,4 @@ lenovo-v15-gen5 src2/lenovo-v15-gen5.jpg biggest
 dell-alienware-16-aurora src2/dell-alienware-16-aurora.png biggest
 hp-omnibook-x-flip-14-a https://cdn.mcc-jo.com/media/hp-omnibook-x-flip-14-fm0013dx-uycylwrywh.webp
 hp-omnibook-x-flip-14-b https://cdn.mcc-jo.com/media/hp-omnibook-x-flip-laptop-ljwewy3cjz.webp
+lenovo-ideapad-slim-3 https://psref.lenovo.com/syspool/Sys/Image/IdeaPad/IdeaPad_Slim_3_15IRH10/IdeaPad_Slim_3_15IRH10_CT1_02.png rawalpha

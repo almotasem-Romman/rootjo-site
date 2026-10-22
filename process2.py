@@ -27,6 +27,19 @@ for line in open("images2.txt", encoding="utf-8"):
             lp = "dl/" + name + ".img"
             open(lp, "wb").write(urllib.request.urlopen(req, timeout=60).read())
             path = lp
+        if "rawalpha" in flags:
+            ra = Image.open(path).convert("RGBA")
+            am = (np.asarray(ra.getchannel("A")) > 127).astype(np.uint8) * 255
+            n, lab, stats, _ = cv2.connectedComponentsWithStats(am)
+            if n > 1:
+                big = stats[1:, cv2.CC_STAT_AREA].max()
+                keep = [i for i in range(1, n) if stats[i, cv2.CC_STAT_AREA] > big * 0.2]
+                am = np.isin(lab, keep).astype(np.uint8) * 255
+            keepA = Image.fromarray(np.minimum(np.asarray(ra.getchannel("A")), am))
+            ra.putalpha(keepA); bb = ra.getbbox(); ra = ra.crop(bb) if bb else ra
+            ra.thumbnail((1600, 1600), Image.LANCZOS)
+            ra.save(f"out2/{name}.png", optimize=True); ra.save(f"out2/{name}.webp", quality=90, method=6)
+            log.append(f"OK {name} rawalpha -> {ra.size}"); continue
         im = Image.open(path).convert("RGB")
         m = max(im.size)
         scale = 3 if m < 600 else 2 if m < 1300 else 1
