@@ -1,1 +1,1 @@
-OK lenovo-thinkpad-t14-gen2 x1 -> (1185, 1340)
+OK lenovo-thinkpad-t14-gen2-ai x2 -> (1600, 1151)
