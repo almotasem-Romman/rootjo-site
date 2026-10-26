@@ -1,5 +1,73 @@
 [
   {
+    "slug": "lenovo-thinkpad-t14-gen2-touch",
+    "status": "available",
+    "category": "laptop",
+    "condition": "used",
+    "condition_note_ar": "كفالة شهرين",
+    "condition_note_en": "2-month warranty",
+    "name": "Lenovo ThinkPad T14 Gen 2 Touch",
+    "brand": "Lenovo",
+    "price": 350,
+    "old_price": null,
+    "badge_ar": "",
+    "badge_en": "",
+    "image": "img/products/lenovo-thinkpad-t14-gen2-touch.webp",
+    "card_specs": [
+      "Core i7 Gen 11",
+      "16GB DDR4",
+      "512GB SSD",
+      "14\" FHD Touch"
+    ],
+    "specs": [
+      [
+        "cpu",
+        "Intel Core i7 (11th Gen)"
+      ],
+      [
+        "ram",
+        "16GB DDR4"
+      ],
+      [
+        "storage",
+        "512GB NVMe SSD"
+      ],
+      [
+        "display",
+        "14\" FHD touchscreen"
+      ],
+      [
+        "gpu",
+        "Intel Iris Xe Graphics"
+      ],
+      [
+        "wifi",
+        "Wi-Fi 6, Bluetooth"
+      ],
+      [
+        "ports",
+        "USB-C, HDMI"
+      ],
+      [
+        "security",
+        "Fingerprint reader"
+      ],
+      [
+        "warranty",
+        "2-month warranty"
+      ]
+    ],
+    "perks": [
+      "win11",
+      "office",
+      "gift",
+      "delivery"
+    ],
+    "about_ar": "لابتوب أعمال ThinkPad T14 Gen 2 بشاشة لمس 14 إنش ومعالج Core i7 الجيل 11 ورام 16GB، مع قارئ بصمة. مستعمل بكفالة شهرين.",
+    "about_en": "A ThinkPad T14 Gen 2 business laptop with a 14-inch touchscreen, an 11th Gen Core i7, 16GB of RAM and a fingerprint reader. Used, with a 2-month warranty.",
+    "added": "2026-10-26"
+  },
+  {
     "slug": "hp-omnibook-x-flip-14",
     "status": "available",
     "category": "laptop",
