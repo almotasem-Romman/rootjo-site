@@ -75,7 +75,7 @@ LBL = {
     "cooling": ("التبريد", "Cooling"), "case": ("الكيس", "Case"), "psu": ("مزود الطاقة", "Power supply"),
     "colors": ("دقة الألوان", "Color accuracy"), "usbhub": ("منافذ USB", "USB hub"),
 }
-COND = {"new": ("جديد بالكرتونة", "New in box"), "open-box": ("مفتوح الكرتونة", "Open box"),
+COND = {"new": ("جديد بالكرتونة", "New in box"), "open-box": ("جديد بدون كرتونة", "New, no box"),
         "used": ("مستعمل", "Used"), "like-new": ("مستعمل بحالة الجديد", "Used, like new"), "digital": ("ترخيص رقمي", "Digital license")}
 CAT = {"laptop": ("لابتوبات", "Laptops"), "desktop": ("كمبيوترات", "Desktops"),
        "license": ("تراخيص", "Licenses"), "monitor": ("شاشات", "Monitors"), "accessory": ("إكسسوارات", "Accessories")}

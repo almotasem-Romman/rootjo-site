@@ -415,7 +415,7 @@ var CONFIG = {
   /* ===== Products ===== */
   var PRODUCTS = [];
   try { PRODUCTS = JSON.parse(document.getElementById("productsData").textContent); } catch (e) {}
-  var COND = { "new": ["جديد بالكرتونة", "New in box"], "open-box": ["مفتوح الكرتونة", "Open box"], used: ["مستعمل", "Used"], "like-new": ["مستعمل بحالة الجديد", "Used, like new"], digital: ["ترخيص رقمي", "Digital license"] };
+  var COND = { "new": ["جديد بالكرتونة", "New in box"], "open-box": ["جديد بدون كرتونة", "New, no box"], used: ["مستعمل", "Used"], "like-new": ["مستعمل بحالة الجديد", "Used, like new"], digital: ["ترخيص رقمي", "Digital license"] };
   var ICON = {
     laptop: '<svg viewBox="0 0 24 24"><rect x="4" y="4" width="16" height="11" rx="1.5"/><path d="M2 19h20l-2-4H4z"/></svg>',
     desktop: '<svg viewBox="0 0 24 24"><rect x="7" y="2" width="10" height="20" rx="1.5"/><path d="M10 6h4M10 9h4"/><circle cx="12" cy="17" r="1.2"/></svg>',

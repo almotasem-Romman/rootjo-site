@@ -1,5 +1,73 @@
 [
   {
+    "slug": "dell-pro-max-14-mc14250",
+    "status": "available",
+    "category": "laptop",
+    "condition": "open-box",
+    "condition_note_ar": "كفالة شهرين",
+    "condition_note_en": "2-month warranty",
+    "name": "Dell Pro Max 14 MC14250",
+    "brand": "Dell",
+    "price": 450,
+    "old_price": 480,
+    "badge_ar": "",
+    "badge_en": "",
+    "image": "img/products/dell-pro-max-14-mc14250.webp",
+    "card_specs": [
+      "Core Ultra 5",
+      "16GB RAM",
+      "256GB SSD",
+      "14\" FHD+"
+    ],
+    "specs": [
+      [
+        "cpu",
+        "Intel Core Ultra 5"
+      ],
+      [
+        "ram",
+        "16GB"
+      ],
+      [
+        "storage",
+        "256GB NVMe SSD"
+      ],
+      [
+        "display",
+        "14\" FHD+ (1920 x 1200)"
+      ],
+      [
+        "gpu",
+        "Intel Arc Graphics"
+      ],
+      [
+        "os",
+        "Windows 11"
+      ],
+      [
+        "ports",
+        "USB-C Thunderbolt 4, USB-A, HDMI"
+      ],
+      [
+        "other",
+        "2025 model"
+      ],
+      [
+        "warranty",
+        "2-month warranty"
+      ]
+    ],
+    "perks": [
+      "win11",
+      "office",
+      "gift",
+      "delivery"
+    ],
+    "about_ar": "لابتوب Dell Pro Max 14 موديل 2025 بمعالج Intel Core Ultra 5 ورام 16GB وشاشة 14 إنش FHD+ ومنفذ Thunderbolt 4. جديد بدون كرتونة، بكفالة شهرين.",
+    "about_en": "A 2025 Dell Pro Max 14 with an Intel Core Ultra 5, 16GB of RAM, a 14-inch FHD+ screen and Thunderbolt 4. New without the box, with a 2-month warranty.",
+    "added": "2026-10-29"
+  },
+  {
     "slug": "lenovo-ideapad-flex-5-16iau7",
     "status": "available",
     "category": "laptop",
