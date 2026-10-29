@@ -1,1 +1,2 @@
-OK lenovo-thinkpad-t14-gen2-ai x2 -> (1600, 1151)
+OK lenovo-ideapad-flex-5-16iau7 x2 -> (1600, 1116)
+OK lenovo-ideapad-flex-5-16iau7-front x1 -> (1600, 1247)
