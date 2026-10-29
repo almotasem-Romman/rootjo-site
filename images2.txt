@@ -12,4 +12,6 @@
 #lenovo-p1-v2 src2/lenovo-p1.webp cutout
 #macbook-pro-14-m5-pro-v2 src2/macbook-pro-14-m5-pro.png cutout
 #lenovo-thinkpad-t14-gen2 src2/lenovo-thinkpad-t14-gen2.jpg biggest
-lenovo-thinkpad-t14-gen2-ai https://d8j0ntlcm91z4.cloudfront.net/user_3DAped8RDW0qbSDLYoaLhUSqQP9/hf_20261026_104908_6faa4d47-e926-4a59-8d23-de23b9f57a63.png biggest
+#lenovo-thinkpad-t14-gen2-ai https://d8j0ntlcm91z4.cloudfront.net/user_3DAped8RDW0qbSDLYoaLhUSqQP9/hf_20261026_104908_6faa4d47-e926-4a59-8d23-de23b9f57a63.png biggest
+lenovo-ideapad-flex-5-16iau7 src2/lenovo-ideapad-flex-5-16iau7.jpg
+lenovo-ideapad-flex-5-16iau7-front src2/lenovo-ideapad-flex-5-16iau7-front.jpg biggest
