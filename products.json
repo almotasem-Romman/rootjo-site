@@ -1,5 +1,81 @@
 [
   {
+    "slug": "lenovo-ideapad-flex-5-16iau7",
+    "status": "available",
+    "category": "laptop",
+    "condition": "used",
+    "condition_note_ar": "كفالة شهرين",
+    "condition_note_en": "2-month warranty",
+    "name": "Lenovo IdeaPad Flex 5 16IAU7",
+    "brand": "Lenovo",
+    "price": 399,
+    "old_price": 429,
+    "badge_ar": "",
+    "badge_en": "",
+    "image": "img/products/lenovo-ideapad-flex-5-16iau7.webp",
+    "card_specs": [
+      "Core i7-1255U",
+      "8GB LPDDR4x",
+      "512GB SSD",
+      "16\" Touch 360°"
+    ],
+    "specs": [
+      [
+        "cpu",
+        "Intel Core i7-1255U (12th Gen)"
+      ],
+      [
+        "ram",
+        "8GB LPDDR4x"
+      ],
+      [
+        "storage",
+        "512GB M.2 NVMe SSD"
+      ],
+      [
+        "display",
+        "16\" WUXGA IPS touchscreen (1920 x 1200), 360° convertible"
+      ],
+      [
+        "gpu",
+        "Intel Iris Xe Graphics"
+      ],
+      [
+        "keyboard",
+        "Backlit keyboard"
+      ],
+      [
+        "security",
+        "Fingerprint reader"
+      ],
+      [
+        "wifi",
+        "Wi-Fi 6, Bluetooth"
+      ],
+      [
+        "ports",
+        "USB-C Thunderbolt 4, HDMI, SD card reader"
+      ],
+      [
+        "inbox",
+        "Stylus pen"
+      ],
+      [
+        "warranty",
+        "2-month warranty"
+      ]
+    ],
+    "perks": [
+      "win11",
+      "office",
+      "gift",
+      "delivery"
+    ],
+    "about_ar": "لابتوب 2 في 1 بشاشة لمس 16 إنش بتلف 360 درجة وبتشتغل كتابلت، ومعه قلم. معالج Core i7 الجيل 12 وقارئ بصمة وكيبورد مضيء. مستعمل بكفالة شهرين.",
+    "about_en": "A 2-in-1 laptop with a 16-inch touchscreen that folds 360° into a tablet, with a stylus pen included. 12th Gen Core i7, fingerprint reader and backlit keyboard. Used, with a 2-month warranty.",
+    "added": "2026-10-29"
+  },
+  {
     "slug": "lenovo-thinkpad-t14-gen2-touch",
     "status": "available",
     "category": "laptop",
