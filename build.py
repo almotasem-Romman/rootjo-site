@@ -109,7 +109,7 @@ def hud_label(x, cat):
         return "TYPE"
     if re.search(r"gpu|rtx|gtx|radeon|geforce|quadro|t1000|t500|arc a|nvidia", v) and "cpu" not in v:
         return "GPU"
-    for pat, lab in [(r"cpu|core|ryzen|xeon|celeron|pentium|snapdragon|apple|\bm[1-5]\b", "CPU"), (r"ddr|lpddr|ram|unified|^\d+ ?gb$", "RAM"),
+    for pat, lab in [(r"cpu|chip|core|ryzen|xeon|celeron|pentium|snapdragon|apple|\ba1[0-9]\b|\bm[1-5]\b", "CPU"), (r"ddr|lpddr|ram|unified|^\d+ ?gb$", "RAM"),
                      (r"ssd|nvme|hdd|\btb\b", "SSD"), (r'"|inch|fhd|qhd|uhd|wuxga|oled|retina|touch', "DISPLAY"), (r"wi-?fi|bluetooth", "WIRELESS")]:
         if re.search(pat, v):
             return lab

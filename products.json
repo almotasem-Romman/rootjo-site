@@ -1,5 +1,292 @@
 [
   {
+    "slug": "hp-omnibook-3-16-bu0038ne",
+    "status": "available",
+    "category": "laptop",
+    "condition": "new",
+    "condition_note_ar": "كفالة سنة",
+    "condition_note_en": "1-year warranty",
+    "name": "HP OmniBook 3 16-bu0038ne",
+    "brand": "HP",
+    "price": 584,
+    "old_price": 614,
+    "badge_ar": "",
+    "badge_en": "",
+    "image": "img/products/hp-omnibook-3-16-bu0038ne.webp",
+    "card_specs": [
+      "Core 5 120U",
+      "8GB DDR5",
+      "512GB SSD",
+      "16\" FHD+ IPS"
+    ],
+    "specs": [
+      [
+        "cpu",
+        "Intel Core 5 120U, up to 5.0GHz, 10 cores / 12 threads"
+      ],
+      [
+        "ram",
+        "8GB DDR5-5200"
+      ],
+      [
+        "storage",
+        "512GB PCIe Gen4 NVMe SSD"
+      ],
+      [
+        "display",
+        "16\" FHD+ IPS, 300 nits, anti-glare"
+      ],
+      [
+        "gpu",
+        "Intel Graphics"
+      ],
+      [
+        "camera",
+        "1080p FHD IR camera with privacy shutter"
+      ],
+      [
+        "wifi",
+        "Wi-Fi 6, Bluetooth 5.4"
+      ],
+      [
+        "ports",
+        "2x USB-C 10Gbps (PD, DisplayPort 1.4), 2x USB-A 5Gbps, HDMI 1.4b"
+      ],
+      [
+        "battery",
+        "41Wh, 45W USB-C charger"
+      ],
+      [
+        "weight",
+        "1.64 kg"
+      ],
+      [
+        "warranty",
+        "1-year warranty"
+      ]
+    ],
+    "perks": [
+      "win11",
+      "office",
+      "gift",
+      "delivery"
+    ],
+    "about_ar": "لابتوب HP OmniBook 3 بشاشة 16 إنش FHD+ ومعالج Intel Core 5 120U ورام 8GB DDR5 وتخزين 512GB، مع كاميرا 1080p. جديد بالكرتونة بكفالة سنة.",
+    "about_en": "An HP OmniBook 3 with a 16-inch FHD+ screen, Intel Core 5 120U, 8GB DDR5 and a 512GB SSD, plus a 1080p camera. New in box with a 1-year warranty.",
+    "added": "2026-10-31"
+  },
+  {
+    "slug": "lenovo-v14-gen4-i7",
+    "status": "available",
+    "category": "laptop",
+    "condition": "new",
+    "condition_note_ar": "كفالة سنة",
+    "condition_note_en": "1-year warranty",
+    "name": "Lenovo V14 Gen 4",
+    "brand": "Lenovo",
+    "price": 714,
+    "old_price": 744,
+    "badge_ar": "",
+    "badge_en": "",
+    "image": "img/products/lenovo-v14-gen4-i7.webp",
+    "card_specs": [
+      "Core i7-13620H",
+      "16GB DDR4",
+      "512GB SSD",
+      "14\" FHD"
+    ],
+    "specs": [
+      [
+        "cpu",
+        "Intel Core i7-13620H (13th Gen), up to 4.9GHz, 10 cores / 16 threads"
+      ],
+      [
+        "ram",
+        "16GB DDR4-3200 (8GB + 8GB)"
+      ],
+      [
+        "storage",
+        "512GB PCIe 4.0 NVMe SSD"
+      ],
+      [
+        "display",
+        "14\" FHD (1920 x 1080), anti-glare"
+      ],
+      [
+        "gpu",
+        "Intel UHD Graphics"
+      ],
+      [
+        "camera",
+        "HD 720p with privacy shutter"
+      ],
+      [
+        "wifi",
+        "Wi-Fi 6, Bluetooth 5.2"
+      ],
+      [
+        "ports",
+        "USB-C 3.2 (PD, DisplayPort), USB 3.2, USB 2.0, HDMI 1.4b, Ethernet RJ-45"
+      ],
+      [
+        "battery",
+        "38Wh, 65W USB-C charger"
+      ],
+      [
+        "warranty",
+        "1-year warranty"
+      ]
+    ],
+    "perks": [
+      "win11",
+      "office",
+      "gift",
+      "delivery"
+    ],
+    "about_ar": "لابتوب Lenovo V14 Gen 4 بمعالج Core i7-13620H الجيل 13 ورام 16GB وتخزين 512GB وشاشة 14 إنش FHD، مع منفذ إيثرنت. جديد بالكرتونة بكفالة سنة.",
+    "about_en": "A Lenovo V14 Gen 4 with a 13th Gen Core i7-13620H, 16GB RAM, a 512GB SSD and a 14-inch FHD screen, plus an Ethernet port. New in box with a 1-year warranty.",
+    "added": "2026-10-31"
+  },
+  {
+    "slug": "apple-macbook-neo-13",
+    "status": "available",
+    "category": "laptop",
+    "condition": "new",
+    "condition_note_ar": "",
+    "condition_note_en": "",
+    "name": "Apple MacBook Neo 13\"",
+    "brand": "Apple",
+    "price": 664,
+    "old_price": 694,
+    "badge_ar": "",
+    "badge_en": "",
+    "image": "img/products/apple-macbook-neo-13.webp",
+    "card_specs": [
+      "A18 Pro chip",
+      "8GB RAM",
+      "256GB SSD",
+      "13\" Liquid Retina"
+    ],
+    "specs": [
+      [
+        "cpu",
+        "Apple A18 Pro chip"
+      ],
+      [
+        "ram",
+        "8GB"
+      ],
+      [
+        "storage",
+        "256GB SSD"
+      ],
+      [
+        "display",
+        "13\" Liquid Retina"
+      ],
+      [
+        "battery",
+        "Up to 16 hours"
+      ],
+      [
+        "color",
+        "Silver"
+      ],
+      [
+        "os",
+        "macOS"
+      ]
+    ],
+    "perks": [
+      "macos",
+      "gift",
+      "delivery"
+    ],
+    "about_ar": "ماك بوك Neo بشاشة 13 إنش Liquid Retina وشريحة Apple A18 Pro، رام 8GB وتخزين 256GB، وبطارية لحد 16 ساعة. لون فضي، جديد بالكرتونة.",
+    "about_en": "A MacBook Neo with a 13-inch Liquid Retina display and the Apple A18 Pro chip, 8GB RAM, 256GB storage and up to 16 hours of battery. Silver, new in box.",
+    "added": "2026-10-31"
+  },
+  {
+    "slug": "lenovo-ideapad-slim-3-15irh10-i7",
+    "status": "available",
+    "category": "laptop",
+    "condition": "new",
+    "condition_note_ar": "كفالة سنة",
+    "condition_note_en": "1-year warranty",
+    "name": "Lenovo IdeaPad Slim 3 15IRH10 Core i7",
+    "brand": "Lenovo",
+    "price": 664,
+    "old_price": 694,
+    "badge_ar": "",
+    "badge_en": "",
+    "image": "img/products/lenovo-ideapad-slim-3-15irh10-i7.webp",
+    "card_specs": [
+      "Core i7-13620H",
+      "16GB DDR5",
+      "512GB SSD",
+      "15.3\" WUXGA"
+    ],
+    "specs": [
+      [
+        "cpu",
+        "Intel Core i7-13620H (13th Gen), up to 4.9GHz, 10 cores / 16 threads"
+      ],
+      [
+        "ram",
+        "16GB DDR5"
+      ],
+      [
+        "storage",
+        "512GB PCIe 4.0 NVMe SSD"
+      ],
+      [
+        "display",
+        "15.3\" WUXGA IPS (1920 x 1200), 300 nits, anti-glare"
+      ],
+      [
+        "gpu",
+        "Intel UHD Graphics"
+      ],
+      [
+        "keyboard",
+        "Arabic / English"
+      ],
+      [
+        "camera",
+        "HD 720p with privacy shutter"
+      ],
+      [
+        "wifi",
+        "Wi-Fi 6, Bluetooth 5.2"
+      ],
+      [
+        "ports",
+        "2x USB-A, USB-C (PD, DisplayPort), HDMI 1.4"
+      ],
+      [
+        "battery",
+        "50Wh"
+      ],
+      [
+        "weight",
+        "1.59 kg"
+      ],
+      [
+        "warranty",
+        "1-year warranty"
+      ]
+    ],
+    "perks": [
+      "win11",
+      "office",
+      "gift",
+      "delivery"
+    ],
+    "about_ar": "لابتوب Lenovo IdeaPad Slim 3 خفيف بمعالج Core i7-13620H الجيل 13 ورام 16GB DDR5 وتخزين 512GB وشاشة 15.3 إنش WUXGA. جديد بالكرتونة بكفالة سنة.",
+    "about_en": "A light Lenovo IdeaPad Slim 3 with a 13th Gen Core i7-13620H, 16GB DDR5, a 512GB SSD and a 15.3-inch WUXGA screen. New in box with a 1-year warranty.",
+    "added": "2026-10-31"
+  },
+  {
     "slug": "dell-pro-max-14-mc14250",
     "status": "available",
     "category": "laptop",
@@ -1266,6 +1553,206 @@
     "added": "2026-10-13"
   },
   {
+    "slug": "gaming-pc-ryzen5-5500-rtx3050",
+    "status": "available",
+    "category": "desktop",
+    "condition": "new",
+    "condition_note_ar": "كفالة سنة",
+    "condition_note_en": "1-year warranty",
+    "name": "Gaming PC · Ryzen 5 5500 · RTX 3050",
+    "brand": "Root",
+    "price": 684,
+    "old_price": 714,
+    "badge_ar": "",
+    "badge_en": "",
+    "image": "img/products/gaming-pc-ryzen5-5500-rtx3050.webp",
+    "card_specs": [
+      "Ryzen 5 5500",
+      "RTX 3050 6GB",
+      "16GB DDR4",
+      "500GB NVMe"
+    ],
+    "specs": [
+      [
+        "cpu",
+        "AMD Ryzen 5 5500, up to 4.2GHz, 6 cores / 12 threads"
+      ],
+      [
+        "gpu",
+        "NVIDIA GeForce RTX 3050 6GB GDDR6, dual fan"
+      ],
+      [
+        "ram",
+        "16GB DDR4 3200MHz Kingston"
+      ],
+      [
+        "storage",
+        "500GB NV3 NVMe SSD (up to 5000MB/s)"
+      ],
+      [
+        "cooling",
+        "Air cooler"
+      ],
+      [
+        "case",
+        "ARGB ATX case, 4x 120mm fans"
+      ],
+      [
+        "psu",
+        "550W 80 Plus"
+      ],
+      [
+        "wifi",
+        "Gigabit Ethernet"
+      ],
+      [
+        "warranty",
+        "1-year warranty"
+      ]
+    ],
+    "perks": [
+      "win11",
+      "office",
+      "gift_mouse",
+      "delivery"
+    ],
+    "about_ar": "كمبيوتر ألعاب جديد بمعالج AMD Ryzen 5 5500 وكرت RTX 3050 6GB، رام 16GB DDR4 وتخزين 500GB NVMe، بكيس ARGB فيه 4 مراوح. بداية ممتازة للألعاب.",
+    "about_en": "A new gaming desktop with an AMD Ryzen 5 5500 and an RTX 3050 6GB, 16GB DDR4 and a 500GB NVMe SSD, in an ARGB case with 4 fans. A great start for gaming.",
+    "added": "2026-10-31"
+  },
+  {
+    "slug": "gaming-pc-i5-14400f-rtx5060ti",
+    "status": "available",
+    "category": "desktop",
+    "condition": "new",
+    "condition_note_ar": "كفالة سنة",
+    "condition_note_en": "1-year warranty",
+    "name": "Gaming PC · Core i5-14400F · RTX 5060 Ti",
+    "brand": "Root",
+    "price": 1024,
+    "old_price": 1054,
+    "badge_ar": "",
+    "badge_en": "",
+    "image": "img/products/gaming-pc-i5-14400f-rtx5060ti.webp",
+    "card_specs": [
+      "Core i5-14400F",
+      "RTX 5060 Ti 8GB",
+      "16GB DDR4",
+      "500GB NVMe"
+    ],
+    "specs": [
+      [
+        "cpu",
+        "Intel Core i5-14400F (14th Gen), up to 4.7GHz, 10 cores / 16 threads"
+      ],
+      [
+        "gpu",
+        "NVIDIA GeForce RTX 5060 Ti 8GB GDDR7"
+      ],
+      [
+        "ram",
+        "16GB DDR4 3200MHz"
+      ],
+      [
+        "storage",
+        "500GB NV3 NVMe SSD (up to 5000MB/s)"
+      ],
+      [
+        "cooling",
+        "ARGB air cooler"
+      ],
+      [
+        "case",
+        "ARGB case, 4 fans"
+      ],
+      [
+        "psu",
+        "650W"
+      ],
+      [
+        "wifi",
+        "Gigabit Ethernet"
+      ],
+      [
+        "warranty",
+        "1-year warranty"
+      ]
+    ],
+    "perks": [
+      "win11",
+      "office",
+      "gift_mouse",
+      "delivery"
+    ],
+    "about_ar": "كمبيوتر ألعاب جديد بمعالج Core i5-14400F الجيل 14 وكرت RTX 5060 Ti 8GB GDDR7، رام 16GB وتخزين 500GB NVMe، بكيس ARGB فيه 4 مراوح. للألعاب الحديثة بدقة عالية.",
+    "about_en": "A new gaming desktop with a 14th Gen Core i5-14400F and an RTX 5060 Ti 8GB GDDR7, 16GB RAM and a 500GB NVMe SSD, in an ARGB case with 4 fans. Built for modern games at high settings.",
+    "added": "2026-10-31"
+  },
+  {
+    "slug": "hp-prodesk-2-tower-g1i",
+    "status": "available",
+    "category": "desktop",
+    "condition": "new",
+    "condition_note_ar": "كفالة سنة",
+    "condition_note_en": "1-year warranty",
+    "name": "HP ProDesk 2 Tower G1i",
+    "brand": "HP",
+    "price": 474,
+    "old_price": 504,
+    "badge_ar": "",
+    "badge_en": "",
+    "image": "img/products/hp-prodesk-2-tower-g1i.webp",
+    "card_specs": [
+      "Core i3-14100",
+      "8GB DDR5",
+      "512GB SSD",
+      "Wi-Fi 6"
+    ],
+    "specs": [
+      [
+        "cpu",
+        "Intel Core i3-14100 (14th Gen), up to 4.7GHz, 4 cores / 8 threads"
+      ],
+      [
+        "ram",
+        "8GB DDR5-4800"
+      ],
+      [
+        "storage",
+        "512GB NVMe SSD"
+      ],
+      [
+        "gpu",
+        "Intel UHD Graphics 730"
+      ],
+      [
+        "wifi",
+        "Wi-Fi 6, Bluetooth 5.4, Gigabit Ethernet"
+      ],
+      [
+        "ports",
+        "Front: USB-C 10Gbps, 3x USB-A 5Gbps; rear: 4x USB 2.0, HDMI 1.4"
+      ],
+      [
+        "inbox",
+        "HP 125 wired keyboard and mouse"
+      ],
+      [
+        "warranty",
+        "1-year warranty"
+      ]
+    ],
+    "perks": [
+      "win11",
+      "office",
+      "gift_mouse",
+      "delivery"
+    ],
+    "about_ar": "كمبيوتر مكتبي HP ProDesk 2 بمعالج Core i3-14100 الجيل 14 ورام 8GB DDR5 وتخزين 512GB، مع Wi-Fi 6 وكيبورد وماوس HP. للشغل المكتبي والدراسة. جديد بالكرتونة بكفالة سنة.",
+    "about_en": "An HP ProDesk 2 desktop with a 14th Gen Core i3-14100, 8GB DDR5 and a 512GB SSD, with Wi-Fi 6 and an HP keyboard and mouse. For office work and study. New in box with a 1-year warranty.",
+    "added": "2026-10-31"
+  },
+  {
     "slug": "ultra5-gaming-desktop-rtx5070ti",
     "status": "available",
     "category": "desktop",
@@ -1454,6 +1941,67 @@
     "about_ar": "باقة كاملة: كمبيوتر صغير MSI Cubi مع شاشة 22 إنش 100Hz. بياخذ مساحة قليلة ومناسب للمكاتب والبيت. جديد بالكرتونة مع كفالة 3 سنوات.",
     "about_en": "A complete bundle: an MSI Cubi mini PC with a 22-inch 100Hz monitor. Takes up little space and suits offices and homes. New in the box with a 3-year warranty.",
     "added": "2026-10-11"
+  },
+  {
+    "slug": "msi-mag-276cf-e20",
+    "status": "available",
+    "category": "monitor",
+    "condition": "new",
+    "condition_note_ar": "كفالة 3 سنوات",
+    "condition_note_en": "3-year warranty",
+    "name": "MSI MAG 276CF E20",
+    "brand": "MSI",
+    "price": 159,
+    "old_price": 189,
+    "badge_ar": "",
+    "badge_en": "",
+    "image": "img/products/msi-mag-276cf-e20.webp",
+    "card_specs": [
+      "27\" FHD Curved",
+      "200Hz · 0.5ms",
+      "Rapid VA",
+      "HDR Ready"
+    ],
+    "specs": [
+      [
+        "display",
+        "27\" FHD 1920×1080, curved 1500R"
+      ],
+      [
+        "panel",
+        "Rapid VA, 3000:1 contrast"
+      ],
+      [
+        "refresh",
+        "200Hz, 0.5ms (GtG)"
+      ],
+      [
+        "hdr",
+        "HDR Ready, 98% sRGB"
+      ],
+      [
+        "eyecare",
+        "Less Blue Light, AI Vision"
+      ],
+      [
+        "ports",
+        "2× HDMI 2.0b, DisplayPort 1.2a, headphone out"
+      ],
+      [
+        "mount",
+        "Tilt -5° to 20°, VESA 100×100"
+      ],
+      [
+        "warranty",
+        "3 years"
+      ]
+    ],
+    "perks": [
+      "delivery"
+    ],
+    "about_ar": "شاشة ألعاب MSI MAG منحنية 27 إنش FHD بتحديث 200Hz واستجابة 0.5ms على لوحة Rapid VA. جديدة بالكرتونة مع كفالة 3 سنوات.",
+    "about_en": "A curved 27-inch FHD MSI MAG gaming monitor at 200Hz with 0.5ms response on a Rapid VA panel. New in box with a 3-year warranty.",
+    "added": "2026-10-31"
   },
   {
     "slug": "dell-pro-p2726h",

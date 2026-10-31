@@ -717,7 +717,7 @@ footer .lat{letter-spacing:.14em;text-transform:uppercase;font-size:12px}
       return "TYPE";
     }
     if (/gpu|rtx|gtx|radeon|geforce|quadro|t1000|t500|arc a|nvidia/.test(v) && !/cpu/.test(v)) return "GPU";
-    if (/cpu|core|ryzen|xeon|celeron|pentium|snapdragon|apple|\bm[1-5]\b/.test(v)) return "CPU";
+    if (/cpu|chip|core|ryzen|xeon|celeron|pentium|snapdragon|apple|\ba1[0-9]\b|\bm[1-5]\b/.test(v)) return "CPU";
     if (/ddr|lpddr|ram|unified|^\d+ ?gb$/.test(v)) return "RAM";
     if (/ssd|nvme|hdd|\btb\b/.test(v)) return "SSD";
     if (/"|inch|fhd|qhd|uhd|wuxga|oled|retina|touch/.test(v)) return "DISPLAY";
