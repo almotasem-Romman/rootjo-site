@@ -32,8 +32,11 @@
 #g8a https://images.gts.jo/cache/catalog/2025/Monitors/MAG-276CF-E20/1024-1200x1200.png biggest
 #g8b https://images.gts.jo/cache/catalog/2025/Monitors/MAG276CF-E20/2-61%2BFUMQmKLL._AC_SL1500_-1200x1200.jpg biggest
 #g8c https://images.gts.jo/cache/catalog/2025/Monitors/MAG276CF-E20/3-717JJAMxPEL._AC_SL1500_-1200x1200.jpg biggest
-g8d https://images.gts.jo/cache/catalog/2025/Monitors/MAG276CF-E20/4-81w3H8ZFbJL._AC_SL1500_-1200x1200.jpg biggest
-g8e https://images.gts.jo/cache/catalog/2025/Monitors/MAG276CF-E20/5-81tQ-yg0AnL._AC_SL1500_-1200x1200.jpg biggest
-g8f https://images.gts.jo/cache/catalog/2025/Monitors/MAG276CF-E20/6-81xXW2xlsVL._AC_SL1500_-1200x1200.jpg biggest
-g8g https://images.gts.jo/cache/catalog/2025/Monitors/MAG276CF-E20/7-81m84BaEC-L._AC_SL1500_-1200x1200.jpg biggest
-g8h https://images.gts.jo/cache/catalog/2025/Monitors/MAG276CF-E20/8-61FVhfznRsL._AC_SL1500_-1200x1200.jpg biggest
+#g8d https://images.gts.jo/cache/catalog/2025/Monitors/MAG276CF-E20/4-81w3H8ZFbJL._AC_SL1500_-1200x1200.jpg biggest
+#g8e https://images.gts.jo/cache/catalog/2025/Monitors/MAG276CF-E20/5-81tQ-yg0AnL._AC_SL1500_-1200x1200.jpg biggest
+#g8f https://images.gts.jo/cache/catalog/2025/Monitors/MAG276CF-E20/6-81xXW2xlsVL._AC_SL1500_-1200x1200.jpg biggest
+#g8g https://images.gts.jo/cache/catalog/2025/Monitors/MAG276CF-E20/7-81m84BaEC-L._AC_SL1500_-1200x1200.jpg biggest
+#g8h https://images.gts.jo/cache/catalog/2025/Monitors/MAG276CF-E20/8-61FVhfznRsL._AC_SL1500_-1200x1200.jpg biggest
+g3d https://images.gts.jo/cache/catalog/2026/Apple/Apple-MacBook-Neo/81FI93bHOLL._AC_SL1500_-1200x1200.jpg biggest
+g3e https://images.gts.jo/cache/catalog/2026/Apple/Apple-MacBook-Neo/81Oirk2mtdL._AC_SL1500_-1200x1200.jpg biggest
+g3f https://images.gts.jo/cache/catalog/2026/Apple/Apple-MacBook-Neo/61mmxF-7ohL._AC_SL1500_-1200x1200.jpg biggest
