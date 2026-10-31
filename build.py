@@ -175,7 +175,7 @@ FAQ_LD = json.dumps({"@context": "https://schema.org", "@type": "FAQPage", "inLa
     "mainEntity": [{"@type": "Question", "name": _qs[k], "acceptedAnswer": {"@type": "Answer", "text": _as["a" + k[1:]]}} for k in sorted(_qs, key=lambda x: int(x[1:]))]}, ensure_ascii=False)
 GA_SNIPPET = (f'<script async src="https://www.googletagmanager.com/gtag/js?id={cfg["ga_id"]}"></script>\n'
     f'<script>window.__gaHead=1;window.dataLayer=window.dataLayer||[];function gtag(){{dataLayer.push(arguments);}}gtag("js",new Date());gtag("config","{cfg["ga_id"]}");</script>\n') if cfg["ga_id"] else ""
-THEME = "#f4f5f7"
+THEME = "#eef0f3"
 STORE_LD = json.dumps({"@context": "https://schema.org", "@type": "Store", "name": "Root Computers", "url": BASE + "/", "logo": BASE + "/img/logo.png",
                        "image": BASE + "/img/og-image.jpg", "telephone": "+" + WA, "email": "info@rootjo.com", "address": {"@type": "PostalAddress", "addressCountry": "JO"},
                        "sameAs": ["https://www.instagram.com/rootcomputers/"]}, ensure_ascii=False)
@@ -222,7 +222,7 @@ body{padding-bottom:30px}
 .btn.pri:hover{background:var(--navy-hi)}
 .btn.sec{border-color:var(--line-2);color:var(--ink);background:rgba(255,255,255,.5)}
 .btn.sec:hover{border-color:var(--navy)}
-.glass{background:rgba(255,255,255,.62);border:1px solid rgba(255,255,255,.95);box-shadow:0 1px 0 #fff inset,0 24px 50px -40px rgba(15,23,48,.5);backdrop-filter:blur(12px);-webkit-backdrop-filter:blur(12px)}
+.glass{background:rgba(255,255,255,.70);border:1px solid rgba(255,255,255,.95);box-shadow:0 1px 0 #fff inset,0 24px 50px -40px rgba(15,23,48,.5);backdrop-filter:blur(12px);-webkit-backdrop-filter:blur(12px)}
 .foot{margin-top:60px;padding-block:28px 40px;border-top:1px solid var(--line)}
 .foot .wrap{display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap;color:var(--muted);font-size:13.5px}
 .foot .lat{letter-spacing:.14em;text-transform:uppercase;font-size:12px}
@@ -239,8 +239,8 @@ FIELD_JS = '''
     var n = Math.min(80, Math.floor(W * H / 16000)); G = []; for (var k = 0; k < n; k++) G.push({ x: Math.random() * W, y: Math.random() * H, s: 13 + Math.random() * 15, a: .05 + Math.random() * .08, v: .05 + Math.random() * .14, c: CH[(Math.random() * CH.length) | 0], ph: Math.random() * 6.28 }); }
   function blob(x, y, r, rgb, a) { var g = ctx.createRadialGradient(x, y, 0, x, y, r); g.addColorStop(0, "rgba(" + rgb + "," + a + ")"); g.addColorStop(1, "rgba(" + rgb + ",0)"); ctx.fillStyle = g; ctx.fillRect(x - r, y - r, r * 2, r * 2); }
   function frame(now) { var t = (now - t0) / 1000, R = Math.max(W, H) * .5; ctx.clearRect(0, 0, W, H);
-    blob(W * (.22 + .08 * Math.sin(t * .11)), H * (.25 + .1 * Math.cos(t * .09)), R, "40,205,228", .10);
-    blob(W * (.8 + .07 * Math.cos(t * .08)), H * (.7 + .1 * Math.sin(t * .1)), R * .9, "27,42,82", .06);
+    blob(W * (.22 + .08 * Math.sin(t * .11)), H * (.25 + .1 * Math.cos(t * .09)), R, "40,205,228", .14);
+    blob(W * (.8 + .07 * Math.cos(t * .08)), H * (.7 + .1 * Math.sin(t * .1)), R * .9, "27,42,82", .09);
     for (var k = 0; k < G.length; k++) { var g = G[k];
       if (!reduce) { g.y -= g.v; g.x += Math.sin(t * .3 + g.ph) * .08; if (g.y < -30) { g.y = H + 30; g.x = Math.random() * W; } }
       var dx = g.x - mx, dy = g.y - my, near = Math.max(0, 1 - Math.sqrt(dx * dx + dy * dy) / 170), a = g.a * (.75 + .25 * Math.sin(t * .8 + g.ph)) + near * .25;
@@ -404,7 +404,7 @@ os.makedirs(os.path.join(OUT, "img", "og"), exist_ok=True)
 
 def og_image(p):
     W, H = 1200, 630
-    bg = Image.new("RGB", (W, H), (244, 245, 247)); d = ImageDraw.Draw(bg)
+    bg = Image.new("RGB", (W, H), (238, 240, 243)); d = ImageDraw.Draw(bg)
     for r in range(520, 0, -8):
         c = int(244 + (255 - 244) * (1 - r / 520)); d.ellipse((W / 2 - r * 1.4, H / 2 - r, W / 2 + r * 1.4, H / 2 + r), fill=(c, c, min(255, c + 2)))
     im = Image.open(os.path.join(HERE, p["image"])).convert("RGBA"); im.thumbnail((int(W * .78), int(H * .82)), Image.LANCZOS)
