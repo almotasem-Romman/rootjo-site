@@ -1,0 +1,28 @@
+name: publish-social-posts
+# Runs on every push to this branch. Publishes posts whose post.json has "status": "approved"
+# and that have no published.json yet. The token lives only in the repo secret META_TOKEN.
+on:
+  push:
+    branches: [social-posts]
+  workflow_dispatch:
+permissions:
+  contents: write
+concurrency:
+  group: social-posts
+  cancel-in-progress: false
+jobs:
+  publish:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Publish approved posts
+        env:
+          META_TOKEN: ${{ secrets.META_TOKEN }}
+          GRAPH_VERSION: ${{ vars.GRAPH_VERSION || 'v23.0' }}
+          RAW_BASE: https://raw.githubusercontent.com/${{ github.repository }}/${{ github.sha }}
+        run: python3 publish.py
+      - name: Save results
+        run: |
+          git config user.name "root-bot"; git config user.email "root-bot@users.noreply.github.com"
+          git add -A posts
+          git diff --cached --quiet || (git commit -m "Record published posts [skip ci]" && git push)
