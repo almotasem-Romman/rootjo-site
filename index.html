@@ -1012,7 +1012,7 @@ footer .lat{letter-spacing:.14em;text-transform:uppercase;font-size:12px}
     dpr = weak ? 1 : Math.min(window.devicePixelRatio || 1, 2); W = window.innerWidth; H = window.innerHeight;
     cv.width = W * dpr; cv.height = H * dpr; ctx.setTransform(dpr, 0, 0, dpr, 0, 0);
     var n = Math.min(110, Math.floor(W * H / 13000)); if (weak) n = Math.round(n / 3); G = [];
-    for (var k = 0; k < n; k++) G.push({ x: Math.random() * W, y: Math.random() * H, s: 13 + Math.random() * 16, a: .05 + Math.random() * .09, v: .06 + Math.random() * .16, c: CH[(Math.random() * CH.length) | 0], ph: Math.random() * 6.28 });
+    for (var k = 0; k < n; k++) G.push({ x: Math.random() * W, y: Math.random() * H, s: 13 + Math.random() * 16, a: .15 + Math.random() * .12, v: .06 + Math.random() * .16, c: CH[(Math.random() * CH.length) | 0], ph: Math.random() * 6.28 });
   }
   function blob(x, y, r, rgb, a) { var g = ctx.createRadialGradient(x, y, 0, x, y, r); g.addColorStop(0, "rgba(" + rgb + "," + a + ")"); g.addColorStop(1, "rgba(" + rgb + ",0)"); ctx.fillStyle = g; ctx.fillRect(x - r, y - r, r * 2, r * 2); }
   function frame(now) {
