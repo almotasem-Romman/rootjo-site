@@ -6,7 +6,7 @@
 <script>window.__gaHead=1;window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag("js",new Date());gtag("config","G-LE9MEQRCHE");</script>
 <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
 <meta name="description" content="Root - Your Tech Partner. متجر إلكتروني لأجهزة الحواسيب الجديدة والمستعملة، تراخيص البرامج، والصيانة في الأردن. New and used laptops, desktops, monitors, software licenses and repair in Jordan.">
-<meta name="theme-color" content="#f4f5f7">
+<meta name="theme-color" content="#eef0f3">
 <link rel="canonical" href="https://rootjo.com/">
 <meta property="og:title" content="Root Computers">
 <meta property="og:description" content="لابتوبات وكمبيوترات وشاشات جديدة ومستعملة، تراخيص برامج، وصيانة. New and used laptops, licenses and repair in Jordan.">
@@ -27,10 +27,10 @@
    centered hero = Arabic headline + decoding English word + search box; then a filterable shop grid, steps, request form, FAQ, contact. */
 /*@base*/
 :root{
-  --bg:#f4f5f7;          /* cool near-white, biased toward Root navy */
-  --bg-2:#eceef2;
+  --bg:#eef0f3;          /* cool near-white, biased toward Root navy */
+  --bg-2:#e5e8ed;
   --paper:#ffffff;
-  --glass:rgba(255,255,255,.62);
+  --glass:rgba(255,255,255,.70);
   --glass-hi:rgba(255,255,255,.82);
   --ink:#0f1730;         /* near-black navy for text */
   --navy:#1b2a52;        /* Root logo navy: buttons, headings */
@@ -105,7 +105,7 @@ html[dir="rtl"] .sheet{margin-inline-start:auto}
 .srows{position:relative;display:grid;gap:10px}
 .srow{display:flex;align-items:center;justify-content:space-between;gap:12px;padding:16px 20px;border-radius:18px;text-decoration:none;cursor:pointer;width:100%;text-align:start;
   background:rgba(255,255,255,.34);border:1px solid rgba(255,255,255,.7);transition:background .2s,transform .2s}
-.srow:hover{background:rgba(255,255,255,.62);transform:translateX(-2px)}
+.srow:hover{background:rgba(255,255,255,.70);transform:translateX(-2px)}
 html[dir="ltr"] .srow:hover{transform:translateX(2px)}
 .srow b{font-family:var(--f-lat);font-weight:400;font-size:clamp(24px,6vw,32px);line-height:1.1;letter-spacing:.02em;text-transform:uppercase;color:var(--ink)}
 .srow small{font-family:var(--f-ar);font-size:13px;color:var(--muted);white-space:nowrap}
@@ -188,7 +188,7 @@ html[dir="rtl"] .sel select{padding-inline:14px 36px}
 /* ---------- cards ---------- */
 /*@card*/
 .grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(258px,1fr));gap:16px}
-.card{position:relative;display:flex;flex-direction:column;background:rgba(255,255,255,.7);border:1px solid rgba(255,255,255,.95);border-radius:var(--r);overflow:hidden;min-width:0;
+.card{position:relative;display:flex;flex-direction:column;background:rgba(255,255,255,.78);border:1px solid rgba(255,255,255,.95);border-radius:var(--r);overflow:hidden;min-width:0;
   box-shadow:0 1px 0 #fff inset,0 1px 2px rgba(15,23,48,.04),0 18px 36px -30px rgba(15,23,48,.45);backdrop-filter:blur(10px);-webkit-backdrop-filter:blur(10px);transition:transform .3s cubic-bezier(.2,.8,.2,1),box-shadow .3s;animation:rise .5s both}
 @keyframes rise{from{transform:translateY(10px)}to{transform:none}}
 .card:hover{transform:translateY(-4px);box-shadow:0 1px 0 #fff inset,0 30px 50px -32px rgba(15,23,48,.5)}
@@ -218,7 +218,7 @@ html[dir="rtl"] .sel select{padding-inline:14px 36px}
 html[dir="rtl"] .buy .p{border-inline-start:1px solid rgba(255,255,255,.14)}
 .buy .p b{font-weight:500;font-size:19px;line-height:1;font-variant-numeric:tabular-nums}
 .buy .p b small{font-size:11px;letter-spacing:.12em;color:var(--cyan);margin-left:3px}
-.buy .p s{font-size:11.5px;color:rgba(255,255,255,.55);line-height:1.2}
+.buy .p s{font-size:11.5px;color:rgba(255,255,255,.63);line-height:1.2}
 .card.sold .cimg img{filter:grayscale(1);opacity:.5}
 .card.sold .buy{background:transparent;color:var(--ink);border:1px solid var(--line-2)}
 .card.sold .buy .p{border-color:var(--line)}
@@ -287,7 +287,7 @@ html[dir="rtl"] .qvimg .cmeta{left:70px;right:20px}
 /* ---------- feedback teaser ---------- */
 .fbsec{padding-block:30px}
 .fbband{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:24px;align-items:center;padding:30px 34px;border-radius:28px;text-decoration:none;color:inherit;overflow:hidden;
-  background:rgba(255,255,255,.62);border:1px solid rgba(255,255,255,.95);box-shadow:0 30px 60px -44px rgba(15,23,48,.5);transition:transform .3s}
+  background:rgba(255,255,255,.70);border:1px solid rgba(255,255,255,.95);box-shadow:0 30px 60px -44px rgba(15,23,48,.5);transition:transform .3s}
 .fbband:hover{transform:translateY(-3px)}
 .fbtxt{display:grid;gap:8px;justify-items:start}
 .fbtxt .k{font-family:var(--f-lat);font-size:12.5px;letter-spacing:.3em;text-transform:uppercase;color:var(--cyan-ink)}
@@ -303,7 +303,7 @@ html[lang="en"] .fbtxt h2{font-family:var(--f-lat);font-weight:500;text-transfor
 .fbband:hover .fbstack img:nth-child(1){transform:rotate(-12deg) translateX(-10px)}
 .fbband:hover .fbstack img:nth-child(3){transform:rotate(12deg) translateX(10px)}
 @media (max-width:860px){.fbband{grid-template-columns:1fr;padding:24px}.fbstack{height:200px}.fbstack img{width:120px;height:165px}.fbstack img:nth-child(1){left:calc(50% - 150px)}.fbstack img:nth-child(2){left:calc(50% - 60px)}.fbstack img:nth-child(3){left:calc(50% + 30px)}}
-.about-r{display:grid;grid-template-columns:minmax(0,.8fr) minmax(0,1.2fr);gap:24px;align-items:center;padding:26px 28px;margin-bottom:44px;border-radius:24px;background:rgba(255,255,255,.62);border:1px solid rgba(255,255,255,.95)}
+.about-r{display:grid;grid-template-columns:minmax(0,.8fr) minmax(0,1.2fr);gap:24px;align-items:center;padding:26px 28px;margin-bottom:44px;border-radius:24px;background:rgba(255,255,255,.70);border:1px solid rgba(255,255,255,.95)}
 .about-r h2{margin:4px 0 0;font-weight:600;font-size:clamp(26px,3.6vw,38px)}
 html[lang="en"] .about-r h2{font-family:var(--f-lat);font-weight:500;text-transform:uppercase}
 .about-r p{margin:0;font-size:17px;color:var(--ink);line-height:1.9}
@@ -317,7 +317,7 @@ footer .fline a{color:var(--muted)}
 
 /* ---------- how to buy ---------- */
 .steps{display:grid;grid-template-columns:repeat(4,1fr);gap:14px;counter-reset:s}
-.step{position:relative;padding:22px 20px 20px;border-radius:var(--r);background:rgba(255,255,255,.55);border:1px solid rgba(255,255,255,.9);display:grid;gap:6px;align-content:start;min-width:0}
+.step{position:relative;padding:22px 20px 20px;border-radius:var(--r);background:rgba(255,255,255,.63);border:1px solid rgba(255,255,255,.9);display:grid;gap:6px;align-content:start;min-width:0}
 .step .n{font-family:var(--f-lat);font-weight:300;font-size:44px;line-height:1;color:var(--navy);direction:ltr;text-align:start}
 .step .n::after{content:"_";color:var(--cyan);animation:blink 1.1s steps(1) infinite}
 .step:not(:last-child) .n::after{content:""}
@@ -331,7 +331,7 @@ footer .fline a{color:var(--muted)}
 
 /* ---------- repair ---------- */
 .svcs{display:grid;grid-template-columns:repeat(4,1fr);gap:12px}
-.svc{display:flex;flex-direction:column;gap:6px;padding:20px 18px 18px;border-radius:var(--r);background:rgba(255,255,255,.55);border:1px solid rgba(255,255,255,.9);min-width:0}
+.svc{display:flex;flex-direction:column;gap:6px;padding:20px 18px 18px;border-radius:var(--r);background:rgba(255,255,255,.63);border:1px solid rgba(255,255,255,.9);min-width:0}
 .svc code{font-family:var(--f-lat);font-size:12px;color:var(--cyan-ink);direction:ltr;text-align:start;overflow-wrap:anywhere}
 .svc h3{margin:0;font-size:17px;font-weight:600}
 .svc p{margin:0;color:var(--muted);font-size:14px;flex:1}
@@ -341,7 +341,7 @@ footer .fline a{color:var(--muted)}
 .shd .btn{min-height:44px}
 
 /* ---------- request ---------- */
-.req{display:grid;grid-template-columns:1fr 1fr;gap:22px;padding:26px;border-radius:26px;background:rgba(255,255,255,.62);border:1px solid rgba(255,255,255,.95);
+.req{display:grid;grid-template-columns:1fr 1fr;gap:22px;padding:26px;border-radius:26px;background:rgba(255,255,255,.70);border:1px solid rgba(255,255,255,.95);
   box-shadow:0 30px 60px -44px rgba(15,23,48,.5);backdrop-filter:blur(14px);-webkit-backdrop-filter:blur(14px)}
 .req fieldset{border:0;margin:0;padding:0;display:grid;gap:8px;min-width:0}
 .req legend{padding:0;margin-bottom:8px;font-family:var(--f-lat);font-size:12px;letter-spacing:.22em;text-transform:uppercase;color:var(--faint)}
@@ -370,7 +370,7 @@ footer .fline a{color:var(--muted)}
 
 /* ---------- faq ---------- */
 .faq{display:grid;gap:8px}
-.qa{border-radius:16px;background:rgba(255,255,255,.55);border:1px solid rgba(255,255,255,.9);padding:0 20px;transition:background .2s}
+.qa{border-radius:16px;background:rgba(255,255,255,.63);border:1px solid rgba(255,255,255,.9);padding:0 20px;transition:background .2s}
 .qa[open]{background:rgba(255,255,255,.85)}
 .qa summary{list-style:none;cursor:pointer;display:flex;justify-content:space-between;align-items:center;gap:14px;padding:16px 0;font-weight:600;font-size:16px}
 .qa summary::-webkit-details-marker{display:none}
@@ -380,7 +380,7 @@ footer .fline a{color:var(--muted)}
 
 /* ---------- contact / footer ---------- */
 .contact{display:grid;grid-template-columns:repeat(4,1fr);gap:12px}
-.ct{display:grid;gap:4px;padding:20px;border-radius:var(--r);background:rgba(255,255,255,.55);border:1px solid rgba(255,255,255,.9);text-decoration:none;min-width:0;transition:background .2s,transform .2s}
+.ct{display:grid;gap:4px;padding:20px;border-radius:var(--r);background:rgba(255,255,255,.63);border:1px solid rgba(255,255,255,.9);text-decoration:none;min-width:0;transition:background .2s,transform .2s}
 .ct:hover{background:rgba(255,255,255,.85);transform:translateY(-2px)}
 .ct em{font-style:normal;font-family:var(--f-lat);font-size:11.5px;letter-spacing:.22em;text-transform:uppercase;color:var(--faint)}
 .ct b{font-family:var(--f-lat);font-weight:500;font-size:18px;direction:ltr;text-align:start;overflow-wrap:anywhere;user-select:all}
@@ -1018,8 +1018,8 @@ footer .lat{letter-spacing:.14em;text-transform:uppercase;font-size:12px}
   function frame(now) {
     var t = (now - t0) / 1000; ctx.clearRect(0, 0, W, H);
     var R = Math.max(W, H) * .5;
-    blob(W * (.22 + .08 * Math.sin(t * .11)), H * (.25 + .1 * Math.cos(t * .09)), R, "40,205,228", .10);
-    blob(W * (.8 + .07 * Math.cos(t * .08)), H * (.7 + .1 * Math.sin(t * .1)), R * .9, "27,42,82", .06);
+    blob(W * (.22 + .08 * Math.sin(t * .11)), H * (.25 + .1 * Math.cos(t * .09)), R, "40,205,228", .14);
+    blob(W * (.8 + .07 * Math.cos(t * .08)), H * (.7 + .1 * Math.sin(t * .1)), R * .9, "27,42,82", .09);
     for (var k = 0; k < G.length; k++) {
       var g = G[k];
       if (!reduce) { g.y -= g.v; g.x += Math.sin(t * .3 + g.ph) * .08; if (g.y < -30) { g.y = H + 30; g.x = Math.random() * W; } if (Math.random() < .0025) g.c = CH[(Math.random() * CH.length) | 0]; }

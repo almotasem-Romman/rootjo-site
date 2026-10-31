@@ -14,7 +14,7 @@
 <meta property="og:image" content="https://rootjo.com/img/og/hp-omnibook-x-flip-14.jpg">
 <meta property="og:url" content="https://rootjo.com/p/hp-omnibook-x-flip-14">
 <meta name="twitter:card" content="summary_large_image">
-<meta name="theme-color" content="#f4f5f7">
+<meta name="theme-color" content="#eef0f3">
 <link rel="icon" type="image/png" href="../img/favicon.png">
 <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Chakra+Petch:wght@300;400;500;600&family=IBM+Plex+Sans+Arabic:wght@300;400;500;600;700&display=swap">
@@ -22,10 +22,10 @@
 <script type="application/ld+json">{"@context": "https://schema.org", "@type": "Product", "name": "HP OmniBook X Flip 14", "image": ["https://rootjo.com/img/og/hp-omnibook-x-flip-14.jpg"], "description": "A HP OmniBook X Flip 14 convertible with a 14-inch touchscreen, an Intel Core Ultra 5 226V and 16GB of RAM. New in the box with a 1-year warranty.", "brand": {"@type": "Brand", "name": "HP"}, "offers": {"@type": "Offer", "url": "https://rootjo.com/p/hp-omnibook-x-flip-14", "priceCurrency": "JOD", "price": "749", "availability": "https://schema.org/InStock", "itemCondition": "https://schema.org/NewCondition", "seller": {"@type": "Organization", "name": "Root Computers"}}}</script>
 <style>
 :root{
-  --bg:#f4f5f7;          /* cool near-white, biased toward Root navy */
-  --bg-2:#eceef2;
+  --bg:#eef0f3;          /* cool near-white, biased toward Root navy */
+  --bg-2:#e5e8ed;
   --paper:#ffffff;
-  --glass:rgba(255,255,255,.62);
+  --glass:rgba(255,255,255,.70);
   --glass-hi:rgba(255,255,255,.82);
   --ink:#0f1730;         /* near-black navy for text */
   --navy:#1b2a52;        /* Root logo navy: buttons, headings */
@@ -81,7 +81,7 @@ html[lang="ar"] .nav a{font-family:var(--f-ar);letter-spacing:0;font-size:14.5px
 .lang-ar{font-family:var(--f-ar)!important;letter-spacing:0!important;font-size:14px!important}
 
 .grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(258px,1fr));gap:16px}
-.card{position:relative;display:flex;flex-direction:column;background:rgba(255,255,255,.7);border:1px solid rgba(255,255,255,.95);border-radius:var(--r);overflow:hidden;min-width:0;
+.card{position:relative;display:flex;flex-direction:column;background:rgba(255,255,255,.78);border:1px solid rgba(255,255,255,.95);border-radius:var(--r);overflow:hidden;min-width:0;
   box-shadow:0 1px 0 #fff inset,0 1px 2px rgba(15,23,48,.04),0 18px 36px -30px rgba(15,23,48,.45);backdrop-filter:blur(10px);-webkit-backdrop-filter:blur(10px);transition:transform .3s cubic-bezier(.2,.8,.2,1),box-shadow .3s;animation:rise .5s both}
 @keyframes rise{from{transform:translateY(10px)}to{transform:none}}
 .card:hover{transform:translateY(-4px);box-shadow:0 1px 0 #fff inset,0 30px 50px -32px rgba(15,23,48,.5)}
@@ -111,7 +111,7 @@ html[lang="ar"] .nav a{font-family:var(--f-ar);letter-spacing:0;font-size:14.5px
 html[dir="rtl"] .buy .p{border-inline-start:1px solid rgba(255,255,255,.14)}
 .buy .p b{font-weight:500;font-size:19px;line-height:1;font-variant-numeric:tabular-nums}
 .buy .p b small{font-size:11px;letter-spacing:.12em;color:var(--cyan);margin-left:3px}
-.buy .p s{font-size:11.5px;color:rgba(255,255,255,.55);line-height:1.2}
+.buy .p s{font-size:11.5px;color:rgba(255,255,255,.63);line-height:1.2}
 .card.sold .cimg img{filter:grayscale(1);opacity:.5}
 .card.sold .buy{background:transparent;color:var(--ink);border:1px solid var(--line-2)}
 .card.sold .buy .p{border-color:var(--line)}
@@ -155,7 +155,7 @@ body{padding-bottom:30px}
 .btn.pri:hover{background:var(--navy-hi)}
 .btn.sec{border-color:var(--line-2);color:var(--ink);background:rgba(255,255,255,.5)}
 .btn.sec:hover{border-color:var(--navy)}
-.glass{background:rgba(255,255,255,.62);border:1px solid rgba(255,255,255,.95);box-shadow:0 1px 0 #fff inset,0 24px 50px -40px rgba(15,23,48,.5);backdrop-filter:blur(12px);-webkit-backdrop-filter:blur(12px)}
+.glass{background:rgba(255,255,255,.70);border:1px solid rgba(255,255,255,.95);box-shadow:0 1px 0 #fff inset,0 24px 50px -40px rgba(15,23,48,.5);backdrop-filter:blur(12px);-webkit-backdrop-filter:blur(12px)}
 .foot{margin-top:60px;padding-block:28px 40px;border-top:1px solid var(--line)}
 .foot .wrap{display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap;color:var(--muted);font-size:13.5px}
 .foot .lat{letter-spacing:.14em;text-transform:uppercase;font-size:12px}
@@ -252,8 +252,8 @@ html[dir="rtl"] .specs dd{text-align:right}
     var n = Math.min(80, Math.floor(W * H / 16000)); G = []; for (var k = 0; k < n; k++) G.push({ x: Math.random() * W, y: Math.random() * H, s: 13 + Math.random() * 15, a: .05 + Math.random() * .08, v: .05 + Math.random() * .14, c: CH[(Math.random() * CH.length) | 0], ph: Math.random() * 6.28 }); }
   function blob(x, y, r, rgb, a) { var g = ctx.createRadialGradient(x, y, 0, x, y, r); g.addColorStop(0, "rgba(" + rgb + "," + a + ")"); g.addColorStop(1, "rgba(" + rgb + ",0)"); ctx.fillStyle = g; ctx.fillRect(x - r, y - r, r * 2, r * 2); }
   function frame(now) { var t = (now - t0) / 1000, R = Math.max(W, H) * .5; ctx.clearRect(0, 0, W, H);
-    blob(W * (.22 + .08 * Math.sin(t * .11)), H * (.25 + .1 * Math.cos(t * .09)), R, "40,205,228", .10);
-    blob(W * (.8 + .07 * Math.cos(t * .08)), H * (.7 + .1 * Math.sin(t * .1)), R * .9, "27,42,82", .06);
+    blob(W * (.22 + .08 * Math.sin(t * .11)), H * (.25 + .1 * Math.cos(t * .09)), R, "40,205,228", .14);
+    blob(W * (.8 + .07 * Math.cos(t * .08)), H * (.7 + .1 * Math.sin(t * .1)), R * .9, "27,42,82", .09);
     for (var k = 0; k < G.length; k++) { var g = G[k];
       if (!reduce) { g.y -= g.v; g.x += Math.sin(t * .3 + g.ph) * .08; if (g.y < -30) { g.y = H + 30; g.x = Math.random() * W; } }
       var dx = g.x - mx, dy = g.y - my, near = Math.max(0, 1 - Math.sqrt(dx * dx + dy * dy) / 170), a = g.a * (.75 + .25 * Math.sin(t * .8 + g.ph)) + near * .25;
