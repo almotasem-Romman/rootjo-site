@@ -421,7 +421,7 @@ footer .lat{letter-spacing:.14em;text-transform:uppercase;font-size:12px}
 
 <header class="top" id="top">
   <div class="wrap bar">
-    <a class="logo" href="#top" aria-label="Root"><img src="img/logo.png" alt=""><span class="lname">Root</span></a>
+    <a class="logo" href="./" data-home aria-label="Root"><img src="img/logo.png" alt=""><span class="lname">Root</span></a>
     <nav class="nav" aria-label="الأقسام">
       <a href="#shop" data-i18n="n_shop">المتجر</a>
       <a href="#how" data-i18n="n_how">كيف بتشتري</a>
@@ -631,7 +631,7 @@ footer .lat{letter-spacing:.14em;text-transform:uppercase;font-size:12px}
 <nav class="dock" aria-label="Quick">
   <button type="button" data-act="menu"><svg viewBox="0 0 24 24"><path d="M4 7h16M4 12h16M4 17h16"/></svg><span data-i18n="menu">القائمة</span></button>
   <button type="button" data-act="search"><svg viewBox="0 0 24 24"><circle cx="11" cy="11" r="6.5"/><path d="m20 20-4.2-4.2"/></svg><span data-i18n="search">بحث</span></button>
-  <a href="#top" aria-label="Root"><img src="img/logo.png" alt=""></a>
+  <a href="./" data-home aria-label="Root"><img src="img/logo.png" alt=""></a>
   <a class="wa" id="waDock" target="_blank" rel="noopener" href="#contact"><svg viewBox="0 0 24 24"><use href="#wa-i"/></svg><span data-i18n="wa">واتساب</span></a>
 </nav>
 
@@ -1010,6 +1010,18 @@ footer .lat{letter-spacing:.14em;text-transform:uppercase;font-size:12px}
   if (!reduce) requestAnimationFrame(loop);
   if (document.fonts && document.fonts.ready) document.fonts.ready.then(function () { frame(performance.now()); });
 
+  /* logo = back to the very start of the home page: close panels, clear search and filters, scroll to top */
+  document.querySelectorAll("[data-home]").forEach(function (a) {
+    a.addEventListener("click", function (e) {
+      if (e.metaKey || e.ctrlKey || e.shiftKey || e.button === 1) return;
+      e.preventDefault();
+      if (qv.open) qv.close();
+      if (!sheet.hidden) closeSheet();
+      S.cat = S.cond = S.price = "all"; S.sort = "new"; fillSort(); setQ("");
+      try { history.replaceState(null, "", location.pathname + location.search); } catch (x) {}
+      window.scrollTo({ top: 0, behavior: reduce ? "auto" : "smooth" });
+    });
+  });
   setLang(lang);
   fromHash();
 })();
