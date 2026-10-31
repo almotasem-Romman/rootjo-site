@@ -236,7 +236,7 @@ FIELD_JS = '''
   var cv = document.getElementById("field"), ctx = cv.getContext("2d"), W, H, G = [], mx = -1e4, my = -1e4, t0 = performance.now();
   var CH = ">_{}[]/\\\\;:#$=+<>01RT".split("");
   function size() { var dpr = Math.min(window.devicePixelRatio || 1, 2); W = innerWidth; H = innerHeight; cv.width = W * dpr; cv.height = H * dpr; ctx.setTransform(dpr, 0, 0, dpr, 0, 0);
-    var n = Math.min(80, Math.floor(W * H / 16000)); G = []; for (var k = 0; k < n; k++) G.push({ x: Math.random() * W, y: Math.random() * H, s: 13 + Math.random() * 15, a: .11 + Math.random() * .11, v: .05 + Math.random() * .14, c: CH[(Math.random() * CH.length) | 0], ph: Math.random() * 6.28 }); }
+    var n = Math.min(80, Math.floor(W * H / 16000)); G = []; for (var k = 0; k < n; k++) G.push({ x: Math.random() * W, y: Math.random() * H, s: 13 + Math.random() * 15, a: .15 + Math.random() * .12, v: .05 + Math.random() * .14, c: CH[(Math.random() * CH.length) | 0], ph: Math.random() * 6.28 }); }
   function blob(x, y, r, rgb, a) { var g = ctx.createRadialGradient(x, y, 0, x, y, r); g.addColorStop(0, "rgba(" + rgb + "," + a + ")"); g.addColorStop(1, "rgba(" + rgb + ",0)"); ctx.fillStyle = g; ctx.fillRect(x - r, y - r, r * 2, r * 2); }
   function frame(now) { var t = (now - t0) / 1000, R = Math.max(W, H) * .5; ctx.clearRect(0, 0, W, H);
     blob(W * (.22 + .08 * Math.sin(t * .11)), H * (.25 + .1 * Math.cos(t * .09)), R, "40,205,228", .14);
