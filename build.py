@@ -288,7 +288,7 @@ def shell(*, pre, title, desc, canonical, og_image, og_type, ld, css, main, wher
 <main class="wrap">
 {main}
 </main>
-<footer class="foot"><div class="wrap"><span class="lat">Root · Your Tech Partner · <a href="{pre}index.html">rootjo.com</a> · <a href="{pre}warranty.html">{bi("سياسة الكفالة", "Warranty policy")}</a></span><span><a href="https://www.instagram.com/rootcomputers/" target="_blank" rel="noopener">@rootcomputers</a> · info@rootjo.com · +962 7 9916 7971</span></div></footer>
+<footer class="foot"><div class="wrap"><span class="lat">Root · Your Tech Partner · <a href="{pre}index.html">rootjo.com</a> · <a href="{pre}warranty.html">{bi("سياسة الكفالة", "Warranty policy")}</a> · <a href="{pre}feedback.html">{bi("آراء الزبائن", "Feedback")}</a></span><span><a href="https://www.instagram.com/rootcomputers/" target="_blank" rel="noopener">@rootcomputers</a> · info@rootjo.com · +962 7 9916 7971</span></div></footer>
 {WA_SYMBOL}
 <script>
 (function(){{
@@ -387,7 +387,6 @@ def product_page(p, others):
       </div>
       {f'<div class="perks">{perks}</div>' if perks else ''}
       <ul class="trust">
-        <li>{bi("السعر نهائي بالدينار الأردني", "Final price in Jordanian dinars")}</li>
         <li>{bi("التوصيل 3 دنانير داخل عمّان و5 دنانير لباقي المحافظات، والدفع بعد المعاينة", "Delivery: 3 JD in Amman, 5 JD elsewhere, and you pay after checking it")}</li>
         <li>{bi("بدك مواصفات ثانية؟ منوفرلك أي جهاز بالطلب", "Need different specs? We source any device to order")}</li>
       </ul>
@@ -518,6 +517,27 @@ open(os.path.join(OUT, "warranty.html"), "w", encoding="utf-8").write(shell(pre=
     canonical=f"{BASE}/warranty", og_image=f"{BASE}/img/og-image.jpg", og_type="website",
     ld={"@context": "https://schema.org", "@type": "WebPage", "name": "Warranty policy - Root", "url": f"{BASE}/warranty"},
     css=TCSS, main=wmain, where="warranty"))
+FCSS = SUB_CSS + '''
+.fbhead{display:grid;gap:6px;margin:30px 0 26px}
+.fbhead h1{margin:0;font-weight:600;font-size:clamp(32px,5vw,52px);line-height:1.15}
+html[lang="en"] .fbhead h1{font-family:var(--f-lat);font-weight:500;text-transform:uppercase}
+.fbhead p{margin:0;color:var(--muted);max-width:60ch}
+.shots{columns:3 280px;column-gap:16px}
+.shot{display:block;break-inside:avoid;margin:0 0 16px;border-radius:20px;overflow:hidden;border:4px solid #fff;box-shadow:0 24px 44px -30px rgba(15,23,48,.55);background:#111;transition:transform .3s}
+.shot:hover{transform:translateY(-3px)}
+.shot img{display:block;width:100%;height:auto}
+.fbcta{display:flex;flex-wrap:wrap;gap:10px;margin-top:20px}
+'''
+FB = sorted(f for f in os.listdir(os.path.join(HERE, "img", "feedback")) if f.endswith(".webp"))
+shots = "".join(f'<a class="shot" href="img/feedback/{f}" target="_blank" rel="noopener"><img src="img/feedback/{f}" alt="" loading="lazy"></a>' for f in FB)
+fmain = f'''  <nav class="crumbs" aria-label="breadcrumb"><a href="index.html">{bi("الرئيسية", "Home")}</a></nav>
+  <div class="fbhead"><span class="k">Feedback</span><h1>{bi("آراء زبائن Root", "Root customer feedback")}</h1><p>{bi("رسائل حقيقية وصلتنا من زبائننا على انستغرام بعد ما استلموا أجهزتهم.", "Real messages our customers sent us on Instagram after receiving their devices.")}</p></div>
+  <div class="shots">{shots}</div>
+  <div class="fbcta"><a class="btn pri" href="index.html#shop">{bi("تصفّح المتجر", "Browse the shop")}</a><a class="btn sec" href="https://www.instagram.com/rootcomputers/" target="_blank" rel="noopener">{bi("المزيد على انستغرام", "More on Instagram")}</a></div>'''
+open(os.path.join(OUT, "feedback.html"), "w", encoding="utf-8").write(shell(pre="", title="آراء الزبائن | Feedback - Root Computers",
+    desc="آراء حقيقية من زبائن Root بعد استلام أجهزتهم. Real feedback from Root customers.", canonical=f"{BASE}/feedback",
+    og_image=f"{BASE}/img/og-image.jpg", og_type="website", ld={"@context": "https://schema.org", "@type": "WebPage", "name": "Feedback - Root", "url": f"{BASE}/feedback"},
+    css=FCSS, main=fmain, where="feedback"))
 nmain = f'''  <div class="nf"><b>4<span>0</span>4</b><p>{bi("الصفحة اللي بتدور عليها مش موجودة، أو الجهاز انباع وانشال.", "The page you're looking for doesn't exist, or the device was sold and removed.")}</p>
   <div class="row"><a class="btn pri" href="/#shop">{bi("تصفّح المتجر", "Browse the shop")}</a><a class="btn sec" href="/#request">{bi("اطلب جهاز", "Request a device")}</a></div></div>'''
 open(os.path.join(OUT, "404.html"), "w", encoding="utf-8").write(shell(pre="/", title="404 - Root Computers", desc="Page not found",
@@ -525,7 +545,7 @@ open(os.path.join(OUT, "404.html"), "w", encoding="utf-8").write(shell(pre="/", 
     css=TCSS, main=nmain, where="404").replace('<meta name="description"', '<meta name="robots" content="noindex">\n<meta name="description"'))
 
 # ---------- sitemap / robots / pages files ----------
-urls = [(BASE + "/", today), (f"{BASE}/warranty", today)] + [(f"{BASE}/{CSLUG[c[0]]}", today) for c in SECTIONS] + [(f"{BASE}/p/{p['slug']}", p.get("added", today)) for p in visible]
+urls = [(BASE + "/", today), (f"{BASE}/warranty", today), (f"{BASE}/feedback", today)] + [(f"{BASE}/{CSLUG[c[0]]}", today) for c in SECTIONS] + [(f"{BASE}/p/{p['slug']}", p.get("added", today)) for p in visible]
 sm = '<?xml version="1.0" encoding="UTF-8"?>\n<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">\n' + \
      "".join(f"  <url><loc>{u}</loc><lastmod>{d}</lastmod></url>\n" for u, d in urls) + "</urlset>\n"
 open(os.path.join(OUT, "sitemap.xml"), "w").write(sm)

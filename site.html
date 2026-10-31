@@ -264,16 +264,25 @@ dialog.qv::backdrop{background:rgba(232,235,240,.5);backdrop-filter:blur(6px);-w
 .qvlink:hover{text-decoration:underline}
 
 html[dir="rtl"] .qvimg .cmeta{left:70px;right:20px}
-/* ---------- reviews ---------- */
-.rvs{columns:4 260px;column-gap:14px}
-.rv{break-inside:avoid;margin:0 0 14px;display:flex;flex-direction:column;gap:12px;padding:18px 18px 16px;border-radius:var(--r);background:rgba(255,255,255,.62);border:1px solid rgba(255,255,255,.95);box-shadow:0 18px 36px -32px rgba(15,23,48,.45)}
-.rv::before{content:"\201D";font-family:var(--f-lat);font-size:46px;line-height:.6;color:var(--cyan);height:18px}
-.rv blockquote{margin:0;font-size:15.5px;line-height:1.8;color:var(--ink)}
-.rv-ph{width:100%;border-radius:12px;max-height:260px;object-fit:cover;order:3}
-.rv figcaption{order:4;display:flex;justify-content:space-between;align-items:center;gap:8px;flex-wrap:wrap;font-size:12.5px;color:var(--muted);border-top:1px solid var(--line);padding-top:10px}
-.rv-tag{font-family:var(--f-lat);letter-spacing:.06em;color:var(--navy);background:var(--bg-2);border-radius:999px;padding:2px 10px}
-html[lang="ar"] .rv-tag .ten,html[lang="en"] .rv-tag .tar{display:none}
-html[lang="en"] .rv-who{display:none}
+/* ---------- feedback teaser ---------- */
+.fbsec{padding-block:30px}
+.fbband{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:24px;align-items:center;padding:30px 34px;border-radius:28px;text-decoration:none;color:inherit;overflow:hidden;
+  background:rgba(255,255,255,.62);border:1px solid rgba(255,255,255,.95);box-shadow:0 30px 60px -44px rgba(15,23,48,.5);transition:transform .3s}
+.fbband:hover{transform:translateY(-3px)}
+.fbtxt{display:grid;gap:8px;justify-items:start}
+.fbtxt .k{font-family:var(--f-lat);font-size:12.5px;letter-spacing:.3em;text-transform:uppercase;color:var(--cyan-ink)}
+.fbtxt h2{margin:0;font-weight:600;font-size:clamp(28px,4vw,42px);line-height:1.2}
+html[lang="en"] .fbtxt h2{font-family:var(--f-lat);font-weight:500;text-transform:uppercase}
+.fbtxt p{margin:0;color:var(--muted)}
+.fbgo{margin-top:8px}
+.fbstack{position:relative;height:230px;direction:ltr}
+.fbstack img{position:absolute;top:10px;width:150px;height:200px;object-fit:cover;object-position:top;border-radius:16px;box-shadow:0 18px 30px -16px rgba(15,23,48,.5);border:3px solid #fff;transition:transform .4s}
+.fbstack img:nth-child(1){left:calc(50% - 190px);transform:rotate(-8deg)}
+.fbstack img:nth-child(2){left:calc(50% - 75px);z-index:2;top:0}
+.fbstack img:nth-child(3){left:calc(50% + 40px);transform:rotate(8deg)}
+.fbband:hover .fbstack img:nth-child(1){transform:rotate(-12deg) translateX(-10px)}
+.fbband:hover .fbstack img:nth-child(3){transform:rotate(12deg) translateX(10px)}
+@media (max-width:860px){.fbband{grid-template-columns:1fr;padding:24px}.fbstack{height:200px}.fbstack img{width:120px;height:165px}.fbstack img:nth-child(1){left:calc(50% - 150px)}.fbstack img:nth-child(2){left:calc(50% - 60px)}.fbstack img:nth-child(3){left:calc(50% + 30px)}}
 .about-r{display:grid;grid-template-columns:minmax(0,.8fr) minmax(0,1.2fr);gap:24px;align-items:center;padding:26px 28px;margin-bottom:44px;border-radius:24px;background:rgba(255,255,255,.62);border:1px solid rgba(255,255,255,.95)}
 .about-r h2{margin:4px 0 0;font-weight:600;font-size:clamp(26px,3.6vw,38px)}
 html[lang="en"] .about-r h2{font-family:var(--f-lat);font-weight:500;text-transform:uppercase}
@@ -340,7 +349,7 @@ footer .fline a{color:var(--muted)}
 .why p{margin:0;color:var(--muted);font-size:14px}
 
 /* ---------- faq ---------- */
-.faq{display:grid;gap:8px;max-width:860px}
+.faq{display:grid;gap:8px}
 .qa{border-radius:16px;background:rgba(255,255,255,.55);border:1px solid rgba(255,255,255,.9);padding:0 20px;transition:background .2s}
 .qa[open]{background:rgba(255,255,255,.85)}
 .qa summary{list-style:none;cursor:pointer;display:flex;justify-content:space-between;align-items:center;gap:14px;padding:16px 0;font-weight:600;font-size:16px}
@@ -454,6 +463,7 @@ footer .lat{letter-spacing:.14em;text-transform:uppercase;font-size:12px}
     <a class="srow" href="#repair" data-close><b>Repair</b><small data-i18n="n_rep">الصيانة</small></a>
     <a class="srow" href="#request" data-close><b>Request</b><small data-i18n="n_req">اطلب جهازك</small></a>
     <a class="srow" href="#why" data-close><b>Why Root</b><small data-i18n="n_why">ليش Root</small></a>
+    <a class="srow" href="feedback.html"><b>Feedback</b><small data-i18n="n_fb">آراء الزبائن</small></a>
     <a class="srow" href="#faq" data-close><b>FAQ</b><small data-i18n="n_faq">أسئلة</small></a>
     <a class="srow" href="#contact" data-close><b>Contact</b><small data-i18n="n_ct">تواصل</small></a>
   </div>
@@ -500,19 +510,12 @@ footer .lat{letter-spacing:.14em;text-transform:uppercase;font-size:12px}
     </div>
   </section>
 
-  <section id="reviews">
+  <section id="reviews" class="fbsec">
     <div class="wrap">
-      <div class="shd"><div><span class="k">Reviews</span><h2 data-i18n="rv_h">شو بيحكوا زباين Root</h2><p data-i18n="rv_p">رسائل حقيقية وصلتنا على انستغرام بعد التسليم، كتبناها زي ما هي.</p></div><a class="btn sec" href="https://www.instagram.com/rootcomputers/" target="_blank" rel="noopener" data-i18n="rv_more">المزيد على انستغرام</a></div>
-      <div class="rvs">
-        <figure class="rv"><blockquote dir="rtl">السلام عليكم يسلموا على اللابتوب زي ما بدي وزيادة شكرا الك على التعامل والخدمة الحلوة ❤️❤️</blockquote><figcaption><span class="rv-who t-ar-only">عميل Root · انستغرام</span><span class="rv-tag"><span class="tar">لابتوب</span><span class="ten">Laptop</span></span></figcaption></figure>
-        <figure class="rv"><blockquote dir="rtl">حبيت اعطيكم فيدباك على الماك بوك الجهاز جدا ممتاز وفعلا نفس الجديد ولا كانه مستعمل وشكرا على الخدمة والثقة كل التوفيق</blockquote><figcaption><span class="rv-who t-ar-only">عميل Root · انستغرام</span><span class="rv-tag"><span class="tar">MacBook</span><span class="ten">MacBook</span></span></figcaption></figure>
-        <figure class="rv"><blockquote dir="rtl">اشتريت من عندكم ٥ لابتوبات استعمال شركة دايما توصياتكم بمحلها وسرعة بالتوصيل و كفالة كلها مصداقية. كمان طلبت من عندكم ٥٠ نسخة اوفس اصلية وكلهم شغالين بشكل ممتاز وأي شي منحتاجه عطول بتدخلوا معنا anydesk لتقدموا الدعم اللازم. أفضل شركة من حيث المصداقية والجودة كل التوفيق</blockquote><figcaption><span class="rv-who t-ar-only">عميل Root · انستغرام</span><span class="rv-tag"><span class="tar">شركة · 5 لابتوبات + 50 أوفيس</span><span class="ten">Business · 5 laptops + 50 Office</span></span></figcaption></figure>
-        <figure class="rv has-ph"><img class="rv-ph" loading="lazy" src="img/reviews/r-lab.webp" alt=""><blockquote dir="rtl">يعطيك العافية معتصم، وصلني اللاب و بصراحة كتير فخم و مرتب متل ما طلبت تماماً 👌🏻 يسلمو كتير مهندس ع المصداقية و التعامل 🌹 و ان شاءالله قريباً منرجع نطلب مرة تانية. First option in Tech 🙏</blockquote><figcaption><span class="rv-who t-ar-only">عميل Root · انستغرام</span><span class="rv-tag"><span class="tar">لابتوب</span><span class="ten">Laptop</span></span></figcaption></figure>
-        <figure class="rv has-ph"><img class="rv-ph" loading="lazy" src="img/reviews/r-used.webp" alt=""><blockquote dir="rtl">وصلني اللابتوب ومش مصدقه انه مستعمل صراحة 😂 نفس المواصفات يلي كنت بدي اياهم بنص السعر وكأنه جديد ما في ولا ربع غلطة. جد شكرًا كثير 🥹</blockquote><figcaption><span class="rv-who t-ar-only">عميل Root · انستغرام</span><span class="rv-tag"><span class="tar">لابتوب مستعمل</span><span class="ten">Used laptop</span></span></figcaption></figure>
-        <figure class="rv has-ph"><img class="rv-ph" loading="lazy" src="img/reviews/r-asus.webp" alt=""><blockquote dir="rtl">شكرا جزيلا على اللابتوب الفخم و التعامل الراقي يعطيكم الف عافية</blockquote><figcaption><span class="rv-who t-ar-only">عميل Root · انستغرام</span><span class="rv-tag"><span class="tar">ASUS TUF Gaming</span><span class="ten">ASUS TUF Gaming</span></span></figcaption></figure>
-        <figure class="rv"><blockquote dir="rtl">مرتبين والله صديقي شكراا الكم مصداقية وسرعة بالتوصيل واحترام وكل اشي ❤️❤️ ان شاء الله انه راح اضل اتعامل معاكم ❤️</blockquote><figcaption><span class="rv-who t-ar-only">عميل Root · انستغرام</span><span class="rv-tag"><span class="tar">سماعة</span><span class="ten">Headphones</span></span></figcaption></figure>
-        <figure class="rv"><blockquote dir="rtl">الخدمة ممتازة كلكم زوق</blockquote><figcaption><span class="rv-who t-ar-only">عميل Root · انستغرام</span><span class="rv-tag"><span class="tar">سماعة</span><span class="ten">Headphones</span></span></figcaption></figure>
-      </div>
+      <a class="fbband" href="feedback.html">
+        <div class="fbtxt"><span class="k">Feedback</span><h2 data-i18n="rv_h">آراء زبائن Root</h2><p data-i18n="rv_p">رسائل حقيقية وصلتنا على انستغرام بعد التسليم.</p><span class="btn pri fbgo"><span data-i18n="rv_go">شوف كل الآراء</span> <bdi class="lat">(9)</bdi></span></div>
+        <div class="fbstack" aria-hidden="true"><img src="img/feedback/fb-02.webp" alt="" loading="lazy"><img src="img/feedback/fb-06.webp" alt="" loading="lazy"><img src="img/feedback/fb-04.webp" alt="" loading="lazy"></div>
+      </a>
     </div>
   </section>
 
@@ -625,7 +628,7 @@ footer .lat{letter-spacing:.14em;text-transform:uppercase;font-size:12px}
     <div class="wrap bhead"><span class="k lat">Brands</span><h2 data-i18n="b_h">ماركات عالمية بنوفرها</h2></div>
     <div class="bstrip"><div class="btrack" id="btrack"></div></div>
   </div>
-  <div class="wrap fline"><span class="lat">Root · Your Tech Partner · rootjo.com · <a href="warranty.html" data-i18n="pol">سياسة الكفالة</a></span><span data-i18n="foot">الأسعار والتوفر قابلة للتغيير، ويؤكدها فريقنا عند الطلب.</span></div>
+  <div class="wrap fline"><span class="lat">Root · Your Tech Partner · rootjo.com · <a href="warranty.html" data-i18n="pol">سياسة الكفالة</a> · <a href="feedback.html" data-i18n="fbl">آراء الزبائن</a></span><span data-i18n="foot">الأسعار والتوفر قابلة للتغيير، ويؤكدها فريقنا عند الطلب.</span></div>
 </footer>
 
 <nav class="dock" aria-label="Quick">
@@ -911,7 +914,8 @@ footer .lat{letter-spacing:.14em;text-transform:uppercase;font-size:12px}
     w_h: "A store built on clarity", w1h: "Pay on delivery", w1p: "You pay only after you receive and check the device.", w2h: "A clear warranty", w2p: "The warranty is written on every device, new or used.", w3h: "Ready to use", w3p: "Genuine Windows and Office from day one, or macOS on Apple devices.", w4h: "Genuine licenses", w4p: "Windows, Office and Microsoft 365 keys sent right after payment.", w5h: "Any device, sourced", w5p: "We work with several suppliers, so if it isn't listed we'll get it.",
     q_h: "FAQ", q1: "How do I order?", a1: "Pick a device and tap “Order”, or fill in “Request a device”. We confirm stock and price and arrange delivery.", q2: "How do delivery and payment work?", a2: "We deliver across Jordan: 3 JD inside Amman, 5 JD outside. You pay on delivery after checking the device.", q3: "What warranty do I get?", a3: "Used devices carry a 2-month warranty: if a technical fault appears that isn't caused by misuse, we replace the faulty part free of charge or replace the device. New devices carry the warranty listed on each device page. <a href=\"warranty.html\">Full warranty policy</a>", q4: "How do I receive a license?", a4: "Licenses are digital: we send the activation key right after payment. If activation gives you trouble, message us on WhatsApp.",
     n_rep: "Repair", rp_h: "Repair & setup", rp_p: "Diagnosis, repair, upgrades and setup for your device, with the cost quoted before any work.", rp_all: "Repair page", rp_btn: "Book on WhatsApp", rp1h: "Diagnosis", rp1p: "We check the device, find the fault and give you the cost before any repair.", rp2h: "Windows & Office setup", rp2p: "A clean install with genuine activation and all drivers.", rp3h: "RAM & SSD upgrades", rp3p: "Speed up your device with more RAM or an SSD.", rp4h: "Cleaning & tune-up", rp4p: "Internal cleaning and a tune-up for speed and temperature.",
-    rv_h: "What Root customers say", rv_p: "Real messages we received on Instagram after delivery, written exactly as they were sent.", rv_more: "More on Instagram", ab_h: "Who is Root?", ab_p: "Root is an online store that aims to offer the best services and devices at the best value for money, with flexible dealings and very high credibility, run by Eng. Almotasem Billah Romman.", pol: "Warranty policy", sold_h: "Sold recently", tot: "Total",
+    rv_h: "Root customer feedback", rv_p: "Real messages we received on Instagram after delivery.", rv_go: "See all feedback", ab_h: "Who is Root?", ab_p: "Root is an online store that aims to offer the best services and devices at the best value for money, with flexible dealings and very high credibility, run by Eng. Almotasem Billah Romman.", pol: "Warranty policy", sold_h: "Sold recently", tot: "Total",
+    n_fb: "Customer feedback", fbl: "Feedback",
     b_h: "Global brands we carry", c_h: "Contact us", c1: "Start a chat", c2: "Call", c3: "Follow", c4: "Email us", foot: "Prices and availability may change; our team confirms them when you order."
   };
   var ROLL = { ar: ["توصيل لكل المملكة", "الدفع بعد المعاينة", "ويندوز وأوفيس أصليين", "كفالة مكتوبة على كل جهاز", "نوفر أي جهاز بالطلب"], en: ["Delivery across Jordan", "Pay after you check it", "Genuine Windows & Office", "Warranty on every device", "Any device, sourced"] };
