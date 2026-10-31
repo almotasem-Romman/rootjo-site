@@ -14,127 +14,228 @@
 <meta property="og:image" content="https://rootjo.com/img/og/msi-pro-mp272-e14c.jpg">
 <meta property="og:url" content="https://rootjo.com/p/msi-pro-mp272-e14c">
 <meta name="twitter:card" content="summary_large_image">
-<meta name="theme-color" content="#0b1324">
+<meta name="theme-color" content="#f4f5f7">
 <link rel="icon" type="image/png" href="../img/favicon.png">
 <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;700;800&family=JetBrains+Mono:wght@700&family=Readex+Pro:wght@500;600;700&display=swap">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Chakra+Petch:wght@300;400;500;600&family=IBM+Plex+Sans+Arabic:wght@300;400;500;600;700&display=swap">
 <script>(function(){var l="ar";try{l=localStorage.getItem("root-lang")||l}catch(e){}if(location.hash==="#en")l="en";if(location.hash==="#ar")l="ar";document.documentElement.lang=l;document.documentElement.dir=l==="en"?"ltr":"rtl"})();</script>
 <script type="application/ld+json">{"@context": "https://schema.org", "@type": "Product", "name": "MSI PRO MP272 E14C", "image": ["https://rootjo.com/img/og/msi-pro-mp272-e14c.jpg"], "description": "A 27-inch 144Hz IPS monitor with USB Type-C, so your laptop connects with a single cable for video. New in box with a 2-year warranty.", "brand": {"@type": "Brand", "name": "MSI"}, "offers": {"@type": "Offer", "url": "https://rootjo.com/p/msi-pro-mp272-e14c", "priceCurrency": "JOD", "price": "129", "availability": "https://schema.org/InStock", "itemCondition": "https://schema.org/NewCondition", "seller": {"@type": "Organization", "name": "Root Computers"}}}</script>
 <style>
-:root{--bg:#f5f8fc;--surface:#ffffff;--fg:#14213d;--muted:#586783;--line:#d9e2ef;--navy:#1b2a52;--cyan:#0e9db9;--cyan-soft:#e0f4f9;--wa:#1a8f4d;--hero:#0b1730;--panel-hi:#ffffff;--panel-lo:#e7edf5;
---font-ar:'Cairo','Segoe UI',Tahoma,sans-serif;--font-head:'Readex Pro','Cairo','Segoe UI',Tahoma,sans-serif;--font-mono:'JetBrains Mono',ui-monospace,Consolas,monospace;color-scheme:light}
-@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){--bg:#0b1324;--surface:#121d36;--fg:#e8eefb;--muted:#9aa9c7;--line:#24335a;--navy:#e8eefb;--cyan:#2cc4e3;--cyan-soft:#12304a;--wa:#2fb868;--panel-hi:#2a3d66;--panel-lo:#131e37;color-scheme:dark}}
-:root[data-theme="dark"]{--bg:#0b1324;--surface:#121d36;--fg:#e8eefb;--muted:#9aa9c7;--line:#24335a;--navy:#e8eefb;--cyan:#2cc4e3;--cyan-soft:#12304a;--wa:#2fb868;--panel-hi:#2a3d66;--panel-lo:#131e37;color-scheme:dark}
+:root{
+  --bg:#f4f5f7;          /* cool near-white, biased toward Root navy */
+  --bg-2:#eceef2;
+  --paper:#ffffff;
+  --glass:rgba(255,255,255,.62);
+  --glass-hi:rgba(255,255,255,.82);
+  --ink:#0f1730;         /* near-black navy for text */
+  --navy:#1b2a52;        /* Root logo navy: buttons, headings */
+  --navy-hi:#26386b;
+  --cyan:#28cde4;        /* Root logo cyan: cursor, accents on navy */
+  --cyan-ink:#0b8ea4;    /* cyan dark enough for text on light */
+  --muted:#5d6679;
+  --faint:#6c7487;
+  --line:rgba(27,42,82,.11);
+  --line-2:rgba(27,42,82,.22);
+  --wa:#1fa855;
+  --sold:#9aa1ae;
+  --f-lat:'Chakra Petch','Segoe UI',system-ui,sans-serif;
+  --f-ar:'IBM Plex Sans Arabic','Segoe UI',Tahoma,system-ui,sans-serif;
+  --r:18px;
+  color-scheme:light;
+}
 *{box-sizing:border-box}
-body{margin:0;font-family:var(--font-ar);font-size:17px;line-height:1.75;color:var(--fg);background:var(--bg);
- background-image:radial-gradient(900px 500px at 85% -10%,color-mix(in srgb,var(--cyan) 18%,transparent),transparent 70%),radial-gradient(700px 500px at 0% 30%,color-mix(in srgb,#4664eb 10%,transparent),transparent 70%),linear-gradient(color-mix(in srgb,var(--cyan) 7%,transparent) 1px,transparent 1px),linear-gradient(90deg,color-mix(in srgb,var(--cyan) 7%,transparent) 1px,transparent 1px);
- background-size:auto,auto,72px 72px,72px 72px;background-attachment:fixed}
-img{max-width:100%}
-h1,h2,h3,h4,.mcard span{font-family:var(--font-head)}
+[hidden]{display:none!important}
+input[type=search]::-webkit-search-cancel-button{-webkit-appearance:none;appearance:none}
+html{scroll-behavior:smooth;scroll-padding-top:150px;-webkit-text-size-adjust:100%}
+body{margin:0;background:var(--bg);color:var(--ink);font-family:var(--f-ar);font-size:16px;line-height:1.75;font-weight:400;overflow-x:hidden;
+  padding-left:max(16px,env(safe-area-inset-left,0px));padding-right:max(16px,env(safe-area-inset-right,0px))}
+body::before{content:"";position:fixed;inset:0 0 auto;height:env(safe-area-inset-top,0px);z-index:40;background:var(--bg)}
+html[lang="en"] body{font-family:var(--f-lat)}
 a{color:inherit}
-:focus-visible{outline:3px solid var(--cyan);outline-offset:3px;border-radius:6px}
+button{font:inherit;color:inherit}
+:focus-visible{outline:2px solid var(--navy);outline-offset:3px;border-radius:8px}
+.lat{font-family:var(--f-lat)}
+.wrap{max-width:1160px;margin-inline:auto}
+#field{position:fixed;inset:0;width:100%;height:100%;z-index:0;pointer-events:none;display:block}
+main,footer{position:relative;z-index:1}
+
+/* ---------- header (desktop) ---------- */
+.top{position:sticky;top:calc(env(safe-area-inset-top,0px) + 12px);z-index:30;margin-top:12px}
+.bar{display:flex;align-items:center;gap:18px;height:60px;padding-inline:14px 10px;border-radius:999px;background:var(--glass);border:1px solid rgba(255,255,255,.8);
+  box-shadow:0 1px 0 rgba(255,255,255,.9) inset,0 10px 30px -18px rgba(15,23,48,.35);backdrop-filter:blur(18px) saturate(1.4);-webkit-backdrop-filter:blur(18px) saturate(1.4)}
+.logo{display:flex;direction:ltr;align-items:baseline;gap:10px;flex:none;text-decoration:none}
+.lname{font-family:var(--f-lat);font-weight:500;font-size:20px;letter-spacing:.06em;color:var(--navy);line-height:1}
+.logo img{height:30px;width:auto;display:block}
+.nav{display:flex;gap:4px;margin-inline-start:6px;flex:1;min-width:0}
+.nav a{font-family:var(--f-lat);font-size:13px;letter-spacing:.08em;text-transform:uppercase;text-decoration:none;color:var(--muted);padding:6px 12px;border-radius:999px;white-space:nowrap;transition:color .2s,background .2s}
+html[lang="ar"] .nav a{font-family:var(--f-ar);letter-spacing:0;font-size:14.5px;text-transform:none}
+.nav a:hover{color:var(--ink);background:rgba(27,42,82,.05)}
+.tools{display:flex;align-items:center;gap:6px;flex:none;margin-inline-start:auto}
+.ibtn{display:inline-flex;align-items:center;justify-content:center;gap:8px;height:40px;min-width:40px;padding-inline:12px;border-radius:999px;border:1px solid var(--line);background:transparent;cursor:pointer;
+  font-family:var(--f-lat);font-size:13px;letter-spacing:.08em;text-transform:uppercase;text-decoration:none;color:var(--ink);transition:background .2s,border-color .2s}
+.ibtn:hover{background:rgba(27,42,82,.05);border-color:var(--line-2)}
+.ibtn svg{width:18px;height:18px;flex:none;fill:none;stroke:currentColor;stroke-width:1.6;stroke-linecap:round;stroke-linejoin:round}
+.ibtn.solid{background:var(--navy);border-color:var(--navy);color:#fff}
+.ibtn.solid:hover{background:var(--navy-hi)}
+.ibtn.solid svg{fill:currentColor;stroke:none}
+.lang-ar{font-family:var(--f-ar)!important;letter-spacing:0!important;font-size:14px!important}
+
+.grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(258px,1fr));gap:16px}
+.card{position:relative;display:flex;flex-direction:column;background:rgba(255,255,255,.7);border:1px solid rgba(255,255,255,.95);border-radius:var(--r);overflow:hidden;min-width:0;
+  box-shadow:0 1px 0 #fff inset,0 1px 2px rgba(15,23,48,.04),0 18px 36px -30px rgba(15,23,48,.45);backdrop-filter:blur(10px);-webkit-backdrop-filter:blur(10px);transition:transform .3s cubic-bezier(.2,.8,.2,1),box-shadow .3s;animation:rise .5s both}
+@keyframes rise{from{transform:translateY(10px)}to{transform:none}}
+.card:hover{transform:translateY(-4px);box-shadow:0 1px 0 #fff inset,0 30px 50px -32px rgba(15,23,48,.5)}
+.cmeta{display:flex;align-items:center;justify-content:space-between;gap:8px;padding:12px 14px 0;font-family:var(--f-lat);font-size:11.5px;letter-spacing:.16em;text-transform:uppercase;color:var(--faint);direction:ltr}
+.tag{border:1px solid var(--line-2);border-radius:6px;padding:1px 7px;color:var(--ink);letter-spacing:.12em}
+.tag.new{border-color:transparent;background:var(--navy);color:#fff}
+.tag.new::before{content:"";display:inline-block;width:6px;height:2px;background:var(--cyan);vertical-align:3px;margin-right:6px}
+.cimg{display:block;border:0;background:none;padding:0;cursor:pointer;text-decoration:none;aspect-ratio:4/3;width:100%;max-width:100%;
+  background:radial-gradient(60% 55% at 50% 52%,#fff,rgba(255,255,255,0) 72%)}
+.cimg img{width:100%;height:100%;object-fit:contain;padding:14px 18px 8px;filter:drop-shadow(0 16px 14px rgba(15,23,48,.2));transition:transform .5s cubic-bezier(.2,.8,.2,1)}
+.card:hover .cimg img{transform:scale(1.045) translateY(-2px)}
+.cbody{display:flex;flex-direction:column;gap:8px;padding:4px 16px 14px;flex:1}
+.cname{margin:0;font-family:var(--f-lat);font-weight:500;font-size:17px;line-height:1.25;letter-spacing:.01em;text-transform:uppercase;direction:ltr;text-align:left;text-wrap:balance}
+.cname a{text-decoration:none;color:inherit}
+.cname a:hover{color:var(--navy-hi)}
+.ccond{font-size:13px;color:var(--muted)}
+.ccond.used::before,.ccond.new::before,.ccond.like-new::before,.ccond.digital::before{content:"";display:inline-block;width:7px;height:7px;border-radius:50%;margin-inline-end:7px;vertical-align:1px;background:var(--cyan)}
+.ccond.used::before,.ccond.like-new::before{background:#e0a800}
+.hud{list-style:none;margin:2px 0 0;padding:0;display:grid;grid-template-columns:1fr 1fr;gap:6px;direction:ltr}
+.hud li{min-width:0;padding:6px 8px;border-radius:9px;background:rgba(236,238,242,.7);font-family:var(--f-lat);font-size:12.5px;line-height:1.25;color:var(--ink);overflow-wrap:anywhere}
+.hud li em{display:block;font-style:normal;font-size:9.5px;letter-spacing:.18em;color:var(--faint);margin-bottom:1px}
+.buy{display:flex;align-items:stretch;margin:auto 10px 10px;border-radius:13px;overflow:hidden;background:var(--navy);color:#fff;text-decoration:none;min-height:48px;transition:background .2s}
+.buy:hover{background:var(--navy-hi)}
+.buy .l{flex:1;display:flex;align-items:center;gap:8px;padding-inline:14px;font-size:14px;font-weight:500;min-width:0}
+.buy .l svg{width:17px;height:17px;flex:none;fill:currentColor}
+.buy .p{display:flex;flex-direction:column;align-items:flex-end;justify-content:center;padding-inline:14px;font-family:var(--f-lat);direction:ltr;border-inline-start:1px solid rgba(255,255,255,.14)}
+html[dir="rtl"] .buy .p{border-inline-start:1px solid rgba(255,255,255,.14)}
+.buy .p b{font-weight:500;font-size:19px;line-height:1;font-variant-numeric:tabular-nums}
+.buy .p b small{font-size:11px;letter-spacing:.12em;color:var(--cyan);margin-left:3px}
+.buy .p s{font-size:11.5px;color:rgba(255,255,255,.55);line-height:1.2}
+.card.sold .cimg img{filter:grayscale(1);opacity:.5}
+.card.sold .buy{background:transparent;color:var(--ink);border:1px solid var(--line-2)}
+.card.sold .buy .p{border-color:var(--line)}
+.card.sold .buy .p b small{color:var(--faint)}
+.card.sold .buy .p s{color:var(--faint)}
+.card.sold .tag{border-color:var(--sold);color:var(--sold)}
+.empty{grid-column:1/-1;display:grid;justify-items:center;gap:10px;text-align:center;padding:54px 20px;border:1px dashed var(--line-2);border-radius:var(--r);color:var(--muted);background:rgba(255,255,255,.4)}
+.empty b{font-family:var(--f-lat);font-weight:400;font-size:28px;letter-spacing:.06em;color:var(--ink);direction:ltr}
+.empty a{color:var(--navy);font-weight:600}
+@media (max-width:520px){
+  .grid{grid-template-columns:1fr 1fr!important;gap:10px}
+  .card{border-radius:16px}
+  .card .hud{display:none}
+  .cmeta{padding:10px 10px 0;font-size:10px;letter-spacing:.1em}
+  .cmeta>span:first-child{display:none}
+  .cmeta .tag{margin-inline-start:auto}
+  .cimg img{padding:8px 8px 4px}
+  .cbody{padding:2px 10px 10px;gap:4px}
+  .cname{font-size:13.5px;line-height:1.25}
+  .ccond{font-size:11.5px;line-height:1.5}
+  .buy{margin:auto 8px 8px;min-height:42px;border-radius:11px}
+  .buy .l{padding-inline:9px;font-size:12.5px;gap:5px}
+  .buy .l svg{width:14px;height:14px}
+  .buy .p{padding-inline:9px}
+  .buy .p b{font-size:16px}
+  .buy .p s{font-size:10px}
+  .empty{padding:36px 14px}
+}
+
 html[lang="ar"] .t-en,html[lang="en"] .t-ar{display:none!important}
-.wrap{max-width:1080px;margin-inline:auto;padding-inline:20px}
-header{position:sticky;top:env(safe-area-inset-top,0px);z-index:5;background:color-mix(in srgb,var(--bg) 82%,transparent);backdrop-filter:blur(14px);-webkit-backdrop-filter:blur(14px);border-bottom:1px solid var(--line)}
-header .wrap{display:flex;align-items:center;justify-content:space-between;gap:12px;height:64px}
-.logo img{height:38px;display:block}
-.logo .d{display:none}
-@media (prefers-color-scheme:dark){:root:not([data-theme="light"]) .logo .l{display:none}:root:not([data-theme="light"]) .logo .d{display:block}}
-:root[data-theme="dark"] .logo .l{display:none}:root[data-theme="dark"] .logo .d{display:block}
-.hbtns{display:flex;align-items:center;gap:10px}
-.lang{font:700 14px/1 var(--font-mono);color:var(--fg);background:transparent;border:1.5px solid var(--line);border-radius:999px;padding:8px 14px;cursor:pointer}
-html[lang="en"] .lang{font-family:var(--font-ar);font-size:15px;padding:5px 14px}
-.lang:hover{border-color:var(--cyan);color:var(--cyan)}
-.navcta{background:var(--wa);color:#fff;text-decoration:none;font-weight:700;font-size:15px;padding:7px 16px;border-radius:999px}
-.crumb{display:inline-block;margin-top:22px;color:var(--muted);text-decoration:none;font-weight:600}
-.crumb:hover{color:var(--cyan)}
-.prod{display:grid;grid-template-columns:1.1fr 1fr;gap:40px;padding-block:20px 50px;align-items:start}
-.gal{position:relative;background:radial-gradient(circle at 50% 45%,var(--panel-hi),var(--panel-lo) 75%);border:1px solid var(--line);border-radius:22px;overflow:hidden;aspect-ratio:4/3}
-.gal img{width:100%;height:100%;object-fit:contain;padding:28px;filter:drop-shadow(0 18px 22px rgba(0,0,0,.28))}
-.gal.cover img{object-fit:cover;padding:0}
-.sold .gal img{filter:grayscale(1);opacity:.55}
-.ptags{display:flex;flex-wrap:wrap;gap:8px;align-items:center}
-.pbadge{font-size:14px;font-weight:800;padding:3px 14px;border-radius:999px;background:var(--cyan);color:#04121f}
-.sold .pbadge{background:#6b7280;color:#fff}
-.info{display:flex;flex-direction:column;gap:14px;min-width:0}
-.cond{align-self:flex-start;font-size:14px;font-weight:700;padding:3px 14px;border-radius:999px;background:var(--cyan-soft);color:var(--navy)}
-.cond.used{background:color-mix(in srgb,#f0b429 22%,transparent)}
-h1{margin:0;font-size:clamp(28px,4.2vw,40px);line-height:1.25;color:var(--navy);text-wrap:balance;direction:ltr;text-align:left}
-html[lang="ar"] h1{text-align:right}
-.price{display:flex;align-items:baseline;gap:12px;direction:ltr;justify-content:flex-end}
-html[lang="en"] .price{justify-content:flex-start}
-.price b{font-size:44px;font-weight:800;color:var(--navy);font-variant-numeric:tabular-nums;line-height:1}
-.price b small{font-size:20px;color:var(--cyan);margin-left:6px}
-.price s{color:var(--muted);font-size:20px}
-.about{margin:0;color:var(--muted)}
-.soldnote{margin:0;padding:12px 16px;border-radius:12px;border:1.5px dashed var(--line);font-weight:600}
-.acts{display:grid;gap:10px}
-.btn{display:flex;align-items:center;justify-content:center;gap:10px;padding:14px 20px;border-radius:12px;font-weight:700;font-size:17px;text-decoration:none;transition:transform .2s,filter .2s}
-.btn:hover{transform:translateY(-2px)}
-.btn svg{width:22px;height:22px;flex:none}
-.btn.wa{background:var(--wa);color:#fff}
-.btn.ghost{border:1.5px solid var(--line);color:var(--fg)}
-.btn.ghost:hover{border-color:var(--cyan)}
-.perks{display:grid;grid-template-columns:1fr 1fr;gap:10px;margin:4px 0}
-.perk{display:flex;align-items:center;gap:10px;padding:10px 12px;border-radius:12px;background:var(--surface);border:1px solid var(--line);font-size:14px;font-weight:600;line-height:1.4}
-.perk svg{width:26px;height:26px;flex:none;stroke:var(--cyan);fill:none;stroke-width:1.6;stroke-linejoin:round;stroke-linecap:round}
-@media (max-width:420px){.perks{grid-template-columns:1fr}}
-.trust{list-style:none;margin:6px 0 0;padding:0;display:grid;gap:6px;color:var(--muted);font-size:15px}
-.trust li{display:flex;gap:8px;align-items:baseline}
-.trust li::before{content:">_";font-family:var(--font-mono);color:var(--cyan);font-weight:700;direction:ltr;flex:none}
-h2{font-size:26px;color:var(--navy);margin:0 0 14px;display:flex;gap:10px;align-items:center}
-h2::before{content:">_";font-family:var(--font-mono);color:var(--cyan);font-size:.7em;direction:ltr}
-.specs{background:var(--surface);border:1px solid var(--line);border-radius:18px;overflow:hidden;margin-bottom:50px}
-.specs div{display:grid;grid-template-columns:minmax(120px,32%) 1fr;gap:12px;padding:12px 20px;border-bottom:1px solid var(--line)}
+body{padding-bottom:30px}
+.grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(258px,1fr));gap:16px}
+.k{display:block;font-family:var(--f-lat);font-size:12.5px;letter-spacing:.3em;text-transform:uppercase;color:var(--cyan-ink)}
+.crumbs{display:flex;align-items:center;gap:8px;flex-wrap:wrap;margin:26px 0 6px;font-size:14px;color:var(--muted)}
+.crumbs a{text-decoration:none;color:var(--muted);padding:4px 10px;border-radius:999px;border:1px solid var(--line);background:rgba(255,255,255,.5)}
+.crumbs a:hover{color:var(--ink);border-color:var(--line-2)}
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:9px;min-height:52px;padding-inline:22px;border-radius:14px;text-decoration:none;font-weight:500;font-size:16px;border:1px solid transparent;cursor:pointer;transition:background .2s,border-color .2s,transform .2s}
+.btn:hover{transform:translateY(-1px)}
+.btn svg{width:19px;height:19px;flex:none;fill:currentColor}
+.btn.pri{background:var(--navy);color:#fff}
+.btn.pri:hover{background:var(--navy-hi)}
+.btn.sec{border-color:var(--line-2);color:var(--ink);background:rgba(255,255,255,.5)}
+.btn.sec:hover{border-color:var(--navy)}
+.glass{background:rgba(255,255,255,.62);border:1px solid rgba(255,255,255,.95);box-shadow:0 1px 0 #fff inset,0 24px 50px -40px rgba(15,23,48,.5);backdrop-filter:blur(12px);-webkit-backdrop-filter:blur(12px)}
+.foot{margin-top:60px;padding-block:28px 40px;border-top:1px solid var(--line)}
+.foot .wrap{display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap;color:var(--muted);font-size:13.5px}
+.foot .lat{letter-spacing:.14em;text-transform:uppercase;font-size:12px}
+.foot a{color:var(--muted)}
+@media (max-width:520px){.ibtn.solid .lbl{display:none}}
+@media (prefers-reduced-motion:reduce){*,*::before,*::after{animation:none!important;transition:none!important}}
+
+.prod{display:grid;grid-template-columns:1.1fr 1fr;gap:36px;padding-block:10px 50px;align-items:start}
+.gal{position:sticky;top:calc(env(safe-area-inset-top,0px) + 96px);border-radius:28px;aspect-ratio:4/3;max-width:100%;overflow:hidden;
+  background:radial-gradient(60% 55% at 50% 52%,#fff,rgba(255,255,255,.35) 75%)}
+.gal img{width:100%;height:100%;object-fit:contain;padding:44px 30px 26px;filter:drop-shadow(0 26px 22px rgba(15,23,48,.22))}
+.gal .cmeta{position:absolute;inset:18px 20px auto;padding:0}
+.sold .gal img{filter:grayscale(1);opacity:.5}
+.info{display:flex;flex-direction:column;gap:16px;min-width:0}
+.pname{margin:0;font-family:var(--f-lat);font-weight:500;font-size:clamp(28px,3.6vw,42px);line-height:1.12;letter-spacing:.01em;text-transform:uppercase;direction:ltr;text-align:left;text-wrap:balance}
+html[dir="rtl"] .pname{text-align:right}
+.pprice{display:flex;align-items:baseline;gap:12px;direction:ltr;font-family:var(--f-lat);justify-content:flex-end}
+html[dir="ltr"] .pprice{justify-content:flex-start}
+.pprice b{font-weight:400;font-size:52px;line-height:1;color:var(--navy);font-variant-numeric:tabular-nums}
+.pprice b small{font-size:17px;letter-spacing:.12em;color:var(--cyan-ink);margin-left:5px}
+.pprice s{color:var(--faint);font-size:19px}
+.about{margin:0;color:var(--muted);font-size:16px}
+.soldnote{margin:0;padding:12px 16px;border-radius:14px;border:1px dashed var(--line-2);font-weight:500}
+.acts{display:grid;grid-template-columns:1fr auto;gap:8px}
+.perks{display:grid;grid-template-columns:1fr 1fr;gap:8px}
+.perk{display:flex;gap:10px;align-items:center;font-size:13.5px;line-height:1.4;padding:10px 12px;border-radius:14px;background:rgba(255,255,255,.7);border:1px solid var(--line)}
+.perk svg{width:24px;height:24px;flex:none;fill:none;stroke:var(--navy);stroke-width:1.5;stroke-linecap:round;stroke-linejoin:round}
+.trust{list-style:none;margin:0;padding:0;display:grid;gap:6px;color:var(--muted);font-size:14.5px}
+.trust li{display:flex;gap:10px;align-items:baseline}
+.trust li::before{content:">_";font-family:var(--f-lat);color:var(--cyan-ink);direction:ltr;flex:none}
+.sh{display:flex;align-items:baseline;justify-content:space-between;gap:12px;margin:10px 0 16px}
+.sh h2{margin:0;font-weight:600;font-size:clamp(24px,3vw,32px)}
+html[lang="en"] .sh h2{font-family:var(--f-lat);font-weight:500;text-transform:uppercase}
+.specs{margin:0 0 50px;border-radius:22px;overflow:hidden}
+.specs div{display:grid;grid-template-columns:minmax(120px,30%) 1fr;gap:14px;padding:13px 22px;border-bottom:1px solid var(--line)}
 .specs div:last-child{border:0}
 .specs dt{color:var(--muted)}
-.specs dd{margin:0;font-weight:600;direction:ltr;text-align:start;overflow-wrap:anywhere}
-html[lang="ar"] .specs dd{text-align:right}
-.more{display:grid;grid-template-columns:repeat(auto-fill,minmax(220px,1fr));gap:14px;margin-bottom:60px}
-.mcard{display:flex;gap:12px;align-items:center;padding:12px;background:var(--surface);border:1px solid var(--line);border-radius:14px;text-decoration:none;min-width:0}
-.mcard:hover{border-color:var(--cyan)}
-.mcard img{width:72px;height:54px;object-fit:contain;background:radial-gradient(circle,var(--panel-hi),var(--panel-lo));border-radius:8px;flex:none}
-.mcard span{display:block;font-weight:700;font-size:15px;line-height:1.3;direction:ltr;text-align:start}
-.mcard small{color:var(--cyan);font-weight:700;direction:ltr;display:block}
-footer{border-top:1px solid var(--line);padding-block:24px 40px;color:var(--muted);font-size:14px}
-@media (max-width:760px){.prod{grid-template-columns:1fr;gap:22px}.navcta{display:none}.price b{font-size:38px}}
-@media (prefers-reduced-motion:reduce){.btn{transition:none}}
+.specs dd{margin:0;font-family:var(--f-lat);direction:ltr;text-align:left;overflow-wrap:anywhere}
+html[dir="rtl"] .specs dd{text-align:right}
+.more{grid-template-columns:repeat(3,1fr)}
+@media (max-width:860px){.prod{grid-template-columns:1fr;gap:20px}.gal{position:relative;top:auto}.more{grid-template-columns:1fr 1fr}}
+@media (max-width:520px){.acts,.perks,.more{grid-template-columns:1fr}.pprice b{font-size:44px}.specs div{grid-template-columns:1fr;gap:2px;padding:11px 18px}}
 </style>
 </head>
 <body>
-<header><div class="wrap">
-  <a class="logo" href="../" aria-label="Root"><img class="l" src="../img/logo.png" alt="Root"><img class="d" src="../img/logo-light-on-dark.png" alt=""></a>
-  <div class="hbtns">
-    <button type="button" class="lang" id="langBtn"><span class="t-ar">EN</span><span class="t-en">عربي</span></button>
-    <a class="navcta" target="_blank" rel="noopener" href="https://wa.me/962799167971?text=%D9%85%D8%B1%D8%AD%D8%A8%D8%A7%D9%8B%20Root%D8%8C%20%D8%A3%D8%B1%D9%8A%D8%AF%20%D8%A7%D9%84%D8%A7%D8%B3%D8%AA%D9%81%D8%B3%D8%A7%D8%B1%20%D8%B9%D9%86%20" data-product="msi-pro-mp272-e14c"><span class="t-ar">واتساب</span><span class="t-en">WhatsApp</span></a>
+<canvas id="field" aria-hidden="true"></canvas>
+<header class="top"><div class="wrap bar">
+  <a class="logo" href="../index.html" aria-label="Root"><img src="../img/logo.png" alt=""><span class="lname">Root</span></a>
+  <div class="tools">
+    <button type="button" class="ibtn" id="langBtn"><span class="t-ar">EN</span><span class="t-en lang-ar">عربي</span></button>
+    <a class="ibtn solid" target="_blank" rel="noopener" data-product="product_page" href="https://wa.me/962799167971?text=%D9%85%D8%B1%D8%AD%D8%A8%D8%A7%D9%8B%20Root%D8%8C%20%D8%A8%D8%AF%D9%8A%20%D8%A3%D8%B3%D8%AA%D9%81%D8%B3%D8%B1%20%D8%B9%D9%86%20" data-href-en="https://wa.me/962799167971?text=Hi%20Root%2C%20I%27d%20like%20to%20ask%20about%20"><svg viewBox="0 0 24 24"><use href="#wa-i"/></svg><span class="lbl"><span class="t-ar">واتساب</span><span class="t-en">WhatsApp</span></span></a>
   </div>
 </div></header>
 <main class="wrap">
-  <a class="crumb" href="../monitors.html"><span class="t-ar">&rarr; شاشات</span><span class="t-en">&larr; Monitors</span></a>
+  <nav class="crumbs" aria-label="breadcrumb"><a href="../index.html"><span class="t-ar">الرئيسية</span><span class="t-en">Home</span></a><a href="../monitors.html"><span class="t-ar">شاشات</span><span class="t-en">Monitors</span></a></nav>
   <div class="prod">
-    <div class="gal"><img src="../img/products/msi-pro-mp272-e14c.webp" alt="MSI PRO MP272 E14C"></div>
+    <div class="gal glass"><div class="cmeta"><span>Monitor · </span><span class="tag">In stock</span></div><img src="../img/products/msi-pro-mp272-e14c.webp" alt="MSI PRO MP272 E14C"></div>
     <div class="info">
-      <div class="ptags"><span class="cond new"><span class="t-ar">جديد بالكرتونة · كفالة سنتين</span><span class="t-en">New in box · 2-year warranty</span></span></div>
-      <h1>MSI PRO MP272 E14C</h1>
-      <div class="price"><s>159 JD</s><b>129<small>JD</small></b></div>
+      <div class="ccond new"><span class="t-ar">جديد بالكرتونة · كفالة سنتين</span><span class="t-en">New in box · 2-year warranty</span></div>
+      <h1 class="pname">MSI PRO MP272 E14C</h1>
+      <div class="pprice"><b>129<small>JD</small></b><s>159 JD</s></div>
       <p class="about"><span class="t-ar">شاشة 27 إنش IPS بتحديث 144Hz ومنفذ USB Type-C، فبتوصل اللابتوب بكيبل واحد للصورة. جديدة بالكرتونة مع كفالة سنتين.</span><span class="t-en">A 27-inch 144Hz IPS monitor with USB Type-C, so your laptop connects with a single cable for video. New in box with a 2-year warranty.</span></p>
       
       <div class="acts">
-        <a class="btn wa" target="_blank" rel="noopener" data-product="msi-pro-mp272-e14c" href="https://wa.me/962799167971?text=%D9%85%D8%B1%D8%AD%D8%A8%D8%A7%D9%8B%20Root%D8%8C%20%D8%A8%D8%AF%D9%8A%20%D8%A3%D8%B7%D9%84%D8%A8%3A%20MSI%20PRO%20MP272%20E14C%20%D8%A8%D8%B3%D8%B9%D8%B1%20129%20JD%0Arootjo.com/p/msi-pro-mp272-e14c" data-href-en="https://wa.me/962799167971?text=Hi%20Root%2C%20I%27d%20like%20to%20order%3A%20MSI%20PRO%20MP272%20E14C%20%28129%20JD%29%0Arootjo.com/p/msi-pro-mp272-e14c"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg><span class="t-ar">اطلبه على واتساب</span><span class="t-en">Order on WhatsApp</span></a>
-        <a class="btn ghost" target="_blank" rel="noopener" data-product="msi-pro-mp272-e14c" href="https://wa.me/962799167971?text=%D9%85%D8%B1%D8%AD%D8%A8%D8%A7%D9%8B%20Root%D8%8C%20%D8%B9%D9%86%D8%AF%D9%8A%20%D8%B3%D8%A4%D8%A7%D9%84%20%D8%B9%D9%86%20MSI%20PRO%20MP272%20E14C%0Arootjo.com/p/msi-pro-mp272-e14c" data-href-en="https://wa.me/962799167971?text=Hi%20Root%2C%20I%20have%20a%20question%20about%20MSI%20PRO%20MP272%20E14C%0Arootjo.com/p/msi-pro-mp272-e14c"><span class="t-ar">اسأل عن الجهاز</span><span class="t-en">Ask a question</span></a>
+        <a class="btn pri" target="_blank" rel="noopener" data-product="msi-pro-mp272-e14c" href="https://wa.me/962799167971?text=%D9%85%D8%B1%D8%AD%D8%A8%D8%A7%D9%8B%20Root%D8%8C%20%D8%A8%D8%AF%D9%8A%20%D8%A3%D8%B7%D9%84%D8%A8%3A%20MSI%20PRO%20MP272%20E14C%20%D8%A8%D8%B3%D8%B9%D8%B1%20129%20JD%0Arootjo.com/p/msi-pro-mp272-e14c" data-href-en="https://wa.me/962799167971?text=Hi%20Root%2C%20I%27d%20like%20to%20order%3A%20MSI%20PRO%20MP272%20E14C%20%28129%20JD%29%0Arootjo.com/p/msi-pro-mp272-e14c"><svg viewBox="0 0 24 24"><use href="#wa-i"/></svg><span class="t-ar">اطلبه على واتساب</span><span class="t-en">Order on WhatsApp</span></a>
+        <a class="btn sec" target="_blank" rel="noopener" data-product="msi-pro-mp272-e14c" href="https://wa.me/962799167971?text=%D9%85%D8%B1%D8%AD%D8%A8%D8%A7%D9%8B%20Root%D8%8C%20%D8%B9%D9%86%D8%AF%D9%8A%20%D8%B3%D8%A4%D8%A7%D9%84%20%D8%B9%D9%86%20MSI%20PRO%20MP272%20E14C%0Arootjo.com/p/msi-pro-mp272-e14c" data-href-en="https://wa.me/962799167971?text=Hi%20Root%2C%20I%20have%20a%20question%20about%20MSI%20PRO%20MP272%20E14C%0Arootjo.com/p/msi-pro-mp272-e14c"><span class="t-ar">اسأل عنه</span><span class="t-en">Ask</span></a>
       </div>
       <div class="perks"><div class="perk"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M3 6h11v10H3zM14 9h4l3 3v4h-7"/><circle cx="7" cy="17" r="2"/><circle cx="17" cy="17" r="2"/></svg><span class="t-ar">توصيل لكل المملكة، الدفع بعد الاستلام والمعاينة</span><span class="t-en">Delivery across Jordan, pay after you receive and check it</span></div></div>
       <ul class="trust">
         <li><span class="t-ar">السعر نهائي بالدينار الأردني</span><span class="t-en">Final price in Jordanian dinars</span></li>
-        <li><span class="t-ar">الطلب والاستفسار عبر واتساب</span><span class="t-en">Order and ask on WhatsApp</span></li>
-        <li><span class="t-ar">بدك مواصفات ثانية؟ نوفرلك أي جهاز بالطلب</span><span class="t-en">Need different specs? We source any device to order</span></li>
+        <li><span class="t-ar">التوصيل 3 دنانير داخل عمّان و5 دنانير لباقي المحافظات، والدفع بعد المعاينة</span><span class="t-en">Delivery: 3 JD in Amman, 5 JD elsewhere, and you pay after checking it</span></li>
+        <li><span class="t-ar">بدك مواصفات ثانية؟ منوفرلك أي جهاز بالطلب</span><span class="t-en">Need different specs? We source any device to order</span></li>
       </ul>
     </div>
   </div>
-  <h2><span class="t-ar">المواصفات</span><span class="t-en">Specifications</span></h2><dl class="specs"><div><dt><span class="t-ar">الشاشة</span><span class="t-en">Display</span></dt><dd>27&quot; FHD 1920×1080 IPS</dd></div><div><dt><span class="t-ar">معدل التحديث</span><span class="t-en">Refresh rate</span></dt><dd>144Hz, 1ms (MPRT)</dd></div><div><dt><span class="t-ar">الألوان و HDR</span><span class="t-en">Color &amp; HDR</span></dt><dd>HDR Ready, Adaptive-Sync</dd></div><div><dt><span class="t-ar">المنافذ</span><span class="t-en">Ports</span></dt><dd>USB Type-C (DP Alt), HDMI, DisplayPort</dd></div><div><dt><span class="t-ar">الصوت</span><span class="t-en">Audio</span></dt><dd>Built-in speakers 2× 2W</dd></div><div><dt><span class="t-ar">راحة العين</span><span class="t-en">Eye care</span></dt><dd>Flicker-Free, Less Blue Light</dd></div><div><dt><span class="t-ar">الكفالة</span><span class="t-en">Warranty</span></dt><dd>2 years</dd></div></dl>
-  <h2><span class="t-ar">منتجات ثانية متوفرة</span><span class="t-en">More available now</span></h2><div class="more"><a class="mcard" href="dell-pro-p2726h.html"><img src="../img/products/dell-pro-p2726h.webp" alt="" loading="lazy"><div><span>Dell Pro 27 P2726H</span><small>189 JD</small></div></a><a class="mcard" href="msi-pro-mp341cqw-e12.html"><img src="../img/products/msi-pro-mp341cqw-e12.webp" alt="" loading="lazy"><div><span>MSI PRO MP341CQW E12</span><small>309 JD</small></div></a><a class="mcard" href="msi-pro-mp275q.html"><img src="../img/products/msi-pro-mp275q.webp" alt="" loading="lazy"><div><span>MSI PRO MP275Q</span><small>159 JD</small></div></a></div>
+  <div class="sh"><h2><span class="t-ar">المواصفات</span><span class="t-en">Specifications</span></h2><span class="k">Specs</span></div><dl class="specs glass"><div><dt><span class="t-ar">الشاشة</span><span class="t-en">Display</span></dt><dd>27&quot; FHD 1920×1080 IPS</dd></div><div><dt><span class="t-ar">معدل التحديث</span><span class="t-en">Refresh rate</span></dt><dd>144Hz, 1ms (MPRT)</dd></div><div><dt><span class="t-ar">الألوان و HDR</span><span class="t-en">Color &amp; HDR</span></dt><dd>HDR Ready, Adaptive-Sync</dd></div><div><dt><span class="t-ar">المنافذ</span><span class="t-en">Ports</span></dt><dd>USB Type-C (DP Alt), HDMI, DisplayPort</dd></div><div><dt><span class="t-ar">الصوت</span><span class="t-en">Audio</span></dt><dd>Built-in speakers 2× 2W</dd></div><div><dt><span class="t-ar">راحة العين</span><span class="t-en">Eye care</span></dt><dd>Flicker-Free, Less Blue Light</dd></div><div><dt><span class="t-ar">الكفالة</span><span class="t-en">Warranty</span></dt><dd>2 years</dd></div></dl>
+  <div class="sh"><h2><span class="t-ar">أجهزة ثانية متوفرة</span><span class="t-en">More in stock</span></h2><span class="k">More</span></div><div class="grid more"><article class="card"><div class="cmeta"><span>Monitor · </span><span class="tag">New</span></div><a class="cimg" href="../p/dell-pro-p2726h.html" tabindex="-1" aria-hidden="true"><img loading="lazy" src="../img/products/dell-pro-p2726h.webp" alt=""></a><div class="cbody"><h3 class="cname"><a href="../p/dell-pro-p2726h.html">Dell Pro 27 P2726H</a></h3><div class="ccond new"><span class="t-ar">جديد بالكرتونة · كفالة 3 سنوات</span><span class="t-en">New in box · 3-year warranty</span></div><ul class="hud"><li><em>SIZE</em>27&quot; FHD IPS</li><li><em>REFRESH</em>120Hz · 5ms</li><li><em>PORTS</em>USB-C hub 15W</li><li><em>STAND</em>Height · Pivot stand</li></ul></div><a class="buy" target="_blank" rel="noopener" data-product="dell-pro-p2726h" href="https://wa.me/962799167971?text=%D9%85%D8%B1%D8%AD%D8%A8%D8%A7%D9%8B%20Root%D8%8C%20%D8%A8%D8%AF%D9%8A%20%D8%A3%D8%B7%D9%84%D8%A8%3A%20Dell%20Pro%2027%20P2726H%20%D8%A8%D8%B3%D8%B9%D8%B1%20189%20JD%0Arootjo.com/p/dell-pro-p2726h" data-href-en="https://wa.me/962799167971?text=Hi%20Root%2C%20I%27d%20like%20to%20order%3A%20Dell%20Pro%2027%20P2726H%20%28189%20JD%29%0Arootjo.com/p/dell-pro-p2726h"><span class="l"><svg viewBox="0 0 24 24"><use href="#wa-i"/></svg><span class="t-ar">اطلبه</span><span class="t-en">Order</span></span><span class="p"><s>219 JD</s><b>189<small>JD</small></b></span></a></article><article class="card"><div class="cmeta"><span>Monitor · </span><span class="tag">New</span></div><a class="cimg" href="../p/msi-pro-mp341cqw-e12.html" tabindex="-1" aria-hidden="true"><img loading="lazy" src="../img/products/msi-pro-mp341cqw-e12.webp" alt=""></a><div class="cbody"><h3 class="cname"><a href="../p/msi-pro-mp341cqw-e12.html">MSI PRO MP341CQW E12</a></h3><div class="ccond new"><span class="t-ar">جديد بالكرتونة · كفالة سنتين</span><span class="t-en">New in box · 2-year warranty</span></div><ul class="hud"><li><em>SIZE</em>34&quot; UWQHD Curved</li><li><em>REFRESH</em>VA 120Hz</li><li><em>RATIO</em>21:9</li><li><em>COLOR</em>HDR Ready</li></ul></div><a class="buy" target="_blank" rel="noopener" data-product="msi-pro-mp341cqw-e12" href="https://wa.me/962799167971?text=%D9%85%D8%B1%D8%AD%D8%A8%D8%A7%D9%8B%20Root%D8%8C%20%D8%A8%D8%AF%D9%8A%20%D8%A3%D8%B7%D9%84%D8%A8%3A%20MSI%20PRO%20MP341CQW%20E12%20%D8%A8%D8%B3%D8%B9%D8%B1%20309%20JD%0Arootjo.com/p/msi-pro-mp341cqw-e12" data-href-en="https://wa.me/962799167971?text=Hi%20Root%2C%20I%27d%20like%20to%20order%3A%20MSI%20PRO%20MP341CQW%20E12%20%28309%20JD%29%0Arootjo.com/p/msi-pro-mp341cqw-e12"><span class="l"><svg viewBox="0 0 24 24"><use href="#wa-i"/></svg><span class="t-ar">اطلبه</span><span class="t-en">Order</span></span><span class="p"><s>339 JD</s><b>309<small>JD</small></b></span></a></article><article class="card"><div class="cmeta"><span>Monitor · </span><span class="tag">New</span></div><a class="cimg" href="../p/msi-pro-mp275q.html" tabindex="-1" aria-hidden="true"><img loading="lazy" src="../img/products/msi-pro-mp275q.webp" alt=""></a><div class="cbody"><h3 class="cname"><a href="../p/msi-pro-mp275q.html">MSI PRO MP275Q</a></h3><div class="ccond new"><span class="t-ar">جديد بالكرتونة · كفالة سنتين</span><span class="t-en">New in box · 2-year warranty</span></div><ul class="hud"><li><em>SIZE</em>27&quot; WQHD 2K</li><li><em>PANEL</em>IPS</li><li><em>REFRESH</em>144Hz</li><li><em>COLOR</em>HDR Ready</li></ul></div><a class="buy" target="_blank" rel="noopener" data-product="msi-pro-mp275q" href="https://wa.me/962799167971?text=%D9%85%D8%B1%D8%AD%D8%A8%D8%A7%D9%8B%20Root%D8%8C%20%D8%A8%D8%AF%D9%8A%20%D8%A3%D8%B7%D9%84%D8%A8%3A%20MSI%20PRO%20MP275Q%20%D8%A8%D8%B3%D8%B9%D8%B1%20159%20JD%0Arootjo.com/p/msi-pro-mp275q" data-href-en="https://wa.me/962799167971?text=Hi%20Root%2C%20I%27d%20like%20to%20order%3A%20MSI%20PRO%20MP275Q%20%28159%20JD%29%0Arootjo.com/p/msi-pro-mp275q"><span class="l"><svg viewBox="0 0 24 24"><use href="#wa-i"/></svg><span class="t-ar">اطلبه</span><span class="t-en">Order</span></span><span class="p"><s>189 JD</s><b>159<small>JD</small></b></span></a></article></div>
 </main>
-<footer><div class="wrap">Root &middot; Your Tech Partner &middot; <a href="../">rootjo.com</a> &middot; <a href="https://www.instagram.com/rootcomputers/" target="_blank" rel="noopener">@rootcomputers</a> &middot; <a href="mailto:info@rootjo.com">info@rootjo.com</a></div></footer>
+<footer class="foot"><div class="wrap"><span class="lat">Root · Your Tech Partner · <a href="../index.html">rootjo.com</a> · <a href="../warranty.html"><span class="t-ar">سياسة الكفالة</span><span class="t-en">Warranty policy</span></a></span><span><a href="https://www.instagram.com/rootcomputers/" target="_blank" rel="noopener">@rootcomputers</a> · info@rootjo.com · +962 7 9916 7971</span></div></footer>
+<svg width="0" height="0" style="position:absolute" aria-hidden="true"><symbol id="wa-i" viewBox="0 0 24 24"><path d="M17.47 14.38c-.3-.15-1.76-.87-2.03-.97-.27-.1-.47-.15-.67.15-.2.3-.77.97-.94 1.16-.17.2-.35.22-.64.07-.3-.15-1.26-.46-2.39-1.47-.88-.79-1.48-1.76-1.65-2.06-.17-.3-.02-.46.13-.6.13-.14.3-.35.45-.52.15-.17.2-.3.3-.5.1-.2.05-.37-.03-.52-.07-.15-.67-1.61-.92-2.2-.24-.59-.49-.5-.67-.51h-.57c-.2 0-.52.07-.8.37-.27.3-1.04 1.02-1.04 2.48 0 1.46 1.07 2.88 1.21 3.07.15.2 2.1 3.2 5.08 4.49.71.3 1.26.49 1.7.63.71.22 1.36.19 1.87.12.57-.09 1.76-.72 2-1.41.25-.7.25-1.29.18-1.42-.08-.12-.28-.2-.57-.34M12.05 21.79h-.01a9.87 9.87 0 0 1-5.03-1.38l-.36-.21-3.74.98 1-3.65-.24-.37a9.86 9.86 0 0 1-1.51-5.26c0-5.45 4.44-9.88 9.89-9.88 2.64 0 5.12 1.03 6.99 2.9a9.82 9.82 0 0 1 2.89 6.99c0 5.45-4.44 9.88-9.88 9.88m8.41-18.3A11.82 11.82 0 0 0 12.05 0C5.5 0 .16 5.34.16 11.89c0 2.1.55 4.14 1.59 5.95L.06 24l6.3-1.65a11.88 11.88 0 0 0 5.68 1.45h.01c6.55 0 11.89-5.34 11.89-11.89 0-3.18-1.24-6.17-3.48-8.41z"/></symbol></svg>
 <script>
 (function(){
   var h=document.documentElement;
@@ -144,6 +245,26 @@ footer{border-top:1px solid var(--line);padding-block:24px 40px;color:var(--mute
   var GA="G-LE9MEQRCHE";window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments)}
   if(/^G-[A-Z0-9]+$/.test(GA)&&!window.__gaHead){var s=document.createElement("script");s.async=true;s.src="https://www.googletagmanager.com/gtag/js?id="+GA;document.head.appendChild(s);gtag("js",new Date());gtag("config",GA);}
   document.addEventListener("click",function(e){var a=e.target.closest&&e.target.closest('a[href^="https://wa.me"]');if(a)gtag("event","whatsapp_click",{link_location:"product_page",product:a.getAttribute("data-product")||""});});
+
+  var reduce = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+  var cv = document.getElementById("field"), ctx = cv.getContext("2d"), W, H, G = [], mx = -1e4, my = -1e4, t0 = performance.now();
+  var CH = ">_{}[]/\\;:#$=+<>01RT".split("");
+  function size() { var dpr = Math.min(window.devicePixelRatio || 1, 2); W = innerWidth; H = innerHeight; cv.width = W * dpr; cv.height = H * dpr; ctx.setTransform(dpr, 0, 0, dpr, 0, 0);
+    var n = Math.min(80, Math.floor(W * H / 16000)); G = []; for (var k = 0; k < n; k++) G.push({ x: Math.random() * W, y: Math.random() * H, s: 13 + Math.random() * 15, a: .05 + Math.random() * .08, v: .05 + Math.random() * .14, c: CH[(Math.random() * CH.length) | 0], ph: Math.random() * 6.28 }); }
+  function blob(x, y, r, rgb, a) { var g = ctx.createRadialGradient(x, y, 0, x, y, r); g.addColorStop(0, "rgba(" + rgb + "," + a + ")"); g.addColorStop(1, "rgba(" + rgb + ",0)"); ctx.fillStyle = g; ctx.fillRect(x - r, y - r, r * 2, r * 2); }
+  function frame(now) { var t = (now - t0) / 1000, R = Math.max(W, H) * .5; ctx.clearRect(0, 0, W, H);
+    blob(W * (.22 + .08 * Math.sin(t * .11)), H * (.25 + .1 * Math.cos(t * .09)), R, "40,205,228", .10);
+    blob(W * (.8 + .07 * Math.cos(t * .08)), H * (.7 + .1 * Math.sin(t * .1)), R * .9, "27,42,82", .06);
+    for (var k = 0; k < G.length; k++) { var g = G[k];
+      if (!reduce) { g.y -= g.v; g.x += Math.sin(t * .3 + g.ph) * .08; if (g.y < -30) { g.y = H + 30; g.x = Math.random() * W; } }
+      var dx = g.x - mx, dy = g.y - my, near = Math.max(0, 1 - Math.sqrt(dx * dx + dy * dy) / 170), a = g.a * (.75 + .25 * Math.sin(t * .8 + g.ph)) + near * .25;
+      ctx.font = "300 " + g.s + "px 'Chakra Petch', monospace"; ctx.fillStyle = near > .05 ? "rgba(11,142,164," + a.toFixed(3) + ")" : "rgba(27,42,82," + a.toFixed(3) + ")"; ctx.fillText(g.c, g.x, g.y); } }
+  function loop(now) { if (!document.hidden) frame(now); requestAnimationFrame(loop); }
+  size(); frame(performance.now());
+  addEventListener("resize", function () { size(); frame(performance.now()); });
+  addEventListener("pointermove", function (e) { mx = e.clientX; my = e.clientY; }, { passive: true });
+  if (!reduce) requestAnimationFrame(loop);
+
 })();
 </script>
 </body>
