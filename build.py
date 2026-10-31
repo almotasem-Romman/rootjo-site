@@ -227,7 +227,7 @@ body{padding-bottom:30px}
 .foot .wrap{display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap;color:var(--muted);font-size:13.5px}
 .foot .lat{letter-spacing:.14em;text-transform:uppercase;font-size:12px}
 .foot a{color:var(--muted)}
-@media (max-width:520px){.ibtn.solid .lbl{display:none}.grid{grid-template-columns:1fr}}
+@media (max-width:520px){.ibtn.solid .lbl{display:none}}
 @media (prefers-reduced-motion:reduce){*,*::before,*::after{animation:none!important;transition:none!important}}
 '''
 
@@ -288,7 +288,7 @@ def shell(*, pre, title, desc, canonical, og_image, og_type, ld, css, main, wher
 <main class="wrap">
 {main}
 </main>
-<footer class="foot"><div class="wrap"><span class="lat">Root · Your Tech Partner · <a href="{pre}index.html">rootjo.com</a></span><span><a href="https://www.instagram.com/rootcomputers/" target="_blank" rel="noopener">@rootcomputers</a> · info@rootjo.com · +962 7 9916 7971</span></div></footer>
+<footer class="foot"><div class="wrap"><span class="lat">Root · Your Tech Partner · <a href="{pre}index.html">rootjo.com</a> · <a href="{pre}warranty.html">{bi("سياسة الكفالة", "Warranty policy")}</a></span><span><a href="https://www.instagram.com/rootcomputers/" target="_blank" rel="noopener">@rootcomputers</a> · info@rootjo.com · +962 7 9916 7971</span></div></footer>
 {WA_SYMBOL}
 <script>
 (function(){{
@@ -477,8 +477,55 @@ def cat_page(cid, ar, en, dar, den):
 for sec in SECTIONS:
     open(os.path.join(OUT, CSLUG[sec[0]] + ".html"), "w", encoding="utf-8").write(cat_page(*sec))
 
+# ---------- warranty policy + 404 ----------
+TCSS = SUB_CSS + '''
+.doc{max-width:760px;margin:30px auto 0;display:grid;gap:16px}
+.doc h1{margin:4px 0 6px;font-weight:600;font-size:clamp(32px,5vw,48px);line-height:1.15}
+html[lang="en"] .doc h1{font-family:var(--f-lat);font-weight:500;text-transform:uppercase}
+.doc section{padding:22px 24px;border-radius:20px}
+.doc h2{margin:0 0 6px;font-size:20px;font-weight:600}
+.doc p{margin:0;color:var(--muted);line-height:1.9}
+.doc .btn{justify-self:start}
+.nf{min-height:50vh;display:grid;place-items:center;text-align:center;align-content:center;gap:14px;padding-block:60px}
+.nf b{font-family:var(--f-lat);font-weight:300;font-size:clamp(80px,16vw,160px);line-height:1;color:var(--navy);letter-spacing:.06em}
+.nf b span{color:var(--cyan)}
+.nf p{margin:0;color:var(--muted);font-size:17px}
+.nf .row{display:flex;gap:10px;flex-wrap:wrap;justify-content:center}
+'''
+POL = [
+    ("الأجهزة المستعملة: كفالة شهرين", "Used devices: 2-month warranty",
+     "إذا صار بالجهاز مشكلة تقنية مش ناتجة عن سوء استخدام، منغيّر القطعة الخربانة مجاناً أو منغيّر الجهاز.",
+     "If a technical fault appears that isn't caused by misuse, we replace the faulty part free of charge or replace the device."),
+    ("الأجهزة الجديدة", "New devices",
+     "كل جهاز جديد بكفالته، ومدة الكفالة مكتوبة على صفحة الجهاز.",
+     "Every new device carries its own warranty, and the warranty period is written on the device page."),
+    ("الدفع بعد المعاينة", "Pay after you check it",
+     "بتفحص الجهاز وقت الاستلام، وما بتدفع إلا بعد ما تتأكد إنه مثل ما هو موصوف.",
+     "You check the device when it arrives, and you pay only once you're sure it matches the listing."),
+    ("التراخيص", "Licenses",
+     "إذا صارت معك مشكلة بتفعيل الترخيص، راسلنا على واتساب ومنساعدك.",
+     "If you have trouble activating a license, message us on WhatsApp and we'll help."),
+    ("كيف بتطلب الكفالة؟", "How do I claim the warranty?",
+     "راسلنا على واتساب على ‎+962 7 9916 7971‎ مع اسم الجهاز ووصف المشكلة.",
+     "Message us on WhatsApp at +962 7 9916 7971 with the device name and a description of the problem."),
+]
+pol = "".join(f'<section class="glass"><h2>{bi(E(a), E(b))}</h2><p>{bi(E(c), E(d))}</p></section>' for a, b, c, d in POL)
+wmain = f'''  <nav class="crumbs" aria-label="breadcrumb"><a href="index.html">{bi("الرئيسية", "Home")}</a></nav>
+  <div class="doc"><div><span class="k">Warranty</span><h1>{bi("سياسة الكفالة", "Warranty policy")}</h1></div>{pol}
+  <a class="btn pri" target="_blank" rel="noopener" data-product="warranty" href="{wa_link("مرحباً Root، عندي سؤال عن الكفالة: ")}" data-href-en="{wa_link("Hi Root, I have a warranty question: ")}">{WA_USE}{bi("اسألنا على واتساب", "Ask us on WhatsApp")}</a></div>'''
+open(os.path.join(OUT, "warranty.html"), "w", encoding="utf-8").write(shell(pre="", title="سياسة الكفالة | Warranty policy - Root Computers",
+    desc="الأجهزة المستعملة بكفالة شهرين: تغيير القطعة الخربانة مجاناً أو تغيير الجهاز. Used devices carry a 2-month warranty.",
+    canonical=f"{BASE}/warranty", og_image=f"{BASE}/img/og-image.jpg", og_type="website",
+    ld={"@context": "https://schema.org", "@type": "WebPage", "name": "Warranty policy - Root", "url": f"{BASE}/warranty"},
+    css=TCSS, main=wmain, where="warranty"))
+nmain = f'''  <div class="nf"><b>4<span>0</span>4</b><p>{bi("الصفحة اللي بتدور عليها مش موجودة، أو الجهاز انباع وانشال.", "The page you're looking for doesn't exist, or the device was sold and removed.")}</p>
+  <div class="row"><a class="btn pri" href="/#shop">{bi("تصفّح المتجر", "Browse the shop")}</a><a class="btn sec" href="/#request">{bi("اطلب جهاز", "Request a device")}</a></div></div>'''
+open(os.path.join(OUT, "404.html"), "w", encoding="utf-8").write(shell(pre="/", title="404 - Root Computers", desc="Page not found",
+    canonical=f"{BASE}/404", og_image=f"{BASE}/img/og-image.jpg", og_type="website", ld={"@context": "https://schema.org", "@type": "WebPage", "name": "404"},
+    css=TCSS, main=nmain, where="404").replace('<meta name="description"', '<meta name="robots" content="noindex">\n<meta name="description"'))
+
 # ---------- sitemap / robots / pages files ----------
-urls = [(BASE + "/", today)] + [(f"{BASE}/{CSLUG[c[0]]}", today) for c in SECTIONS] + [(f"{BASE}/p/{p['slug']}", p.get("added", today)) for p in visible]
+urls = [(BASE + "/", today), (f"{BASE}/warranty", today)] + [(f"{BASE}/{CSLUG[c[0]]}", today) for c in SECTIONS] + [(f"{BASE}/p/{p['slug']}", p.get("added", today)) for p in visible]
 sm = '<?xml version="1.0" encoding="UTF-8"?>\n<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">\n' + \
      "".join(f"  <url><loc>{u}</loc><lastmod>{d}</lastmod></url>\n" for u, d in urls) + "</urlset>\n"
 open(os.path.join(OUT, "sitemap.xml"), "w").write(sm)

@@ -208,6 +208,25 @@ html[dir="rtl"] .buy .p{border-inline-start:1px solid rgba(255,255,255,.14)}
 .empty{grid-column:1/-1;display:grid;justify-items:center;gap:10px;text-align:center;padding:54px 20px;border:1px dashed var(--line-2);border-radius:var(--r);color:var(--muted);background:rgba(255,255,255,.4)}
 .empty b{font-family:var(--f-lat);font-weight:400;font-size:28px;letter-spacing:.06em;color:var(--ink);direction:ltr}
 .empty a{color:var(--navy);font-weight:600}
+@media (max-width:520px){
+  .grid{grid-template-columns:1fr 1fr!important;gap:10px}
+  .card{border-radius:16px}
+  .card .hud{display:none}
+  .cmeta{padding:10px 10px 0;font-size:10px;letter-spacing:.1em}
+  .cmeta>span:first-child{display:none}
+  .cmeta .tag{margin-inline-start:auto}
+  .cimg img{padding:8px 8px 4px}
+  .cbody{padding:2px 10px 10px;gap:4px}
+  .cname{font-size:13.5px;line-height:1.25}
+  .ccond{font-size:11.5px;line-height:1.5}
+  .buy{margin:auto 8px 8px;min-height:42px;border-radius:11px}
+  .buy .l{padding-inline:9px;font-size:12.5px;gap:5px}
+  .buy .l svg{width:14px;height:14px}
+  .buy .p{padding-inline:9px}
+  .buy .p b{font-size:16px}
+  .buy .p s{font-size:10px}
+  .empty{padding:36px 14px}
+}
 /*@end*/
 
 /* ---------- quick view ---------- */
@@ -245,6 +264,28 @@ dialog.qv::backdrop{background:rgba(232,235,240,.5);backdrop-filter:blur(6px);-w
 .qvlink:hover{text-decoration:underline}
 
 html[dir="rtl"] .qvimg .cmeta{left:70px;right:20px}
+/* ---------- reviews ---------- */
+.rvs{columns:4 260px;column-gap:14px}
+.rv{break-inside:avoid;margin:0 0 14px;display:flex;flex-direction:column;gap:12px;padding:18px 18px 16px;border-radius:var(--r);background:rgba(255,255,255,.62);border:1px solid rgba(255,255,255,.95);box-shadow:0 18px 36px -32px rgba(15,23,48,.45)}
+.rv::before{content:"\201D";font-family:var(--f-lat);font-size:46px;line-height:.6;color:var(--cyan);height:18px}
+.rv blockquote{margin:0;font-size:15.5px;line-height:1.8;color:var(--ink)}
+.rv-ph{width:100%;border-radius:12px;max-height:260px;object-fit:cover;order:3}
+.rv figcaption{order:4;display:flex;justify-content:space-between;align-items:center;gap:8px;flex-wrap:wrap;font-size:12.5px;color:var(--muted);border-top:1px solid var(--line);padding-top:10px}
+.rv-tag{font-family:var(--f-lat);letter-spacing:.06em;color:var(--navy);background:var(--bg-2);border-radius:999px;padding:2px 10px}
+html[lang="ar"] .rv-tag .ten,html[lang="en"] .rv-tag .tar{display:none}
+html[lang="en"] .rv-who{display:none}
+.about-r{display:grid;grid-template-columns:minmax(0,.8fr) minmax(0,1.2fr);gap:24px;align-items:center;padding:26px 28px;margin-bottom:44px;border-radius:24px;background:rgba(255,255,255,.62);border:1px solid rgba(255,255,255,.95)}
+.about-r h2{margin:4px 0 0;font-weight:600;font-size:clamp(26px,3.6vw,38px)}
+html[lang="en"] .about-r h2{font-family:var(--f-lat);font-weight:500;text-transform:uppercase}
+.about-r p{margin:0;font-size:17px;color:var(--ink);line-height:1.9}
+.about-r .k{font-family:var(--f-lat);font-size:12.5px;letter-spacing:.3em;text-transform:uppercase;color:var(--cyan-ink)}
+.soldh{grid-column:1/-1;display:flex;align-items:center;gap:14px;margin:18px 0 2px;font-size:15px;color:var(--muted)}
+.soldh::after{content:"";flex:1;height:1px;background:var(--line-2)}
+.qvtot{display:flex;flex-wrap:wrap;gap:4px 10px;align-items:baseline;font-size:14px;color:var(--muted);padding:10px 14px;border-radius:12px;background:rgba(236,238,242,.7)}
+.qvtot b{font-family:var(--f-lat);font-weight:500;color:var(--ink)}
+footer .fline a{color:var(--muted)}
+@media (max-width:860px){.about-r{grid-template-columns:1fr;gap:10px;padding:22px}}
+
 /* ---------- how to buy ---------- */
 .steps{display:grid;grid-template-columns:repeat(4,1fr);gap:14px;counter-reset:s}
 .step{position:relative;padding:22px 20px 20px;border-radius:var(--r);background:rgba(255,255,255,.55);border:1px solid rgba(255,255,255,.9);display:grid;gap:6px;align-content:start;min-width:0}
@@ -361,7 +402,6 @@ footer .lat{letter-spacing:.14em;text-transform:uppercase;font-size:12px}
   .hero{padding-block:54px 40px}
   .eyebrow{letter-spacing:.18em;font-size:11px}.eyebrow::before,.eyebrow::after{width:16px}
   .tb-row:first-child{flex-wrap:nowrap}.sbox{flex:1 1 auto}.sel select{padding-inline:10px 28px;max-width:130px}
-  .grid{grid-template-columns:1fr}
   .tb{padding:8px;border-radius:18px}
   .tb-row.f .seg{flex:1 1 100%;min-width:0}
   .steps,.contact,.svcs{grid-template-columns:1fr}
@@ -460,6 +500,22 @@ footer .lat{letter-spacing:.14em;text-transform:uppercase;font-size:12px}
     </div>
   </section>
 
+  <section id="reviews">
+    <div class="wrap">
+      <div class="shd"><div><span class="k">Reviews</span><h2 data-i18n="rv_h">شو بيحكوا زباين Root</h2><p data-i18n="rv_p">رسائل حقيقية وصلتنا على انستغرام بعد التسليم، كتبناها زي ما هي.</p></div><a class="btn sec" href="https://www.instagram.com/rootcomputers/" target="_blank" rel="noopener" data-i18n="rv_more">المزيد على انستغرام</a></div>
+      <div class="rvs">
+        <figure class="rv"><blockquote dir="rtl">السلام عليكم يسلموا على اللابتوب زي ما بدي وزيادة شكرا الك على التعامل والخدمة الحلوة ❤️❤️</blockquote><figcaption><span class="rv-who t-ar-only">عميل Root · انستغرام</span><span class="rv-tag"><span class="tar">لابتوب</span><span class="ten">Laptop</span></span></figcaption></figure>
+        <figure class="rv"><blockquote dir="rtl">حبيت اعطيكم فيدباك على الماك بوك الجهاز جدا ممتاز وفعلا نفس الجديد ولا كانه مستعمل وشكرا على الخدمة والثقة كل التوفيق</blockquote><figcaption><span class="rv-who t-ar-only">عميل Root · انستغرام</span><span class="rv-tag"><span class="tar">MacBook</span><span class="ten">MacBook</span></span></figcaption></figure>
+        <figure class="rv"><blockquote dir="rtl">اشتريت من عندكم ٥ لابتوبات استعمال شركة دايما توصياتكم بمحلها وسرعة بالتوصيل و كفالة كلها مصداقية. كمان طلبت من عندكم ٥٠ نسخة اوفس اصلية وكلهم شغالين بشكل ممتاز وأي شي منحتاجه عطول بتدخلوا معنا anydesk لتقدموا الدعم اللازم. أفضل شركة من حيث المصداقية والجودة كل التوفيق</blockquote><figcaption><span class="rv-who t-ar-only">عميل Root · انستغرام</span><span class="rv-tag"><span class="tar">شركة · 5 لابتوبات + 50 أوفيس</span><span class="ten">Business · 5 laptops + 50 Office</span></span></figcaption></figure>
+        <figure class="rv has-ph"><img class="rv-ph" loading="lazy" src="img/reviews/r-lab.webp" alt=""><blockquote dir="rtl">يعطيك العافية معتصم، وصلني اللاب و بصراحة كتير فخم و مرتب متل ما طلبت تماماً 👌🏻 يسلمو كتير مهندس ع المصداقية و التعامل 🌹 و ان شاءالله قريباً منرجع نطلب مرة تانية. First option in Tech 🙏</blockquote><figcaption><span class="rv-who t-ar-only">عميل Root · انستغرام</span><span class="rv-tag"><span class="tar">لابتوب</span><span class="ten">Laptop</span></span></figcaption></figure>
+        <figure class="rv has-ph"><img class="rv-ph" loading="lazy" src="img/reviews/r-used.webp" alt=""><blockquote dir="rtl">وصلني اللابتوب ومش مصدقه انه مستعمل صراحة 😂 نفس المواصفات يلي كنت بدي اياهم بنص السعر وكأنه جديد ما في ولا ربع غلطة. جد شكرًا كثير 🥹</blockquote><figcaption><span class="rv-who t-ar-only">عميل Root · انستغرام</span><span class="rv-tag"><span class="tar">لابتوب مستعمل</span><span class="ten">Used laptop</span></span></figcaption></figure>
+        <figure class="rv has-ph"><img class="rv-ph" loading="lazy" src="img/reviews/r-asus.webp" alt=""><blockquote dir="rtl">شكرا جزيلا على اللابتوب الفخم و التعامل الراقي يعطيكم الف عافية</blockquote><figcaption><span class="rv-who t-ar-only">عميل Root · انستغرام</span><span class="rv-tag"><span class="tar">ASUS TUF Gaming</span><span class="ten">ASUS TUF Gaming</span></span></figcaption></figure>
+        <figure class="rv"><blockquote dir="rtl">مرتبين والله صديقي شكراا الكم مصداقية وسرعة بالتوصيل واحترام وكل اشي ❤️❤️ ان شاء الله انه راح اضل اتعامل معاكم ❤️</blockquote><figcaption><span class="rv-who t-ar-only">عميل Root · انستغرام</span><span class="rv-tag"><span class="tar">سماعة</span><span class="ten">Headphones</span></span></figcaption></figure>
+        <figure class="rv"><blockquote dir="rtl">الخدمة ممتازة كلكم زوق</blockquote><figcaption><span class="rv-who t-ar-only">عميل Root · انستغرام</span><span class="rv-tag"><span class="tar">سماعة</span><span class="ten">Headphones</span></span></figcaption></figure>
+      </div>
+    </div>
+  </section>
+
   <section id="how">
     <div class="wrap">
       <div class="shd"><div><span class="k">How to buy</span><h2 data-i18n="h_h">أربع خطوات، وبتدفع بالآخر</h2></div></div>
@@ -524,6 +580,10 @@ footer .lat{letter-spacing:.14em;text-transform:uppercase;font-size:12px}
 
   <section id="why">
     <div class="wrap">
+      <div class="about-r">
+        <div><span class="k">About Root</span><h2 data-i18n="ab_h">مين Root؟</h2></div>
+        <p data-i18n="ab_p">Root متجر إلكتروني هدفه توفير أفضل الخدمات والأجهزة بأفضل قيمة مقابل السعر، مع تعامل مرن ومصداقية عالية جداً، تحت إدارة المهندس المعتصم بالله رمّان.</p>
+      </div>
       <div class="shd"><div><span class="k">Why Root</span><h2 data-i18n="w_h">متجر مبني على الوضوح</h2></div></div>
       <div class="why">
         <article><code>$ pay --on-delivery</code><h3 data-i18n="w1h">الدفع عند الاستلام</h3><p data-i18n="w1p">ما بتدفع إلا بعد ما تستلم الجهاز وتفحصه.</p></article>
@@ -541,7 +601,7 @@ footer .lat{letter-spacing:.14em;text-transform:uppercase;font-size:12px}
       <div class="faq">
         <details class="qa"><summary data-i18n="q1">كيف بطلب جهاز؟</summary><p data-i18n="a1">اختار الجهاز واضغط «اطلبه»، أو عبّي نموذج «اطلب جهازك». منأكدلك التوفر والسعر ومنرتب معك التوصيل.</p></details>
         <details class="qa"><summary data-i18n="q2">كيف التوصيل والدفع؟</summary><p data-i18n="a2">منوصّل لكل مناطق المملكة: 3 دنانير داخل عمّان و5 دنانير خارجها. والدفع عند الاستلام بعد ما تفحص الجهاز.</p></details>
-        <details class="qa"><summary data-i18n="q3">شو الكفالة؟</summary><p data-i18n="a3">مدة الكفالة مكتوبة على كل جهاز. الجديد بكفالته، والمستعمل مفحوص وكفالته محددة على صفحته.</p></details>
+        <details class="qa"><summary data-i18n="q3">شو الكفالة؟</summary><p data-i18n="a3">الأجهزة المستعملة عليها كفالة شهرين: إذا صار بالجهاز مشكلة تقنية مش ناتجة عن سوء استخدام، منغيّر القطعة الخربانة مجاناً أو منغيّر الجهاز. الأجهزة الجديدة بكفالتها المكتوبة على صفحة كل جهاز. <a href="warranty.html">سياسة الكفالة كاملة</a></p></details>
         <details class="qa"><summary data-i18n="q4">كيف بيوصلني الترخيص؟</summary><p data-i18n="a4">التراخيص رقمية: منبعتلك مفتاح التفعيل بعد الدفع مباشرة، وإذا صارت معك مشكلة بالتفعيل راسلنا على واتساب.</p></details>
       </div>
     </div>
@@ -565,7 +625,7 @@ footer .lat{letter-spacing:.14em;text-transform:uppercase;font-size:12px}
     <div class="wrap bhead"><span class="k lat">Brands</span><h2 data-i18n="b_h">ماركات عالمية بنوفرها</h2></div>
     <div class="bstrip"><div class="btrack" id="btrack"></div></div>
   </div>
-  <div class="wrap fline"><span class="lat">Root · Your Tech Partner · rootjo.com</span><span data-i18n="foot">الأسعار والتوفر قابلة للتغيير، ويؤكدها فريقنا عند الطلب.</span></div>
+  <div class="wrap fline"><span class="lat">Root · Your Tech Partner · rootjo.com · <a href="warranty.html" data-i18n="pol">سياسة الكفالة</a></span><span data-i18n="foot">الأسعار والتوفر قابلة للتغيير، ويؤكدها فريقنا عند الطلب.</span></div>
 </footer>
 
 <nav class="dock" aria-label="Quick">
@@ -735,7 +795,8 @@ footer .lat{letter-spacing:.14em;text-transform:uppercase;font-size:12px}
     segBtns(document.getElementById("prices"), PRICES, "price");
     var L = list(false);
     var avail = L.filter(function (p) { return p.status !== "sold"; }).length;
-    grid.innerHTML = L.length ? L.map(card).join("") :
+    var Lav = L.filter(function (p) { return p.status !== "sold"; }), Lso = L.filter(function (p) { return p.status === "sold"; });
+    grid.innerHTML = L.length ? Lav.map(card).join("") + (Lso.length ? '<div class="soldh">' + T("انباعت مؤخراً", "Sold recently") + "</div>" + Lso.map(function (p, i) { return card(p, Lav.length + i); }).join("") : "") :
       '<div class="empty"><b>0 results</b><span>' + T("ما في جهاز بهالمواصفات حالياً.", "Nothing matches right now.") + '</span><a href="#request">' + T("اطلبه ومنوفره لك ←", "Request it and we'll source it →") + "</a></div>";
     document.getElementById("count").innerHTML = T('<b>' + avail + "</b> متوفر من أصل " + L.length, "<b>" + avail + "</b> available of " + L.length);
     var dirty = S.q || S.cat !== "all" || S.cond !== "all" || S.price !== "all";
@@ -787,6 +848,7 @@ footer .lat{letter-spacing:.14em;text-transform:uppercase;font-size:12px}
     qvin.innerHTML = '<div class="qvimg"><div class="cmeta"><span>' + (CAT_LAT[p.category] || "") + " · " + esc(p.brand || "") + '</span><span class="tag' + (isNew(p) ? " new" : "") + '">' + (sold ? "Sold out" : isNew(p) ? "New in" : "In stock") + '</span></div><img src="' + esc(p.image) + '" alt="' + esc(p.name) + '"></div>' +
       '<div class="qvinfo"><div class="ccond ' + esc(p.condition) + '">' + esc(en() ? c[1] : c[0]) + (note ? " · " + esc(note) : "") + "</div><h3>" + esc(p.name) + "</h3>" +
       '<div class="qvprice">' + "<b>" + p.price + "<small>JD</small></b>" + (p.old_price ? "<s>" + p.old_price + " JD</s>" : "") + "</div>" +
+      (!sold && p.category !== "license" ? '<div class="qvtot">' + T("مع التوصيل داخل عمّان (3 دنانير):", "With delivery in Amman (3 JD):") + ' <b><bdi dir="ltr">' + (p.price + 3) + " JD</bdi></b> · " + T("باقي المحافظات (5 دنانير):", "Other governorates (5 JD):") + ' <b><bdi dir="ltr">' + (p.price + 5) + " JD</bdi></b></div>" : "") +
       '<p class="qvabout">' + esc(en() ? p.about_en : p.about_ar) + "</p>" +
       '<div class="qvacts"><a class="btn pri" target="_blank" rel="noopener" data-product="' + esc(p.slug) + '" href="' + wa(msg) + '"><svg viewBox="0 0 24 24"><use href="#wa-i"/></svg>' + (sold ? T("اطلب مشابه على واتساب", "Ask for a similar one") : T("اطلبه على واتساب", "Order on WhatsApp")) + "</a>" +
       '<a class="btn sec" target="_blank" rel="noopener" href="' + wa(ask) + '">' + T("اسأل عنه", "Ask") + "</a></div>" +
@@ -847,8 +909,9 @@ footer .lat{letter-spacing:.14em;text-transform:uppercase;font-size:12px}
     r_h: "Can't find it? We'll source it", r_p: "Pick what you need and you'll get a tidy WhatsApp message. We reply with options and prices.", r_t: "Type", r_t1: "Laptop", r_t2: "Desktop", r_t3: "Monitor", r_c: "Condition", r_c1: "New", r_c2: "Used", r_c3: "Either",
     r_u: "Use", r_u1: "Study", r_u2: "Office work", r_u3: "Programming", r_u4: "Design & editing", r_u5: "Gaming", r_b: "Budget", r_n: "More details (optional)", r_nm: "Name (optional)", r_ci: "City (optional)", r_btn: "Send on WhatsApp", r_hint: "WhatsApp opens with the message ready.",
     w_h: "A store built on clarity", w1h: "Pay on delivery", w1p: "You pay only after you receive and check the device.", w2h: "A clear warranty", w2p: "The warranty is written on every device, new or used.", w3h: "Ready to use", w3p: "Genuine Windows and Office from day one, or macOS on Apple devices.", w4h: "Genuine licenses", w4p: "Windows, Office and Microsoft 365 keys sent right after payment.", w5h: "Any device, sourced", w5p: "We work with several suppliers, so if it isn't listed we'll get it.",
-    q_h: "FAQ", q1: "How do I order?", a1: "Pick a device and tap “Order”, or fill in “Request a device”. We confirm stock and price and arrange delivery.", q2: "How do delivery and payment work?", a2: "We deliver across Jordan: 3 JD inside Amman, 5 JD outside. You pay on delivery after checking the device.", q3: "What warranty do I get?", a3: "Every device lists its warranty. New ones carry their warranty; used ones are inspected and carry the warranty shown on their page.", q4: "How do I receive a license?", a4: "Licenses are digital: we send the activation key right after payment. If activation gives you trouble, message us on WhatsApp.",
+    q_h: "FAQ", q1: "How do I order?", a1: "Pick a device and tap “Order”, or fill in “Request a device”. We confirm stock and price and arrange delivery.", q2: "How do delivery and payment work?", a2: "We deliver across Jordan: 3 JD inside Amman, 5 JD outside. You pay on delivery after checking the device.", q3: "What warranty do I get?", a3: "Used devices carry a 2-month warranty: if a technical fault appears that isn't caused by misuse, we replace the faulty part free of charge or replace the device. New devices carry the warranty listed on each device page. <a href=\"warranty.html\">Full warranty policy</a>", q4: "How do I receive a license?", a4: "Licenses are digital: we send the activation key right after payment. If activation gives you trouble, message us on WhatsApp.",
     n_rep: "Repair", rp_h: "Repair & setup", rp_p: "Diagnosis, repair, upgrades and setup for your device, with the cost quoted before any work.", rp_all: "Repair page", rp_btn: "Book on WhatsApp", rp1h: "Diagnosis", rp1p: "We check the device, find the fault and give you the cost before any repair.", rp2h: "Windows & Office setup", rp2p: "A clean install with genuine activation and all drivers.", rp3h: "RAM & SSD upgrades", rp3p: "Speed up your device with more RAM or an SSD.", rp4h: "Cleaning & tune-up", rp4p: "Internal cleaning and a tune-up for speed and temperature.",
+    rv_h: "What Root customers say", rv_p: "Real messages we received on Instagram after delivery, written exactly as they were sent.", rv_more: "More on Instagram", ab_h: "Who is Root?", ab_p: "Root is an online store that aims to offer the best services and devices at the best value for money, with flexible dealings and very high credibility, run by Eng. Almotasem Billah Romman.", pol: "Warranty policy", sold_h: "Sold recently", tot: "Total",
     b_h: "Global brands we carry", c_h: "Contact us", c1: "Start a chat", c2: "Call", c3: "Follow", c4: "Email us", foot: "Prices and availability may change; our team confirms them when you order."
   };
   var ROLL = { ar: ["توصيل لكل المملكة", "الدفع بعد المعاينة", "ويندوز وأوفيس أصليين", "كفالة مكتوبة على كل جهاز", "نوفر أي جهاز بالطلب"], en: ["Delivery across Jordan", "Pay after you check it", "Genuine Windows & Office", "Warranty on every device", "Any device, sourced"] };
@@ -915,11 +978,13 @@ footer .lat{letter-spacing:.14em;text-transform:uppercase;font-size:12px}
 
   /* ---------- background: slow glyph field + two soft blobs ---------- */
   var cv = document.getElementById("field"), ctx = cv.getContext("2d"), W, H, dpr, G = [], mx = -1e4, my = -1e4, t0 = performance.now();
+  /* weak phones only (low memory, few cores or data saver): fewer glyphs, half frame rate, 1x canvas */
+  var weak = (navigator.deviceMemory && navigator.deviceMemory < 4) || (navigator.hardwareConcurrency && navigator.hardwareConcurrency <= 4) || (navigator.connection && navigator.connection.saveData) || false, fr = 0;
   var CH = ">_{}[]/\\;:#$=+<>01RT".split("");
   function size() {
-    dpr = Math.min(window.devicePixelRatio || 1, 2); W = window.innerWidth; H = window.innerHeight;
+    dpr = weak ? 1 : Math.min(window.devicePixelRatio || 1, 2); W = window.innerWidth; H = window.innerHeight;
     cv.width = W * dpr; cv.height = H * dpr; ctx.setTransform(dpr, 0, 0, dpr, 0, 0);
-    var n = Math.min(110, Math.floor(W * H / 13000)); G = [];
+    var n = Math.min(110, Math.floor(W * H / 13000)); if (weak) n = Math.round(n / 3); G = [];
     for (var k = 0; k < n; k++) G.push({ x: Math.random() * W, y: Math.random() * H, s: 13 + Math.random() * 16, a: .05 + Math.random() * .09, v: .06 + Math.random() * .16, c: CH[(Math.random() * CH.length) | 0], ph: Math.random() * 6.28 });
   }
   function blob(x, y, r, rgb, a) { var g = ctx.createRadialGradient(x, y, 0, x, y, r); g.addColorStop(0, "rgba(" + rgb + "," + a + ")"); g.addColorStop(1, "rgba(" + rgb + ",0)"); ctx.fillStyle = g; ctx.fillRect(x - r, y - r, r * 2, r * 2); }
@@ -938,7 +1003,7 @@ footer .lat{letter-spacing:.14em;text-transform:uppercase;font-size:12px}
       ctx.fillText(g.c, g.x, g.y);
     }
   }
-  function loop(now) { if (!document.hidden) frame(now); requestAnimationFrame(loop); }
+  function loop(now) { if (!document.hidden && (!weak || (fr++ & 1))) frame(now); requestAnimationFrame(loop); }
   size(); frame(performance.now());
   var rt; window.addEventListener("resize", function () { clearTimeout(rt); rt = setTimeout(function () { size(); frame(performance.now()); }, 150); });
   window.addEventListener("pointermove", function (e) { mx = e.clientX; my = e.clientY; }, { passive: true });
