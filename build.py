@@ -218,7 +218,7 @@ body{padding-bottom:30px}
 .btn{display:inline-flex;align-items:center;justify-content:center;gap:9px;min-height:52px;padding-inline:22px;border-radius:14px;text-decoration:none;font-weight:500;font-size:16px;border:1px solid transparent;cursor:pointer;transition:background .2s,border-color .2s,transform .2s}
 .btn:hover{transform:translateY(-1px)}
 .btn svg{width:19px;height:19px;flex:none;fill:currentColor}
-.btn.pri{background:var(--navy);color:#fff}
+.btn.pri{background:var(--navy);color:var(--on-navy)}
 .btn.pri:hover{background:var(--navy-hi)}
 .btn.sec{border-color:var(--line-2);color:var(--ink);background:var(--w5)}
 .btn.sec:hover{border-color:var(--head)}
@@ -287,7 +287,7 @@ def shell(*, pre, title, desc, canonical, og_image, og_type, ld, css, main, wher
 <body>
 <canvas id="field" aria-hidden="true"></canvas>
 <header class="top"><div class="wrap bar">
-  <a class="logo" href="{pre}index.html" aria-label="Root"><img src="{pre}img/logo.png" alt=""><span class="lname">Root</span></a>
+  <a class="logo" href="{pre}index.html" aria-label="Root"><img class="lg-l" src="{pre}img/logo.png" alt=""><img class="lg-d" src="{pre}img/logo-light-on-dark.png" alt=""><span class="lname">Root</span></a>
   <div class="tools">
     <button type="button" class="ibtn" id="langBtn"><span class="t-ar">EN</span><span class="t-en lang-ar">عربي</span></button>
     <button type="button" class="ibtn theme" id="themeBtn" aria-label="الوضع الداكن"><svg class="t-moon" viewBox="0 0 24 24"><path d="M20 14.5A8.5 8.5 0 0 1 9.5 4a8.5 8.5 0 1 0 10.5 10.5Z"/></svg><svg class="t-sun" viewBox="0 0 24 24"><circle cx="12" cy="12" r="4"/><path d="M12 2.5v2.2M12 19.3v2.2M2.5 12h2.2M19.3 12h2.2M5.3 5.3l1.6 1.6M17.1 17.1l1.6 1.6M18.7 5.3l-1.6 1.6M6.9 17.1l-1.6 1.6"/></svg></button>
