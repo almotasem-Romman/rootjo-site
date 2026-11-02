@@ -40,3 +40,4 @@
 g3d https://images.gts.jo/cache/catalog/2026/Apple/Apple-MacBook-Neo/81FI93bHOLL._AC_SL1500_-1200x1200.jpg biggest
 g3e https://images.gts.jo/cache/catalog/2026/Apple/Apple-MacBook-Neo/81Oirk2mtdL._AC_SL1500_-1200x1200.jpg biggest
 g3f https://images.gts.jo/cache/catalog/2026/Apple/Apple-MacBook-Neo/61mmxF-7ohL._AC_SL1500_-1200x1200.jpg biggest
+hp-zbook-15u-g5 https://images.icecat.biz/img/gallery/62fa5ce896ad9b3f4dc6a6c1be4f222196647f0a.jpg biggest
