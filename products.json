@@ -701,7 +701,7 @@
   },
   {
     "slug": "lenovo-v15-gen5",
-    "status": "available",
+    "status": "sold",
     "category": "laptop",
     "condition": "like-new",
     "condition_note_ar": "بالكرتونة · كفالة رسمية",
@@ -754,7 +754,7 @@
   },
   {
     "slug": "lenovo-thinkpad-p1-workstation",
-    "status": "available",
+    "status": "sold",
     "category": "laptop",
     "condition": "like-new",
     "condition_note_ar": "كفالة شهرين",
