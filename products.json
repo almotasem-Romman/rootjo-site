@@ -1,5 +1,61 @@
 [
   {
+    "slug": "hp-zbook-15u-g5",
+    "status": "available",
+    "category": "laptop",
+    "condition": "used",
+    "condition_note_ar": "كفالة شهرين",
+    "condition_note_en": "2-month warranty",
+    "name": "HP ZBook 15u G5",
+    "brand": "HP",
+    "price": 250,
+    "old_price": 280,
+    "badge_ar": "",
+    "badge_en": "",
+    "image": "img/products/hp-zbook-15u-g5.webp",
+    "card_specs": [
+      "Core i7 Gen 8",
+      "8GB DDR4",
+      "256GB SSD",
+      "15.6\" FHD"
+    ],
+    "specs": [
+      [
+        "cpu",
+        "Intel Core i7 (8th Gen)"
+      ],
+      [
+        "ram",
+        "8GB DDR4"
+      ],
+      [
+        "storage",
+        "256GB M.2 SSD"
+      ],
+      [
+        "display",
+        "15.6\" FHD (1920×1080)"
+      ],
+      [
+        "gpu",
+        "Intel HD Graphics 630"
+      ],
+      [
+        "warranty",
+        "2-month warranty"
+      ]
+    ],
+    "perks": [
+      "win11",
+      "office",
+      "gift",
+      "delivery"
+    ],
+    "about_ar": "لابتوب ZBook 15u G5 من HP بشاشة 15.6 إنش FHD ومعالج Core i7 الجيل الثامن ورام 8GB وتخزين SSD سعة 256GB. مستعمل بكفالة شهرين.",
+    "about_en": "An HP ZBook 15u G5 with a 15.6-inch FHD display, an 8th Gen Core i7, 8GB of RAM and a 256GB SSD. Used, with a 2-month warranty.",
+    "added": "2026-11-02"
+  },
+  {
     "slug": "hp-omnibook-3-16-bu0038ne",
     "status": "available",
     "category": "laptop",
