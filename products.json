@@ -1,5 +1,81 @@
 [
   {
+    "slug": "asus-tuf-gaming-a16",
+    "status": "available",
+    "category": "laptop",
+    "condition": "new",
+    "condition_note_ar": "كفالة سنة",
+    "condition_note_en": "1-year warranty",
+    "name": "ASUS TUF Gaming A16",
+    "brand": "ASUS",
+    "price": 999,
+    "old_price": 1029,
+    "badge_ar": "",
+    "badge_en": "",
+    "image": "img/products/asus-tuf-gaming-a16.webp",
+    "card_specs": [
+      "Ryzen 7 170",
+      "RTX 4050 6GB",
+      "16GB DDR5",
+      "16\" 144Hz"
+    ],
+    "specs": [
+      [
+        "cpu",
+        "AMD Ryzen 7 170 (8C/16T, up to 4.75GHz, 20MB cache)"
+      ],
+      [
+        "ram",
+        "16GB DDR5-4800 (2× SO-DIMM, up to 64GB)"
+      ],
+      [
+        "storage",
+        "512GB PCIe 4.0 NVMe SSD (dual M.2 slots)"
+      ],
+      [
+        "display",
+        "16\" FHD+ (1920×1200) IPS-level, 144Hz, G-Sync"
+      ],
+      [
+        "gpu",
+        "NVIDIA GeForce RTX 4050 6GB GDDR6"
+      ],
+      [
+        "keyboard",
+        "Backlit RGB keyboard with Copilot key"
+      ],
+      [
+        "wifi",
+        "Wi-Fi 6 + Bluetooth 5.3"
+      ],
+      [
+        "battery",
+        "56Wh"
+      ],
+      [
+        "weight",
+        "2.2 kg"
+      ],
+      [
+        "color",
+        "Mecha Gray"
+      ],
+      [
+        "warranty",
+        "1 year"
+      ]
+    ],
+    "perks": [
+      "win11",
+      "office",
+      "gift",
+      "delivery"
+    ],
+    "about_ar": "لابتوب ألعاب ASUS TUF Gaming A16 بمعالج AMD Ryzen 7 170 وكرت NVIDIA RTX 4050 بذاكرة 6GB، ورام 16GB DDR5، وشاشة 16 إنش FHD+ بتردد 144Hz. جديد بالكرتونة وكفالة سنة.",
+    "about_en": "An ASUS TUF Gaming A16 with an AMD Ryzen 7 170, an NVIDIA RTX 4050 6GB, 16GB DDR5 and a 16-inch FHD+ 144Hz display. New in box with a 1-year warranty.",
+    "added": "2026-11-08"
+  },
+  {
     "slug": "hp-zbook-15u-g5",
     "status": "available",
     "category": "laptop",
@@ -1192,8 +1268,8 @@
     "condition_note_ar": "كفالة سنة",
     "condition_note_en": "1-year warranty",
     "name": "ASUS TUF Gaming A15",
-    "price": 799,
-    "old_price": 829,
+    "price": 820,
+    "old_price": 850,
     "badge_ar": "",
     "badge_en": "",
     "image": "img/products/asus-tuf-gaming-a15.webp",
