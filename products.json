@@ -1,5 +1,85 @@
 [
   {
+    "slug": "lenovo-loq-15irx10",
+    "status": "available",
+    "category": "laptop",
+    "condition": "new",
+    "condition_note_ar": "كفالة سنتين",
+    "condition_note_en": "2-year warranty",
+    "name": "Lenovo LOQ 15IRX10",
+    "brand": "Lenovo",
+    "price": 1265,
+    "old_price": 1295,
+    "badge_ar": "",
+    "badge_en": "",
+    "image": "img/products/lenovo-loq-15irx10.webp",
+    "card_specs": [
+      "Core i7-13645HX",
+      "RTX 5060 8GB",
+      "16GB DDR5",
+      "15.6\" 144Hz"
+    ],
+    "specs": [
+      [
+        "cpu",
+        "Intel Core i7-13645HX (14 cores / 20 threads, up to 4.9GHz, 24MB cache)"
+      ],
+      [
+        "ram",
+        "16GB DDR5"
+      ],
+      [
+        "storage",
+        "512GB M.2 PCIe 4.0 NVMe SSD"
+      ],
+      [
+        "display",
+        "15.6\" FHD (1920×1080) IPS, 144Hz, G-SYNC, 300 nits, 100% sRGB"
+      ],
+      [
+        "gpu",
+        "NVIDIA GeForce RTX 5060 8GB GDDR7 (100W TGP)"
+      ],
+      [
+        "keyboard",
+        "White backlit keyboard (Arabic/English)"
+      ],
+      [
+        "wifi",
+        "Wi-Fi 6 + Bluetooth 5.2"
+      ],
+      [
+        "ports",
+        "3× USB-A, USB-C (PD + DisplayPort), HDMI 2.1, RJ-45"
+      ],
+      [
+        "camera",
+        "5MP with privacy shutter"
+      ],
+      [
+        "battery",
+        "60Wh"
+      ],
+      [
+        "color",
+        "Luna Grey"
+      ],
+      [
+        "warranty",
+        "2 years"
+      ]
+    ],
+    "perks": [
+      "win11",
+      "office",
+      "gift",
+      "delivery"
+    ],
+    "about_ar": "لابتوب ألعاب Lenovo LOQ 15IRX10 بمعالج Intel Core i7-13645HX وكرت NVIDIA RTX 5060 بذاكرة 8GB GDDR7، ورام 16GB DDR5، وشاشة 15.6 إنش FHD بتردد 144Hz مع G-SYNC. جديد بالكرتونة وكفالة سنتين.",
+    "about_en": "A Lenovo LOQ 15IRX10 with an Intel Core i7-13645HX, an NVIDIA RTX 5060 8GB GDDR7, 16GB DDR5 and a 15.6-inch FHD 144Hz G-SYNC display. New in box with a 2-year warranty.",
+    "added": "2026-11-08"
+  },
+  {
     "slug": "asus-tuf-gaming-a16",
     "status": "available",
     "category": "laptop",
