@@ -176,9 +176,17 @@ FAQ_LD = json.dumps({"@context": "https://schema.org", "@type": "FAQPage", "inLa
 GA_SNIPPET = (f'<script async src="https://www.googletagmanager.com/gtag/js?id={cfg["ga_id"]}"></script>\n'
     f'<script>window.__gaHead=1;window.dataLayer=window.dataLayer||[];function gtag(){{dataLayer.push(arguments);}}gtag("js",new Date());gtag("config","{cfg["ga_id"]}");</script>\n') if cfg["ga_id"] else ""
 THEME = "#eef0f3"
-STORE_LD = json.dumps({"@context": "https://schema.org", "@type": "Store", "name": "Root Computers", "url": BASE + "/", "logo": BASE + "/img/logo.png",
-                       "image": BASE + "/img/og-image.jpg", "telephone": "+" + WA, "email": "info@rootjo.com", "address": {"@type": "PostalAddress", "addressCountry": "JO"},
-                       "sameAs": ["https://www.instagram.com/rootcomputers/"]}, ensure_ascii=False)
+STORE_LD = json.dumps({"@context": "https://schema.org", "@type": ["Store", "ComputerStore"], "@id": BASE + "/#store",
+    "name": "Root Computers", "alternateName": ["Root", "روت", "روت للكمبيوتر", "Root - Your Tech Partner"], "url": BASE + "/",
+    "logo": BASE + "/img/logo.png", "image": BASE + "/img/og-image.jpg",
+    "description": "Online store in Jordan selling new and used laptops, desktops, monitors and genuine software licenses, with warranty, delivery across Jordan and payment after the customer receives and checks the device. متجر إلكتروني أردني للابتوبات والكمبيوترات الجديدة والمستعملة بكفالة.",
+    "telephone": "+" + WA, "email": "info@rootjo.com",
+    "contactPoint": [{"@type": "ContactPoint", "telephone": "+962799167971", "contactType": "sales", "availableLanguage": ["ar", "en"]},
+                     {"@type": "ContactPoint", "telephone": "+962791851390", "contactType": "customer service", "availableLanguage": ["ar", "en"]}],
+    "address": {"@type": "PostalAddress", "addressCountry": "JO"},
+    "areaServed": {"@type": "Country", "name": "Jordan"}, "currenciesAccepted": "JOD", "paymentAccepted": "Cash on delivery",
+    "knowsAbout": ["used laptops", "new laptops", "gaming laptops", "business laptops", "Windows licenses", "Microsoft Office licenses", "laptop repair"],
+    "sameAs": ["https://www.instagram.com/rootcomputers/"]}, ensure_ascii=False)
 LIST_LD = json.dumps({"@context": "https://schema.org", "@type": "ItemList", "itemListElement": [
     {"@type": "ListItem", "position": k + 1, "url": f"{BASE}/p/{p['slug']}", "name": p["name"]} for k, p in enumerate([q for q in visible if q.get("status") != "sold"])]}, ensure_ascii=False)
 head = f'''<!doctype html>
@@ -186,10 +194,10 @@ head = f'''<!doctype html>
 <head>
 <meta charset="utf-8">
 {GA_SNIPPET}<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
-<meta name="description" content="Root - Your Tech Partner. متجر إلكتروني لأجهزة الحواسيب الجديدة والمستعملة، تراخيص البرامج، والصيانة في الأردن. New and used laptops, desktops, monitors, software licenses and repair in Jordan.">
+<meta name="description" content="Root متجر إلكتروني أردني للابتوبات الجديدة والمستعملة بكفالة: مستعمل بكفالة شهرين، توصيل لكل المملكة والدفع بعد الاستلام والمعاينة، مع ويندوز وأوفيس أصلي. Root is an online store in Jordan for new and used laptops, desktops and monitors with warranty and delivery.">
 <meta name="theme-color" content="{THEME}">
 <link rel="canonical" href="{BASE}/">
-<meta property="og:title" content="Root Computers">
+<meta property="og:title" content="Root | لابتوبات جديدة ومستعملة بكفالة في الأردن">
 <meta property="og:description" content="لابتوبات وكمبيوترات وشاشات جديدة ومستعملة، تراخيص برامج، وصيانة. New and used laptops, licenses and repair in Jordan.">
 <meta property="og:type" content="website">
 <meta property="og:url" content="{BASE}/">
@@ -374,14 +382,32 @@ def product_page(p, others):
     crumb = (f'<nav class="crumbs" aria-label="breadcrumb"><a href="../index.html">{bi("الرئيسية", "Home")}</a>'
              + (f'<a href="../{CSLUG[p["category"]]}.html">{bi(E(sec[1]), E(sec[2]))}</a>' if sec else "") + "</nav>")
     img_abs = f"{BASE}/img/og/{p['slug']}.jpg"
-    title = f"{name} - {p['price']} JD | Root"
+    _ct = {"new": "جديد", "open-box": "جديد", "used": "مستعمل", "like-new": "مستعمل"}.get(p.get("condition"), "")
+    title = f"{name}{' ' + _ct if _ct else ''} - {p['price']} JD | Root"
     desc = ((p.get("about_ar") or "") + " " + (p.get("about_en") or "")).strip() or name
     ld = {"@context": "https://schema.org", "@type": "Product", "name": name, "image": [img_abs],
           "description": p.get("about_en") or name, "brand": {"@type": "Brand", "name": p.get("brand") or name.split()[0]},
           "offers": {"@type": "Offer", "url": f"{BASE}/p/{p['slug']}", "priceCurrency": "JOD", "price": str(p["price"]),
                      "availability": "https://schema.org/SoldOut" if sold else "https://schema.org/InStock",
                      "itemCondition": "https://schema.org/UsedCondition" if p.get("condition") in ("used", "like-new") else "https://schema.org/NewCondition",
-                     "seller": {"@type": "Organization", "name": "Root Computers"}}}
+                     "seller": {"@id": BASE + "/#store", "@type": "Organization", "name": "Root Computers"},
+                     "areaServed": {"@type": "Country", "name": "Jordan"},
+                     "shippingDetails": [
+                         {"@type": "OfferShippingDetails", "shippingRate": {"@type": "MonetaryAmount", "value": "3", "currency": "JOD"},
+                          "shippingDestination": {"@type": "DefinedRegion", "addressCountry": "JO", "addressRegion": "Amman"}},
+                         {"@type": "OfferShippingDetails", "shippingRate": {"@type": "MonetaryAmount", "value": "5", "currency": "JOD"},
+                          "shippingDestination": {"@type": "DefinedRegion", "addressCountry": "JO"}}]}}
+    if p.get("category") == "license":
+        ld["offers"].pop("shippingDetails")
+    ld["sku"] = p["slug"]; ld["url"] = f"{BASE}/p/{p['slug']}"
+    ld["category"] = CAT_LAT.get(p["category"], "")
+    ld["itemCondition"] = ld["offers"]["itemCondition"]
+    if p.get("about_ar"):
+        ld["description"] = (p.get("about_en") or "") + " " + p["about_ar"]
+    ld["additionalProperty"] = [{"@type": "PropertyValue", "name": LBL.get(k, (k, k))[1], "value": v} for k, v in p.get("specs", [])]
+    _w = next((v for k, v in p.get("specs", []) if k == "warranty"), None) or p.get("condition_note_en")
+    if _w:
+        ld["offers"]["warranty"] = {"@type": "WarrantyPromise", "description": _w}
     main = f'''  {crumb}
   <div class="prod{' sold' if sold else ''}">
     <div class="gal glass"><div class="cmeta"><span>{CAT_LAT.get(p["category"], "")} · {E(p.get("brand") or "")}</span>{tag}</div><img src="../{E(p['image'])}" alt="{E(name)}"></div>
@@ -559,7 +585,33 @@ urls = [(BASE + "/", today), (f"{BASE}/warranty", today), (f"{BASE}/feedback", t
 sm = '<?xml version="1.0" encoding="UTF-8"?>\n<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">\n' + \
      "".join(f"  <url><loc>{u}</loc><lastmod>{d}</lastmod></url>\n" for u, d in urls) + "</urlset>\n"
 open(os.path.join(OUT, "sitemap.xml"), "w").write(sm)
-open(os.path.join(OUT, "robots.txt"), "w").write(f"User-agent: *\nAllow: /\n\nSitemap: {BASE}/sitemap.xml\n")
+AI_BOTS = ["OAI-SearchBot", "ChatGPT-User", "GPTBot", "Claude-SearchBot", "Claude-User", "ClaudeBot", "PerplexityBot", "Perplexity-User",
+           "Google-Extended", "Googlebot", "Bingbot", "Applebot", "Applebot-Extended", "meta-externalagent"]
+open(os.path.join(OUT, "robots.txt"), "w").write("# Root Computers welcomes search engines and AI assistants.\n# Summary for AI: " + BASE + "/llms.txt\n\n"
+    + "".join(f"User-agent: {a}\n" for a in AI_BOTS) + "Allow: /\n\nUser-agent: *\nAllow: /\n\nSitemap: " + BASE + "/sitemap.xml\n")
+# ---------- llms.txt: plain summary for AI assistants ----------
+def _llm_line(p):
+    c = COND.get(p.get("condition"), ("", ""))[1]
+    note = p.get("condition_note_en") or ""
+    old = f" (was {p['old_price']} JD)" if p.get("old_price") else ""
+    return f"- [{p['name']}]({BASE}/p/{p['slug']}): {p['price']} JD{old}, {c}{', ' + note if note else ''}. " + ", ".join(v for k, v in p.get("specs", [])[:4])
+_avail = [p for p in sorted(visible, key=home_sort) if p.get("status") != "sold"]
+_ll = [f"# Root Computers (روت)\n",
+       "> Root (rootjo.com) is an online computer store in Jordan. It sells new laptops (in box, with the maker's or supplier's warranty) and used laptops in excellent condition (2-month warranty), plus desktops, monitors and genuine Windows and Microsoft Office licenses, and offers repair and upgrades. Delivery covers all of Jordan (3 JD in Amman, 5 JD elsewhere) and customers pay on delivery after checking the device. Most Windows laptops come with genuine Windows 11 Pro and Microsoft Office Pro Plus and a free bag and wireless mouse (each product page lists what is included).\n",
+       "روت متجر إلكتروني أردني للابتوبات والكمبيوترات الجديدة والمستعملة. الأجهزة المستعملة بكفالة شهرين، والجديدة بكفالتها. توصيل لكل المملكة (3 دنانير داخل عمّان و5 خارجها) والدفع عند الاستلام بعد المعاينة.\n",
+       "## Contact\n",
+       f"- Website: {BASE}/",
+       "- WhatsApp / phone: +962 7 9916 7971",
+       "- Phone: +962 7 9185 1390",
+       "- Email: info@rootjo.com",
+       "- Instagram: https://www.instagram.com/rootcomputers/ (@rootcomputers)\n",
+       "## Policies\n",
+       f"- [Warranty policy]({BASE}/warranty): used devices 2 months; new devices carry the warranty stated on each product page.",
+       f"- [Customer feedback]({BASE}/feedback): real messages from customers.",
+       "- Ordering: choose a device on the site and order on WhatsApp, or request any model and Root sources it.\n",
+       "## Sections\n"] + [f"- [{s[2]}]({BASE}/{CSLUG[s[0]]}): {s[4]}" for s in SECTIONS] + \
+      ["", f"## Devices in stock (updated {today}, prices in Jordanian dinars)\n"] + [_llm_line(p) for p in _avail]
+open(os.path.join(OUT, "llms.txt"), "w", encoding="utf-8").write("\n".join(_ll) + "\n")
 open(os.path.join(OUT, "CNAME"), "w").write("rootjo.com\n")
 open(os.path.join(OUT, ".nojekyll"), "w").write("")
 print(f"built {len(visible)} products -> {OUT}")
