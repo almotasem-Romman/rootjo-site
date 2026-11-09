@@ -1,0 +1,69 @@
+# Root Computers (روت)
+
+> Root (rootjo.com) is an online computer store in Jordan. It sells new laptops (in box, with the maker's or supplier's warranty) and used laptops in excellent condition (2-month warranty), plus desktops, monitors and genuine Windows and Microsoft Office licenses, and offers repair and upgrades. Delivery covers all of Jordan (3 JD in Amman, 5 JD elsewhere) and customers pay on delivery after checking the device. Most Windows laptops come with genuine Windows 11 Pro and Microsoft Office Pro Plus and a free bag and wireless mouse (each product page lists what is included).
+
+روت متجر إلكتروني أردني للابتوبات والكمبيوترات الجديدة والمستعملة. الأجهزة المستعملة بكفالة شهرين، والجديدة بكفالتها. توصيل لكل المملكة (3 دنانير داخل عمّان و5 خارجها) والدفع عند الاستلام بعد المعاينة.
+
+## Contact
+
+- Website: https://rootjo.com/
+- WhatsApp / phone: +962 7 9916 7971
+- Phone: +962 7 9185 1390
+- Email: info@rootjo.com
+- Instagram: https://www.instagram.com/rootcomputers/ (@rootcomputers)
+
+## Policies
+
+- [Warranty policy](https://rootjo.com/warranty): used devices 2 months; new devices carry the warranty stated on each product page.
+- [Customer feedback](https://rootjo.com/feedback): real messages from customers.
+- Ordering: choose a device on the site and order on WhatsApp, or request any model and Root sources it.
+
+## Sections
+
+- [Laptops](https://rootjo.com/laptops): New in box and used in excellent condition, each with a clear warranty.
+- [Desktops](https://rootjo.com/desktops): Ready-made desktops, or one built to your budget.
+- [Monitors](https://rootjo.com/monitors): New-in-box monitors with warranty.
+- [Software licenses](https://rootjo.com/licenses): Genuine Windows, Office and Microsoft 365, with the key sent right after payment.
+- [Repair & setup](https://rootjo.com/repair): Diagnosis, repair, upgrades and setup for your device, with the cost quoted before any work.
+
+## Devices in stock (updated 2026-11-10, prices in Jordanian dinars)
+
+- [Dell Latitude 7320](https://rootjo.com/p/dell-latitude-7320): 280 JD (was 310 JD), Used, 2-month warranty. Intel Core i7-1185G7, 16GB DDR4, 512GB NVMe M.2 SSD, 13.3" FHD (1920×1080)
+- [Lenovo LOQ 15IRX10](https://rootjo.com/p/lenovo-loq-15irx10): 1265 JD (was 1295 JD), New in box, 2-year warranty. Intel Core i7-13645HX (14 cores / 20 threads, up to 4.9GHz, 24MB cache), 16GB DDR5, 512GB M.2 PCIe 4.0 NVMe SSD, 15.6" FHD (1920×1080) IPS, 144Hz, G-SYNC, 300 nits, 100% sRGB
+- [ASUS TUF Gaming A16](https://rootjo.com/p/asus-tuf-gaming-a16): 999 JD (was 1029 JD), New in box, 1-year warranty. AMD Ryzen 7 170 (8C/16T, up to 4.75GHz, 20MB cache), 16GB DDR5-4800 (2× SO-DIMM, up to 64GB), 512GB PCIe 4.0 NVMe SSD (dual M.2 slots), 16" FHD+ (1920×1200) IPS-level, 144Hz, G-Sync
+- [HP ZBook 15u G5](https://rootjo.com/p/hp-zbook-15u-g5): 250 JD (was 280 JD), Used, 2-month warranty. Intel Core i7 (8th Gen), 8GB DDR4, 256GB M.2 SSD, 15.6" FHD (1920×1080)
+- [HP OmniBook 3 16-bu0038ne](https://rootjo.com/p/hp-omnibook-3-16-bu0038ne): 584 JD (was 614 JD), New in box, 1-year warranty. Intel Core 5 120U, up to 5.0GHz, 10 cores / 12 threads, 8GB DDR5-5200, 512GB PCIe Gen4 NVMe SSD, 16" FHD+ IPS, 300 nits, anti-glare
+- [Lenovo V14 Gen 4](https://rootjo.com/p/lenovo-v14-gen4-i7): 714 JD (was 744 JD), New in box, 1-year warranty. Intel Core i7-13620H (13th Gen), up to 4.9GHz, 10 cores / 16 threads, 16GB DDR4-3200 (8GB + 8GB), 512GB PCIe 4.0 NVMe SSD, 14" FHD (1920 x 1080), anti-glare
+- [Apple MacBook Neo 13"](https://rootjo.com/p/apple-macbook-neo-13): 664 JD (was 694 JD), New in box. Apple A18 Pro chip, 8GB, 256GB SSD, 13" Liquid Retina
+- [Lenovo IdeaPad Slim 3 15IRH10 Core i7](https://rootjo.com/p/lenovo-ideapad-slim-3-15irh10-i7): 664 JD (was 694 JD), New in box, 1-year warranty. Intel Core i7-13620H (13th Gen), up to 4.9GHz, 10 cores / 16 threads, 16GB DDR5, 512GB PCIe 4.0 NVMe SSD, 15.3" WUXGA IPS (1920 x 1200), 300 nits, anti-glare
+- [Gaming PC · Ryzen 5 5500 · RTX 3050](https://rootjo.com/p/gaming-pc-ryzen5-5500-rtx3050): 684 JD (was 714 JD), New in box, 1-year warranty. AMD Ryzen 5 5500, up to 4.2GHz, 6 cores / 12 threads, NVIDIA GeForce RTX 3050 6GB GDDR6, dual fan, 16GB DDR4 3200MHz Kingston, 500GB NV3 NVMe SSD (up to 5000MB/s)
+- [Gaming PC · Core i5-14400F · RTX 5060 Ti](https://rootjo.com/p/gaming-pc-i5-14400f-rtx5060ti): 1024 JD (was 1054 JD), New in box, 1-year warranty. Intel Core i5-14400F (14th Gen), up to 4.7GHz, 10 cores / 16 threads, NVIDIA GeForce RTX 5060 Ti 8GB GDDR7, 16GB DDR4 3200MHz, 500GB NV3 NVMe SSD (up to 5000MB/s)
+- [HP ProDesk 2 Tower G1i](https://rootjo.com/p/hp-prodesk-2-tower-g1i): 474 JD (was 504 JD), New in box, 1-year warranty. Intel Core i3-14100 (14th Gen), up to 4.7GHz, 4 cores / 8 threads, 8GB DDR5-4800, 512GB NVMe SSD, Intel UHD Graphics 730
+- [MSI MAG 276CF E20](https://rootjo.com/p/msi-mag-276cf-e20): 159 JD (was 189 JD), New in box, 3-year warranty. 27" FHD 1920×1080, curved 1500R, Rapid VA, 3000:1 contrast, 200Hz, 0.5ms (GtG), HDR Ready, 98% sRGB
+- [Lenovo IdeaPad Flex 5 16IAU7](https://rootjo.com/p/lenovo-ideapad-flex-5-16iau7): 399 JD (was 429 JD), Used, 2-month warranty. Intel Core i7-1255U (12th Gen), 8GB LPDDR4x, 512GB M.2 NVMe SSD, 16" WUXGA IPS touchscreen (1920 x 1200), 360° convertible
+- [Lenovo ThinkPad T14 Gen 2 Touch](https://rootjo.com/p/lenovo-thinkpad-t14-gen2-touch): 350 JD, Used, 2-month warranty. Intel Core i7 (11th Gen), 16GB DDR4, 512GB NVMe SSD, 14" FHD touchscreen
+- [HP OmniBook X Flip 14](https://rootjo.com/p/hp-omnibook-x-flip-14): 749 JD (was 779 JD), New in box, 1-year warranty. Intel Core Ultra 5 226V, up to 4.5GHz, 16GB DDR5-8533, 512GB PCIe Gen4 NVMe SSD, 14" FHD+ (1920 x 1200) IPS touchscreen, 400 nits
+- [Lenovo IdeaPad Slim 3 15IRH10](https://rootjo.com/p/lenovo-ideapad-slim-3-15irh10): 520 JD (was 550 JD), New in box, 1-year warranty. Intel Core i5-13420H (13th Gen, 8C/12T, up to 4.6GHz), 8GB DDR5-4800, 512GB PCIe 4.0 NVMe M.2 SSD, 15.3" WUXGA IPS (1920 x 1200)
+- [Dell Alienware 16 Aurora](https://rootjo.com/p/dell-alienware-16-aurora): 1760 JD (was 1790 JD), New in box, 1-year warranty. Intel Core 9 270H, up to 5.8GHz, 32GB DDR5-5600, 1TB PCIe NVMe M.2 SSD, 16" 2.5K QHD+ IPS, 120Hz, 100% sRGB
+- [MacBook Pro 14" M5 Pro](https://rootjo.com/p/macbook-pro-14-m5-pro): 2959 JD (was 2989 JD), New in box, 1-year warranty. Apple M5 Pro chip (18-core CPU), Integrated 20-core GPU, 24GB unified memory, 2TB NVMe SSD
+- [ASUS ROG Strix SCAR 18](https://rootjo.com/p/asus-rog-strix-scar-18): 3699 JD (was 3729 JD), New in box, 1-year warranty. Intel Core Ultra 9 275HX, up to 5.4GHz, NVIDIA GeForce RTX 5080 16GB GDDR7, 64GB DDR5, 2TB PCIe 4.0 NVMe SSD
+- [ASUS Vivobook 15 X1504VA](https://rootjo.com/p/asus-vivobook-15-x1504va): 449 JD (was 479 JD), New in box, 1-year warranty. Intel Core i3-1315U (13th Gen), 6 cores / 8 threads, up to 4.5GHz, 10MB cache, 8GB DDR4, 512GB M.2 PCIe NVMe SSD, 15.6" FHD (1920×1080) anti-glare
+- [Ultra 5 Gaming Desktop · RTX 5070 Ti](https://rootjo.com/p/ultra5-gaming-desktop-rtx5070ti): 2489 JD (was 2519 JD), New in box, 1-year warranty. Intel Core Ultra 5 250K Plus, 18 cores, up to 5.3GHz, 30MB cache, NVIDIA GeForce RTX 5070 Ti 16GB GDDR7, 32GB DDR5 6000MHz (2×16GB) Kingston FURY Beast RGB, 1TB NV3 M.2 NVMe SSD (up to 6000MB/s)
+- [Dell Pro 27 P2726H](https://rootjo.com/p/dell-pro-p2726h): 189 JD (was 219 JD), New in box, 3-year warranty. 27" FHD (1920×1080) IPS, 120Hz, 5ms GtG, 99% sRGB, 1500:1, 300 nits, HDMI 1.4, DisplayPort 1.4
+- [HP EliteBook 840 G10](https://rootjo.com/p/hp-elitebook-840-g10): 519 JD (was 549 JD), Used, like new, Official warranty. Intel Core i7-1355U (13th Gen), 16GB DDR5-5200MHz, 512GB NVMe M.2 SSD, 14" FHD IPS, 400 nits, 100% sRGB
+- [Dell Latitude 7650](https://rootjo.com/p/dell-latitude-7650): 820 JD (was 850 JD), Used, like new, Boxed · Dell warranty to 11/2027. Intel Core Ultra 7 165U, Intel NPU AI accelerator, 32GB LPDDR5x 6400MHz, 512GB NVMe SSD
+- [Lenovo ThinkPad E16 Gen 1](https://rootjo.com/p/thinkpad-e16-gen1): 619 JD (was 649 JD), Used, like new, 2-month warranty. Intel Core i7-13700H (13th Gen), 16GB DDR4-3200, 512GB NVMe SSD, 16" WUXGA 1920×1200 IPS, anti-glare, 300 nits
+- [Dell Latitude 5550](https://rootjo.com/p/dell-latitude-5550): 619 JD (was 649 JD), Used, like new, Dell warranty to 2028. Intel Core Ultra 7 155U, Intel NPU AI accelerator, 16GB DDR5, 512GB NVMe SSD
+- [MSI PRO MP341CQW E12](https://rootjo.com/p/msi-pro-mp341cqw-e12): 309 JD (was 339 JD), New in box, 2-year warranty. 34" UWQHD 3440×1440, curved 1500R, VA, 21:9 UltraWide, 120Hz, 1ms (MPRT), HDR Ready, 91% DCI-P3
+- [MSI PRO MP275Q](https://rootjo.com/p/msi-pro-mp275q): 159 JD (was 189 JD), New in box, 2-year warranty. 27" WQHD 2560×1440, IPS, anti-glare, 178° viewing angles, 144Hz, 1ms MPRT, HDR Ready, 115% sRGB
+- [MSI PRO MP272 E14C](https://rootjo.com/p/msi-pro-mp272-e14c): 129 JD (was 159 JD), New in box, 2-year warranty. 27" FHD 1920×1080 IPS, 144Hz, 1ms (MPRT), HDR Ready, Adaptive-Sync, USB Type-C (DP Alt), HDMI, DisplayPort
+- [MSI PRO MP251 E14L](https://rootjo.com/p/msi-pro-mp251-e14l): 99 JD (was 129 JD), New in box, 2-year warranty. 24.5" FHD 1920×1080 IPS, 144Hz, 1ms MPRT, HDR Ready, Adaptive-Sync, 99% sRGB, 16.7M colors, HDMI 1.4b, VGA, headphone out
+- [ASUS ROG Zephyrus G14 OLED](https://rootjo.com/p/asus-rog-zephyrus-g14-oled): 1799 JD (was 1829 JD), New in box, 1-year warranty. AMD Ryzen AI 9 465, up to 5.0GHz, 16GB LPDDR5X, 1TB PCIe 4.0 NVMe SSD, 14" 3K OLED, 120Hz, Nebula HDR
+- [Lenovo ThinkPad E16 Gen 4](https://rootjo.com/p/lenovo-thinkpad-e16-gen4): 1199 JD (was 1229 JD), New in box, 1-year warranty. Intel Core Ultra 7 355 (8 cores, up to 4.7GHz), 16GB DDR5-5600, 1TB PCIe 4.0 NVMe SSD, 16" WUXGA IPS, anti-glare, 400 nits
+- [ASUS TUF Gaming A15](https://rootjo.com/p/asus-tuf-gaming-a15): 820 JD (was 850 JD), New in box, 1-year warranty. AMD Ryzen 7 170 (8C/16T, up to 4.75GHz), 8GB DDR5, 512GB PCIe 4.0 NVMe SSD, 15.6" FHD IPS, 144Hz
+- [HP Pro Tower 290 G9](https://rootjo.com/p/hp-pro-tower-290-g9): 449 JD (was 479 JD), New in box, 1-year warranty. Intel Core i3-13100 (4C/8T, up to 4.5GHz), 8GB DDR4-3200, 512GB PCIe NVMe M.2 SSD, Intel UHD Graphics 730
+- [MSI Cubi 5 1M + PRO MP225V 22"](https://rootjo.com/p/msi-cubi-5-1m-pro-mp225v): 559 JD (was 589 JD), New in box, 3-year warranty. Intel Core 3 100U (6C/8T, up to 4.7GHz), 8GB DDR5-5200, 512GB NVMe M.2 SSD, Intel Graphics (integrated)
+- [Microsoft 365 Personal](https://rootjo.com/p/microsoft-365-personal): 25 JD (was 70 JD), Digital license. 1 person, 12-month subscription, Up to 5 devices at the same time, Windows, Mac, iPhone, Android
+- [Microsoft Office 2021 Professional Plus](https://rootjo.com/p/office-2021-pro-plus): 15 JD (was 30 JD), Digital license. Lifetime license, Activates once on one device, Windows only, Word, Excel, PowerPoint, Outlook, Teams, OneNote, Publisher, Access
+- [Windows 11 Pro](https://rootjo.com/p/windows-11-pro): 15 JD (was 50 JD), Digital license. Lifetime activation, Activates once on one device, Genuine Microsoft activation key, sent after payment
+- [Windows Server 2019 Standard](https://rootjo.com/p/windows-server-2019-standard): 35 JD (was 65 JD), Digital license. Windows Server 2019 Standard, Server operating system, Original Microsoft license, Permanent activation
