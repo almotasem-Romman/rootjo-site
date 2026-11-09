@@ -1,5 +1,65 @@
 [
   {
+    "slug": "dell-latitude-7320",
+    "status": "available",
+    "category": "laptop",
+    "condition": "used",
+    "condition_note_ar": "كفالة شهرين",
+    "condition_note_en": "2-month warranty",
+    "name": "Dell Latitude 7320",
+    "brand": "Dell",
+    "price": 280,
+    "old_price": 310,
+    "badge_ar": "",
+    "badge_en": "",
+    "image": "img/products/dell-latitude-7320.webp",
+    "card_specs": [
+      "Core i7 Gen 11",
+      "16GB DDR4",
+      "512GB SSD",
+      "13.3\" FHD"
+    ],
+    "specs": [
+      [
+        "cpu",
+        "Intel Core i7-1185G7"
+      ],
+      [
+        "ram",
+        "16GB DDR4"
+      ],
+      [
+        "storage",
+        "512GB NVMe M.2 SSD"
+      ],
+      [
+        "display",
+        "13.3\" FHD (1920×1080)"
+      ],
+      [
+        "gpu",
+        "Intel Iris Xe Graphics"
+      ],
+      [
+        "keyboard",
+        "Backlit keyboard"
+      ],
+      [
+        "warranty",
+        "2-month warranty"
+      ]
+    ],
+    "perks": [
+      "win11",
+      "office",
+      "gift",
+      "delivery"
+    ],
+    "about_ar": "لابتوب Dell Latitude 7320 بحالة الجديد، بمعالج Core i7-1185G7 ورام 16GB وتخزين SSD NVMe سعة 512GB وشاشة 13.3 إنش FHD وكيبورد مضيء. مع شاحن Type-C أصلي، مستعمل بكفالة شهرين.",
+    "about_en": "A like-new Dell Latitude 7320 with an Intel Core i7-1185G7, 16GB of RAM, a 512GB NVMe SSD, a 13.3-inch FHD display and a backlit keyboard. Includes the original Type-C charger. Used, with a 2-month warranty.",
+    "added": "2026-11-09"
+  },
+  {
     "slug": "lenovo-loq-15irx10",
     "status": "available",
     "category": "laptop",
