@@ -1,0 +1,80 @@
+{
+ "brand": "<span style=\"font:800 26px/1 Poppins;letter-spacing:.02em\">HP</span>",
+ "model": "EliteBook<br><em>840 G10</em>",
+ "sub": "Intel® Core™ i7 · 13th Gen · 14-Core",
+ "specs": [
+  {
+   "icon": "cpu",
+   "label": "CPU",
+   "value": "Intel® Core™ i7-1370P (13th Gen)"
+  },
+  {
+   "icon": "ram",
+   "label": "RAM",
+   "value": "16GB DDR5"
+  },
+  {
+   "icon": "ssd",
+   "label": "Storage",
+   "value": "SSD 500GB PCIe M.2"
+  },
+  {
+   "icon": "screen",
+   "label": "Screen",
+   "value": "14\" 1920×1200 IPS Sure View"
+  },
+  {
+   "icon": "bolt",
+   "label": "Ports",
+   "value": "Thunderbolt 4 · HDMI 2.1 (4K 60Hz)"
+  },
+  {
+   "icon": "cam",
+   "label": "Camera",
+   "value": "5MP IR Webcam"
+  },
+  {
+   "icon": "wifi",
+   "label": "Wireless",
+   "value": "Wi-Fi 6E · Bluetooth 5.3"
+  }
+ ],
+ "extras": [
+  {
+   "icon": "win",
+   "t": "Windows 11 Pro",
+   "s": "نسخة أصلية"
+  },
+  {
+   "icon": "office",
+   "t": "MS Office Pro Plus",
+   "s": "نسخة أصلية"
+  },
+  {
+   "icon": "gift",
+   "t": "هدية مجانية",
+   "s": "شنطة + ماوس لاسلكي"
+  },
+  {
+   "icon": "truck",
+   "t": "توصيل لكل المملكة",
+   "s": "الدفع بعد الاستلام والمعاينة"
+  }
+ ],
+ "price": "385",
+ "old": "415",
+ "rib_t": "مستعمل",
+ "rib_s": "كفالة شهرين",
+ "contact": "للاستفسار والتواصل",
+ "handle": "@rootcomputers",
+ "wa": "0799167971",
+ "tel": "0791851390",
+ "wm": "",
+ "brand_bg": "#0096D6",
+ "layout": {
+  "card_x": 668,
+  "spv": 13.2,
+  "lap_w": 652,
+  "lap_y": 398
+ }
+}
