@@ -1,5 +1,73 @@
 [
   {
+    "slug": "hp-elitebook-840-g10-i7-1370p",
+    "status": "available",
+    "category": "laptop",
+    "condition": "used",
+    "condition_note_ar": "كفالة شهرين",
+    "condition_note_en": "2-month warranty",
+    "name": "HP EliteBook 840 G10 (Core i7-1370P)",
+    "brand": "HP",
+    "price": 385,
+    "old_price": 415,
+    "badge_ar": "",
+    "badge_en": "",
+    "image": "img/products/hp-elitebook-840-g10-i7-1370p.webp",
+    "card_specs": [
+      "Core i7-1370P",
+      "16GB DDR5",
+      "500GB SSD",
+      "14\" Sure View"
+    ],
+    "specs": [
+      [
+        "cpu",
+        "Intel Core i7-1370P (13th Gen, 14 cores)"
+      ],
+      [
+        "ram",
+        "16GB DDR5"
+      ],
+      [
+        "storage",
+        "500GB PCIe M.2 SSD"
+      ],
+      [
+        "display",
+        "14\" 1920×1200 IPS, Sure View privacy screen"
+      ],
+      [
+        "ports",
+        "Thunderbolt 4, USB-A 3.2 Gen 1, HDMI 2.1 (4K 60Hz), 3.5mm audio"
+      ],
+      [
+        "wifi",
+        "Wi-Fi 6E, Bluetooth 5.3"
+      ],
+      [
+        "camera",
+        "5MP IR webcam, dual mics and speakers"
+      ],
+      [
+        "os",
+        "Windows 11 Pro"
+      ],
+      [
+        "warranty",
+        "2-month warranty"
+      ]
+    ],
+    "perks": [
+      "win11",
+      "office",
+      "gift",
+      "delivery"
+    ],
+    "about_ar": "لابتوب HP EliteBook 840 G10 بمعالج Intel Core i7-1370P من الجيل 13 (14 نواة)، رام 16GB DDR5، تخزين SSD سعة 500GB، وشاشة 14 إنش بدقة 1920×1200 مع خاصية Sure View لحماية الخصوصية. فيه Thunderbolt 4 وHDMI 2.1 وWi-Fi 6E وكاميرا 5MP IR. مستعمل بكفالة شهرين.",
+    "about_en": "A used HP EliteBook 840 G10 with a 14-core Intel Core i7-1370P (13th Gen), 16GB DDR5, a 500GB PCIe SSD and a 14-inch 1920×1200 IPS Sure View privacy display. Thunderbolt 4, HDMI 2.1, Wi-Fi 6E and a 5MP IR webcam. 2-month warranty.",
+    "added": "2026-11-11"
+  },
+  {
     "slug": "dell-latitude-7320",
     "status": "available",
     "category": "laptop",
