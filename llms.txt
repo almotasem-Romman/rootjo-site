@@ -26,8 +26,9 @@
 - [Software licenses](https://rootjo.com/licenses): Genuine Windows, Office and Microsoft 365, with the key sent right after payment.
 - [Repair & setup](https://rootjo.com/repair): Diagnosis, repair, upgrades and setup for your device, with the cost quoted before any work.
 
-## Devices in stock (updated 2026-11-10, prices in Jordanian dinars)
+## Devices in stock (updated 2026-11-11, prices in Jordanian dinars)
 
+- [HP EliteBook 840 G10 (Core i7-1370P)](https://rootjo.com/p/hp-elitebook-840-g10-i7-1370p): 385 JD (was 415 JD), Used, 2-month warranty. Intel Core i7-1370P (13th Gen, 14 cores), 16GB DDR5, 500GB PCIe M.2 SSD, 14" 1920×1200 IPS, Sure View privacy screen
 - [Dell Latitude 7320](https://rootjo.com/p/dell-latitude-7320): 280 JD (was 310 JD), Used, 2-month warranty. Intel Core i7-1185G7, 16GB DDR4, 512GB NVMe M.2 SSD, 13.3" FHD (1920×1080)
 - [Lenovo LOQ 15IRX10](https://rootjo.com/p/lenovo-loq-15irx10): 1265 JD (was 1295 JD), New in box, 2-year warranty. Intel Core i7-13645HX (14 cores / 20 threads, up to 4.9GHz, 24MB cache), 16GB DDR5, 512GB M.2 PCIe 4.0 NVMe SSD, 15.6" FHD (1920×1080) IPS, 144Hz, G-SYNC, 300 nits, 100% sRGB
 - [ASUS TUF Gaming A16](https://rootjo.com/p/asus-tuf-gaming-a16): 999 JD (was 1029 JD), New in box, 1-year warranty. AMD Ryzen 7 170 (8C/16T, up to 4.75GHz, 20MB cache), 16GB DDR5-4800 (2× SO-DIMM, up to 64GB), 512GB PCIe 4.0 NVMe SSD (dual M.2 slots), 16" FHD+ (1920×1200) IPS-level, 144Hz, G-Sync
