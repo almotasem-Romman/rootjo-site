@@ -26,8 +26,10 @@
 - [Software licenses](https://rootjo.com/licenses): Genuine Windows, Office and Microsoft 365, with the key sent right after payment.
 - [Repair & setup](https://rootjo.com/repair): Diagnosis, repair, upgrades and setup for your device, with the cost quoted before any work.
 
-## Devices in stock (updated 2026-11-12, prices in Jordanian dinars)
+## Devices in stock (updated 2026-11-14, prices in Jordanian dinars)
 
+- [ASUS Vivobook Pro 15 OLED · Ultra 9 · 2TB](https://rootjo.com/p/asus-vivobook-pro-15-oled-ultra9-2tb): 870 JD (was 900 JD), Used, 2-month warranty. Intel Core Ultra 9 185H (16 cores / 22 threads, up to 5.1GHz, 24MB cache), Intel AI Boost NPU, up to 11 TOPS, NVIDIA GeForce RTX 3050 6GB GDDR6 + Intel Arc Graphics, 24GB DDR5
+- [ASUS Vivobook Pro 15 OLED · Ultra 9 · 1TB](https://rootjo.com/p/asus-vivobook-pro-15-oled-ultra9-1tb): 810 JD (was 840 JD), Used, 2-month warranty. Intel Core Ultra 9 185H (16 cores / 22 threads, up to 5.1GHz, 24MB cache), Intel AI Boost NPU, up to 11 TOPS, NVIDIA GeForce RTX 3050 6GB GDDR6 + Intel Arc Graphics, 24GB DDR5
 - [HP EliteBook 840 G10 (Core i7-1370P)](https://rootjo.com/p/hp-elitebook-840-g10-i7-1370p): 385 JD (was 415 JD), Used, 2-month warranty. Intel Core i7-1370P (13th Gen, 14 cores), 16GB DDR5, 500GB PCIe M.2 SSD, 14" 1920×1200 IPS, Sure View privacy screen
 - [Lenovo LOQ 15IRX10](https://rootjo.com/p/lenovo-loq-15irx10): 1265 JD (was 1295 JD), New in box, 2-year warranty. Intel Core i7-13645HX (14 cores / 20 threads, up to 4.9GHz, 24MB cache), 16GB DDR5, 512GB M.2 PCIe 4.0 NVMe SSD, 15.6" FHD (1920×1080) IPS, 144Hz, G-SYNC, 300 nits, 100% sRGB
 - [ASUS TUF Gaming A16](https://rootjo.com/p/asus-tuf-gaming-a16): 999 JD (was 1029 JD), New in box, 1-year warranty. AMD Ryzen 7 170 (8C/16T, up to 4.75GHz, 20MB cache), 16GB DDR5-4800 (2× SO-DIMM, up to 64GB), 512GB PCIe 4.0 NVMe SSD (dual M.2 slots), 16" FHD+ (1920×1200) IPS-level, 144Hz, G-Sync
