@@ -1,5 +1,173 @@
 [
   {
+    "slug": "asus-vivobook-pro-15-oled-ultra9-2tb",
+    "status": "available",
+    "category": "laptop",
+    "condition": "used",
+    "condition_note_ar": "كفالة شهرين",
+    "condition_note_en": "2-month warranty",
+    "name": "ASUS Vivobook Pro 15 OLED · Ultra 9 · 2TB",
+    "brand": "ASUS",
+    "price": 870,
+    "old_price": 900,
+    "badge_ar": "",
+    "badge_en": "",
+    "image": "img/products/asus-vivobook-pro-15-oled.webp",
+    "card_specs": [
+      "Core Ultra 9 185H",
+      "RTX 3050 6GB",
+      "24GB DDR5",
+      "2TB SSD"
+    ],
+    "specs": [
+      [
+        "cpu",
+        "Intel Core Ultra 9 185H (16 cores / 22 threads, up to 5.1GHz, 24MB cache)"
+      ],
+      [
+        "npu",
+        "Intel AI Boost NPU, up to 11 TOPS"
+      ],
+      [
+        "gpu",
+        "NVIDIA GeForce RTX 3050 6GB GDDR6 + Intel Arc Graphics"
+      ],
+      [
+        "ram",
+        "24GB DDR5"
+      ],
+      [
+        "storage",
+        "2TB M.2 NVMe PCIe 4.0 SSD"
+      ],
+      [
+        "display",
+        "15.6\" FHD (1920×1080) OLED, 100% DCI-P3, 600 nits HDR, DisplayHDR True Black 600, anti-glare"
+      ],
+      [
+        "ports",
+        "2× USB-C, 2× USB 3.2, HDMI 2.1, RJ45, SD 4.0 card reader"
+      ],
+      [
+        "keyboard",
+        "Backlit keyboard with numpad, ASUS DialPad"
+      ],
+      [
+        "camera",
+        "5MP camera with privacy shutter, harman/kardon audio"
+      ],
+      [
+        "wifi",
+        "Wi-Fi 6E, Bluetooth 5.2"
+      ],
+      [
+        "battery",
+        "75Wh, battery health 80%"
+      ],
+      [
+        "weight",
+        "1.90 kg"
+      ],
+      [
+        "warranty",
+        "2-month warranty"
+      ]
+    ],
+    "perks": [
+      "win11",
+      "office",
+      "gift",
+      "delivery"
+    ],
+    "about_ar": "لابتوب ASUS Vivobook Pro 15 OLED للمصممين وصنّاع المحتوى، بمعالج Intel Core Ultra 9 185H وكرت NVIDIA RTX 3050 بذاكرة 6GB مع كرت Intel Arc المدمج، رام 24GB DDR5 وتخزين SSD سعة 2TB. شاشته OLED بحجم 15.6 إنش ودقة FHD وتغطية 100% DCI-P3. الجهاز بحالة ممتازة بدون أي ملاحظة، صحة البطارية 80% وصحة الـSSD 100%. مستعمل بكفالة شهرين.",
+    "about_en": "A creator and productivity laptop: ASUS Vivobook Pro 15 OLED with an Intel Core Ultra 9 185H, NVIDIA RTX 3050 6GB plus Intel Arc graphics, 24GB DDR5 and a 2TB PCIe 4.0 SSD. 15.6-inch FHD OLED with 100% DCI-P3. Excellent condition with no marks; battery health 80%, SSD health 100%. Used, 2-month warranty.",
+    "added": "2026-11-14"
+  },
+  {
+    "slug": "asus-vivobook-pro-15-oled-ultra9-1tb",
+    "status": "available",
+    "category": "laptop",
+    "condition": "used",
+    "condition_note_ar": "كفالة شهرين",
+    "condition_note_en": "2-month warranty",
+    "name": "ASUS Vivobook Pro 15 OLED · Ultra 9 · 1TB",
+    "brand": "ASUS",
+    "price": 810,
+    "old_price": 840,
+    "badge_ar": "",
+    "badge_en": "",
+    "image": "img/products/asus-vivobook-pro-15-oled.webp",
+    "card_specs": [
+      "Core Ultra 9 185H",
+      "RTX 3050 6GB",
+      "24GB DDR5",
+      "1TB SSD"
+    ],
+    "specs": [
+      [
+        "cpu",
+        "Intel Core Ultra 9 185H (16 cores / 22 threads, up to 5.1GHz, 24MB cache)"
+      ],
+      [
+        "npu",
+        "Intel AI Boost NPU, up to 11 TOPS"
+      ],
+      [
+        "gpu",
+        "NVIDIA GeForce RTX 3050 6GB GDDR6 + Intel Arc Graphics"
+      ],
+      [
+        "ram",
+        "24GB DDR5"
+      ],
+      [
+        "storage",
+        "1TB M.2 NVMe PCIe 4.0 SSD"
+      ],
+      [
+        "display",
+        "15.6\" FHD (1920×1080) OLED, 100% DCI-P3, 600 nits HDR, DisplayHDR True Black 600, anti-glare"
+      ],
+      [
+        "ports",
+        "2× USB-C, 2× USB 3.2, HDMI 2.1, RJ45, SD 4.0 card reader"
+      ],
+      [
+        "keyboard",
+        "Backlit keyboard with numpad, ASUS DialPad"
+      ],
+      [
+        "camera",
+        "5MP camera with privacy shutter, harman/kardon audio"
+      ],
+      [
+        "wifi",
+        "Wi-Fi 6E, Bluetooth 5.2"
+      ],
+      [
+        "battery",
+        "75Wh, battery health 80%"
+      ],
+      [
+        "weight",
+        "1.90 kg"
+      ],
+      [
+        "warranty",
+        "2-month warranty"
+      ]
+    ],
+    "perks": [
+      "win11",
+      "office",
+      "gift",
+      "delivery"
+    ],
+    "about_ar": "لابتوب ASUS Vivobook Pro 15 OLED للمصممين وصنّاع المحتوى، بمعالج Intel Core Ultra 9 185H وكرت NVIDIA RTX 3050 بذاكرة 6GB مع كرت Intel Arc المدمج، رام 24GB DDR5 وتخزين SSD سعة 1TB. شاشته OLED بحجم 15.6 إنش ودقة FHD وتغطية 100% DCI-P3. الجهاز بحالة ممتازة بدون أي ملاحظة، صحة البطارية 80% وصحة الـSSD 100%. مستعمل بكفالة شهرين.",
+    "about_en": "A creator and productivity laptop: ASUS Vivobook Pro 15 OLED with an Intel Core Ultra 9 185H, NVIDIA RTX 3050 6GB plus Intel Arc graphics, 24GB DDR5 and a 1TB PCIe 4.0 SSD. 15.6-inch FHD OLED with 100% DCI-P3. Excellent condition with no marks; battery health 80%, SSD health 100%. Used, 2-month warranty.",
+    "added": "2026-11-14"
+  },
+  {
     "slug": "hp-elitebook-840-g10-i7-1370p",
     "status": "available",
     "category": "laptop",
