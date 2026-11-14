@@ -44,3 +44,4 @@ hp-zbook-15u-g5 https://images.icecat.biz/img/gallery/62fa5ce896ad9b3f4dc6a6c1be
 asus-tuf-gaming-a16 https://images.gts.jo/cache/catalog/A2024/laptop/asus/FA607PV-N3060/w800-%284%29-1200x1200.png rawalpha
 lenovo-loq-15irx10 https://psref.lenovo.com/syspool/Sys/Image/LOQ/LOQ_15IRX10/LOQ_15IRX10_CT1_02.png rawalpha
 dell-latitude-7320 https://raw.githubusercontent.com/almotasem-Romman/rootjo-site/asset-pipeline/src/dell-latitude-7320.png biggest
+asus-vivobook-pro-15-oled-n6506 https://images.icecat.biz/img/gallery/38d4b066ce4b0e126b8b2b438a31cbf5b0d2916f.jpg biggest
