@@ -1,12 +1,15 @@
 # Root ad scene pass: product photo (or cutout) -> studio-grade layers that share one geometry.
-# Usage: python3 scene.py photo.jpg|cutout.png [--seg] [--rim 0.45] [--refl 0.10] [--shadow 1.0] [--halo 0]
+# Usage: python3 scene.py photo.jpg|cutout.png [--seg] [--rim 0.45] [--refl 0.10] [--shadow 1.0] [--halo 0] [--style soft|classic]
+#   --style soft (default, approved 2026-11-16): ../_tools/studio_shadow.py, a diffused 45-degree softbox shadow.
+#   --shadow scales it (0.8 lighter, 1.2 a bit denser; it never passes the CAP in studio_shadow.py).
+#   --style classic is the old stacked contact shadow, kept only for comparison: it drew a dark line under the base.
 #   A photo with a white/light background is cut by ../_tools/cutout.py (BiRefNet + guided-filter edges +
 #   floor clean + colour decontamination). An RGBA png keeps its own alpha but gets the same clean-up;
 #   --seg forces the AI mask on it too (use it when the png carries a baked glow/shadow, e.g. PSREF/Dell renders).
 # Outputs (in the cwd):
 #   laptop.png      the clean cutout (kept so the ad folder has it)
 #   laptop_lit.png  cutout + thin cyan rim light (what make.py shows)
-#   shadow.png      contact shadow + AO + soft penumbra on the floor (laptop_lit canvas padded by PAD, multiply)
+#   shadow.png      soft studio floor shadow (laptop_lit canvas padded by PAD, multiply blend in make.py)
 #   refl.png        faint glossy-floor reflection of the base       (same padded canvas, normal blend)
 #   scene_check.png QA sheet: cutout on navy/white/checker + zoomed base corners
 import sys, os, argparse
@@ -19,6 +22,7 @@ ap = argparse.ArgumentParser()
 ap.add_argument('src'); ap.add_argument('--seg', action='store_true')
 ap.add_argument('--rim', type=float, default=.45); ap.add_argument('--refl', type=float, default=.10)
 ap.add_argument('--shadow', type=float, default=1.); ap.add_argument('--halo', type=float, default=0)
+ap.add_argument('--style', default='soft', choices=['soft', 'classic'])  # soft = studio_shadow.py (45 deg softbox)
 o = ap.parse_args()
 PAD = 220                                              # make.py uses the same padding
 
@@ -84,7 +88,10 @@ layers = [
 ]
 m = layers[0]
 for l in layers[1:]: m = ImageChops.screen(m, l)
-sh = Image.new('RGBA', (W, H), (22, 28, 42, 0)); sh.putalpha(m); sh.save('shadow.png')
+if o.style == 'soft':
+    from studio_shadow import studio_shadow
+    m = studio_shadow(a, PAD, u, foot, o.shadow)
+sh = Image.new('RGBA', (W, H), (24, 32, 52, 0) if o.style == 'soft' else (22, 28, 42, 0)); sh.putalpha(m); sh.save('shadow.png')
 
 # ---------- 4. glossy floor reflection of the base (subtle, starts below the contact shadow) ----------
 RH = int(h * .10); gap = max(2, round(4 * u))
