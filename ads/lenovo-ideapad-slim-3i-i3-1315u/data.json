@@ -1,0 +1,81 @@
+{
+ "brand": "<span style=\"font:600 28px/1 Poppins;letter-spacing:-.01em\">Lenovo</span>",
+ "model": "IdeaPad<br><em>Slim 3i</em>",
+ "sub": "Intel® Core™ i3 · 13th Gen",
+ "specs": [
+  {
+   "icon": "cpu",
+   "label": "CPU",
+   "value": "Intel® Core™ i3-1315U (6C, up to 4.5GHz)"
+  },
+  {
+   "icon": "ram",
+   "label": "RAM",
+   "value": "8GB LPDDR5-4800"
+  },
+  {
+   "icon": "ssd",
+   "label": "Storage",
+   "value": "SSD 256GB PCIe® 4.0 NVMe"
+  },
+  {
+   "icon": "screen",
+   "label": "Screen",
+   "value": "15.6\" FHD Anti-glare 250 nits"
+  },
+  {
+   "icon": "bolt",
+   "label": "Ports",
+   "value": "USB-C (PD + DisplayPort) · HDMI"
+  },
+  {
+   "icon": "wifi",
+   "label": "Connectivity",
+   "value": "Wi-Fi 6 · Bluetooth 5.2"
+  },
+  {
+   "icon": "shield",
+   "label": "Warranty",
+   "value": "1 Year Warranty"
+  }
+ ],
+ "extras": [
+  {
+   "icon": "win",
+   "t": "Windows 11 Pro",
+   "s": "نسخة أصلية"
+  },
+  {
+   "icon": "office",
+   "t": "MS Office Pro Plus",
+   "s": "نسخة أصلية"
+  },
+  {
+   "icon": "gift",
+   "t": "هدية مجانية",
+   "s": "شنطة + ماوس + باور بانك"
+  },
+  {
+   "icon": "truck",
+   "t": "توصيل لكل المملكة",
+   "s": "الدفع بعد الاستلام والمعاينة"
+  }
+ ],
+ "price": "349",
+ "old": "379",
+ "rib_t": "جديد بالكرتونة",
+ "rib_s": "كفالة سنة",
+ "contact": "للاستفسار والتواصل",
+ "handle": "@rootcomputers",
+ "wa": "0799167971",
+ "tel": "0791851390",
+ "wm": "",
+ "brand_bg": "#E2231A",
+ "layout": {
+  "lap_w": 600,
+  "lap_x": 30,
+  "lap_y": 380,
+  "card_x": 668,
+  "spv": 13.2
+ }
+}
