@@ -19,6 +19,7 @@ ap = argparse.ArgumentParser()
 ap.add_argument('src'); ap.add_argument('--seg', action='store_true')
 ap.add_argument('--rim', type=float, default=.45); ap.add_argument('--refl', type=float, default=.10)
 ap.add_argument('--shadow', type=float, default=1.); ap.add_argument('--halo', type=float, default=0)
+ap.add_argument('--style', default='soft', choices=['soft', 'classic'])  # soft = studio_shadow.py (45 deg softbox)
 o = ap.parse_args()
 PAD = 220                                              # make.py uses the same padding
 
@@ -84,7 +85,10 @@ layers = [
 ]
 m = layers[0]
 for l in layers[1:]: m = ImageChops.screen(m, l)
-sh = Image.new('RGBA', (W, H), (22, 28, 42, 0)); sh.putalpha(m); sh.save('shadow.png')
+if o.style == 'soft':
+    from studio_shadow import studio_shadow
+    m = studio_shadow(a, PAD, u, foot, o.shadow)
+sh = Image.new('RGBA', (W, H), (24, 32, 52, 0) if o.style == 'soft' else (22, 28, 42, 0)); sh.putalpha(m); sh.save('shadow.png')
 
 # ---------- 4. glossy floor reflection of the base (subtle, starts below the contact shadow) ----------
 RH = int(h * .10); gap = max(2, round(4 * u))
