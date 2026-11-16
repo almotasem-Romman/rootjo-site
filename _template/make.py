@@ -4,7 +4,17 @@ import json, os
 from PIL import Image
 B = os.path.dirname(os.path.abspath(__file__))
 D = json.load(open(os.path.join(B, 'data.json'), encoding='utf-8'))
-FS = 'node_modules/@fontsource'
+def _fonts():
+    # node_modules may sit in the build dir or in any parent (e.g. the ads-tools checkout): find it, and stop
+    # loudly if it is missing (a silent fallback renders the ad in a serif font).
+    d = B
+    while True:
+        if os.path.isdir(os.path.join(d, 'node_modules', '@fontsource', 'poppins')):
+            return os.path.relpath(os.path.join(d, 'node_modules', '@fontsource'), B)
+        if os.path.dirname(d) == d:
+            raise SystemExit('fonts missing: npm i @fontsource/cairo @fontsource/poppins @fontsource/montserrat playwright-core')
+        d = os.path.dirname(d)
+FS = _fonts()
 L = D.get('layout', {})
 
 ICON = {

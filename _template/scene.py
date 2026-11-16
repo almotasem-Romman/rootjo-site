@@ -1,12 +1,15 @@
 # Root ad scene pass: product photo (or cutout) -> studio-grade layers that share one geometry.
-# Usage: python3 scene.py photo.jpg|cutout.png [--seg] [--rim 0.45] [--refl 0.10] [--shadow 1.0] [--halo 0]
+# Usage: python3 scene.py photo.jpg|cutout.png [--seg] [--rim 0.45] [--refl 0.10] [--shadow 1.0] [--halo 0] [--style soft|classic]
+#   --style soft (default, approved 2026-11-16): ../_tools/studio_shadow.py, a diffused 45-degree softbox shadow.
+#   --shadow scales it (0.8 lighter, 1.2 a bit denser; it never passes the CAP in studio_shadow.py).
+#   --style classic is the old stacked contact shadow, kept only for comparison: it drew a dark line under the base.
 #   A photo with a white/light background is cut by ../_tools/cutout.py (BiRefNet + guided-filter edges +
 #   floor clean + colour decontamination). An RGBA png keeps its own alpha but gets the same clean-up;
 #   --seg forces the AI mask on it too (use it when the png carries a baked glow/shadow, e.g. PSREF/Dell renders).
 # Outputs (in the cwd):
 #   laptop.png      the clean cutout (kept so the ad folder has it)
 #   laptop_lit.png  cutout + thin cyan rim light (what make.py shows)
-#   shadow.png      contact shadow + AO + soft penumbra on the floor (laptop_lit canvas padded by PAD, multiply)
+#   shadow.png      soft studio floor shadow (laptop_lit canvas padded by PAD, multiply blend in make.py)
 #   refl.png        faint glossy-floor reflection of the base       (same padded canvas, normal blend)
 #   scene_check.png QA sheet: cutout on navy/white/checker + zoomed base corners
 import sys, os, argparse
