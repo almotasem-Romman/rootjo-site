@@ -1,5 +1,173 @@
 [
   {
+    "slug": "lenovo-ideapad-slim-3i-i3-1315u",
+    "status": "available",
+    "category": "laptop",
+    "condition": "new",
+    "condition_note_ar": "كفالة سنة",
+    "condition_note_en": "1-year warranty",
+    "name": "Lenovo IdeaPad Slim 3i · Core i3-1315U",
+    "brand": "Lenovo",
+    "price": 349,
+    "old_price": 379,
+    "badge_ar": "",
+    "badge_en": "",
+    "image": "img/products/lenovo-ideapad-slim-3-15iru8.webp",
+    "card_specs": [
+      "Core i3-1315U",
+      "8GB LPDDR5",
+      "256GB SSD",
+      "15.6\" FHD"
+    ],
+    "specs": [
+      [
+        "cpu",
+        "Intel Core i3-1315U (13th Gen, 6 cores / 8 threads, up to 4.5GHz, 10MB cache)"
+      ],
+      [
+        "ram",
+        "8GB LPDDR5-4800"
+      ],
+      [
+        "storage",
+        "256GB M.2 PCIe 4.0 NVMe SSD"
+      ],
+      [
+        "display",
+        "15.6\" FHD (1920×1080) TN, 250 nits, anti-glare"
+      ],
+      [
+        "gpu",
+        "Intel UHD Graphics (integrated)"
+      ],
+      [
+        "wifi",
+        "Wi-Fi 6, Bluetooth 5.2"
+      ],
+      [
+        "ports",
+        "2× USB 3.2 Gen 1, USB-C 3.2 (Power Delivery + DisplayPort 1.2), HDMI 1.4, SD card reader, 3.5mm audio"
+      ],
+      [
+        "camera",
+        "720p HD camera with privacy shutter, Dolby Audio speakers"
+      ],
+      [
+        "battery",
+        "47Wh, 65W charger"
+      ],
+      [
+        "keyboard",
+        "Arabic / English"
+      ],
+      [
+        "color",
+        "Arctic Grey"
+      ],
+      [
+        "inbox",
+        "Free Promate Bolt-20PD 20000mAh power bank"
+      ],
+      [
+        "warranty",
+        "1 year"
+      ]
+    ],
+    "perks": [
+      "win11",
+      "office",
+      "gift",
+      "delivery"
+    ],
+    "about_ar": "لابتوب Lenovo IdeaPad Slim 3i نحيف وخفيف بمعالج Intel Core i3-1315U من الجيل 13 (6 أنوية)، رام 8GB LPDDR5 وتخزين SSD سعة 256GB PCIe 4.0 وشاشة 15.6 إنش FHD. فيه Wi-Fi 6 ومنفذ USB-C بيدعم الشحن والشاشة. ومعه هدية باور بانك Promate سعة 20000mAh. جديد بالكرتونة وبكفالة سنة.",
+    "about_en": "A thin and light Lenovo IdeaPad Slim 3i with a 13th Gen Intel Core i3-1315U (6 cores), 8GB LPDDR5, a 256GB PCIe 4.0 SSD and a 15.6-inch FHD display, with Wi-Fi 6 and USB-C charging and display output. Comes with a free Promate 20000mAh power bank. New in box, 1-year warranty.",
+    "added": "2026-11-16"
+  },
+  {
+    "slug": "lenovo-ideapad-1-15ijl7",
+    "status": "available",
+    "category": "laptop",
+    "condition": "new",
+    "condition_note_ar": "كفالة سنة",
+    "condition_note_en": "1-year warranty",
+    "name": "Lenovo IdeaPad 1 15IJL7",
+    "brand": "Lenovo",
+    "price": 210,
+    "old_price": 240,
+    "badge_ar": "",
+    "badge_en": "",
+    "image": "img/products/lenovo-ideapad-1-15ijl7.webp",
+    "card_specs": [
+      "Celeron N4500",
+      "8GB DDR4",
+      "256GB SSD",
+      "15.6\" HD"
+    ],
+    "specs": [
+      [
+        "cpu",
+        "Intel Celeron N4500 (2 cores / 2 threads, up to 2.8GHz, 4MB cache)"
+      ],
+      [
+        "ram",
+        "8GB DDR4"
+      ],
+      [
+        "storage",
+        "256GB M.2 PCIe NVMe SSD"
+      ],
+      [
+        "display",
+        "15.6\" HD (1366×768) TN, 220 nits, anti-glare"
+      ],
+      [
+        "gpu",
+        "Intel UHD Graphics (integrated)"
+      ],
+      [
+        "wifi",
+        "Wi-Fi 6, Bluetooth 5.2"
+      ],
+      [
+        "ports",
+        "USB 3.2 Gen 1, USB 2.0, USB-C 3.2 (data), HDMI 1.4b, SD card reader, 3.5mm audio"
+      ],
+      [
+        "camera",
+        "720p HD camera with privacy shutter, Dolby Audio speakers"
+      ],
+      [
+        "battery",
+        "42Wh"
+      ],
+      [
+        "weight",
+        "1.55 kg"
+      ],
+      [
+        "keyboard",
+        "Arabic / English, numeric keypad"
+      ],
+      [
+        "color",
+        "Cloud Grey"
+      ],
+      [
+        "warranty",
+        "1 year"
+      ]
+    ],
+    "perks": [
+      "win11",
+      "office",
+      "gift",
+      "delivery"
+    ],
+    "about_ar": "لابتوب Lenovo IdeaPad 1 خفيف وعملي للدراسة والشغل اليومي والتصفح، بمعالج Intel Celeron N4500 ورام 8GB DDR4 وتخزين SSD سعة 256GB وشاشة 15.6 إنش. فيه Wi-Fi 6 وكاميرا مع غطاء خصوصية وصوت Dolby Audio. لون Cloud Grey، جديد بالكرتونة وبكفالة سنة.",
+    "about_en": "A light, practical Lenovo IdeaPad 1 for study, everyday work and browsing: Intel Celeron N4500, 8GB DDR4, a 256GB SSD and a 15.6-inch display, with Wi-Fi 6, a privacy-shutter camera and Dolby Audio. Cloud Grey, new in box with a 1-year warranty.",
+    "added": "2026-11-16"
+  },
+  {
     "slug": "asus-vivobook-pro-15-oled-ultra9-2tb",
     "status": "available",
     "category": "laptop",
