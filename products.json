@@ -1,5 +1,65 @@
 [
   {
+    "slug": "dell-latitude-7340",
+    "status": "available",
+    "category": "laptop",
+    "condition": "used",
+    "condition_note_ar": "كفالة شهرين",
+    "condition_note_en": "2-month warranty",
+    "name": "Dell Latitude 7340",
+    "brand": "Dell",
+    "price": 370,
+    "old_price": 400,
+    "badge_ar": "",
+    "badge_en": "",
+    "image": "img/products/dell-latitude-7340.webp",
+    "card_specs": [
+      "Core i7-1365U vPro",
+      "16GB RAM",
+      "500GB SSD",
+      "13.3\" FHD"
+    ],
+    "specs": [
+      [
+        "cpu",
+        "Intel Core i7-1365U vPro (13th Gen)"
+      ],
+      [
+        "ram",
+        "16GB 4800MT/s"
+      ],
+      [
+        "storage",
+        "500GB SSD"
+      ],
+      [
+        "display",
+        "13.3\" FHD"
+      ],
+      [
+        "gpu",
+        "Intel Iris Xe Graphics"
+      ],
+      [
+        "security",
+        "Fingerprint reader"
+      ],
+      [
+        "warranty",
+        "2-month warranty"
+      ]
+    ],
+    "perks": [
+      "win11",
+      "office",
+      "gift",
+      "delivery"
+    ],
+    "about_ar": "لابتوب Dell Latitude 7340 مستعمل بحالة ممتازة، بمعالج Core i7-1365U vPro الجيل 13 ورام 16GB بسرعة 4800MT/s وتخزين SSD سعة 500GB وشاشة 13.3 إنش FHD ورسوميات Intel Iris Xe. فيه قارئ بصمة. مستعمل بكفالة شهرين.",
+    "about_en": "A Dell Latitude 7340 in excellent used condition, with a 13th Gen Intel Core i7-1365U vPro, 16GB of RAM at 4800MT/s, a 500GB SSD, a 13.3-inch FHD display and Intel Iris Xe graphics. Includes a fingerprint reader. Used, with a 2-month warranty.",
+    "added": "2026-11-17"
+  },
+  {
     "slug": "dell-latitude-7430",
     "status": "available",
     "category": "laptop",
