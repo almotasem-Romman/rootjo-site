@@ -1,0 +1,65 @@
+{
+ "brand": "<span style=\"font:800 30px/1 Poppins;letter-spacing:.04em\">D<span style=\"display:inline-block;transform:rotate(-25deg)\">E</span>LL</span>",
+ "model": "Latitude<br><em>7430</em>",
+ "sub": "Intel® Core™ i7 · 12th Gen · 32GB RAM",
+ "specs": [
+  {
+   "icon": "cpu",
+   "label": "CPU",
+   "value": "Intel® Core™ i7 (12th Gen)"
+  },
+  {
+   "icon": "ram",
+   "label": "RAM",
+   "value": "32GB"
+  },
+  {
+   "icon": "ssd",
+   "label": "Storage",
+   "value": "SSD 500GB"
+  },
+  {
+   "icon": "screen",
+   "label": "Screen",
+   "value": "14\" FHD"
+  }
+ ],
+ "extras": [
+  {
+   "icon": "win",
+   "t": "Windows 11 Pro",
+   "s": "نسخة أصلية"
+  },
+  {
+   "icon": "office",
+   "t": "MS Office Pro Plus",
+   "s": "نسخة أصلية"
+  },
+  {
+   "icon": "gift",
+   "t": "هدية مجانية",
+   "s": "شنطة + ماوس لاسلكي"
+  },
+  {
+   "icon": "truck",
+   "t": "توصيل لكل المملكة",
+   "s": "الدفع بعد الاستلام والمعاينة"
+  }
+ ],
+ "price": "379",
+ "old": "409",
+ "rib_t": "مستعمل",
+ "rib_s": "كفالة شهرين",
+ "contact": "للاستفسار والتواصل",
+ "handle": "@rootcomputers",
+ "wa": "0799167971",
+ "tel": "0791851390",
+ "wm": "",
+ "brand_bg": "#0076CE",
+ "layout": {
+  "lap_w": 640,
+  "lap_y": 368,
+  "card_x": 668,
+  "spv": 13.2
+ }
+}
