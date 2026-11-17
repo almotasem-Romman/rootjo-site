@@ -337,7 +337,7 @@
   },
   {
     "slug": "hp-elitebook-840-g10-i7-1370p",
-    "status": "available",
+    "status": "sold",
     "category": "laptop",
     "condition": "used",
     "condition_note_ar": "كفالة شهرين",
@@ -1487,7 +1487,7 @@
   },
   {
     "slug": "macbook-pro-14-m5-pro",
-    "status": "available",
+    "status": "sold",
     "category": "laptop",
     "condition": "new",
     "condition_note_ar": "كفالة سنة",
@@ -1990,7 +1990,7 @@
   },
   {
     "slug": "hp-elitebook-840-g10",
-    "status": "available",
+    "status": "sold",
     "category": "laptop",
     "condition": "like-new",
     "condition_note_ar": "تحت الكفالة الرسمية",
