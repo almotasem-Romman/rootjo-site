@@ -14,7 +14,7 @@
     "badge_en": "",
     "image": "img/products/dell-latitude-7430.webp",
     "card_specs": [
-      "Core i7 Gen 12",
+      "Core i7-1265U vPro",
       "32GB RAM",
       "500GB SSD",
       "14\" FHD"
@@ -22,11 +22,11 @@
     "specs": [
       [
         "cpu",
-        "Intel Core i7 (12th Gen)"
+        "Intel Core i7-1265U vPro (12th Gen)"
       ],
       [
         "ram",
-        "32GB"
+        "32GB 3200MT/s"
       ],
       [
         "storage",
@@ -35,6 +35,18 @@
       [
         "display",
         "14\" FHD"
+      ],
+      [
+        "gpu",
+        "Intel Iris Xe Graphics"
+      ],
+      [
+        "security",
+        "Fingerprint reader"
+      ],
+      [
+        "keyboard",
+        "Backlit keyboard"
       ],
       [
         "warranty",
@@ -47,8 +59,8 @@
       "gift",
       "delivery"
     ],
-    "about_ar": "لابتوب Dell Latitude 7430 مستعمل بحالة ممتازة، بمعالج Core i7 الجيل 12 ورام 32GB وتخزين SSD سعة 500GB وشاشة 14 إنش FHD. مستعمل بكفالة شهرين.",
-    "about_en": "A Dell Latitude 7430 in excellent used condition, with a 12th Gen Intel Core i7, 32GB of RAM, a 500GB SSD and a 14-inch FHD display. Used, with a 2-month warranty.",
+    "about_ar": "لابتوب Dell Latitude 7430 مستعمل بحالة ممتازة، بمعالج Core i7-1265U vPro الجيل 12 ورام 32GB بسرعة 3200MT/s وتخزين SSD سعة 500GB وشاشة 14 إنش FHD ورسوميات Intel Iris Xe. فيه قارئ بصمة وكيبورد مضيء. مستعمل بكفالة شهرين.",
+    "about_en": "A Dell Latitude 7430 in excellent used condition, with a 12th Gen Intel Core i7-1265U vPro, 32GB of RAM at 3200MT/s, a 500GB SSD, a 14-inch FHD display and Intel Iris Xe graphics. Includes a fingerprint reader and a backlit keyboard. Used, with a 2-month warranty.",
     "added": "2026-11-17"
   },
   {
