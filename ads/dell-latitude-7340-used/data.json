@@ -67,8 +67,8 @@
  "wm": "",
  "brand_bg": "#0076CE",
  "layout": {
-  "lap_w": 600,
-  "lap_y": 330,
+  "lap_w": 640,
+  "lap_y": 368,
   "card_x": 668,
   "spv": 13.2
  }
