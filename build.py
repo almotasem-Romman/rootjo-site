@@ -8,7 +8,9 @@ Config: config.json -> {"ga_id": "G-XXXX", "base_url": "https://rootjo.com"}
 Shared CSS: the /*@base*/ and /*@card*/ blocks of site.html are reused by the product and section pages,
 so the home page stays the single source of the design tokens and the product card.
 """
-import json, os, re, shutil, sys, html, datetime
+import json
+from currency import CUR_CSS, CUR_BTN, CUR_JS
+import os, re, shutil, sys, html, datetime
 from urllib.parse import quote
 
 HERE = os.path.dirname(os.path.abspath(__file__))
@@ -150,7 +152,7 @@ def card(p, pre, bilingual=True, qv=False):
     lab_en = "Ask for similar" if sold else "Order"
     label = bi(lab_ar, lab_en) if bilingual else lab_ar
     hen = f' data-href-en="{wa_link(m_en)}"' if bilingual else ""
-    old = f"<s>{p['old_price']} JD</s>" if p.get("old_price") else ""
+    old = f'<s><span data-jod="{p["old_price"]}">{p["old_price"]}</span> <span data-cu>JD</span></s>' if p.get("old_price") else ""
     return (f'<article class="card{" sold" if sold else ""}">'
             f'<div class="cmeta"><span>{CAT_LAT.get(p["category"], "")} · {E(p.get("brand") or "")}</span>{tag}</div>'
             f'<a class="cimg" href="{url}"{q} tabindex="-1" aria-hidden="true"><img loading="lazy" src="{pre}{E(p["image"])}" alt=""></a>'
@@ -158,7 +160,7 @@ def card(p, pre, bilingual=True, qv=False):
             f'<div class="ccond {E(p.get("condition", ""))}">{ctext}</div>'
             + (f'<ul class="hud">{hud}</ul>' if hud else "") + "</div>"
             f'<a class="buy" target="_blank" rel="noopener" data-product="{E(p["slug"])}" href="{wa_link(m_ar)}"{hen}><span class="l">{WA_USE}{label}</span>'
-            f'<span class="p">{old}<b>{p["price"]}<small>JD</small></b></span></a></article>')
+            f'<span class="p">{old}<b><span data-jod="{p["price"]}">{p["price"]}</span><small data-cu>JD</small></b></span></a></article>')
 
 
 # ---------- home page ----------
@@ -167,7 +169,7 @@ def home_sort(p):
 
 grid0 = "".join(card(p, "", bilingual=False, qv=True) for p in sorted(visible, key=home_sort))
 data = json.dumps(visible, ensure_ascii=False).replace("</", "<\\/")
-body = src.replace("__PRODUCTS__", data).replace("__GA_ID__", cfg["ga_id"]).replace("__GRID__", grid0)
+body = src.replace("__CUR_CSS__", CUR_CSS).replace("__CUR_BTN__", CUR_BTN).replace("__CUR_JS__", CUR_JS).replace("__PRODUCTS__", data).replace("__GA_ID__", cfg["ga_id"]).replace("__GRID__", grid0)
 open(os.path.join(OUT, "index.preview.html"), "w", encoding="utf-8").write(body)
 
 _qs = dict(re.findall(r'data-i18n="(q\d+)">([^<]+)<', body)); _as = dict(re.findall(r'data-i18n="(a\d+)">([^<]+)<', body))
@@ -215,7 +217,7 @@ live = head + body_live.replace("</style>", "\n</style>\n</head>\n<body>", 1) + 
 open(os.path.join(OUT, "index.html"), "w", encoding="utf-8").write(live)
 
 # ---------- shared shell for product + section pages ----------
-SUB_CSS = BASE_CSS + CARD_CSS + '''
+SUB_CSS = BASE_CSS + CARD_CSS + CUR_CSS + '''
 html[lang="ar"] .t-en,html[lang="en"] .t-ar{display:none!important}
 body{padding-bottom:30px}
 .grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(258px,1fr));gap:16px}
@@ -297,6 +299,7 @@ def shell(*, pre, title, desc, canonical, og_image, og_type, ld, css, main, wher
 <header class="top"><div class="wrap bar">
   <a class="logo" href="{pre}index.html" aria-label="Root"><img class="lg-l" src="{pre}img/logo.png" alt=""><img class="lg-d" src="{pre}img/logo-light-on-dark.png" alt=""><span class="lname">Root</span></a>
   <div class="tools">
+    {CUR_BTN}
     <button type="button" class="ibtn" id="langBtn"><span class="t-ar">EN</span><span class="t-en lang-ar">عربي</span></button>
     <button type="button" class="ibtn theme" id="themeBtn" aria-label="الوضع الداكن"><svg class="t-moon" viewBox="0 0 24 24"><path d="M20 14.5A8.5 8.5 0 0 1 9.5 4a8.5 8.5 0 1 0 10.5 10.5Z"/></svg><svg class="t-sun" viewBox="0 0 24 24"><circle cx="12" cy="12" r="4"/><path d="M12 2.5v2.2M12 19.3v2.2M2.5 12h2.2M19.3 12h2.2M5.3 5.3l1.6 1.6M17.1 17.1l1.6 1.6M18.7 5.3l-1.6 1.6M6.9 17.1l-1.6 1.6"/></svg></button>
     <a class="ibtn solid" target="_blank" rel="noopener" data-product="{E(where)}" href="{wa_link('مرحباً Root، بدي أستفسر عن ')}" data-href-en="{wa_link("Hi Root, I'd like to ask about ")}">{WA_USE}<span class="lbl">{bi("واتساب", "WhatsApp")}</span></a>
@@ -320,6 +323,7 @@ def shell(*, pre, title, desc, canonical, og_image, og_type, ld, css, main, wher
 {THEME_JS}
 }})();
 </script>
+<script>{CUR_JS}</script>
 </body>
 </html>
 '''
@@ -414,7 +418,7 @@ def product_page(p, others):
     <div class="info">
       <div class="ccond {E(p.get('condition', ''))}">{cond_html}</div>
       <h1 class="pname">{E(name)}</h1>
-      <div class="pprice"><b>{p['price']}<small>JD</small></b>{f'<s>{p["old_price"]} JD</s>' if p.get("old_price") else ''}</div>
+      <div class="pprice"><b><span data-jod="{p['price']}">{p['price']}</span><small data-cu>JD</small></b>{f'<s><span data-jod="{p["old_price"]}">{p["old_price"]}</span> <span data-cu>JD</span></s>' if p.get("old_price") else ''}</div>
       <p class="about">{bi(E(p.get('about_ar', '')), E(p.get('about_en', '')))}</p>
       {f'<p class="soldnote">{bi("هذا الجهاز انباع. راسلنا ومنوفرلك بديل مشابه.", "This device is sold. Message us and we will find you a similar one.")}</p>' if sold else ''}
       <div class="acts">

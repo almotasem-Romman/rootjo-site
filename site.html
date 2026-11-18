@@ -457,6 +457,7 @@ footer .lat{letter-spacing:.14em;text-transform:uppercase;font-size:12px}
   html{scroll-behavior:auto}
   *,*::before,*::after{animation:none!important;transition:none!important}
 }
+__CUR_CSS__
 </style>
 
 <canvas id="field" aria-hidden="true"></canvas>
@@ -475,6 +476,7 @@ footer .lat{letter-spacing:.14em;text-transform:uppercase;font-size:12px}
     </nav>
     <div class="tools">
       <button class="ibtn hide-m" type="button" data-act="search" aria-label="بحث"><svg viewBox="0 0 24 24"><circle cx="11" cy="11" r="6.5"/><path d="m20 20-4.2-4.2"/></svg></button>
+      __CUR_BTN__
       <button class="ibtn" type="button" id="langBtn">EN</button>
       <button class="ibtn theme" type="button" id="themeBtn" aria-label="الوضع الداكن"><svg class="t-moon" viewBox="0 0 24 24"><path d="M20 14.5A8.5 8.5 0 0 1 9.5 4a8.5 8.5 0 1 0 10.5 10.5Z"/></svg><svg class="t-sun" viewBox="0 0 24 24"><circle cx="12" cy="12" r="4"/><path d="M12 2.5v2.2M12 19.3v2.2M2.5 12h2.2M19.3 12h2.2M5.3 5.3l1.6 1.6M17.1 17.1l1.6 1.6M18.7 5.3l-1.6 1.6M6.9 17.1l-1.6 1.6"/></svg></button>
       <button class="ibtn hide-m" type="button" data-act="menu"><span data-i18n="menu">القائمة</span></button>
@@ -815,7 +817,7 @@ footer .lat{letter-spacing:.14em;text-transform:uppercase;font-size:12px}
       '<div class="ccond ' + esc(p.condition) + '">' + esc(en() ? c[1] : c[0]) + (note ? " · " + esc(note) : "") + "</div>" +
       (hud ? '<ul class="hud">' + hud + "</ul>" : "") + "</div>" +
       '<a class="buy" target="_blank" rel="noopener" data-product="' + esc(p.slug) + '" href="' + wa(msg) + '"><span class="l"><svg viewBox="0 0 24 24"><use href="#wa-i"/></svg>' +
-      (sold ? T("اطلب مشابه", "Ask for similar") : T("اطلبه", "Order")) + '</span><span class="p">' + (p.old_price ? "<s>" + p.old_price + " JD</s>" : "") + "<b>" + p.price + "<small>JD</small></b></span></a></article>";
+      (sold ? T("اطلب مشابه", "Ask for similar") : T("اطلبه", "Order")) + '</span><span class="p">' + (p.old_price ? '<s><span data-jod="' + p.old_price + '">' + p.old_price + '</span> <span data-cu>JD</span></s>' : "") + '<b><span data-jod="' + p.price + '">' + p.price + '</span><small data-cu>JD</small></b></span></a></article>';
   }
 
   function segBtns(el, items, key, counts) {
@@ -884,8 +886,8 @@ footer .lat{letter-spacing:.14em;text-transform:uppercase;font-size:12px}
     var perks = (p.perks || []).filter(function (k) { return PERKS[k]; }).map(function (k) { return '<div class="perk"><svg viewBox="0 0 24 24">' + PERKS[k][2] + "</svg>" + esc(en() ? PERKS[k][1] : PERKS[k][0]) + "</div>"; }).join("");
     qvin.innerHTML = '<div class="qvimg"><div class="cmeta"><span>' + (CAT_LAT[p.category] || "") + " · " + esc(p.brand || "") + '</span><span class="tag' + (isNew(p) ? " new" : "") + '">' + (sold ? "Sold out" : isNew(p) ? "New in" : "In stock") + '</span></div><img src="' + esc(p.image) + '" alt="' + esc(p.name) + '"></div>' +
       '<div class="qvinfo"><div class="ccond ' + esc(p.condition) + '">' + esc(en() ? c[1] : c[0]) + (note ? " · " + esc(note) : "") + "</div><h3>" + esc(p.name) + "</h3>" +
-      '<div class="qvprice">' + "<b>" + p.price + "<small>JD</small></b>" + (p.old_price ? "<s>" + p.old_price + " JD</s>" : "") + "</div>" +
-      (!sold && p.category !== "license" ? '<div class="qvtot">' + T("مع التوصيل داخل عمّان (3 دنانير):", "With delivery in Amman (3 JD):") + ' <b><bdi dir="ltr">' + (p.price + 3) + " JD</bdi></b> · " + T("باقي المحافظات (5 دنانير):", "Other governorates (5 JD):") + ' <b><bdi dir="ltr">' + (p.price + 5) + " JD</bdi></b></div>" : "") +
+      '<div class="qvprice">' + '<b><span data-jod="' + p.price + '">' + p.price + '</span><small data-cu>JD</small></b>' + (p.old_price ? '<s><span data-jod="' + p.old_price + '">' + p.old_price + '</span> <span data-cu>JD</span></s>' : "") + "</div>" +
+      (!sold && p.category !== "license" ? '<div class="qvtot">' + T("مع التوصيل داخل عمّان (3 دنانير):", "With delivery in Amman (3 JD):") + ' <b><bdi dir="ltr"><span data-jod="' + (p.price + 3) + '">' + (p.price + 3) + '</span> <span data-cu>JD</span></bdi></b> · ' + T("باقي المحافظات (5 دنانير):", "Other governorates (5 JD):") + ' <b><bdi dir="ltr"><span data-jod="' + (p.price + 5) + '">' + (p.price + 5) + '</span> <span data-cu>JD</span></bdi></b></div>' : "") +
       '<p class="qvabout">' + esc(en() ? p.about_en : p.about_ar) + "</p>" +
       '<div class="qvacts"><a class="btn pri" target="_blank" rel="noopener" data-product="' + esc(p.slug) + '" href="' + wa(msg) + '"><svg viewBox="0 0 24 24"><use href="#wa-i"/></svg>' + (sold ? T("اطلب مشابه على واتساب", "Ask for a similar one") : T("اطلبه على واتساب", "Order on WhatsApp")) + "</a>" +
       '<a class="btn sec" target="_blank" rel="noopener" href="' + wa(ask) + '">' + T("اسأل عنه", "Ask") + "</a></div>" +
@@ -1071,3 +1073,4 @@ footer .lat{letter-spacing:.14em;text-transform:uppercase;font-size:12px}
   fromHash();
 })();
 </script>
+<script>__CUR_JS__</script>
