@@ -1,10 +1,18 @@
-OK g3d x2 -> (1105, 974)
-OK g3e x2 -> (1526, 1149)
-OK g3f x2 -> (900, 1600)
+FAIL g3d OpenCV(5.1.0) /io/opencv/modules/dnn/src/onnx/onnx_importer2.cpp:745: error: (-215:Assertion failed) model_proto.has_graph() in function 'parseModel'
+
+FAIL g3e OpenCV(5.1.0) /io/opencv/modules/dnn/src/onnx/onnx_importer2.cpp:745: error: (-215:Assertion failed) model_proto.has_graph() in function 'parseModel'
+
+FAIL g3f OpenCV(5.1.0) /io/opencv/modules/dnn/src/onnx/onnx_importer2.cpp:745: error: (-215:Assertion failed) model_proto.has_graph() in function 'parseModel'
+
 OK hp-zbook-15u-g5 x1 -> (1600, 1005)
 OK asus-tuf-gaming-a16 rawalpha -> (889, 1080)
 OK lenovo-loq-15irx10 rawalpha -> (1600, 1024)
-OK dell-latitude-7320 x2 -> (1600, 1033)
+FAIL dell-latitude-7320 OpenCV(5.1.0) /io/opencv/modules/dnn/src/onnx/onnx_importer2.cpp:745: error: (-215:Assertion failed) model_proto.has_graph() in function 'parseModel'
+
 OK asus-vivobook-pro-15-oled-n6506 x1 -> (1600, 1044)
 OK lenovo-ideapad-1-15ijl7 rawalpha -> (839, 783)
 OK lenovo-ideapad-slim-3-15iru8 rawalpha -> (797, 756)
+OK thinkpad-e14-gen6-intel-01 rawalpha -> (1595, 1349)
+OK thinkpad-e14-gen6-intel-02 rawalpha -> (1594, 1349)
+OK thinkpad-e14-gen6-intel-03 rawalpha -> (1600, 1600)
+OK thinkpad-e14-gen6-intel-04 rawalpha -> (1596, 571)
