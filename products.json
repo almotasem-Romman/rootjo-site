@@ -1,5 +1,77 @@
 [
   {
+    "slug": "lenovo-thinkpad-e14-gen6",
+    "status": "available",
+    "category": "laptop",
+    "condition": "like-new",
+    "condition_note_ar": "كفالة Lenovo حتى 03/2027",
+    "condition_note_en": "Lenovo warranty until 03/2027",
+    "name": "Lenovo ThinkPad E14 Gen 6",
+    "brand": "Lenovo",
+    "price": 499,
+    "old_price": 529,
+    "badge_ar": "",
+    "badge_en": "",
+    "image": "img/products/lenovo-thinkpad-e14-gen6.webp",
+    "card_specs": [
+      "Core Ultra 7 155H",
+      "16GB RAM",
+      "1TB SSD",
+      "14\" WUXGA"
+    ],
+    "specs": [
+      [
+        "cpu",
+        "Intel Core Ultra 7 155H (16 cores / 22 threads)"
+      ],
+      [
+        "ram",
+        "16GB"
+      ],
+      [
+        "storage",
+        "1TB NVMe SSD"
+      ],
+      [
+        "display",
+        "14\" WUXGA (1920x1200) IPS"
+      ],
+      [
+        "gpu",
+        "Intel integrated graphics"
+      ],
+      [
+        "npu",
+        "Intel AI Boost NPU"
+      ],
+      [
+        "camera",
+        "IR camera (Windows Hello)"
+      ],
+      [
+        "wifi",
+        "Wi-Fi 6E (AX211) + Ethernet"
+      ],
+      [
+        "ports",
+        "USB4 + USB 3.2"
+      ],
+      [
+        "warranty",
+        "Lenovo warranty until 03/2027"
+      ]
+    ],
+    "perks": [
+      "win11",
+      "office",
+      "gift",
+      "delivery"
+    ],
+    "about_ar": "لابتوب Lenovo ThinkPad E14 Gen 6 (موديل 21M7001UAD) مستعمل بحالة الجديد، بمعالج Intel Core Ultra 7 155H ورام 16GB وتخزين SSD سعة 1TB وشاشة 14 إنش WUXGA IPS ووحدة NPU للذكاء الاصطناعي وكاميرا IR لتسجيل الدخول بـ Windows Hello. كفالة Lenovo سارية حتى 03/2027.",
+    "about_en": "A Lenovo ThinkPad E14 Gen 6 (model 21M7001UAD) in like-new used condition, with an Intel Core Ultra 7 155H, 16GB of RAM, a 1TB SSD, a 14-inch WUXGA IPS display, an AI Boost NPU and an IR camera for Windows Hello. Lenovo warranty valid until 03/2027.",
+    "added": "2026-11-18"
+  },
+  {
     "slug": "dell-latitude-7340",
     "status": "available",
     "category": "laptop",
