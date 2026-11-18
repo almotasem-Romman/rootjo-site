@@ -26,7 +26,7 @@
 - [Software licenses](https://rootjo.com/licenses): Genuine Windows, Office and Microsoft 365, with the key sent right after payment.
 - [Repair & setup](https://rootjo.com/repair): Diagnosis, repair, upgrades and setup for your device, with the cost quoted before any work.
 
-## Devices in stock (updated 2026-11-18, prices in Jordanian dinars)
+## Devices in stock (updated 2026-11-19, prices in Jordanian dinars)
 
 - [Lenovo ThinkPad E14 Gen 6](https://rootjo.com/p/lenovo-thinkpad-e14-gen6): 499 JD (was 529 JD), Used, like new, Lenovo warranty until 03/2027. Intel Core Ultra 7 155H (16 cores / 22 threads), 16GB, 1TB NVMe SSD, 14" WUXGA (1920x1200) IPS
 - [Dell Latitude 7340](https://rootjo.com/p/dell-latitude-7340): 370 JD (was 400 JD), Used, 2-month warranty. Intel Core i7-1365U vPro (13th Gen), 16GB 4800MT/s, 500GB SSD, 13.3" FHD
@@ -37,7 +37,6 @@
 - [ASUS Vivobook Pro 15 OLED · Ultra 9 · 1TB](https://rootjo.com/p/asus-vivobook-pro-15-oled-ultra9-1tb): 810 JD (was 840 JD), Used, 2-month warranty. Intel Core Ultra 9 185H (16 cores / 22 threads, up to 5.1GHz, 24MB cache), Intel AI Boost NPU, up to 11 TOPS, NVIDIA GeForce RTX 3050 6GB GDDR6 + Intel Arc Graphics, 24GB DDR5
 - [Lenovo LOQ 15IRX10](https://rootjo.com/p/lenovo-loq-15irx10): 1265 JD (was 1295 JD), New in box, 2-year warranty. Intel Core i7-13645HX (14 cores / 20 threads, up to 4.9GHz, 24MB cache), 16GB DDR5, 512GB M.2 PCIe 4.0 NVMe SSD, 15.6" FHD (1920×1080) IPS, 144Hz, G-SYNC, 300 nits, 100% sRGB
 - [ASUS TUF Gaming A16](https://rootjo.com/p/asus-tuf-gaming-a16): 999 JD (was 1029 JD), New in box, 1-year warranty. AMD Ryzen 7 170 (8C/16T, up to 4.75GHz, 20MB cache), 16GB DDR5-4800 (2× SO-DIMM, up to 64GB), 512GB PCIe 4.0 NVMe SSD (dual M.2 slots), 16" FHD+ (1920×1200) IPS-level, 144Hz, G-Sync
-- [HP ZBook 15u G5](https://rootjo.com/p/hp-zbook-15u-g5): 250 JD (was 280 JD), Used, 2-month warranty. Intel Core i7 (8th Gen), 8GB DDR4, 256GB M.2 SSD, 15.6" FHD (1920×1080)
 - [HP OmniBook 3 16-bu0038ne](https://rootjo.com/p/hp-omnibook-3-16-bu0038ne): 584 JD (was 614 JD), New in box, 1-year warranty. Intel Core 5 120U, up to 5.0GHz, 10 cores / 12 threads, 8GB DDR5-5200, 512GB PCIe Gen4 NVMe SSD, 16" FHD+ IPS, 300 nits, anti-glare
 - [Lenovo V14 Gen 4](https://rootjo.com/p/lenovo-v14-gen4-i7): 714 JD (was 744 JD), New in box, 1-year warranty. Intel Core i7-13620H (13th Gen), up to 4.9GHz, 10 cores / 16 threads, 16GB DDR4-3200 (8GB + 8GB), 512GB PCIe 4.0 NVMe SSD, 14" FHD (1920 x 1080), anti-glare
 - [Apple MacBook Neo 13"](https://rootjo.com/p/apple-macbook-neo-13): 664 JD (was 694 JD), New in box. Apple A18 Pro chip, 8GB, 256GB SSD, 13" Liquid Retina
