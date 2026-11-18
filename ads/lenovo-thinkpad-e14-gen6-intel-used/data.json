@@ -1,0 +1,87 @@
+{
+ "brand": "<span style=\"font:600 28px/1 Poppins;letter-spacing:-.01em\">Lenovo</span>",
+ "model": "ThinkPad<br><em>E14 Gen 6</em>",
+ "sub": "Intel® Core™ Ultra 7 155H · 16GB · 1TB SSD",
+ "specs": [
+  {
+   "icon": "cpu",
+   "label": "CPU",
+   "value": "Intel® Core™ Ultra 7 155H (16C / 22T)"
+  },
+  {
+   "icon": "ram",
+   "label": "RAM",
+   "value": "16GB"
+  },
+  {
+   "icon": "ssd",
+   "label": "Storage",
+   "value": "SSD 1TB NVMe"
+  },
+  {
+   "icon": "screen",
+   "label": "Screen",
+   "value": "14\" WUXGA (1920x1200) IPS"
+  },
+  {
+   "icon": "gpu",
+   "label": "GPU",
+   "value": "Intel® Graphics Integrated"
+  },
+  {
+   "icon": "cpu",
+   "label": "AI",
+   "value": "Intel® AI Boost NPU"
+  },
+  {
+   "icon": "kb",
+   "label": "Security",
+   "value": "IR Camera · Windows Hello"
+  },
+  {
+   "icon": "shield",
+   "label": "Warranty",
+   "value": "Lenovo Warranty until 03/2027"
+  }
+ ],
+ "extras": [
+  {
+   "icon": "win",
+   "t": "Windows 11 Pro",
+   "s": "نسخة أصلية"
+  },
+  {
+   "icon": "office",
+   "t": "MS Office Pro Plus",
+   "s": "نسخة أصلية"
+  },
+  {
+   "icon": "gift",
+   "t": "هدية مجانية",
+   "s": "شنطة + ماوس لاسلكي"
+  },
+  {
+   "icon": "truck",
+   "t": "توصيل لكل المملكة",
+   "s": "الدفع بعد الاستلام والمعاينة"
+  }
+ ],
+ "price": "499",
+ "old": "529",
+ "rib_t": "مستعمل بحالة الجديد",
+ "rib_s": "كفالة <span style=\"font-family:Poppins\">Lenovo</span> حتى <span style=\"font-family:Poppins\">03/2027</span>",
+ "contact": "للاستفسار والتواصل",
+ "handle": "@rootcomputers",
+ "wa": "0799167971",
+ "tel": "0791851390",
+ "wm": "",
+ "brand_bg": "#E2231A",
+ "layout": {
+  "lap_w": 640,
+  "lap_x": 14,
+  "lap_y": 392,
+  "card_x": 668,
+  "spv": 13.0,
+  "sp_pad": 9
+ }
+}

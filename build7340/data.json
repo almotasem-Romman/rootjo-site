@@ -1,0 +1,75 @@
+{
+ "brand": "<span style=\"font:800 30px/1 Poppins;letter-spacing:.04em\">D<span style=\"display:inline-block;transform:rotate(-25deg)\">E</span>LL</span>",
+ "model": "Latitude<br><em>7340</em>",
+ "sub": "Intel® Core™ i7 · 13th Gen · vPro · 16GB RAM",
+ "specs": [
+  {
+   "icon": "cpu",
+   "label": "CPU",
+   "value": "Intel® Core™ i7-1365U vPro (13th Gen)"
+  },
+  {
+   "icon": "ram",
+   "label": "RAM",
+   "value": "16GB 4800MT/s"
+  },
+  {
+   "icon": "ssd",
+   "label": "Storage",
+   "value": "SSD 500GB"
+  },
+  {
+   "icon": "screen",
+   "label": "Screen",
+   "value": "13.3\" FHD"
+  },
+  {
+   "icon": "gpu",
+   "label": "GPU",
+   "value": "Intel® Iris® Xe Graphics"
+  },
+  {
+   "icon": "shield",
+   "label": "Security",
+   "value": "Fingerprint Reader"
+  }
+ ],
+ "extras": [
+  {
+   "icon": "win",
+   "t": "Windows 11 Pro",
+   "s": "نسخة أصلية"
+  },
+  {
+   "icon": "office",
+   "t": "MS Office Pro Plus",
+   "s": "نسخة أصلية"
+  },
+  {
+   "icon": "gift",
+   "t": "هدية مجانية",
+   "s": "شنطة + ماوس لاسلكي"
+  },
+  {
+   "icon": "truck",
+   "t": "توصيل لكل المملكة",
+   "s": "الدفع بعد الاستلام والمعاينة"
+  }
+ ],
+ "price": "370",
+ "old": "400",
+ "rib_t": "مستعمل",
+ "rib_s": "كفالة شهرين",
+ "contact": "للاستفسار والتواصل",
+ "handle": "@rootcomputers",
+ "wa": "0799167971",
+ "tel": "0791851390",
+ "wm": "",
+ "brand_bg": "#0076CE",
+ "layout": {
+  "lap_w": 640,
+  "lap_y": 368,
+  "card_x": 668,
+  "spv": 13.2
+ }
+}
