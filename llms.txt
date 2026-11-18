@@ -28,6 +28,7 @@
 
 ## Devices in stock (updated 2026-11-18, prices in Jordanian dinars)
 
+- [Lenovo ThinkPad E14 Gen 6](https://rootjo.com/p/lenovo-thinkpad-e14-gen6): 499 JD (was 529 JD), Used, like new, Lenovo warranty until 03/2027. Intel Core Ultra 7 155H (16 cores / 22 threads), 16GB, 1TB NVMe SSD, 14" WUXGA (1920x1200) IPS
 - [Dell Latitude 7340](https://rootjo.com/p/dell-latitude-7340): 370 JD (was 400 JD), Used, 2-month warranty. Intel Core i7-1365U vPro (13th Gen), 16GB 4800MT/s, 500GB SSD, 13.3" FHD
 - [Dell Latitude 7430](https://rootjo.com/p/dell-latitude-7430): 379 JD (was 409 JD), Used, 2-month warranty. Intel Core i7-1265U vPro (12th Gen), 32GB 3200MT/s, 500GB SSD, 14" FHD
 - [Lenovo IdeaPad Slim 3i · Core i3-1315U](https://rootjo.com/p/lenovo-ideapad-slim-3i-i3-1315u): 349 JD (was 379 JD), New in box, 1-year warranty. Intel Core i3-1315U (13th Gen, 6 cores / 8 threads, up to 4.5GHz, 10MB cache), 8GB LPDDR5-4800, 256GB M.2 PCIe 4.0 NVMe SSD, 15.6" FHD (1920×1080) TN, 250 nits, anti-glare
