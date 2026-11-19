@@ -52,3 +52,5 @@ thinkpad-e14-gen6-intel-02 https://psref.lenovo.com/syspool/Sys/Image/ThinkPad/T
 thinkpad-e14-gen6-intel-03 https://psref.lenovo.com/syspool/Sys/Image/ThinkPad/ThinkPad_E14_Gen_6_Intel/ThinkPad_E14_Gen_6_Intel_CT1_03.png rawalpha
 thinkpad-e14-gen6-intel-04 https://psref.lenovo.com/syspool/Sys/Image/ThinkPad/ThinkPad_E14_Gen_6_Intel/ThinkPad_E14_Gen_6_Intel_CT1_04.png rawalpha
 hp-envy-x360-15-ey0013dx https://laptoping.com/specs/wp-content/uploads/2022/07/HP-Envy-x360-15-ey0013dx-2-in-1.jpg noup
+dell-latitude-5410-a https://images.icecat.biz/img/gallery/f0795a087c9a862d9a519e52db6e2c6a77a7871f.jpg
+dell-latitude-5410-b https://images.icecat.biz/img/gallery/c6c3c2a1a0193529c500f7521fb8643ab7f11889.jpg
