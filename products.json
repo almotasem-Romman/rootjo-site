@@ -3,9 +3,9 @@
     "slug": "hp-envy-x360-15",
     "status": "available",
     "category": "laptop",
-    "condition": "new",
-    "condition_note_ar": "بالكرتونة · كفالة سنة",
-    "condition_note_en": "Boxed · 1-year warranty",
+    "condition": "used",
+    "condition_note_ar": "مستعمل بالكرتونة · كفالة شهرين",
+    "condition_note_en": "Used, boxed · 2-month warranty",
     "name": "HP ENVY x360 15.6\" 2-in-1",
     "brand": "HP",
     "price": 359,
@@ -50,7 +50,7 @@
       ],
       [
         "warranty",
-        "1-year warranty"
+        "2-month warranty"
       ]
     ],
     "perks": [
@@ -59,8 +59,8 @@
       "gift",
       "delivery"
     ],
-    "about_ar": "لابتوب HP ENVY x360 2-in-1 جديد بالكرتونة، بمعالج AMD Ryzen 5 5625U ورام 8GB DDR4 وتخزين SSD سعة 256GB NVMe وشاشة 15.6 إنش FHD IPS تعمل باللمس وتدور 360 درجة، مع قارئ بصمة وصوت Bang & Olufsen. كفالة سنة.",
-    "about_en": "A brand-new, boxed HP ENVY x360 2-in-1 with an AMD Ryzen 5 5625U, 8GB of DDR4 RAM, a 256GB NVMe SSD and a 15.6-inch FHD IPS touchscreen that folds 360 degrees. Includes a fingerprint reader and Bang & Olufsen audio. 1-year warranty.",
+    "about_ar": "لابتوب HP ENVY x360 2-in-1 مستعمل بالكرتونة بحالة ممتازة، بمعالج AMD Ryzen 5 5625U ورام 8GB DDR4 وتخزين SSD سعة 256GB NVMe وشاشة 15.6 إنش FHD IPS تعمل باللمس وتدور 360 درجة، مع قارئ بصمة وصوت Bang & Olufsen. كفالة شهرين.",
+    "about_en": "A used, boxed HP ENVY x360 2-in-1 in excellent condition, with an AMD Ryzen 5 5625U, 8GB of DDR4 RAM, a 256GB NVMe SSD and a 15.6-inch FHD IPS touchscreen that folds 360 degrees. Includes a fingerprint reader and Bang & Olufsen audio. 2-month warranty.",
     "added": "2026-11-19"
   },
   {
