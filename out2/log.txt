@@ -16,5 +16,4 @@ OK thinkpad-e14-gen6-intel-01 rawalpha -> (1595, 1349)
 OK thinkpad-e14-gen6-intel-02 rawalpha -> (1594, 1349)
 OK thinkpad-e14-gen6-intel-03 rawalpha -> (1600, 1600)
 OK thinkpad-e14-gen6-intel-04 rawalpha -> (1596, 571)
-FAIL hp-envy-x360-15-ey0013dx OpenCV(5.1.0) /io/opencv/modules/dnn/src/onnx/onnx_importer2.cpp:745: error: (-215:Assertion failed) model_proto.has_graph() in function 'parseModel'
-
+OK hp-envy-x360-15-ey0013dx x1 -> (1600, 1310)
