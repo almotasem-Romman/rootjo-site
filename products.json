@@ -1,5 +1,69 @@
 [
   {
+    "slug": "hp-envy-x360-15",
+    "status": "available",
+    "category": "laptop",
+    "condition": "new",
+    "condition_note_ar": "بالكرتونة · كفالة سنة",
+    "condition_note_en": "Boxed · 1-year warranty",
+    "name": "HP ENVY x360 15.6\" 2-in-1",
+    "brand": "HP",
+    "price": 359,
+    "old_price": 389,
+    "badge_ar": "",
+    "badge_en": "",
+    "image": "img/products/hp-envy-x360-15.webp",
+    "card_specs": [
+      "Ryzen 5 5625U",
+      "8GB RAM",
+      "256GB SSD",
+      "15.6\" Touch 360°"
+    ],
+    "specs": [
+      [
+        "cpu",
+        "AMD Ryzen 5 5625U"
+      ],
+      [
+        "ram",
+        "8GB DDR4"
+      ],
+      [
+        "storage",
+        "256GB NVMe M.2 SSD"
+      ],
+      [
+        "display",
+        "15.6\" FHD IPS touchscreen, 360° hinge, 250 nits"
+      ],
+      [
+        "gpu",
+        "AMD Radeon Graphics (integrated)"
+      ],
+      [
+        "security",
+        "Fingerprint reader"
+      ],
+      [
+        "audio",
+        "Bang & Olufsen"
+      ],
+      [
+        "warranty",
+        "1-year warranty"
+      ]
+    ],
+    "perks": [
+      "win11",
+      "office",
+      "gift",
+      "delivery"
+    ],
+    "about_ar": "لابتوب HP ENVY x360 2-in-1 جديد بالكرتونة، بمعالج AMD Ryzen 5 5625U ورام 8GB DDR4 وتخزين SSD سعة 256GB NVMe وشاشة 15.6 إنش FHD IPS تعمل باللمس وتدور 360 درجة، مع قارئ بصمة وصوت Bang & Olufsen. كفالة سنة.",
+    "about_en": "A brand-new, boxed HP ENVY x360 2-in-1 with an AMD Ryzen 5 5625U, 8GB of DDR4 RAM, a 256GB NVMe SSD and a 15.6-inch FHD IPS touchscreen that folds 360 degrees. Includes a fingerprint reader and Bang & Olufsen audio. 1-year warranty.",
+    "added": "2026-11-19"
+  },
+  {
     "slug": "lenovo-thinkpad-e14-gen6",
     "status": "available",
     "category": "laptop",
