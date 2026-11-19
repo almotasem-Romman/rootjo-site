@@ -28,6 +28,7 @@
 
 ## Devices in stock (updated 2026-11-19, prices in Jordanian dinars)
 
+- [HP ENVY x360 15.6" 2-in-1](https://rootjo.com/p/hp-envy-x360-15): 359 JD (was 389 JD), New in box, Boxed · 1-year warranty. AMD Ryzen 5 5625U, 8GB DDR4, 256GB NVMe M.2 SSD, 15.6" FHD IPS touchscreen, 360° hinge, 250 nits
 - [Lenovo ThinkPad E14 Gen 6](https://rootjo.com/p/lenovo-thinkpad-e14-gen6): 499 JD (was 529 JD), Used, like new, Lenovo warranty until 03/2027. Intel Core Ultra 7 155H (16 cores / 22 threads), 16GB, 1TB NVMe SSD, 14" WUXGA (1920x1200) IPS
 - [Dell Latitude 7340](https://rootjo.com/p/dell-latitude-7340): 370 JD (was 400 JD), Used, 2-month warranty. Intel Core i7-1365U vPro (13th Gen), 16GB 4800MT/s, 500GB SSD, 13.3" FHD
 - [Dell Latitude 7430](https://rootjo.com/p/dell-latitude-7430): 379 JD (was 409 JD), Used, 2-month warranty. Intel Core i7-1265U vPro (12th Gen), 32GB 3200MT/s, 500GB SSD, 14" FHD
