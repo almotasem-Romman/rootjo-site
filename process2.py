@@ -49,6 +49,8 @@ for line in open("images2.txt", encoding="utf-8"):
         im = Image.open(path).convert("RGB")
         m = max(im.size)
         scale = 3 if m < 600 else 2 if m < 1300 else 1
+        if "noup" in flags:
+            im = im.resize((im.width * 2, im.height * 2), Image.LANCZOS); scale = 1
         if scale > 1:
             bgr = cv2.cvtColor(np.asarray(im), cv2.COLOR_RGB2BGR)
             up = sr(scale).upsample(bgr)
