@@ -41,7 +41,7 @@
   {
    "icon": "shield",
    "label": "Warranty",
-   "value": "1 Year Warranty"
+   "value": "2 Month Warranty"
   }
  ],
  "extras": [
@@ -68,8 +68,8 @@
  ],
  "price": "359",
  "old": "389",
- "rib_t": "جديد بالكرتونة",
- "rib_s": "كفالة سنة",
+ "rib_t": "مستعمل بالكرتونة",
+ "rib_s": "كفالة شهرين",
  "contact": "للاستفسار والتواصل",
  "handle": "@rootcomputers",
  "wa": "0799167971",
