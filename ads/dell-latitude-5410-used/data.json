@@ -1,0 +1,87 @@
+{
+ "brand": "<span style=\"font:800 30px/1 Poppins;letter-spacing:.04em\">D<span style=\"display:inline-block;transform:rotate(-25deg)\">E</span>LL</span>",
+ "model": "Latitude<br><em>5410</em>",
+ "sub": "Intel® Core™ i7-10310U · 8GB · 256GB SSD",
+ "specs": [
+  {
+   "icon": "cpu",
+   "label": "CPU",
+   "value": "Intel® Core™ i7-10310U (up to 4.40GHz)"
+  },
+  {
+   "icon": "ram",
+   "label": "RAM",
+   "value": "8GB"
+  },
+  {
+   "icon": "ssd",
+   "label": "Storage",
+   "value": "SSD 256GB M.2"
+  },
+  {
+   "icon": "screen",
+   "label": "Screen",
+   "value": "14\" FHD (1920x1080)"
+  },
+  {
+   "icon": "gpu",
+   "label": "GPU",
+   "value": "Intel® UHD Graphics"
+  },
+  {
+   "icon": "kb",
+   "label": "Keyboard",
+   "value": "Backlit Keyboard"
+  },
+  {
+   "icon": "box",
+   "label": "Charger",
+   "value": "Original Charger"
+  },
+  {
+   "icon": "shield",
+   "label": "Warranty",
+   "value": "2 Month Warranty"
+  }
+ ],
+ "extras": [
+  {
+   "icon": "win",
+   "t": "Windows 11 Pro",
+   "s": "نسخة أصلية"
+  },
+  {
+   "icon": "office",
+   "t": "MS Office Pro Plus",
+   "s": "نسخة أصلية"
+  },
+  {
+   "icon": "gift",
+   "t": "هدية مجانية",
+   "s": "شنطة + ماوس لاسلكي"
+  },
+  {
+   "icon": "truck",
+   "t": "توصيل لكل المملكة",
+   "s": "الدفع بعد الاستلام والمعاينة"
+  }
+ ],
+ "price": "290",
+ "old": "320",
+ "rib_t": "مستعمل",
+ "rib_s": "كفالة شهرين",
+ "contact": "للاستفسار والتواصل",
+ "handle": "@rootcomputers",
+ "wa": "0799167971",
+ "tel": "0791851390",
+ "wm": "",
+ "brand_bg": "#0076CE",
+ "layout": {
+  "lap_w": 640,
+  "lap_x": 14,
+  "lap_y": 392,
+  "card_x": 668,
+  "spv": 13.0,
+  "sp_pad": 9
+ }
+}
