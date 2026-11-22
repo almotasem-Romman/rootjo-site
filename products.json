@@ -1,5 +1,65 @@
 [
   {
+    "slug": "hp-probook-460-g11",
+    "status": "available",
+    "category": "laptop",
+    "condition": "like-new",
+    "condition_note_ar": "بالكرتونة · كفالة شهرين",
+    "condition_note_en": "Boxed · 2-month warranty",
+    "name": "HP ProBook 460 G11",
+    "brand": "HP",
+    "price": 649,
+    "old_price": 679,
+    "badge_ar": "",
+    "badge_en": "",
+    "image": "img/products/hp-probook-460-g11.webp",
+    "card_specs": [
+      "Core Ultra 7 155U",
+      "16GB DDR5",
+      "512GB SSD",
+      "16\" WUXGA"
+    ],
+    "specs": [
+      [
+        "cpu",
+        "Intel Core Ultra 7 155U"
+      ],
+      [
+        "npu",
+        "Intel AI Boost NPU"
+      ],
+      [
+        "ram",
+        "16GB DDR5"
+      ],
+      [
+        "storage",
+        "512GB NVMe SSD"
+      ],
+      [
+        "display",
+        "16\" WUXGA (1920x1200) IPS"
+      ],
+      [
+        "gpu",
+        "Intel Graphics (integrated)"
+      ],
+      [
+        "warranty",
+        "2-month warranty"
+      ]
+    ],
+    "perks": [
+      "win11",
+      "office",
+      "gift",
+      "delivery"
+    ],
+    "about_ar": "لابتوب أعمال HP ProBook 460 G11 مستعمل بالكرتونة بحالة الجديد، بمعالج Intel Core Ultra 7 155U مع وحدة NPU للذكاء الاصطناعي، ورام 16GB DDR5 وتخزين SSD سعة 512GB NVMe وشاشة 16 إنش WUXGA IPS. كفالة شهرين.",
+    "about_en": "An HP ProBook 460 G11 business laptop, used and boxed in like-new condition, with an Intel Core Ultra 7 155U and AI Boost NPU, 16GB of DDR5 RAM, a 512GB NVMe SSD and a 16-inch WUXGA IPS display. 2-month warranty.",
+    "added": "2026-11-23"
+  },
+  {
     "slug": "dell-latitude-5410",
     "status": "available",
     "category": "laptop",
