@@ -1,0 +1,82 @@
+{
+ "brand": "<span style=\"display:inline-flex;align-items:center;justify-content:center;width:34px;height:34px;border-radius:50%;background:#fff;color:#0096D6;font:italic 700 19px/1 Poppins;letter-spacing:-.04em\">hp</span>",
+ "model": "ProBook<br><em>460 G11</em>",
+ "sub": "Intel® Core™ Ultra 7 155U · 16GB · 512GB SSD",
+ "specs": [
+  {
+   "icon": "cpu",
+   "label": "CPU",
+   "value": "Intel® Core™ Ultra 7 155U"
+  },
+  {
+   "icon": "cpu",
+   "label": "AI",
+   "value": "Intel® AI Boost NPU"
+  },
+  {
+   "icon": "ram",
+   "label": "RAM",
+   "value": "16GB DDR5"
+  },
+  {
+   "icon": "ssd",
+   "label": "Storage",
+   "value": "SSD 512GB NVMe"
+  },
+  {
+   "icon": "screen",
+   "label": "Screen",
+   "value": "16\" WUXGA (1920x1200) IPS"
+  },
+  {
+   "icon": "gpu",
+   "label": "GPU",
+   "value": "Intel® Graphics Integrated"
+  },
+  {
+   "icon": "shield",
+   "label": "Warranty",
+   "value": "2 Month Warranty"
+  }
+ ],
+ "extras": [
+  {
+   "icon": "win",
+   "t": "Windows 11 Pro",
+   "s": "نسخة أصلية"
+  },
+  {
+   "icon": "office",
+   "t": "MS Office Pro Plus",
+   "s": "نسخة أصلية"
+  },
+  {
+   "icon": "gift",
+   "t": "هدية مجانية",
+   "s": "شنطة + ماوس لاسلكي"
+  },
+  {
+   "icon": "truck",
+   "t": "توصيل لكل المملكة",
+   "s": "الدفع بعد الاستلام والمعاينة"
+  }
+ ],
+ "price": "649",
+ "old": "679",
+ "rib_t": "مستعمل بالكرتونة",
+ "rib_s": "بحالة الجديد · كفالة شهرين",
+ "contact": "للاستفسار والتواصل",
+ "handle": "@rootcomputers",
+ "wa": "0799167971",
+ "tel": "0791851390",
+ "wm": "",
+ "brand_bg": "#0096D6",
+ "layout": {
+  "lap_w": 668,
+  "lap_x": 10,
+  "lap_y": 392,
+  "card_x": 668,
+  "spv": 14.0,
+  "sp_pad": 10
+ }
+}
