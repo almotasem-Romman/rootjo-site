@@ -54,3 +54,4 @@ thinkpad-e14-gen6-intel-04 https://psref.lenovo.com/syspool/Sys/Image/ThinkPad/T
 hp-envy-x360-15-ey0013dx https://laptoping.com/specs/wp-content/uploads/2022/07/HP-Envy-x360-15-ey0013dx-2-in-1.jpg noup
 dell-latitude-5410-a https://images.icecat.biz/img/gallery/f0795a087c9a862d9a519e52db6e2c6a77a7871f.jpg
 dell-latitude-5410-b https://images.icecat.biz/img/gallery/c6c3c2a1a0193529c500f7521fb8643ab7f11889.jpg
+hp-probook-460-g11 https://images.icecat.biz/img/gallery/03b51fac2806ffcda5bc2b438c7e4bafe88e66ac.jpg
