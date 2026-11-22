@@ -26,8 +26,9 @@
 - [Software licenses](https://rootjo.com/licenses): Genuine Windows, Office and Microsoft 365, with the key sent right after payment.
 - [Repair & setup](https://rootjo.com/repair): Diagnosis, repair, upgrades and setup for your device, with the cost quoted before any work.
 
-## Devices in stock (updated 2026-11-21, prices in Jordanian dinars)
+## Devices in stock (updated 2026-11-23, prices in Jordanian dinars)
 
+- [HP ProBook 460 G11](https://rootjo.com/p/hp-probook-460-g11): 649 JD (was 679 JD), Used, like new, Boxed · 2-month warranty. Intel Core Ultra 7 155U, Intel AI Boost NPU, 16GB DDR5, 512GB NVMe SSD
 - [Dell Latitude 5410](https://rootjo.com/p/dell-latitude-5410): 290 JD (was 320 JD), Used, 2-month warranty. Intel Core i7-10310U (up to 4.40GHz), 8GB, 256GB M.2 SSD, 14" FHD (1920x1080)
 - [HP ENVY x360 15.6" 2-in-1](https://rootjo.com/p/hp-envy-x360-15): 359 JD (was 389 JD), Used, Used, boxed · 2-month warranty. AMD Ryzen 5 5625U, 8GB DDR4, 256GB NVMe M.2 SSD, 15.6" FHD IPS touchscreen, 360° hinge, 250 nits
 - [Lenovo ThinkPad E14 Gen 6](https://rootjo.com/p/lenovo-thinkpad-e14-gen6): 499 JD (was 529 JD), Used, like new, Lenovo warranty until 03/2027. Intel Core Ultra 7 155H (16 cores / 22 threads), 16GB, 1TB NVMe SSD, 14" WUXGA (1920x1200) IPS
