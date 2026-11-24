@@ -398,8 +398,10 @@ def product_page(p, others):
                      "areaServed": {"@type": "Country", "name": "Jordan"},
                      "shippingDetails": [
                          {"@type": "OfferShippingDetails", "shippingRate": {"@type": "MonetaryAmount", "value": "3", "currency": "JOD"},
+                          "deliveryTime": {"@type": "ShippingDeliveryTime", "handlingTime": {"@type": "QuantitativeValue", "minValue": 0, "maxValue": 0, "unitCode": "DAY"}, "transitTime": {"@type": "QuantitativeValue", "minValue": 0, "maxValue": 0, "unitCode": "DAY"}},
                           "shippingDestination": {"@type": "DefinedRegion", "addressCountry": "JO", "addressRegion": "Amman"}},
                          {"@type": "OfferShippingDetails", "shippingRate": {"@type": "MonetaryAmount", "value": "5", "currency": "JOD"},
+                          "deliveryTime": {"@type": "ShippingDeliveryTime", "handlingTime": {"@type": "QuantitativeValue", "minValue": 0, "maxValue": 0, "unitCode": "DAY"}, "transitTime": {"@type": "QuantitativeValue", "minValue": 0, "maxValue": 0, "unitCode": "DAY"}},
                           "shippingDestination": {"@type": "DefinedRegion", "addressCountry": "JO"}}]}}
     if p.get("category") == "license":
         ld["offers"].pop("shippingDetails")
