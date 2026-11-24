@@ -1,0 +1,82 @@
+{
+ "brand": "<span style=\"font:800 30px/1 Poppins;letter-spacing:.04em\">D<span style=\"display:inline-block;transform:rotate(-25deg)\">E</span>LL</span>",
+ "model": "Latitude<br><em>7320</em>",
+ "sub": "Intel® Core™ i7-1185G7 · 16GB · 512GB SSD",
+ "specs": [
+  {
+   "icon": "cpu",
+   "label": "CPU",
+   "value": "Intel® Core™ i7-1185G7"
+  },
+  {
+   "icon": "ram",
+   "label": "RAM",
+   "value": "16GB DDR4"
+  },
+  {
+   "icon": "ssd",
+   "label": "Storage",
+   "value": "SSD 512GB NVMe M.2"
+  },
+  {
+   "icon": "screen",
+   "label": "Screen",
+   "value": "13.3\" FHD (1920x1080)"
+  },
+  {
+   "icon": "gpu",
+   "label": "GPU",
+   "value": "Intel® Iris® Xe Graphics"
+  },
+  {
+   "icon": "kb",
+   "label": "Keyboard",
+   "value": "Backlit Keyboard"
+  },
+  {
+   "icon": "shield",
+   "label": "Warranty",
+   "value": "2 Month Warranty"
+  }
+ ],
+ "extras": [
+  {
+   "icon": "win",
+   "t": "Windows 11 Pro",
+   "s": "نسخة أصلية"
+  },
+  {
+   "icon": "office",
+   "t": "MS Office Pro Plus",
+   "s": "نسخة أصلية"
+  },
+  {
+   "icon": "gift",
+   "t": "هدية مجانية",
+   "s": "شنطة + ماوس لاسلكي"
+  },
+  {
+   "icon": "truck",
+   "t": "توصيل لكل المملكة",
+   "s": "الدفع بعد الاستلام والمعاينة"
+  }
+ ],
+ "price": "260",
+ "old": "299",
+ "rib_t": "مستعمل",
+ "rib_s": "كفالة شهرين · خدوش خارجية بسيطة",
+ "contact": "للاستفسار والتواصل",
+ "handle": "@rootcomputers",
+ "wa": "0799167971",
+ "tel": "0791851390",
+ "wm": "",
+ "brand_bg": "#0076CE",
+ "layout": {
+  "lap_w": 640,
+  "lap_x": 14,
+  "lap_y": 392,
+  "card_x": 668,
+  "spv": 14.0,
+  "sp_pad": 10
+ }
+}
