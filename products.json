@@ -1,5 +1,65 @@
 [
   {
+    "slug": "dell-latitude-7320",
+    "status": "available",
+    "category": "laptop",
+    "condition": "used",
+    "condition_note_ar": "خدوش خارجية بسيطة · كفالة شهرين",
+    "condition_note_en": "Minor cosmetic scratches · 2-month warranty",
+    "name": "Dell Latitude 7320",
+    "brand": "Dell",
+    "price": 260,
+    "old_price": 299,
+    "badge_ar": "",
+    "badge_en": "",
+    "image": "img/products/dell-latitude-7320.webp",
+    "card_specs": [
+      "Core i7 Gen 11",
+      "16GB DDR4",
+      "512GB SSD",
+      "13.3\" FHD"
+    ],
+    "specs": [
+      [
+        "cpu",
+        "Intel Core i7-1185G7"
+      ],
+      [
+        "ram",
+        "16GB DDR4"
+      ],
+      [
+        "storage",
+        "512GB NVMe M.2 SSD"
+      ],
+      [
+        "display",
+        "13.3\" FHD (1920×1080)"
+      ],
+      [
+        "gpu",
+        "Intel Iris Xe Graphics"
+      ],
+      [
+        "keyboard",
+        "Backlit keyboard"
+      ],
+      [
+        "warranty",
+        "2-month warranty"
+      ]
+    ],
+    "perks": [
+      "win11",
+      "office",
+      "gift",
+      "delivery"
+    ],
+    "about_ar": "لابتوب Dell Latitude 7320 مستعمل بمعالج Core i7-1185G7 ورام 16GB وتخزين SSD NVMe سعة 512GB وشاشة 13.3 إنش FHD وكيبورد مضيء، مع شاحن Type-C أصلي. ملاحظة: يحتوي الجهاز على خدوش خارجية بسيطة. مستعمل بكفالة شهرين.",
+    "about_en": "A used Dell Latitude 7320 with an Intel Core i7-1185G7, 16GB of RAM, a 512GB NVMe SSD, a 13.3-inch FHD display and a backlit keyboard. Includes the original Type-C charger. Note: the device has minor cosmetic scratches on the outside. Used, with a 2-month warranty.",
+    "added": "2026-11-25"
+  },
+  {
     "slug": "hp-probook-460-g11",
     "status": "available",
     "category": "laptop",
@@ -786,66 +846,6 @@
     "about_ar": "لابتوب HP EliteBook 840 G10 بمعالج Intel Core i7-1370P من الجيل 13 (14 نواة)، رام 16GB DDR5، تخزين SSD سعة 500GB، وشاشة 14 إنش بدقة 1920×1200 مع خاصية Sure View لحماية الخصوصية. فيه Thunderbolt 4 وHDMI 2.1 وWi-Fi 6E وكاميرا 5MP IR. مستعمل بكفالة شهرين.",
     "about_en": "A used HP EliteBook 840 G10 with a 14-core Intel Core i7-1370P (13th Gen), 16GB DDR5, a 500GB PCIe SSD and a 14-inch 1920×1200 IPS Sure View privacy display. Thunderbolt 4, HDMI 2.1, Wi-Fi 6E and a 5MP IR webcam. 2-month warranty.",
     "added": "2026-11-11"
-  },
-  {
-    "slug": "dell-latitude-7320",
-    "status": "sold",
-    "category": "laptop",
-    "condition": "used",
-    "condition_note_ar": "كفالة شهرين",
-    "condition_note_en": "2-month warranty",
-    "name": "Dell Latitude 7320",
-    "brand": "Dell",
-    "price": 280,
-    "old_price": 310,
-    "badge_ar": "",
-    "badge_en": "",
-    "image": "img/products/dell-latitude-7320.webp",
-    "card_specs": [
-      "Core i7 Gen 11",
-      "16GB DDR4",
-      "512GB SSD",
-      "13.3\" FHD"
-    ],
-    "specs": [
-      [
-        "cpu",
-        "Intel Core i7-1185G7"
-      ],
-      [
-        "ram",
-        "16GB DDR4"
-      ],
-      [
-        "storage",
-        "512GB NVMe M.2 SSD"
-      ],
-      [
-        "display",
-        "13.3\" FHD (1920×1080)"
-      ],
-      [
-        "gpu",
-        "Intel Iris Xe Graphics"
-      ],
-      [
-        "keyboard",
-        "Backlit keyboard"
-      ],
-      [
-        "warranty",
-        "2-month warranty"
-      ]
-    ],
-    "perks": [
-      "win11",
-      "office",
-      "gift",
-      "delivery"
-    ],
-    "about_ar": "لابتوب Dell Latitude 7320 بحالة الجديد، بمعالج Core i7-1185G7 ورام 16GB وتخزين SSD NVMe سعة 512GB وشاشة 13.3 إنش FHD وكيبورد مضيء. مع شاحن Type-C أصلي، مستعمل بكفالة شهرين.",
-    "about_en": "A like-new Dell Latitude 7320 with an Intel Core i7-1185G7, 16GB of RAM, a 512GB NVMe SSD, a 13.3-inch FHD display and a backlit keyboard. Includes the original Type-C charger. Used, with a 2-month warranty.",
-    "added": "2026-11-09"
   },
   {
     "slug": "lenovo-loq-15irx10",
